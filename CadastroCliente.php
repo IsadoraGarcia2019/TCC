@@ -36,11 +36,15 @@ background-attachment: scroll;">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="cidade_cliente">Cidade</label>
-        <input type="text" class="form-control" id="cidade_cliente" placeholder="Gaspar">
+        <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar">
       </div>
       <div class="form-group">
         <label for="rua_cliente">Rua</label>
-        <input type="text" class="form-control" id="rua_cliente" placeholder="Rua Sábia 179">
+        <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179">
+      </div>
+      <div class="form-group">
+        <label for="telefone_cliente">Número de telefone</label>
+        <input type="text" class="form-control" id="telefone_cliente">
       </div>
       <div class="form-group ml-2">
         <label for="restricao">Restrição alimentar</label>
