@@ -1,6 +1,6 @@
 <?php
 
-include_once "footer.php"; 
+// include_once "footer.php"; 
 
 ?>
 
@@ -64,55 +64,6 @@ include_once "footer.php";
       <strong>Para você comer no café da manhã, almoço e jantar.</strong>
     </div>
   </div>
-
-  <content>
-    <div class="container">
-      <div class="conteudo-pagina">
-
-<div class="row">
-    <div class="col">
-        <div class="card" style="width: 20rem;">
-  <h5 class="card-header">Cardápio Massas</h5>
-  <div class="card-body">
-    <img src="media/images/massas.png" class="card-img-top" alt="..." style="height: 190px;">
-    <a href="#" class="btn btn-success" style="margin-top: 15px;">Vizualizar</a>
-  </div>
-</div>
-</div>
-
-<div class="col">
-        <div class="card" style="width: 20rem;">
-  <h5 class="card-header">Cardápio Sobremesas</h5>
-  <div class="card-body">
-    <img src="media/images/sobremesas.jpg" class="card-img-top" alt="..." style="height: 190px;">
-    <a href="#" class="btn btn-success" style="margin-top: 15px;">Vizualizar</a>
-  </div>
-</div>
-</div>
-
-<div class="row">
-    <div class="col" style="margin-top: 20px; margin-left: 15px;">
-        <div class="card" style="width: 20rem;">
-  <h5 class="card-header">Cardápio Vegetariano</h5>
-  <div class="card-body">
-    <img src="media/images/vegetariano.jpg" class="card-img-top" alt="..." style="height: 190px;">
-    <a href="#" class="btn btn-success" style="margin-top: 15px;">Vizualizar</a>
-  </div>
-</div>
-</div>
-
-<div class="col" style="margin-top: 20px; margin-left: 130px;">
-  <div class="card" style="width: 20rem;">
-  <h5 class="card-header">Cardápio Japonês</h5>
-  <div class="card-body">
-    <img src="media/images/sushi.jpg" class="card-img-top" alt="..." style="height: 190px;">
-    <a href="#" class="btn btn-success" style="margin-top: 15px;">Vizualizar</a>
-    </div>
-    </div>        
-   </div>
-  </div>
- </div> 
-</content>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
