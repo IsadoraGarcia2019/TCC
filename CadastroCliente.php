@@ -12,7 +12,7 @@ background-size: 100%;
 background-repeat: no-repeat;
 background-attachment: scroll;">
 
-<div class="card col-md-6 offset-3">
+<div class="card col-md-6 offset-3 mt-5">
  <div class="card-body"> 
   <h1>Cadastro de Cliente</h1>
   <br>

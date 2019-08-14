@@ -1,9 +1,3 @@
-<?php
-
-//arrumar esta merda
-includeonce "header.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
