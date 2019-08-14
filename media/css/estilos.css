@@ -3,7 +3,7 @@
 @charset "UTF-8";
 
 * {
-	font-family: arial;
+	font-family: arial !important;
 }
 
 body {
@@ -82,26 +82,25 @@ header {
 footer {
 	background-color: rgba(47, 47, 47);
 	overflow: hidden;
+  height: 145px;
 }
 
 .footer-item {
-  margin-left: 60px;
-	color: white;
-	text-align: center;
+  margin-top: 35px;
+  color: white;
+  text-align: center;
   width: 100%:
 }
 
-.footer-item a {
+.footer-item a{
 	color: white;
 	text-decoration: none;
-}
-
-.footer-item p {
-	color: white;
-	text-decoration: none;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 #negrito{
   text-align: center;
   color: white;
+  margin-top: 10px;
 }
 
