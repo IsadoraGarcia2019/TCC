@@ -1,1 +1,86 @@
 /* Definições Globais de CSS do projeto */
+
+@charset "UTF-8";
+
+* {
+	font-family: arial;
+}
+
+body {
+	background-color: #bfbfbf !important; 
+}
+
+header {
+	background-color: white;
+}
+
+#container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.box {
+  background-color: white;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 15px; 
+  margin: 30px 0px;
+}
+
+.titulo-box {
+  margin: 0px 0px 20px 0px !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: 2em;
+}
+
+.alerta {
+  padding: 20px;
+  border-left-style: solid;
+  border-left-width: 4px;
+  margin-bottom: 20px;
+}
+
+.alerta p {
+  margin: 0 !important;
+}
+
+.vermelho {
+  background-color: rgba(255, 99, 71, 0.2);
+  border-color: Tomato;
+  color: rgb(255, 109, 81, 1);
+}
+
+.redes-sociais {
+	background-color: #bfbfbf;
+}
+
+.redes-sociais img {
+	padding: 30px 54px;
+}
+
+footer {
+	background-color: rgba(47, 47, 47);
+	overflow: hidden;
+}
+
+.footer-item {
+	width: 33%;
+	float: left;
+	color: white;
+	text-align: center;
+	line-height: 100px;
+}
+
+.footer-item a {
+	color: white;
+	text-decoration: none;
+}
+
+.footer-item p {
+	color: white;
+	text-decoration: none;
+}
+
