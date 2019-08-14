@@ -52,13 +52,31 @@ header {
   border-color: Tomato;
   color: rgb(255, 109, 81, 1);
 }
+.redes-sociais{
+  height: 160px;
+  width: 100%;
+}
+.icones {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 50px;
 
-.redes-sociais {
-	background-color: #bfbfbf;
+}
+#linkedin{
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 50px;
+
 }
 
-.redes-sociais img {
-	padding: 30px 54px;
+#instagram{
+  width: 70px;
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 50px;
+
 }
 
 footer {
@@ -67,11 +85,10 @@ footer {
 }
 
 .footer-item {
-	width: 33%;
-	float: left;
+  margin-left: 60px;
 	color: white;
 	text-align: center;
-	line-height: 100px;
+  width: 100%:
 }
 
 .footer-item a {
@@ -82,5 +99,9 @@ footer {
 .footer-item p {
 	color: white;
 	text-decoration: none;
+}
+#negrito{
+  text-align: center;
+  color: white;
 }
 

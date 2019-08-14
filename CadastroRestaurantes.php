@@ -1,7 +1,7 @@
 <?php
 
-//arrumar esta merda
-include_once "header.php";
+//inclusão do header
+require_once "header.php";
 ?>
 
 <!DOCTYPE html>
