@@ -1,3 +1,9 @@
+<?php
+
+//arrumar esta merda
+include_once "header.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
