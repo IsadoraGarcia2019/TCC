@@ -4,6 +4,7 @@
 <center>
   <div class="redes-sociais bg-danger">
     <div class="container" style="margin-top: 65px;">
+      <img src="media/images/email.png" alt="Rede Social 0" title="Rede Social 0    " class="icones">
       <img src="media/images/facebook.png" alt="Rede Social 1" title="Rede Social 1" class="icones">
       <img src="media/images/instagram.png" alt="Rede Social 2" title="Rede Social 2" id="instagram">
       <img src="media/images/twitter.png" alt="Rede Social 3" title="Rede Social 3" class="icones">
@@ -15,13 +16,13 @@
 <footer>
  <div class="footer-item">
   <a href="caramba@deucerto.com">E-mail: cheffDelivery@gmail.com   </a>
-  <pre>Twitter: @CheffDelivery </pre>
-  <pre>Facebook: Cheff Delivery</pre>
-  <pre>Instagram: @whoischeffdelivery_</pre>
+  <a href="">Twitter: @CheffDelivery </a>
+  <a href="">Facebook: Cheff Delivery</a>
+  <a href="">Instagram: @whoischeffdelivery_</a>
 </div>
-<div id="negrito">
+<div id="negrito" class="mt-4">
   <p>2019 &copy; <strong>Todos os direitos reservados</strong></p>
-  
+
 </div>
 </footer>
 
