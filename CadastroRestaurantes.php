@@ -1,9 +1,3 @@
-<?php
-
-//inclusão do header
-require_once "header.php";
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -96,3 +90,9 @@ background-attachment: scroll;">
 
 </body>
 </html>
+
+<?php
+
+//inclusão do header
+require_once "footer.php";
+?>

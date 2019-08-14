@@ -85,3 +85,9 @@ background-attachment: scroll;">
 </body>
 
 </html>
+
+<?php
+
+//inclusão do header
+require_once "footer.php";
+?>
