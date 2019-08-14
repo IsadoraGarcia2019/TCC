@@ -21,6 +21,7 @@
 </div>
 <div id="negrito">
   <p>2019 &copy; <strong>Todos os direitos reservados</strong></p>
+  
 </div>
 </footer>
 
