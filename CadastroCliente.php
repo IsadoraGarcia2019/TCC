@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/estilos.css">
 
 </head>
-<body style="background-image: url('img/img-fundo.jpg');
+<body style="background-image: url('media/images/img-fundo.jpg');
 background-size: 100%;
 background-repeat: no-repeat;
 background-attachment: scroll;">
