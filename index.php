@@ -36,9 +36,6 @@ include_once "footer.php";
           <a class="dropdown-item" href="#">Combos</a>
           <a class="dropdown-item" href="#">Promoções</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-light" href="#" style="margin-left: 10px;">Fale Conosco</a>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
           Cadastro
@@ -47,6 +44,9 @@ include_once "footer.php";
           <a class="dropdown-item" href="#">Cliente</a>
           <a class="dropdown-item" href="#">Empresa</a>
           <a class="dropdown-item" href="#">Restaurante</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-light" href="#" style="margin-left: 10px;">Contato</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
