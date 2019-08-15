@@ -8,81 +8,88 @@
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
 </head>
-<body style="background-image: url('media/images/img-fundo.jpg');
-background-size: 100%;
-background-repeat: no-repeat;
-background-attachment: scroll;">
+<body style="background-color: rgb(235, 226, 225);">
 
 	<?php
 	require_once "header.php";
 	?>
 
-<div class="card col-10 xs-6 col-md-6 mt-5" style="margin-right: auto; margin-left: auto;">
-	<div class="card-body pr-2">
-		<h1 class="card-title">Cadastro de Restaurantes</h1>
-		<form class="col-sm">
-			<div class="form-row">
-				<div class="form-group col-sm mt-3">
-					<label for="nome_restaurante"><strong>Nome do Restaurante</strong></label>
-					<input type="text" class="form-control" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
+	<div class="row">
+		<div style="background-image: url('media/images/img-fundo.jpg'); min-height: 200px; min-width: 100%;     background-position: center 1050px;
+		" class="shadow">
+		<div class="text-center my-5">
+			<h1 class="text-white">Cadastro de Restaurantes</h1>
+		</div> 
+	</div>
+</div>
+
+<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
+	<div class="card" style="margin-right: auto; margin-left: auto;">
+		<div class="card-body" > 
+
+			<form class="col-sm">
+				<div class="form-row">
+					<div class="form-group col-sm mt-3">
+						<label for="nome_restaurante"><strong>Nome do Restaurante</strong></label>
+						<input type="text" class="form-control" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
+					</div>
+					<div class="form-group col-sm mt-3">
+						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
+						<input type="text" class="form-control" id="telefone_cliente">
+					</div>
 				</div>
-				<div class="form-group col-sm mt-3">
-					<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-					<input type="text" class="form-control" id="telefone_cliente">
+				<div class="form-row">
+					<div class="form-group col-sm col-xs-12">
+						<label for="horario_atendimento"><strong>Horário de Atendimento</strong></label>
+						<select id="horario_atendimento" class="form-control">
+							<option selected>Segunda à Sexta</option>
+							<option >Segunda à Sábado</option>
+							<option >Segunda à Segunda</option>
+							<option >Terça à Sábado</option>
+							<option >Outros dias </option>
+						</select>
+					</div>
+					<div class="form-group col-sm col-xs-12">
+						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
+						<input type="text" class="form-control" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
+					</div>
 				</div>
-			</div>
-			<div class="form-row">
-				<div class="form-group col-sm col-xs-12">
-					<label for="horario_atendimento"><strong>Horário de Atendimento</strong></label>
-					<select id="horario_atendimento" class="form-control">
-						<option selected>Segunda à Sexta</option>
-						<option >Segunda à Sábado</option>
-						<option >Segunda à Segunda</option>
-						<option >Terça à Sábado</option>
-						<option >Outros dias </option>
-					</select>
+				<div class="form-group col-sm p-0">
+					<legend class="col-form-label col-sm-2 p-0"><strong>Avaliação</strong></legend>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="estrelas" id="estrelas1" value="option1" checked>
+						<label class="form-check-label" for="estrelas1">
+							De 0 à 2 estrelas
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="estrelas" id="estrelas2" value="option2">
+						<label class="form-check-label" for="estrelas2">
+							De 2 à 4 estrelas
+						</label>
+					</div>
+					<div class="form-check disabled">
+						<input class="form-check-input" type="radio" name="estrelas" id="estrelas3" value="option3">
+						<label class="form-check-label" for="estrelas3">
+							De 4 à 5 estrelas
+						</label>
+					</div>
 				</div>
-				<div class="form-group col-sm col-xs-12">
-					<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
-					<input type="text" class="form-control" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
+				<div class="form-row">
+					<div class="form-group col-sm">
+						<label for="localizacao_restaurante"><strong>Localização</strong></label>
+						<input type="text" class="form-control" id="localizacao_restaurante">
+					</div>
+					<div class="form-group col-sm">
+						<label for="estado_restaurante"><strong>Estado</strong></label>
+						<select id="estado_restaurante" class="form-control">
+							<option selected>SC</option>
+						</select>
+					</div>
 				</div>
-			</div>
-			<div class="form-group col-sm p-0">
-				<legend class="col-form-label col-sm-2 p-0"><strong>Avaliação</strong></legend>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="estrelas" id="estrelas1" value="option1" checked>
-					<label class="form-check-label" for="estrelas1">
-						De 0 à 2 estrelas
-					</label>
-				</div>
-				<div class="form-check">
-					<input class="form-check-input" type="radio" name="estrelas" id="estrelas2" value="option2">
-					<label class="form-check-label" for="estrelas2">
-						De 2 à 4 estrelas
-					</label>
-				</div>
-				<div class="form-check disabled">
-					<input class="form-check-input" type="radio" name="estrelas" id="estrelas3" value="option3">
-					<label class="form-check-label" for="estrelas3">
-						De 4 à 5 estrelas
-					</label>
-				</div>
-			</div>
-			<div class="form-row">
-				<div class="form-group col-sm">
-					<label for="localizacao_restaurante"><strong>Localização</strong></label>
-					<input type="text" class="form-control" id="localizacao_restaurante">
-				</div>
-				<div class="form-group col-sm">
-					<label for="estado_restaurante"><strong>Estado</strong></label>
-					<select id="estado_restaurante" class="form-control">
-						<option selected>SC</option>
-					</select>
-				</div>
-			</div>
-			<button type="submit" class="btn btn-outline-secondary mr-2">Cadastrar</button>
-			<button type="submit" class="btn btn-outline-danger">Excluir</button>
-		</form>
+				<button type="submit" class="btn btn-secondary mr-2">Cadastrar</button>
+			</form>
+		</div>
 	</div>
 </div>
 
