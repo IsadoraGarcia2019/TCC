@@ -3,9 +3,9 @@
     <div class="container" style="margin-top: 65px;">
       <img src="media/images/email.png" alt="Rede Social 0" title="Rede Social 0    " class="icones">
       <img src="media/images/facebook.png" alt="Rede Social 1" title="Rede Social 1" class="icones">
-      <img src="media/images/instagram.png" alt="Rede Social 2" title="Rede Social 2" id="instagram">
+      <img src="media/images/instagram.png" alt="Rede Social 2" title="Rede Social 2" id="instagram " class="icones">
       <img src="media/images/twitter.png" alt="Rede Social 3" title="Rede Social 3" class="icones">
-      <img src="media/images/linkedin.png" alt="Rede Social 4" title="Rede Social 4" id="linkedin">
+      <img src="media/images/linkedin.png" alt="Rede Social 4" title="Rede Social 4" id="linkedin" class="icones">
     </center>
   </div>
 </div>

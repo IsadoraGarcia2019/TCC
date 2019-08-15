@@ -10,7 +10,8 @@
 <body style="background-image: url('media/images/img-fundo.jpg');
 background-size: 130%;
 background-repeat: no-repeat;
-background-attachment: scroll;">
+background-attachment: scroll;
+">
 
 <?php
 require_once "header.php";

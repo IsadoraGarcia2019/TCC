@@ -18,15 +18,17 @@
             <a class="dropdown-item" href="#">Cardápio do dia</a>
             <a class="dropdown-item" href="#">Combos</a>
             <a class="dropdown-item" href="#">Promoções</a>
+          </div>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
               Cadastro
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
               <a class="dropdown-item" href="#">Cliente</a>
               <a class="dropdown-item" href="#">Empresa</a>
               <a class="dropdown-item" href="#">Restaurante</a>
+            </div>
             </li>
             <li class="nav-item">
               <a class="nav-link text-light" href="#" style="margin-left: 10px;">Contato</a>
