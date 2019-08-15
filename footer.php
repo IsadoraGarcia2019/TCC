@@ -14,11 +14,11 @@
 </div>
 
 <footer>
- <div class="footer-item">
+ <div class="footer-item col-sm xs-12">
   <a href="caramba@deucerto.com">E-mail: cheffDelivery@gmail.com   </a>
-  <a href="">Twitter: @CheffDelivery </a>
-  <a href="">Facebook: Cheff Delivery</a>
-  <a href="">Instagram: @whoischeffdelivery_</a>
+  <a href="" class="col-sm xs-12">Twitter: @CheffDelivery </a>
+  <a href=""class="col-sm xs-12">Facebook: Cheff Delivery</a>
+  <a href=""class="col-sm xs-12">Instagram: @whoischeffdelivery_</a>
 </div>
 <div id="negrito" class="mt-4">
   <p>2019 &copy; <strong>Todos os direitos reservados</strong></p>

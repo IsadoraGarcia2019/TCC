@@ -8,28 +8,28 @@
 
 </head>
 <body style="background-image: url('media/images/img-fundo.jpg');
-background-size: 100%;
+background-size: 110%;
 background-repeat: no-repeat;
 background-attachment: scroll;">
 
-<div class="card col-md-6 offset-3 mt-5">
-	<div class="card-body"> 
+<div class="card col-10 xs-6 col-md-6 mt-5 offset-3">
+	<div class="card-body pr-2"> 
 		<h1>Cadastro de Empresa</h1>
 		<br>
-		<form>
-			<div class="form-group">
+		<form class="col-sm">
+			<div class="form-group col-sm col-xs-12">
 				<label for="nome_empresa">Nome da empresa</label>
 				<input type="text" class="form-control" id="nome_empresa">
 			</div>
-			<div class="form-group">
+			<div class="form-group col-sm col-xs-12">
 				<label for="CNPJ">CNPJ</label>
 				<input type="text" class="form-control" id="CNPJ">
 			</div>
-			<div class="form-group">
+			<div class="form-group col-sm col-xs-12">
 				<label for="numero_funcionarios">Número de Funcionários</label>
 				<input type="number" class="form-control" id="numero_funcionarios">
 			</div>
-			<div class="form-group">
+			<div class="form-group col-sm col-xs-12">
 				<label for="horario_empresa">Horário</label>
 				<select id="horario_empresa" class="form-control">
 					<option selected>-</option>
@@ -38,7 +38,7 @@ background-attachment: scroll;">
 					<option>Noturno</option>
 				</select>
 				<br>
-				<div class="form-group">
+				<div class="form-group col-sm col-xs-12">
 					<label for="tipo_empresa">Tipo da empresa</label>
 					<select id="tipo_empresa" class="form-control">
 						<option selected>-</option>
@@ -50,21 +50,21 @@ background-attachment: scroll;">
 						<option>Sociedade Anônima (SA)</option>
 					</select>
 				</div>
-						<div class="form-group">
+						<div class="form-group col-sm col-xs-12">
 							<label for="telefone_cliente">Número de telefone</label>
 							<input type="text" class="form-control" id="telefone_cliente">
 						</div>
 				<div class="form-row">
-					<div class="form-group col-md-6">
+					<div class="form-group col-sm-12">
 						<label for="cidade_empresa">Cidade</label>
 						<input type="text" class="form-control" id="cidade_empresa" placeholder="Ex: Gaspar">
 					</div>
 					<div class="form-row">
-						<div class="form-group col-md-6">
+						<div class="form-group col-sm">
 							<label for="rua_empresa">Rua</label>
 							<input type="text" class="form-control" id="rua_empresa" placeholder="Ex: Rua Sábia 179">
 						</div>
-						<div class="form-group">
+						<div class="form-group col-sm">
 							<label for="estado_empresa">Estado</label>
 							<select id="estado_empresa" class="form-control">
 								<option selected>SC</option>
