@@ -7,11 +7,11 @@
   <link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
 </head>
-<<<<<<< HEAD
+
 <body>
-=======
+
 <body style="background-color: rgb(235, 226, 225);">
->>>>>>> 043ebca4f11106b8e3dccb9f97945caadf8cf0b5
+
 
   <?php
   require_once "header.php";
