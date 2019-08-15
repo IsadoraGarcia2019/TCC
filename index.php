@@ -1,6 +1,6 @@
 <?php
 
-// include_once "footer.php"; 
+require_once "header.php"; 
 
 ?>
 
@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+<<<<<<< HEAD
 <body style="background-image: url('media/images/img-fundo2.jpg');
              background-size: 100%;">
     <header>
@@ -57,6 +58,9 @@
   </div>
 </nav>
 </header>
+=======
+<body style="background-image: url('media/images/img-fundo.jpg');">
+>>>>>>> 88ac4fc2dbdfccb4a06dbe888b7cdd87f558918e
 
  <div id="container">  
     <div class="box" style="background-color: #de2828">
@@ -71,3 +75,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<?php
+
+require_once "footer.php"; 
+
+?>

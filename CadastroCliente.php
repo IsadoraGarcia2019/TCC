@@ -8,7 +8,7 @@
 
 </head>
 <body style="background-image: url('media/images/img-fundo.jpg');
-background-size: 100%;
+background-size: 118%;
 background-repeat: no-repeat;
 background-attachment: scroll;">
 
@@ -19,35 +19,35 @@ background-attachment: scroll;">
   <form>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="email">E-mail</label>
+        <label for="email"><strong>E-mail</strong></label>
         <input type="email" class="form-control" id="email">
       </div>
-      <div class="form-group col-md-6">
-        <label for="senha">Senha</label>
+      <div class="form-group col-sm">
+        <label for="senha"><strong>Senha</strong></label>
         <input type="password" class="form-control" id="senha">
       </div>
     </div>
     <div class="form-group">
-      <label for="estado_cliente">Estado</label>
+      <label for="estado_cliente"><strong>Estado</strong></label>
       <select id="estado_cliente" class="form-control">
         <option selected>SC</option>
       </select>
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="cidade_cliente">Cidade</label>
+        <label for="cidade_cliente"><strong>Cidade</strong></label>
         <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar">
       </div>
-      <div class="form-group">
-        <label for="rua_cliente">Rua</label>
+      <div class="form-group col-sm-6">
+        <label for="rua_cliente"><strong>Rua</strong></label>
         <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179">
       </div>
-      <div class="form-group">
-        <label for="telefone_cliente">Número de telefone</label>
+      <div class="form-group col-sm-6">
+        <label for="telefone_cliente"><strong>Número de telefone</strong></label>
         <input type="text" class="form-control" id="telefone_cliente">
       </div>
-      <div class="form-group ml-2">
-        <label for="restricao">Restrição alimentar</label>
+      <div class="form-group col-sm-6">
+        <label for="restricao"><strong>Restrição alimentar</strong></label>
         <select id="restricao" class="form-control">
          <option selected>Nenhuma</option> 
          <option>Glúten</option> 
@@ -59,7 +59,7 @@ background-attachment: scroll;">
        </select>
      </div>
    </div>
-   <h2>Preferências</h2>
+   <h2><strong>Preferências</strong></h2>
    <div class="form-group">
     <label for="preco">Preço</label>
     <select id="preco" class="form-control">
@@ -72,15 +72,15 @@ background-attachment: scroll;">
     </select>
   </div>
   <div class="form-group">
-    <label for="restaurante_cliente">Restaurante</label>
+    <label for="restaurante_cliente"><strong>Restaurante</strong></label>
     <input type="text" class="form-control" id="restaurante_cliente">
   </div>
   <div class="form-group">
-    <label for="comida_cliente">Comida</label>
+    <label for="comida_cliente"><strong>Comida</strong></label>
     <input type="text" class="form-control" id="comida_cliente">
   </div>
   <div class="form-group">
-    <label for="comentarios">Comentários</label>
+    <label for="comentarios"><strong>Comentários</strong></label>
     <textarea class="form-control" id="comentarios" rows="3"></textarea>
   </div>
   <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>

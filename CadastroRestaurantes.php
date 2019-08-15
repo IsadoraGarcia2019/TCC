@@ -23,7 +23,7 @@ background-attachment: scroll;">
 					<input type="text" class="form-control" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
 				</div>
 				<div class="form-group col-sm mt-3">
-					<label for="telefone_cliente">Número de telefone</label>
+					<label for="telefone_cliente"><strong>Número de telefone</strong></label>
 					<input type="text" class="form-control" id="telefone_cliente">
 				</div>
 			</div>
