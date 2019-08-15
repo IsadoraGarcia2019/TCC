@@ -16,7 +16,7 @@ background-attachment: scroll;">
 require_once "header.php";
 ?>
 
-<div class="card col-md-6 offset-3 mt-5">
+<div class="card col-10 xs-6 col-md-6 mt-5" style="margin-right: auto; margin-left: auto;">
  <div class="card-body"> 
   <h1>Cadastro de Cliente</h1>
   <br>
