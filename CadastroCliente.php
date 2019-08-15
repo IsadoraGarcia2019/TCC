@@ -65,7 +65,7 @@ require_once "header.php";
    </div>
    <h2><strong>Preferências</strong></h2>
    <div class="form-group">
-    <label for="preco">Preço</label>
+    <label for="preco"><strong>Preço</strong></label>
     <select id="preco" class="form-control">
       <option>R$2,00 a R$9,99</option>
       <option>R$10,00 a R$24,99</option>

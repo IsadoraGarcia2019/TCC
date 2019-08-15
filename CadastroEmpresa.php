@@ -21,20 +21,20 @@ require_once "header.php";
 		<h1 class="card-title">Cadastro de Empresa</h1>
 		<br>
 		<form>
-			<div class="form-group col-sm col-xs-12">
-				<label for="nome_empresa">Nome da empresa</label>
+			<div class="form-group">
+				<label for="nome_empresa"><strong>Nome da empresa</strong></label>
 				<input type="text" class="form-control" id="nome_empresa">
 			</div>
-			<div class="form-group col-sm col-xs-12">
-				<label for="CNPJ">CNPJ</label>
+			<div class="form-group">
+				<label for="CNPJ"><strong>CNPJ</strong></label>
 				<input type="text" class="form-control" id="CNPJ">
 			</div>
-			<div class="form-group col-sm col-xs-12">
-				<label for="numero_funcionarios">Número de Funcionários</label>
+			<div class="form-group">
+				<label for="numero_funcionarios"><strong>Número de Funcionários</strong></label>
 				<input type="number" class="form-control" id="numero_funcionarios">
 			</div>
-			<div class="form-group col-sm col-xs-12">
-				<label for="horario_empresa">Horário</label>
+			<div class="form-group">
+				<label for="horario_empresa"><strong>Horário</strong></label>
 				<select id="horario_empresa" class="form-control">
 					<option selected>-</option>
 					<option>Matutino</option>
@@ -42,8 +42,8 @@ require_once "header.php";
 					<option>Noturno</option>
 				</select>
 			</div>
-			<div class="form-group col-sm col-xs-12">
-				<label for="tipo_empresa">Tipo da empresa</label>
+			<div class="form-group">
+				<label for="tipo_empresa"><strong>Tipo da empresa</strong></label>
 				<select id="tipo_empresa" class="form-control">
 					<option selected>-</option>
 					<option>Sociedade Empresária Limitada (Ltda.)</option>
@@ -54,24 +54,24 @@ require_once "header.php";
 					<option>Sociedade Anônima (SA)</option>
 				</select>
 			</div>
-			<div class="form-group col-sm col-xs-12">
-				<label for="telefone_cliente">Número de telefone</label>
+			<div class="form-group">
+				<label for="telefone_cliente"><strong>Número de telefone</strong></label>
 				<input type="text" class="form-control" id="telefone_cliente">
 			</div>
 			<div class="form-group">
-				<div class="form-group col-sm-12">
-					<label for="cidade_empresa">Cidade</label>
+				<div class="form-group">
+					<label for="cidade_empresa"><strong>Cidade</strong></label>
 					<input type="text" class="form-control" id="cidade_empresa" placeholder="Ex: Gaspar">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="form-group">
-					<label for="rua_empresa">Rua</label>
+					<label for="rua_empresa"><strong>Rua</strong></label>
 					<input type="text" class="form-control" id="rua_empresa" placeholder="Ex: Rua Sábia 179">
 				</div>
 			</div>				
 			<div class="form-group">
-				<label for="estado_empresa">Estado</label>
+				<label for="estado_empresa"><strong>Estado</strong></label>
 				<select id="estado_empresa" class="form-control">
 					<option selected>SC</option>
 				</select>
