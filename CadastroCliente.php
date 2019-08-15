@@ -7,15 +7,7 @@
   <link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
 </head>
-<<<<<<< HEAD
-<body style="background-image: url('media/images/img-fundo.jpg');
-background-size: 130%;
-background-repeat: no-repeat;
-background-attachment: scroll;
-">
-=======
-<body >
->>>>>>> 2fcbbac853ad34caa4ee38509ce07cabded4c9e0
+<body>
 
 <?php
 require_once "header.php";
