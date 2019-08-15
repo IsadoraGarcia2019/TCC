@@ -7,19 +7,33 @@
   <link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
 </head>
+<<<<<<< HEAD
 <body style="background-image: url('media/images/img-fundo.jpg');
 background-size: 130%;
 background-repeat: no-repeat;
 background-attachment: scroll;
 ">
+=======
+<body >
+>>>>>>> 2fcbbac853ad34caa4ee38509ce07cabded4c9e0
 
 <?php
 require_once "header.php";
 ?>
 
-<div class="card col-10 xs-6 col-md-6 mt-5" style="margin-right: auto; margin-left: auto;">
- <div class="card-body"> 
-  <h1>Cadastro de Cliente</h1>
+<div class="row">
+  <div style="background-image: url('media/images/img-fundo.jpg'); min-height: 200px; min-width: 100%;     background-position: center 1050px;
+" class="shadow">
+    <div class="text-center my-5">
+      <h1 class="text-white">Cadastro de Cliente</h1>
+    </div> 
+  </div>
+</div>
+
+<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
+<div class="card" style="margin-right: auto; margin-left: auto;">
+ <div class="card-body" > 
+
   <br>
   <form>
     <div class="form-row">
@@ -91,6 +105,7 @@ require_once "header.php";
   <button type="submit" class="btn btn-outline-secondary">Cadastrar</button>
   <button type="submit" class="btn btn-outline-danger">Excluir</button>
 </form>
+</div>
 </div>
 </div>
 
