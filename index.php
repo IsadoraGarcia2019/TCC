@@ -14,7 +14,7 @@ background-size: 100%;">
 
 <div id="container">  
   <div class="box" style="background-color: white; ">
-    <h1 class="titulo-box " style="color:#de2828"><strong>Promoções da semana</strong></h1>
+    <h1 class="titulo-box " style="color:#de2828"><strong>Favoritos do momento</strong></h1>
     <div class="alert alert-secondary" role="alert">
       <strong>Para você comer no café da manhã, almoço e jantar.</strong>
     </div>
