@@ -12,21 +12,37 @@
 	require_once "header.php";
 	?>
 
-	<div class="row">
-		<div style="background-image: url('media/images/img-fundo.jpg'); min-height: 200px; min-width: 100%;     background-position: center 1050px;
-		" class="shadow">
-		<div class="text-center my-5">
-			<h1 class="text-white">Combos</h1>
-		</div> 
-	</div>
-</div>
-<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
+	<h1 class="text-center">Combos</h1>
+<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1">
 	<div class="card" style="margin-right: auto; margin-left: auto;">
-		<img src="media/images/pizza.pnj" class="card-img-top" alt="...">
+		<img src="" class="card-img-top" alt="...">
 		<div class="card-body">
-			<h5 class="card-title">Card title</h5>
-			<p class="card-text">Promação de Pizza do seu Zé</p>
-			<a href="#" class="btn btn-primary">Ir para promoção</a>
+			<h5 class="card-title">Básico</h5>
+			<p class="card-text">Almoço ou Jantar de segunda a sexta</p>
+			<a href="#" class="btn btn-primary">R$200,00</a>
+		</div>
+	</div><div class="card" style="margin-right: auto; margin-left: auto;">
+		<img src="" class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">Intermediário</h5>
+			<p class="card-text">Café da manhã e Almoço de segunda a sábado</p>
+			<a href="#" class="btn btn-primary">R$432,00</a>
+		</div>
+	</div>
+	<div class="card" style="margin-right: auto; margin-left: auto;">
+		<img src="" class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">Premium</h5>
+			<p class="card-text">Café da manhã, Almoço e  Jantar de segunda a segunda</p>
+			<a href="#" class="btn btn-primary">R$784,00</a>
+		</div>
+	</div>
+	<div class="card" style="margin-right: auto; margin-left: auto;">
+		<img src="" class="card-img-top" alt="...">
+		<div class="card-body">
+			<h5 class="card-title">Personalizado</h5>
+			<p class="card-text">O cliente escolhe o que quer receber e os dias que quer receber, o valor varia conforme as escolhas</p>
+			<a href="#" class="btn btn-primary">Varia</a>
 		</div>
 	</div>	
 </div>
