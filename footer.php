@@ -1,8 +1,5 @@
-<link rel="stylesheet" type="text/css" href="media/css/estilos.css ">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 <center>
-  <div class="redes-sociais bg-danger">
+  <div class="redes-sociais" style="background-color: #de2828;">
     <div class="container" style="margin-top: 65px;">
       <img src="media/images/email.png" alt="Rede Social 0" title="Rede Social 0    " class="icones">
       <img src="media/images/facebook.png" alt="Rede Social 1" title="Rede Social 1" class="icones">
@@ -14,11 +11,13 @@
 </div>
 
 <footer>
- <div class="footer-item col-sm xs-12">
-  <a href="caramba@deucerto.com">E-mail: cheffDelivery@gmail.com   </a>
-  <a href="" class="col-sm xs-12">Twitter: @CheffDelivery </a>
-  <a href=""class="col-sm xs-12">Facebook: Cheff Delivery</a>
-  <a href=""class="col-sm xs-12">Instagram: @whoischeffdelivery_</a>
+ <div class="footer-item">
+  <div class="row">
+    <a href="caramba@deucerto.com" class="col-sm-12 col-md-3">E-mail: cheffDelivery@gmail.com   </a>
+    <a href="" class="col-sm-12 col-md-3">Twitter: @CheffDelivery </a>
+    <a href=""class="col-sm-12 col-md-3">Facebook: Cheff Delivery</a>
+    <a href=""class="col-sm-12 col-md-3">Instagram: @whoischeffdelivery_</a>
+  </div>
 </div>
 <div id="negrito" class="mt-4">
   <p>2019 &copy; <strong>Todos os direitos reservados</strong></p>
