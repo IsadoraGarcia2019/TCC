@@ -14,7 +14,7 @@
 	?>
 
 	<div class="row">
-		<div style="background-image: url('media/images/img-login.jpg'); min-height: 200px; min-width: 100%;     background-position: center 930px;
+		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 200px; min-width: 100%;     background-position: center 930px;
 		" class="shadow">
 		<div class="text-center my-5">
 			<h1 class="text-white">Login</h1>
@@ -22,8 +22,8 @@
 	</div>
 </div>
 
-<div class="col-10 col-md-10 mt-5 offset-md-1" style="margin-top: -80px !important;">
-	<div class="card col-md-4 offset-4 mt-5">
+<div class="col-8 col-md-10 mt-5 offset-md-1" style="margin-top: -80px !important;">
+	<div class="card col-md-4 offset-md-4 offset-3 mt-5">
 		<div class="card-body"> 
 			<form>
 				<div class="form-row">

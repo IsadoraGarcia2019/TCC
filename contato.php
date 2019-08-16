@@ -13,7 +13,7 @@
 	?>
 
 	<div class="row">
-		<div style="background-image: url('media/images/img-fundo.jpg'); min-height: 200px; min-width: 100%;     background-position: center 1050px;
+		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 200px; min-width: 100%;     background-position: center 1050px;
 		" class="shadow">
 		<div class="text-center my-5">
 			<h1 class="text-white">Contato</h1>

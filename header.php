@@ -36,6 +36,9 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="login.php" style="margin-left: 10px;">Login</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
+        </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Vai pedir o que?" aria-label="Search">
