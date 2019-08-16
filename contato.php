@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 </head>
-<body>
+<body style="background-color: rgb(235, 226, 225);">
 
 	<?php
 	require_once "header.php";
@@ -29,17 +29,17 @@
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="nome"><strong>Nome</strong></label>
-						<input type="text" class="form-control" id="nome">
+						<input type="text" class="form-control" id="nome" placeholder="Ex: Fulano">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" placeholder="fulano@provedor.com">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-sm-6">
 						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" id="telefone_cliente">
+						<input type="text" class="form-control" id="telefone_cliente" placeholder="99663311">
 					</div>
 					<div class="form-group col-sm-6">
 						<label for="tipo_comentario"><strong>Tipo do comentário</strong></label>
@@ -55,26 +55,15 @@
 					<label for="comentarios"><strong>Comentários</strong></label>
 					<textarea class="form-control" id="comentarios" rows="3"></textarea>
 				</div>
-				<button type="submit" class="btn btn-outline-secondary">Enviar</button>
+				<button type="submit" class="btn btn-outline-secondary col-md-12">Enviar</button>
 			</form>
 		</div>
 	</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
 <?php
 
-//inclusão do header
+//inclusão do rodpé
 require_once "footer.php";
 ?>
 

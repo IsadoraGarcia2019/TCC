@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
+          <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-light" href="#" style="margin-left: 10px;">Sobre</a>
@@ -16,7 +16,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Cardápio do dia</a>
-            <a class="dropdown-item" href="#">Combos</a>
+            <a class="dropdown-item" href="combos.php">Combos</a>
             <a class="dropdown-item" href="#">Promoções</a>
           </div>
         </li>
@@ -25,16 +25,16 @@
             Cadastro
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-            <a class="dropdown-item" href="#">Cliente</a>
-            <a class="dropdown-item" href="#">Empresa</a>
-            <a class="dropdown-item" href="#">Restaurante</a>
+            <a class="dropdown-item" href="CadastroCliente.php">Cliente</a>
+            <a class="dropdown-item" href="CadastroEmpresa.php">Empresa</a>
+            <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Contato</a>
+          <a class="nav-link text-light" href="contato.php" style="margin-left: 10px;">Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Login</a>
+          <a class="nav-link text-light" href="login.php" style="margin-left: 10px;">Login</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

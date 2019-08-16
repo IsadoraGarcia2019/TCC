@@ -82,9 +82,7 @@
 						<option selected>SC</option>
 					</select>
 				</div>
-				<div class="row">
-					<button type="submit" class="btn btn-secondary col-10 offset-1">Cadastrar</button>
-				</div>
+					<button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
 			</form>
 		</div>
 	</div>
