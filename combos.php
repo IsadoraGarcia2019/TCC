@@ -16,7 +16,7 @@
 		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 15%;   background-position: center 1050px;
 		" class="shadow" >
 		<div class="text-center my-5" >
-			<h1 class="text-white pt-3 "><strong >Combos</strong></h1>
+			<h1 class="text-white pt-3 "><strong >Pacotes</strong></h1>
 		</div> 
 	</div>
 </div>
