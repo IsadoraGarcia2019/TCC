@@ -22,42 +22,49 @@
 </div>
 
 
-
-<div class="row">
-	<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1">
-		<div class="card" style="margin-right: auto; margin-left: auto;">
-			<img src="media/images/combo.jpg" class="card-img-top" alt="...">
-			<div class="card-body">
-				<h5 class="card-title text-danger">Básico</h5>
-				<p class="card-text"><strong>Almoço ou jantar de segunda à sexta</strong></p>
-				<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$200,00</a>
+<div class="container">
+	<div class="row">
+		<div class="col-10 col-md-3 mt-5 ">
+			<div class="card" style="margin-right: auto; margin-left: auto;">
+				<img src="media/images/combo.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Básico</h5>
+					<p class="card-text"><strong>Almoço ou jantar de segunda à sexta</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$200,00</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
-		<img src="media/images/cafe-da-manha.jpg" class="card-img-top" alt="...">
-		<div class="card-body">
-			<h5 class="card-title text-danger">Intermediário</h5>
-			<p class="card-text"><strong>Café da manhã e almoço de segunda à sábado</strong></p>
-			<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$432,00</a>
+		<div class="col-10 col-md-3 mt-5 ">
+			<div class="card" style="margin-right: auto; margin-left: auto;">
+				<img src="media/images/cafe-da-manha.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Intermediário</h5>
+					<p class="card-text"><strong>Café da manhã e almoço de segunda à sábado</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$432,00</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-10 col-md-3 mt-5">
+			<div class="card" style="margin-right: auto; margin-left: auto;">
+				<img src="media/images/refeiçoes.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Premium</h5>
+					<p class="card-text"><strong>Café da manhã, almoço e jantar de segunda à segunda</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$784,00</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-10 col-md-3 mt-5 ">
+			<div class="card" style="margin-right: auto; margin-left: auto;">
+				<img src="media/images/combo_personalizado.jpeg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Personalizado</h5>
+					<p class="card-text"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">Variável</a>
+				</div>
+			</div>	
 		</div>
 	</div>
-	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
-		<img src="media/images/refeiçoes.jpg" class="card-img-top" alt="...">
-		<div class="card-body">
-			<h5 class="card-title text-danger">Premium</h5>
-			<p class="card-text"><strong>Café da manhã, almoço e jantar de segunda à segunda</strong></p>
-			<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$784,00</a>
-		</div>
-	</div>
-	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
-		<img src="media/images/combo_personalizado.jpeg" class="card-img-top" alt="...">
-		<div class="card-body">
-			<h5 class="card-title text-danger">Personalizado</h5>
-			<p class="card-text"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas</strong></p>
-			<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">Variável</a>
-		</div>
-	</div>	
 </div>
 
 <?php

@@ -18,7 +18,7 @@
     ?>
 
     <div class="row">
-      <div style="background-image: url('media/images/img-fundo.jpg'); min-height: 200px; min-width: 100%;     background-position: center 1050px;
+      <div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 200px; min-width: 100%;     background-position: center 1050px;
       " class="shadow">
       <div class="text-center my-5">
         <h1 class="text-white">Edição</h1>
@@ -57,11 +57,11 @@
               <label for="rua_cliente"><strong>Rua</strong></label>
               <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179">
             </div>
-            <div class="form-group col-sm-6">
+            <div class="form-group col-sm-6 col-md-12">
               <label for="telefone_cliente"><strong>Número de telefone</strong></label>
               <input type="text" class="form-control" id="telefone_cliente">
             </div>
-            <div class="form-group col-sm-6">
+            <div class="form-group col-md-12">
               <label for="restricao"><strong>Restrição alimentar</strong></label>
               <select id="restricao" class="form-control">
                 <option>Nenhuma</option> 
@@ -94,7 +94,8 @@
             <label for="comida_cliente"><strong>Comida</strong></label>
             <input type="text" class="form-control" id="comida_cliente">
           </div>
-          <button type="submit" class="btn btn-outline-secondary col-md-12">Editar</button>
+          <button type="submit" class="btn btn-outline-danger float-left mb-3 col-md-12">Excluir</button>
+          <button type="submit" class="btn btn-outline-secondary col-md-12 ">Editar</button>
         </form>
       </div>
     </div>
