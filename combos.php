@@ -15,48 +15,38 @@
 	<h1 class="text-center">Combos</h1>
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1">
 	<div class="card" style="margin-right: auto; margin-left: auto;">
-		<img src="" class="card-img-top" alt="...">
+		<img src="media/images/combo.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title">Básico</h5>
-			<p class="card-text">Almoço ou Jantar de segunda a sexta</p>
+			<p class="card-text"><strong>Almoço ou Jantar de segunda a sexta</strong></p>
 			<a href="#" class="btn btn-primary">R$200,00</a>
 		</div>
-	</div><div class="card" style="margin-right: auto; margin-left: auto;">
-		<img src="" class="card-img-top" alt="...">
+	</div>
+	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
+		<img src="media/images/cafe-da-manha.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title">Intermediário</h5>
-			<p class="card-text">Café da manhã e Almoço de segunda a sábado</p>
+			<p class="card-text"><strong>Café da manhã e Almoço de segunda a sábado</strong></p>
 			<a href="#" class="btn btn-primary">R$432,00</a>
 		</div>
 	</div>
-	<div class="card" style="margin-right: auto; margin-left: auto;">
-		<img src="" class="card-img-top" alt="...">
+	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
+		<img src="media/images/refeiçoes.jpg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title">Premium</h5>
-			<p class="card-text">Café da manhã, Almoço e  Jantar de segunda a segunda</p>
+			<p class="card-text"><strong>Café da manhã, Almoço e  Jantar de segunda a segunda</strong></p>
 			<a href="#" class="btn btn-primary">R$784,00</a>
 		</div>
 	</div>
-	<div class="card" style="margin-right: auto; margin-left: auto;">
-		<img src="" class="card-img-top" alt="...">
+	<div class="card mt-5" style="margin-right: auto; margin-left: auto;">
+		<img src="media/images/combo_personalizado.jpeg" class="card-img-top" alt="...">
 		<div class="card-body">
 			<h5 class="card-title">Personalizado</h5>
-			<p class="card-text">O cliente escolhe o que quer receber e os dias que quer receber, o valor varia conforme as escolhas</p>
-			<a href="#" class="btn btn-primary">Varia</a>
+			<p class="card-text"><strong>O cliente escolhe o que quer receber e os dias que quer receber, o valor varia conforme as escolhas</strong></p>
+			<a href="#" class="btn btn-primary">Variável</a>
 		</div>
 	</div>	
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <?php
 
