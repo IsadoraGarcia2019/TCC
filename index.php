@@ -8,7 +8,7 @@
 </head>
 
 <body style="background-image: url('media/images/food-pattern.png'); 
-background-size: 100%; background-color: rgb(235, 226, 225);">
+background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: no-repeat;">
 
 <!-- <body style="background-image: url('media/images/img-fundo2.jpg');
 background-size: 100%;"> -->
@@ -17,7 +17,7 @@ background-size: 100%;"> -->
 
 <div id="container">  
   <div class="box" style="background-color: white; ">
-    <h1 class="titulo-box " style="color:#de2828"><strong>Promoções da semana</strong></h1>
+    <h1 class="titulo-box " style="color:#de2828"><strong>Favoritos do momento</strong></h1>
     <div class="alert alert-secondary" role="alert">
       <strong>Para você comer no café da manhã, almoço e jantar.</strong>
     </div>
@@ -25,67 +25,66 @@ background-size: 100%;"> -->
 </div>
 
 <div class="container">
+  <div class="card-index">
   <div class="card-columns">
-  <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
+  <div class="card shadow">
+    <img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">A</h5>
+      <h5 class="card-title">Café da Manhã</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
   </div>
-  <div class="card p-3">
-    <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <div class="card p-3 shadow">
+    <blockquote class="blockquote mb-0 card-body text-center text-danger">
+      <p><strong>Temos promoções todos os dias para melhor atender você, faça seu pedido e o frete é totalmente gratuito</strong></p>
     </blockquote>
   </div>
-    <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
+    <div class="card shadow">
+    <img src="media/images/japonesa.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">D</h5>
+      <h5 class="card-title">Asiática</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
   </div>
-  <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
+  <div class="card shadow">
+    <img src="media/images/frenchfries.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">B</h5>
+      <h5 class="card-title">Almoço</h5>
       <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     </div>
   </div>
-  <div class="card text-white text-center p-3" style="background-color: #de2828">
-    <blockquote class="blockquote mb-0">
-      <p>Fique calmo e escolha<br>
-        Cheff Delivery</p>
-    </blockquote>
-  </div>
-    <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">E</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-    </div>
-  </div>
-    <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">C</h5>
-      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-  </div>
-    <div class="card p-3">
+     <div class="card p-3 text-danger text-center shadow">
     <blockquote class="blockquote mb-0 card-body">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <p><strong>Receber sua comida em casa nunca foi tão fácil</strong></p>
     </blockquote>
   </div>
-     <div class="card">
-    <img src="media/images/waffles1.jpg" class="card-img-top" alt="...">
+    <div class="card shadow">
+    <img src="media/images/sobremesas.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">F</h5>
+      <h5 class="card-title">Sobremesas</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+    </div>
+  </div>
+    <div class="card shadow">
+    <img src="media/images/massas1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Jantar</h5>
       <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
     </div>
   </div>
+    <div class="card p-3 shadow">
+    <blockquote class="blockquote mb-0 card-body text-center text-danger">
+      <p><strong>Trabalhamos com pagamentos mensais onde você deposita quanto quer gastar</strong></p>
+    </blockquote>
+  </div>
+     <div class="card shadow">
+    <img src="media/images/vegetariano.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vegetariana</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 
