@@ -8,7 +8,7 @@
 </head>
 
 <body style="background-image: url('media/images/img-fundo2.jpg');
-background-size: 100%;">
+background-size: 130%; background-repeat: no-repeat;">
 
 <?php require_once "header.php"; ?>
 

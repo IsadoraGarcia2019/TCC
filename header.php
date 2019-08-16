@@ -19,25 +19,28 @@
             <a class="dropdown-item" href="#">Combos</a>
             <a class="dropdown-item" href="#">Promoções</a>
           </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-              Cadastro
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-              <a class="dropdown-item" href="#">Cliente</a>
-              <a class="dropdown-item" href="#">Empresa</a>
-              <a class="dropdown-item" href="#">Restaurante</a>
-            </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-light" href="#" style="margin-left: 10px;">Contato</a>
-            </li>
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Vai pedir o que?" aria-label="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">Pesquisar</button>
-          </form>
-        </div>
-      </nav>
-    </header>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+            Cadastro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="#">Cliente</a>
+            <a class="dropdown-item" href="#">Empresa</a>
+            <a class="dropdown-item" href="#">Restaurante</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Login</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Vai pedir o que?" aria-label="Search">
+        <button class="btn my-2 my-sm-0 text-light" type="submit" style="background-color: rgb(143, 19, 10);">Pesquisar</button>
+      </form>
+    </div>
+  </nav>
+</header>

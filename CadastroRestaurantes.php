@@ -87,7 +87,9 @@
 						</select>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-secondary mr-2">Cadastrar</button>
+				<div class="row">
+					<button type="submit" class="btn btn-secondary col-10 offset-1">Cadastrar</button>
+				</div>
 			</form>
 		</div>
 	</div>
