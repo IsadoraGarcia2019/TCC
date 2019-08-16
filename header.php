@@ -23,7 +23,6 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
             <a class="dropdown-item" href="combos.php">Combos</a>
-            <a class="dropdown-item" href="#">Promoções</a>
           </div>
         </li>
         <li class="nav-item dropdown">
