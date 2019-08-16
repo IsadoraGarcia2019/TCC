@@ -8,7 +8,7 @@
           <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-light" href="#" style="margin-left: 10px;">Sobre</a>
+          <a class="nav-link text-light" href="sobre.php" style="margin-left: 10px;">Sobre</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
