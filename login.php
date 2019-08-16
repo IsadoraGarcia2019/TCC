@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
 </head>
-<<<<<<< HEAD
 <body style="background-color: rgb(235, 226, 225);">
 
 	<?php
@@ -36,32 +35,6 @@
 						<label for="senha"><strong>Senha</strong></label>
 						<input type="password" class="form-control" id="senha">
 					</div>
-=======
-<body>
-
-<?php
-  require_once "header.php";
-  ?>
-
-  <div class="row">
-    <div style="background-image: url('media/images/img-login.jpg'); min-height: 200px; min-width: 100%;     background-position: center 650px;
-    " class="shadow">
-    <div class="text-center my-5">
-      <h1 class="text-white">Login</h1>
-    </div> 
-  </div>
-</div>
-
-<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
-	<div class="card-body"> 
-		<h1>Login</h1>
-		<br>
-		<form>
-			<div class="form-row">
-				<div class="col-md-12">
-					<label for="email"><strong>E-mail</strong></label>
-					<input type="email" class="form-control" id="email">
->>>>>>> 7b4fd076a127cbbf005d42f72c8396cf255ac805
 				</div>
 				<div class="form-row">
 					<a href="#" class="col-sm-12 col-md-12 text-center text-danger mt-3" >Esqueci minha senha</a> 
@@ -75,15 +48,10 @@
 		</div>
 	</div>
 </div>
-<<<<<<< HEAD
 
 <?php
 	//inclusão do rodapé
-=======
-<?php
 
-//inclusão do header
->>>>>>> 7b4fd076a127cbbf005d42f72c8396cf255ac805
 require_once "footer.php";
 ?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

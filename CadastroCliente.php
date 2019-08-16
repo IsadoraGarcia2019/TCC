@@ -98,9 +98,7 @@
           <label for="comentarios"><strong>Comentários</strong></label>
           <textarea class="form-control" id="comentarios" rows="3"></textarea>
         </div>
-        <div class="row">
-          <button type="submit" class="btn btn-secondary col-10 offset-1">Cadastrar</button>
-        </div>
+          <button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
       </form>
     </div>
   </div>
