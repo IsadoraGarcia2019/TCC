@@ -58,7 +58,7 @@
 				<div class="col-md-6 all dinner">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Arroz com feijão</h4>
+							<h4>Arroz com Feijão</h4>
 							<h4 class="price">R$20</h4>
 						</div>			
 						<p>
@@ -69,7 +69,7 @@
 				<div class="col-md-6 all breakfast">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>cereal generico</h4>
+							<h4>Cereal Genérico</h4>
 							<h4 class="price">R$45</h4>
 						</div>			
 						<p>
@@ -80,8 +80,8 @@
 				<div class="col-md-6 all breakfast">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pizza de camarão</h4>
-							<h4 class="price">$49</h4>
+							<h4>Pizza de Camarão</h4>
+							<h4 class="price">R$49</h4>
 						</div>
 						<p>
 							Usage of the Internet is becoming more common due to rapid advance.
@@ -91,7 +91,7 @@
 				<div class="col-md-6 all breakfast">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Café com leite</h4>
+							<h4>Café Forte</h4>
 							<h4 class="price">R$5</h4>
 						</div>
 						<p>
@@ -102,7 +102,7 @@
 				<div class="col-md-6 all lunch">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Macarrão com queijo</h4>
+							<h4>Macarrão com Queijo</h4>
 							<h4 class="price">R$20</h4>
 						</div>
 						<p>
