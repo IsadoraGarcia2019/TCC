@@ -30,7 +30,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
 <div class="container">
   <div class="card-index">
     <div class="card-columns">
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Café da Manhã</h3>
@@ -42,14 +42,14 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
           <p><strong>Temos promoções todos os dias para melhor atender você, faça seu pedido e o frete é totalmente gratuito</strong></p>
         </blockquote>
       </div>
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/japonesa.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Asiática</h3>
           <p class="card-text">Vamos de sushi hoje?</p>
         </div>
       </div>
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/frenchfries.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Almoço</h3>
@@ -61,14 +61,14 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
           <p><strong>Receber sua comida em casa nunca foi tão fácil</strong></p>
         </blockquote>
       </div>
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/sobremesas.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Sobremesas</h3>
           <p class="card-text">Porque depois do almoço sempre tem aquela sobremesa não é mesmo? Peça a sua agora!</p>
         </div>
       </div>
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/massas1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Jantar</h3>
@@ -80,7 +80,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
           <p><strong>Trabalhamos com pagamentos mensais onde você deposita quanto quer gastar</strong></p>
         </blockquote>
       </div>
-      <div class="card shadow">
+      <div class="card shadow" style="max-height: 450px;">
         <img src="media/images/vegetariano.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Vegetariana</h3>
