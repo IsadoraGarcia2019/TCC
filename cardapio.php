@@ -36,10 +36,12 @@
 		</div>	
 
 		<ul class="filter-wrap filters col-lg-12 no-padding">
-			<li class="active" data-filter="*">Todo menu</li>
+			<li class="active " data-filter="*">Todo menu</li>
 			<li data-filter=".breakfast">Café da manhã</li>
 			<li data-filter=".lunch">Almoço</li>
 			<li data-filter=".dinner">Jantar</li>
+			<li data-filter=".Vegan">Vegana</li>
+			<li data-filter=".sobremesa">Sobremesas</li>
 		</ul>
 
 		<div class="filters-content">
