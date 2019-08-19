@@ -10,107 +10,97 @@
 
 <body>
 
-<body style="background-color: rgb(235, 226, 225);">
+  <body style="background-color: rgb(235, 226, 225);">
 
 
-  <?php
-  require_once "header.php";
-  ?>
+    <?php
+    require_once "header.php";
+    ?>
 
-  <div class="row">
-    <div style="background-image: url('media/images/food-pattern.png'); min-height: 200px; min-width: 100%;  background-color: #f13d3d; background-position: center 1050px;
-    " class="shadow">
-    <div class="text-center my-5">
-      <h1 class="text-white">Cadastro de Clientes</h1>
-    </div> 
-  </div>
-</div>
-
-<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
-  <div class="card" style="margin-right: auto; margin-left: auto;">
-    <div class="card-body" > 
-
-      <form>
-        <h2><strong>Dados Pessoais</strong></h2>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="email"><strong>E-mail</strong></label>
-            <input type="email" class="form-control" id="email">
-          </div>
-          <div class="form-group col-sm">
-            <label for="senha"><strong>Senha</strong></label>
-            <input type="password" class="form-control" id="senha">
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="estado_cliente"><strong>Estado</strong></label>
-          <select id="estado_cliente" class="form-control">
-            <option selected>SC</option>
-          </select>
-        </div>
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="cidade_cliente"><strong>Cidade</strong></label>
-            <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar">
-          </div>
-          <div class="form-group col-sm-6">
-            <label for="rua_cliente"><strong>Rua</strong></label>
-            <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179">
-          </div>
-          <div class="form-group col-sm-6">
-            <label for="telefone_cliente"><strong>Número de telefone</strong></label>
-            <input type="text" class="form-control" id="telefone_cliente">
-          </div>
-          <div class="form-group col-sm-6">
-            <label for="restricao"><strong>Restrição alimentar</strong></label>
-            <select id="restricao" class="form-control">
-              <option selected>Nenhuma</option> 
-              <option>Glúten</option> 
-              <option>Lactose</option> 
-              <option>Açúcar</option> 
-              <option>Soja</option> 
-              <option>Ovos</option> 
-              <option>Frutos do mar</option> 
-            </select>
-          </div>
-        </div>
-        <h2><strong>Preferências</strong></h2>
-        <div class="form-group">
-          <label for="preco"><strong>Preço</strong></label>
-          <select id="preco" class="form-control">
-            <option>R$2,00 a R$9,99</option>
-            <option>R$10,00 a R$24,99</option>
-            <option>R$25,00 a R$39,99</option>
-            <option>R$40,00 a R$66,59</option>
-            <option>R$65,60 a R$100,00</option>
-            <option selected>Qualquer preço</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="restaurante_cliente"><strong>Restaurante</strong></label>
-          <input type="text" class="form-control" id="restaurante_cliente">
-        </div>
-        <div class="form-group">
-          <label for="comida_cliente"><strong>Comida</strong></label>
-          <input type="text" class="form-control" id="comida_cliente">
-        </div>
-        <div class="form-group">
-          <label for="comentarios"><strong>Comentários</strong></label>
-          <textarea class="form-control" id="comentarios" rows="3"></textarea>
-        </div>
-          <button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
-      </form>
+    <div class="row">
+      <div style="background-image: url('media/images/food-pattern.png'); min-height: 200px; min-width: 100%;  background-color: #f13d3d; background-position: center 1050px;
+      " class="shadow">
+      <div class="text-center my-5">
+        <h1 class="text-white">Cadastro de Clientes</h1>
+      </div> 
     </div>
   </div>
-</div>
 
-<?php
+  <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
+    <div class="card" style="margin-right: auto; margin-left: auto;">
+      <div class="card-body" > 
+
+        <form>
+          <h2><strong>Dados Pessoais</strong></h2>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email"><strong>E-mail</strong></label>
+              <input type="email" class="form-control" id="email" name="email_cliente">
+            </div>
+            <div class="form-group col-sm">
+              <label for="senha"><strong>Senha</strong></label>
+              <input type="password" class="form-control" id="senha" name="senha_cliente">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="estado_cliente"><strong>Estado</strong></label>
+            <select id="estado_cliente" class="form-control" name="estado_cliente">
+              <option selected>SC</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="cidade_cliente"><strong>Cidade</strong></label>
+              <input type="text" class="form-control" id="cidade_cliente" name="cidade_cliente" placeholder="Ex: Gaspar">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="rua_cliente"><strong>Rua</strong></label>
+              <input type="text" class="form-control" id="rua_cliente" name="rua_cliente" placeholder="Ex: Rua Sábia 179">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="telefone_cliente"><strong>Número de telefone</strong></label>
+              <input type="text" class="form-control" id="telefone_cliente" name="numero_telefone_cliente">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="restricao"><strong>Restrição alimentar</strong></label>
+              <select id="restricao" class="form-control" name="restricao_alimentar">
+                <option selected value="nenhuma">Nenhuma</option> 
+                <option value="gluten">Glúten</option> 
+                <option value="lactose">Lactose</option> 
+                <option value="acucar">Açúcar</option> 
+                <option value="soja">Soja</option> 
+                <option value="ovos">Ovos</option> 
+                <option value="frutos_mar">Frutos do mar</option> 
+              </select>
+            </div>
+          </div>
+          <h2><strong>Preferências</strong></h2>
+          <div class="form-group">
+            <label for="restaurante_cliente"><strong>Restaurante</strong></label>
+            <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante">
+          </div>
+          <div class="form-group">
+            <label for="comida_cliente"><strong>Comida</strong></label>
+            <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida">
+          </div>
+          <div class="form-group">
+            <label for="comentarios"><strong>Comentários</strong></label>
+            <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <?php
 //inclusão do rodapé
-require_once "footer.php";
-?>
+  require_once "footer.php";
+  ?>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+
