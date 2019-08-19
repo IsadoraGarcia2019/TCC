@@ -30,7 +30,7 @@
 				<div class="card-body">
 					<h5 class="card-title text-danger">Básico</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Almoço ou jantar de segunda à sexta</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$200,00</a>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-4">R$200,00</a>
 				</div>
 			</div>
 		</div>
