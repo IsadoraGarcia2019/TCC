@@ -37,14 +37,14 @@
 
 		<ul class="filter-wrap filters col-lg-12 no-padding">
 			<li class="active" data-filter="*">Todo menu</li>
-			<li data-filter=".breakfast">Café da manhã</li>
-			<li data-filter=".lunch">Almoço</li>
-			<li data-filter=".dinner">Jantar</li>
+			<li data-filter=".cafe_manha">Café da manhã</li>
+			<li data-filter=".almoco">Almoço</li>
+			<li data-filter=".jantar">Jantar</li>
 		</ul>
 
 		<div class="filters-content">
 			<div class="row grid">
-				<div class="col-md-6 all breakfast">
+				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cappuccino</h4>
@@ -55,7 +55,7 @@
 						</p>									
 					</div>					                               
 				</div>                           
-				<div class="col-md-6 all dinner">
+				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Arroz com Feijão</h4>
@@ -66,7 +66,7 @@
 						</p>									
 					</div>
 				</div>
-				<div class="col-md-6 all breakfast">
+				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cereal Genérico</h4>
@@ -77,7 +77,7 @@
 						</p>									
 					</div>
 				</div>
-				<div class="col-md-6 all breakfast">
+				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de Camarão</h4>
@@ -88,7 +88,7 @@
 						</p>									
 					</div>
 				</div>
-				<div class="col-md-6 all breakfast">
+				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Café Forte</h4>
@@ -99,7 +99,7 @@
 						</p>									
 					</div>
 				</div>
-				<div class="col-md-6 all lunch">
+				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Macarrão com Queijo</h4>
