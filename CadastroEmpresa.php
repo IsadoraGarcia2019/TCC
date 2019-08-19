@@ -30,28 +30,28 @@
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" name="email">
 					</div>
 					<div class="form-group col-sm">
 						<label for="senha"><strong>Senha</strong></label>
-						<input type="password" class="form-control" id="senha">
+						<input type="password" class="form-control" id="senha" id="senha">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="nome_empresa"><strong>Nome da empresa</strong></label>
-					<input type="text" class="form-control" id="nome_empresa">
+					<input type="text" class="form-control" id="nome_empresa" name="nome_empresa">
 				</div>
 				<div class="form-group">
 					<label for="CNPJ"><strong>CNPJ</strong></label>
-					<input type="text" class="form-control" id="CNPJ">
+					<input type="text" class="form-control" id="CNPJ" name="cnpj">
 				</div>
 				<div class="form-group">
 					<label for="numero_funcionarios"><strong>Número de Funcionários</strong></label>
-					<input type="number" class="form-control" id="numero_funcionarios">
+					<input type="number" class="form-control" id="numero_funcionarios" name="numero_funcionarios">
 				</div>
 				<div class="form-group">
 					<label for="horario_empresa"><strong>Horário</strong></label>
-					<select id="horario_empresa" class="form-control">
+					<select id="horario_empresa" name="turno" class="form-control">
 						<option selected>-</option>
 						<option>Matutino</option>
 						<option>Vespertino</option>
@@ -60,7 +60,7 @@
 				</div>
 				<div class="form-group">
 					<label for="tipo_empresa"><strong>Tipo da empresa</strong></label>
-					<select id="tipo_empresa" class="form-control">
+					<select id="tipo_empresa" name="tipo_empresa" class="form-control">
 						<option selected>-</option>
 						<option>Sociedade Empresária Limitada (Ltda.)</option>
 						<option>Empresa individual</option>
@@ -72,23 +72,23 @@
 				</div>
 				<div class="form-group">
 					<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-					<input type="text" class="form-control" id="telefone_cliente">
+					<input type="text" class="form-control" id="telefone_cliente" name="numero_empresa">
 				</div>
 				<div class="form-group">
 					<div class="form-group">
 						<label for="cidade_empresa"><strong>Cidade</strong></label>
-						<input type="text" class="form-control" id="cidade_empresa" placeholder="Ex: Gaspar">
+						<input type="text" class="form-control" id="cidade_empresa" name="cidade_empresa" placeholder="Ex: Gaspar">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="form-group">
 						<label for="rua_empresa"><strong>Rua</strong></label>
-						<input type="text" class="form-control" id="rua_empresa" placeholder="Ex: Rua Sábia 179">
+						<input type="text" class="form-control" id="rua_empresa" name="rua_empresa" placeholder="Ex: Rua Sábia 179">
 					</div>
 				</div>				
 				<div class="form-group">
 					<label for="estado_empresa"><strong>Estado</strong></label>
-					<select id="estado_empresa" class="form-control">
+					<select id="estado_empresa" name="cidade_empresa" class="form-control">
 						<option selected>SC</option>
 					</select>
 				</div>
@@ -99,7 +99,7 @@
 </div>
 <?php
 
-//inclusão do rodapé
+//INCLUSÃO DO RODAPÉ
 require_once "footer.php";
 ?>
 
