@@ -11,16 +11,20 @@
 background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: no-repeat;">
 
 <!-- <body style="background-image: url('media/images/img-fundo2.jpg');
-background-size: 100%;"> -->
+  background-size: 100%;"> -->
 
-<?php require_once "header.php"; ?>
+  <?php require_once "header.php"; ?>
 
-<div id="container">  
-  <div class="box" style="background-color: white; ">
-    <h1 class="titulo-box " style="color:#de2828"><strong>Favoritos do momento</strong></h1>
-    <div class="alert alert-secondary" role="alert">
-      <strong>Para você comer no café da manhã, almoço e jantar.</strong>
+  <div id="container"> 
+    <div class="row"> 
+      <div class="box col-md-12" style="background-color: white; ">
+        <h1 class="titulo-box text-center" style="color:#de2828"><strong>Nosso cardápio</strong></h1>
+        <div class="alert alert-secondary" role="alert">
+          <strong>Para você comer no café da manhã, almoço e jantar.</strong>
+        </div>
+      </div>
     </div>
+<<<<<<< HEAD
   </div>
 </div>
 
@@ -82,14 +86,73 @@ background-size: 100%;"> -->
     <div class="card-body">
       <h3 class="card-title">Vegetariana</h3>
       <p class="card-text">E para os amantes de comida vegetariana, temos um cardápio especial para vocês</p>
+=======
+    <div class="card-index">
+      <div class="card-columns">
+        <div class="card shadow">
+          <img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Café da Manhã</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card p-3 shadow">
+          <blockquote class="blockquote mb-0 card-body text-center text-danger">
+            <p><strong>Temos promoções todos os dias para melhor atender você, faça seu pedido e o frete é totalmente gratuito</strong></p>
+          </blockquote>
+        </div>
+        <div class="card shadow">
+          <img src="media/images/japonesa.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Asiática</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card shadow">
+          <img src="media/images/frenchfries.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Almoço</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card p-3 text-danger text-center shadow">
+          <blockquote class="blockquote mb-0 card-body">
+            <p><strong>Receber sua comida em casa nunca foi tão fácil</strong></p>
+          </blockquote>
+        </div>
+        <div class="card shadow">
+          <img src="media/images/sobremesas.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Sobremesas</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+        </div>
+        <div class="card shadow">
+          <img src="media/images/massas1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Jantar</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+        <div class="card p-3 shadow">
+          <blockquote class="blockquote mb-0 card-body text-center text-danger">
+            <p><strong>Trabalhamos com pagamentos mensais onde você deposita quanto quer gastar</strong></p>
+          </blockquote>
+        </div>
+        <div class="card shadow">
+          <img src="media/images/vegetariano.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Vegetariana</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+>>>>>>> d4adf5290d106da1b4800fae30db4938c0b36727
     </div>
   </div>
-</div>
-</div>
-</div>
 
 
-<?php require_once "footer.php"; ?>
+  <?php require_once "footer.php"; ?>
 
 </body>
 </html>
