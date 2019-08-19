@@ -22,19 +22,8 @@
 		</div> 
 	</div>
 </div>
-
-
 <section class="menu-area section-gap" id="menu">
 	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="menu-content pb-70 col-lg-8">
-				<div class="title text-center">
-					<h1 class="mb-10"></h1>
-
-				</div>
-			</div>
-		</div>	
-
 		<ul class="filter-wrap filters col-lg-12 no-padding">
 			<li class="active " data-filter="*">Todo menu</li>
 			<li data-filter=".cafe_manha">Café da manhã</li>
@@ -43,7 +32,6 @@
 			<li data-filter=".Vegan">Vegana</li>
 			<li data-filter=".sobremesa">Sobremesas</li>
 		</ul>
-
 		<div class="filters-content">
 			<div class="row grid">
 				<div class="col-md-6 all cafe_manha">
@@ -114,10 +102,8 @@
 				</div>                            
 			</div>
 		</div>
-
 	</div>
 </section>
-
 <?php
 //inclusão do rodapé
 require_once "footer.php";
