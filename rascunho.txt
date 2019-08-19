@@ -1,0 +1,42 @@
+							BANCO DE DADOS 
+
+TABELAS:
+
+
+- Clientes
+ - id
+ - e-mail
+ - senha
+ - estado
+ - cidade
+ - rua
+ - numero_telefone
+ - restricao_alimentar
+ - preferencia_preco
+ - preferencia_restaurante
+ - preferencihora_comida
+ - comentários
+
+
+- Restaurantes 
+ - nome_restaurante
+ - numero_telefone
+ - horário_atendimento
+ - dias_atendimento
+ - avaliação
+ - localização
+ - estado
+
+
+- Empresas:
+ - nome_empresa
+ - CNPJ
+ - numero_funcionarios
+ - turno
+ - tipo_empresa
+ - numero_empresa
+ - cidade
+ - rua
+ - estado
+
+
