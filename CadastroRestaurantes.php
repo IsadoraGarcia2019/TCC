@@ -1,3 +1,22 @@
+<?php
+	error_reporting(0);
+
+	CONST HOST = "127.0.0.1";
+	CONST USER = "root";
+	CONST PASS = "";
+	CONST DB   = "cheff_delivery";
+
+	$con = mysqli_connect(HOST, USER, PASS, DB);
+    
+	if (!$con) {
+		die("ERRO: Não foi possível conectar no banco de dados -> " . mysqli_connect_error());
+	}
+
+	$sql = "SELECT * FROM restaurantes";
+	$queryrestaurante = mysqli_query($con, $sql);
+
+	
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -31,27 +50,27 @@
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" name="email" id="email">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="senha"><strong>Senha</strong></label>
-						<input type="password" class="form-control" id="senha">
+						<input type="password" class="form-control" name="senha" id="senha">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6 mt-3">
 						<label for="nome_restaurante"><strong>Nome do Restaurante</strong></label>
-						<input type="text" class="form-control" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
+						<input type="text" class="form-control" name="nome_restaurante" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
 					</div>
 					<div class="form-group col-md-6 mt-3">
-						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" id="telefone_cliente">
+						<label for="telefone_restaurante"><strong>Número de telefone</strong></label>
+						<input type="text" class="form-control" id="telefone_restaurante" id="telefone_restaurante">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-6 col-xs-12">
 						<label for="horario_atendimento"><strong>Horário de Atendimento</strong></label>
-						<select id="horario_atendimento" class="form-control">
+						<select name="horario_atendimento" id="horario_atendimento" class="form-control">
 							<option selected>Segunda à Sexta</option>
 							<option >Segunda à Sábado</option>
 							<option >Segunda à Segunda</option>
@@ -61,12 +80,12 @@
 					</div>
 					<div class="form-group col-md-6 col-xs-12">
 						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
-						<input type="text" class="form-control" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
+						<input type="text" class="form-control" name="dias_atendimento_restaurante" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
 					</div>
 				</div>
 				<div class="form-group col-sm p-0">
 					<label class="form-group col-md-12" for="avaliacao">Avaliação</label>
-					<select id="avaliacao" class="form-control">
+					<select name="avaliacao" id="avaliacao" class="form-control">
 						<option selected>Muito bom</option>
 						<option >Bom</option>
 						<option >Mais ou menos</option>
@@ -77,16 +96,16 @@
 				<div class="form-row">
 					<div class="form-group col-sm mt-3">
 						<label for="localizacao_restaurante"><strong>Localização</strong></label>
-						<input type="text" class="form-control" id="localizacao_restaurante">
+						<input type="text" class="form-control" name="localizacao_restaurante" id="localizacao_restaurante">
 					</div>
 					<div class="form-group col-sm mt-3">
 						<label for="estado_restaurante"><strong>Estado</strong></label>
-						<select id="estado_restaurante" class="form-control">
+						<select name="estado_restaurante" id="estado_restaurante" class="form-control">
 							<option selected>SC</option>
 						</select>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-outline-secondary col-md-12	">Cadastrar</button>
+				<input type="submit" class="btn btn-outline-secondary col-md-12" name="salvar" value="Cadastrar">
 			</form>
 		</div>
 	</div>
