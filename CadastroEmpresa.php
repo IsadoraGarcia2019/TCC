@@ -27,6 +27,16 @@
 		<div class="card-body" > 
 			<form>
 				<h2><strong>Dados da Empresa</strong></h2>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="email"><strong>E-mail</strong></label>
+						<input type="email" class="form-control" id="email">
+					</div>
+					<div class="form-group col-sm">
+						<label for="senha"><strong>Senha</strong></label>
+						<input type="password" class="form-control" id="senha">
+					</div>
+				</div>
 				<div class="form-group">
 					<label for="nome_empresa"><strong>Nome da empresa</strong></label>
 					<input type="text" class="form-control" id="nome_empresa">
@@ -82,7 +92,7 @@
 						<option selected>SC</option>
 					</select>
 				</div>
-					<button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
+				<button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
 			</form>
 		</div>
 	</div>

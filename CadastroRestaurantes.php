@@ -29,17 +29,27 @@
 
 			<form class="col-sm">
 				<div class="form-row">
-					<div class="form-group col-sm mt-3">
+					<div class="form-group col-md-6">
+						<label for="email"><strong>E-mail</strong></label>
+						<input type="email" class="form-control" id="email">
+					</div>
+					<div class="form-group col-md-6">
+						<label for="senha"><strong>Senha</strong></label>
+						<input type="password" class="form-control" id="senha">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6 mt-3">
 						<label for="nome_restaurante"><strong>Nome do Restaurante</strong></label>
 						<input type="text" class="form-control" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
 					</div>
-					<div class="form-group col-sm mt-3">
+					<div class="form-group col-md-6 mt-3">
 						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
 						<input type="text" class="form-control" id="telefone_cliente">
 					</div>
 				</div>
 				<div class="form-row">
-					<div class="form-group col-sm col-xs-12">
+					<div class="form-group col-md-6 col-xs-12">
 						<label for="horario_atendimento"><strong>Horário de Atendimento</strong></label>
 						<select id="horario_atendimento" class="form-control">
 							<option selected>Segunda à Sexta</option>
@@ -49,7 +59,7 @@
 							<option >Outros dias </option>
 						</select>
 					</div>
-					<div class="form-group col-sm col-xs-12">
+					<div class="form-group col-md-6 col-xs-12">
 						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
 						<input type="text" class="form-control" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
 					</div>
@@ -87,7 +97,7 @@
 						</select>
 					</div>
 				</div>
-					<button type="submit" class="btn btn-outline-secondary col-md-12	">Cadastrar</button>
+				<button type="submit" class="btn btn-outline-secondary col-md-12	">Cadastrar</button>
 			</form>
 		</div>
 	</div>
