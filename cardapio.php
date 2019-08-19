@@ -36,10 +36,19 @@
 		</div>	
 
 		<ul class="filter-wrap filters col-lg-12 no-padding">
+<<<<<<< HEAD
 			<li class="active" data-filter="*">Todo menu</li>
 			<li data-filter=".cafe_manha">Café da manhã</li>
 			<li data-filter=".almoco">Almoço</li>
 			<li data-filter=".jantar">Jantar</li>
+=======
+			<li class="active " data-filter="*">Todo menu</li>
+			<li data-filter=".breakfast">Café da manhã</li>
+			<li data-filter=".lunch">Almoço</li>
+			<li data-filter=".dinner">Jantar</li>
+			<li data-filter=".Vegan">Vegana</li>
+			<li data-filter=".sobremesa">Sobremesas</li>
+>>>>>>> e87f8d3ea8f24fdef010dab01f7473e87b5cebce
 		</ul>
 
 		<div class="filters-content">
