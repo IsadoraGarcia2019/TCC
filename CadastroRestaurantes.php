@@ -65,32 +65,21 @@
 					</div>
 				</div>
 				<div class="form-group col-sm p-0">
-					<legend class="col-form-label col-sm-2 p-0"><strong>Avaliação</strong></legend>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="estrelas" id="estrelas1" value="option1" checked>
-						<label class="form-check-label" for="estrelas1">
-							De 0 à 2 estrelas
-						</label>
+					<label class="form-group col-md-12" for="avaliacao">Avaliação</label>
+					<select id="avaliacao" class="form-control">
+						<option selected>Muito bom</option>
+						<option >Bom</option>
+						<option >Mais ou menos</option>
+						<option >Ruim</option>
+						<option >Péssimo</option>
 					</div>
-					<div class="form-check">
-						<input class="form-check-input" type="radio" name="estrelas" id="estrelas2" value="option2">
-						<label class="form-check-label" for="estrelas2">
-							De 2 à 4 estrelas
-						</label>
-					</div>
-					<div class="form-check disabled">
-						<input class="form-check-input" type="radio" name="estrelas" id="estrelas3" value="option3">
-						<label class="form-check-label" for="estrelas3">
-							De 4 à 5 estrelas
-						</label>
-					</div>
-				</div>
+				</select>
 				<div class="form-row">
-					<div class="form-group col-sm">
+					<div class="form-group col-sm mt-3">
 						<label for="localizacao_restaurante"><strong>Localização</strong></label>
 						<input type="text" class="form-control" id="localizacao_restaurante">
 					</div>
-					<div class="form-group col-sm">
+					<div class="form-group col-sm mt-3">
 						<label for="estado_restaurante"><strong>Estado</strong></label>
 						<select id="estado_restaurante" class="form-control">
 							<option selected>SC</option>
@@ -101,6 +90,7 @@
 			</form>
 		</div>
 	</div>
+</div>
 </div>
 
 
