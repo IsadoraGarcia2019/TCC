@@ -91,7 +91,6 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
   </div>
 </div>
 
-
 <?php require_once "footer.php"; ?>
 
 </body>
