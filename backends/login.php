@@ -22,7 +22,6 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 		$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 		if ($resultadoCredencial) {
 			if ($resultadoCredencial['ativo'] == 1) {
-					# code...
 				// Criar sessão do usuário
 				$_SESSION['logado'] = true;
 				$_SESSION['nomeUsuario'] = $resultadoCredencial['nome'];
