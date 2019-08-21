@@ -1,3 +1,8 @@
+<?php
+require_once"backends/CadastroRestaurantes.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -65,15 +70,15 @@
 					</div>
 				</div>
 				<div class="form-group col-sm p-0">
-					<label class="form-group col-md-12" for="avaliacao">Avaliação</label>
+					<label class="form-group col-md-12" for="avaliacao"><strong>Avaliação</strong></label>
 					<select name="avaliacao" id="avaliacao" class="form-control">
 						<option selected>Muito bom</option>
 						<option >Bom</option>
 						<option >Mais ou menos</option>
 						<option >Ruim</option>
 						<option >Péssimo</option>
-					</div>
-				</select>
+					</select>
+				</div>
 				<div class="form-row">
 					<div class="form-group col-sm mt-3">
 						<label for="localizacao_restaurante"><strong>Localização</strong></label>
@@ -85,6 +90,18 @@
 							<option selected>SC</option>
 						</select>
 					</div>
+				</div>
+				<div class="form-group p-0">
+					<label class="form-group col-md-12 mt-1 text-left" for="categoria"><strong>Categoria</strong></label>
+					<select name="categoria" id="categoria" class="form-control">
+						<option selected>Cafeteria</option>
+						<option >Panificadora</option>
+						<option >Restaurante Buffet</option>
+						<option >Marmitex</option>
+						<option >Vegetariana</option>
+						<option >Pizzaria</option>
+						<option >Lanches e Petiscos</option>
+					</select>
 				</div>
 				<input type="submit" class="btn btn-outline-secondary col-md-12" name="salvar" value="Cadastrar">
 			</form>

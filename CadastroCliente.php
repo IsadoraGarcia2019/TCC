@@ -87,7 +87,10 @@
             <label for="comentarios"><strong>Comentários</strong></label>
             <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
           </div>
-          <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
+          <?php if (empty($disabled)) { ?>
+            <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
+          <?php } ?>
+          
         </form>
       </div>
     </div>
