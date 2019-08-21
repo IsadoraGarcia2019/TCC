@@ -99,7 +99,6 @@ require_once"backends/CadastroCliente.php";
           <?php if (empty($disabled)) { ?>
             <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
           <?php } ?>
-
         </form>
       </div>
     </div>

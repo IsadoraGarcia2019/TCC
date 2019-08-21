@@ -31,22 +31,27 @@ if (isset($_POST['btnCadastrar'])) {
 	'$comentarios'
 )";
 
-//inserindo no BD
-$sqlUsuario = "INSERT INTO usuarios 
-VALUES (
-DEFAULT, 
-'$email',
-'$senha'
+// Executando o SQL
+if (mysqli_query($con, $sqlCliente)) {
+
+	$idCliente = mysql_insert_id();
+
+	//inserindo no BD
+	$sqlUsuario = "INSERT INTO usuarios 
+	VALUES (
+	DEFAULT, 
+	'$email',
+	'$senha',
+	'cliente',
+	'$idCliente'
 )";
 
-// Executando o SQL
-if (mysqli_query($con, $sqlCliente) && (mysqli_query($con, $sqlUsuario))) {
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
+$alerta['tipo'] = "success";
+$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
 
-	$alerta = serialize($alerta);
+$alerta = serialize($alerta);
 
-	setcookie('alerta', $alerta, time() + 120);
+setcookie('alerta', $alerta, time() + 120);
 
 } else {
 	$alerta['tipo'] = "danger";
