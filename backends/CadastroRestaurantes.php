@@ -1,14 +1,7 @@
 <?php
 
 //conexao com o banco de dados
-require_once"../includes/conexao.php";
-
-CONST HOST = "127.0.0.1";
-CONST USER = "root";
-CONST PASS = "";
-CONST DB   = "cheff_delivery";
-
-$con = mysqli_connect(HOST, USER, PASS, DB);
+require_once"include/conexao.php";
 
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
