@@ -12,7 +12,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
 
 <?php require_once "header.php"; ?>
 
-<div id="container"> 
+<div class="container"> 
   <div class="row"> 
     <div class="box col-md-12" style="background-color: white; ">
       <h1 class="titulo-box text-center" style="color:#de2828"><strong>Nosso cardápio</strong></h1>

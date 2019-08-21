@@ -18,15 +18,15 @@
     ?>
 
     <div class="row">
-      <div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 200px; min-width: 100%;     background-position: center 1050px;
-      " class="shadow">
+        <div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
+    " class="shadow" >
       <div class="text-center my-5">
         <h1 class="text-white">Edição</h1>
       </div> 
     </div>
   </div>
 
-  <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
+  <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
     <div class="card" style="margin-right: auto; margin-left: auto;">
       <div class="card-body" > 
 

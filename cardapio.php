@@ -15,7 +15,7 @@
 	?>
 
 	<div class="row">
-		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 15%;   background-position: center 1050px;
+		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
 		" class="shadow" >
 		<div class="text-center my-5" >
 			<h1 class="text-white pt-3 ">Cardápio do dia</h1>
