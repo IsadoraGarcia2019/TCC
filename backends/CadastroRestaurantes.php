@@ -3,67 +3,64 @@
 //conexao com o banco de dados
 require_once"include/conexao.php";
 
-if (isset($_GET['id'])) {
-	$id = $_GET['id'];
-}
-
-if (isset($id)) {
-	$sql = "SELECT * FROM restaurantes WHERE id = $id";
-	$queryrestaurante = mysqli_query($con, $sql);
-	$resultadorestaurante = mysqli_fetch_array($queryrestaurante);
-
-	if (is_null($resultadorestaurante)) {
-		die("Restaurante não encontrado.");
-	}
-}
-
 
 if (isset($_POST['salvar'])) {
+
+	$email = $_POST['email'];
+	$senha = $_POST['senha'];
 	$nome_restaurante = $_POST['nome_restaurante'];
-	$telefone_restaurante = $_POST['numero_telefone'];
-	$horario_atendimento = $_POST['horario_atentimento'];
-	$dias_atendimento_restaurante = $_POST['dias_atendimento'];
+	$telefone_restaurante = $_POST['telefone_restaurante'];
+	$horario_atendimento = $_POST['horario_atendimento'];
+	$dias_atendimento_restaurante = $_POST['dias_atendimento_restaurante'];
 	$avaliacao = $_POST['avaliacao'];
-	$localizacao_restaurante = $_POST['localizacao'];
-	$estado_restaurante = $_POST['estado'];
+	$localizacao_restaurante = $_POST['localizacao_restaurante'];
+	$estado_restaurante = $_POST['estado_restaurante'];
+	$categoria = $_POST['categoria'];
 
-	if (isset($id)) {
-		$sql = "UPDATE restaurantes
-		SET nome_restaurante = '$nome_restaurante',
-		numero_telefone = '$telefone_restaurante',
-		horario_atentimento = '$horario_atendimento',
-		dias_atendimento = '$dias_atendimento_restaurante',
-		avaliacao = '$avaliacao',
-		localizacao = '$localizacao_restaurante',
-		estado = '$estado_restaurante'
-		WHERE
-		id = $id";
-	} else {
-		$sql = "INSERT INTO restaurantes 
-		VALUES (
-		DEFAULT, 
-		'$nome_restaurante',
-		'$telefone_restaurante',
-		'$horario_atendimento',
-		'$dias_atendimento_restaurante',
-		'$avaliacao',
-		'$localizacao_restaurante',
-		'$estado_restaurante',
-	)";
-}
+	$sqlRestaurante = "INSERT INTO restaurantes 
+	VALUES (
+	DEFAULT, 
+	'$nome_restaurante',
+	'$telefone_restaurante',
+	'$horario_atendimento',
+	'$dias_atendimento_restaurante',
+	'$avaliacao',
+	'$localizacao_restaurante',
+	'$estado_restaurante',
+	'$categoria'
+)";
 
-if (mysqli_query($con, $sql)) {
+
+if (mysqli_query($con, $sqlRestaurante)) {
+
+    $idRestaurante = mysql_insert_id();
+ 
+	$sqlUsuario = "INSERT INTO usuarios 
+	VALUES (
+	DEFAULT, 
+	'$email',
+	'$senha',
+	'restaurante',
+	'$idRestaurante'
+)";
+
+
+if (mysqli_query($con, $sqlUsuario)) {
+
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "restauranto salvo com sucesso!";
+	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
 
 	$alerta = serialize($alerta);
-}else{
+	setcookie('alerta', $alerta, time() + 120);
+
+} else {
 	$alerta['tipo'] = "danger";
-	$alerta['mensagem'] = "restauranto não foi salvo!";
+	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
 	$alerta = serialize($alerta);
-	echo "$sql";
-}	
-}
+	setcookie('alerta', $alerta, time() + 120);
 
+}
+}
+}
 ?>

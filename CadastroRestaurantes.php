@@ -1,5 +1,4 @@
 <?php
-
 require_once"backends/CadastroRestaurantes.php";
 ?>
 
@@ -32,7 +31,7 @@ require_once"backends/CadastroRestaurantes.php";
 	<div class="card" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
 
-			<form class="col-sm">
+			<form class="col-sm" method="post" action="">
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
@@ -50,7 +49,7 @@ require_once"backends/CadastroRestaurantes.php";
 					</div>
 					<div class="form-group col-md-6 mt-3">
 						<label for="telefone_restaurante"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" id="telefone_restaurante" id="telefone_restaurante">
+						<input type="text" class="form-control" name="telefone_restaurante" id="telefone_restaurante">
 					</div>
 				</div>
 				<div class="form-row">
