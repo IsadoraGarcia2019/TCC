@@ -33,9 +33,14 @@ if (isset($_POST['salvar'])) {
 // Executando o SQL
 if (mysqli_query($con, $sqlRestaurante)) {
 
+<<<<<<< HEAD
 	$idRestaurante = mysqli_insert_id($con);
 
 	//inserindo no BD
+=======
+    $idRestaurante = mysqli_insert_id($con);
+ 
+>>>>>>> c003dcfe55aa3c9dc2a85f43d2392b6a83ec10b7
 	$sqlUsuario = "INSERT INTO usuarios 
 	VALUES (
 	DEFAULT, 
