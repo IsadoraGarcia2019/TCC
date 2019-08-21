@@ -33,7 +33,7 @@ if (isset($_POST['salvar'])) {
 
 if (mysqli_query($con, $sqlRestaurante)) {
 
-    $idRestaurante = mysql_insert_id();
+    $idRestaurante = mysqli_insert_id();
  
 	$sqlUsuario = "INSERT INTO usuarios 
 	VALUES (
@@ -43,7 +43,6 @@ if (mysqli_query($con, $sqlRestaurante)) {
 	'restaurante',
 	'$idRestaurante'
 )";
-
 
 if (mysqli_query($con, $sqlUsuario)) {
 
