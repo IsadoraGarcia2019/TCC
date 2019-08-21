@@ -102,7 +102,9 @@ require_once"backends/CadastroRestaurantes.php";
 						<option >Lanches e Petiscos</option>
 					</select>
 				</div>
-				<input type="submit" class="btn btn-outline-secondary col-md-12" name="salvar" value="Cadastrar">
+				<?php if (empty($disabled)) { ?>
+					<input type="submit" class="btn btn-outline-secondary col-md-12" name="salvar" value="Cadastrar">
+				<?php } ?>
 			</form>
 		</div>
 	</div>

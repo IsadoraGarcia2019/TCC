@@ -29,18 +29,18 @@
 				<div class="form-row">
 					<div class="col-md-12">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" name="email">
 					</div>
 					<div class="col-md-12">
 						<label for="senha"><strong>Senha</strong></label>
-						<input type="password" class="form-control" id="senha">
+						<input type="password" class="form-control" id="senha" name="senha">
 					</div>
 				</div>
 				<div class="form-row">
 					<a href="#" class="col-sm-12 col-md-12 text-center text-danger mt-3" >Esqueci minha senha</a> 
 				</div>
 				<div class="form-row">
-					<button type="submit" class="btn btn-outline-secondary col-md-12 mb-3 mt-3">Entrar</button>
+					<button type="submit" class="btn btn-outline-secondary col-md-12 mb-3 mt-3" name="btnEntrar">Entrar</button>
 
 					<button type="submit" class="btn btn-outline-danger col-md-12 mb-3 mt-3">Criar uma nova conta</button>
 				</div>
