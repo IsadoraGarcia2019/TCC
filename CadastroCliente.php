@@ -1,3 +1,12 @@
+<?php
+
+require_once"backends/CadastroCliente.php";
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,7 +39,7 @@
     <div class="card" style="margin-right: auto; margin-left: auto;">
       <div class="card-body" > 
 
-        <form>
+        <form method="post" action="">
           <h2><strong>Dados Pessoais</strong></h2>
           <div class="form-row">
             <div class="form-group col-md-6">
@@ -76,12 +85,12 @@
           </div>
           <h2><strong>Preferências</strong></h2>
           <div class="form-group">
-            <label for="restaurante_cliente"><strong>Restaurante</strong></label>
-            <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante">
-          </div>
-          <div class="form-group">
             <label for="comida_cliente"><strong>Comida</strong></label>
             <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida">
+          </div>
+          <div class="form-group">
+            <label for="restaurante_cliente"><strong>Restaurante</strong></label>
+            <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante">
           </div>
           <div class="form-group">
             <label for="comentarios"><strong>Comentários</strong></label>
@@ -90,7 +99,7 @@
           <?php if (empty($disabled)) { ?>
             <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
           <?php } ?>
-          
+
         </form>
       </div>
     </div>

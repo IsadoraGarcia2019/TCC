@@ -1,8 +1,7 @@
 <?php
 
 //conexao com o banco de dados
-require_once"../includes/conexao.php";
-
+require_once"include/conexao.php";
 
 	// botão de cadastrar
 if (isset($_POST['btnCadastrar'])) {
@@ -14,29 +13,34 @@ if (isset($_POST['btnCadastrar'])) {
 	$rua = $_POST['rua_cliente'];
 	$numero_telefone = $_POST['numero_telefone_cliente'];
 	$restricao_alimentar = $_POST['restricao_alimentar'];
+	$preferencia_comida = $_POST['preferencia_comida'];
 	$preferencia_restaurante = $_POST['preferencia_restaurante'];
-	$preferencihora_comida = $_POST['preferencia_comida'];
 	$comentarios = $_POST['comentarios'];
 
 	//inserindo no BD
-	$sql = "INSERT INTO clientes 
+	$sqlCliente = "INSERT INTO clientes 
 	VALUES (
 	DEFAULT, 
-	'$email',
-	'$senha',
 	'$estado',
 	'$cidade',
 	'$rua',
 	'$numero_telefone',
 	'$restricao_alimentar',
-	'$preferencia_restaurante',
 	'$preferencia_comida',
+	'$preferencia_restaurante',
 	'$comentarios'
 )";
-}
+
+//inserindo no BD
+$sqlUsuario = "INSERT INTO usuarios 
+VALUES (
+DEFAULT, 
+'$email',
+'$senha'
+)";
 
 // Executando o SQL
-if (mysqli_query($con, $sql)) {
+if (mysqli_query($con, $sqlCliente) && (mysqli_query($con, $sqlUsuario))) {
 	$alerta['tipo'] = "success";
 	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
 
@@ -53,8 +57,9 @@ if (mysqli_query($con, $sql)) {
 	setcookie('alerta', $alerta, time() + 120);
 
 }
-
-
-	header('Location: CadastroCliente.php');
 }
+
+
+	// header('Location: CadastroCliente.php');
+
 ?>

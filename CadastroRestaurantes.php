@@ -1,4 +1,5 @@
 <?php
+
 require_once"backends/CadastroRestaurantes.php";
 
 ?>
