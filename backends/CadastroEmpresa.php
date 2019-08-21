@@ -34,7 +34,7 @@ if (isset($_POST['btnCadastrar'])) {
 // Executando o SQL
 if (mysqli_query($con, $sqlEmpresa)) {
 
-	$idEmpresa = mysql_insert_id();
+	$idEmpresa = mysqli_insert_id($con);
 
 	//inserindo no BD
 	$sqlUsuario = "INSERT INTO usuarios 
@@ -54,7 +54,7 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
-} else {
+}else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
@@ -65,6 +65,5 @@ if (mysqli_query($con, $sqlUsuario)) {
 }
 }
 }
-	// header('Location: CadastroCliente.php');
 
 ?>

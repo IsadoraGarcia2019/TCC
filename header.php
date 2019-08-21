@@ -1,4 +1,5 @@
-<div>Icons made by <a href="https://br.flaticon.com/autores/freepik" title="Freepik">Freepik</a> from <a href="https://br.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+<link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
+
  <header>
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828">
     <a href="index.php"><img src="media/images/cheffmenu2.png" style="height: 65px; width: 150px"></a>

@@ -30,16 +30,17 @@ if (isset($_POST['salvar'])) {
 	'$categoria'
 )";
 
-
+// Executando o SQL
 if (mysqli_query($con, $sqlRestaurante)) {
 
-    $idRestaurante = mysqli_insert_id();
- 
+	$idRestaurante = mysqli_insert_id($con);
+
+	//inserindo no BD
 	$sqlUsuario = "INSERT INTO usuarios 
 	VALUES (
 	DEFAULT, 
 	'$email',
-	'$senha',
+	'$senha', 
 	'restaurante',
 	'$idRestaurante'
 )";
@@ -50,16 +51,18 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
 
 	$alerta = serialize($alerta);
-	setcookie('alerta', $alerta, time() + 120);
 
-} else {
+	setcookie('alerta', $alerta, time() + 120);
+}else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
 	$alerta = serialize($alerta);
+
 	setcookie('alerta', $alerta, time() + 120);
 
 }
 }
 }
+
 ?>
