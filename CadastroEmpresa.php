@@ -1,8 +1,13 @@
+<?php
+
+require_once"backends/CadastroEmpresa.php";
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Cadastro Empresa</title>
+	<title>Cadastro Empresas</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 
@@ -25,7 +30,7 @@
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -60px !important;">
 	<div class="card" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
-			<form>
+			<form method="post" action="">
 				<h2><strong>Dados da Empresa</strong></h2>
 				<div class="form-row">
 					<div class="form-group col-md-6">
@@ -34,7 +39,7 @@
 					</div>
 					<div class="form-group col-sm">
 						<label for="senha"><strong>Senha</strong></label>
-						<input type="password" class="form-control" id="senha" id="senha">
+						<input type="password" class="form-control" id="senha" name="senha">
 					</div>
 				</div>
 				<div class="form-group">
@@ -86,19 +91,15 @@
 						<input type="text" class="form-control" id="rua_empresa" name="rua_empresa" placeholder="Ex: Rua Sábia 179">
 					</div>
 				</div>				
-				<div class="form-group">
-					<label for="estado_empresa"><strong>Estado</strong></label>
-					<select id="estado_empresa" name="cidade_empresa" class="form-control">
-						<option selected>SC</option>
-					</select>
-				</div>
-				<button type="submit" class="btn btn-outline-secondary col-md-12">Cadastrar</button>
+				<?php if (empty($disabled)) { ?>
+					<button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
+				<?php } ?>
 			</form>
 		</div>
 	</div>
 </div>
-<?php
 
+<?php
 //INCLUSÃO DO RODAPÉ
 require_once "footer.php";
 ?>
