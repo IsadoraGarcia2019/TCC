@@ -1,67 +1,106 @@
-<?php
-	
-	/** 
-	 * CLASSE "Site"
-	 * Classe principal do projeto.
-	 */
-	class Site {
+<?php 
 
-		public $conexao;
+	//	================================
+	//		Classe principal do site
+	//	================================
 
-		/** 
-		 * SITE CONSTRUCT
-		 * Executa o autoload, inclui as configurações,
-		 * funções e cria a conexão inicial.
-		 */
-		public function __construct() {
+//	Atributo Local: está dentro de uma função
+// 	Atributo global: é a constante fora da função
 
-			session_start();
+class Site {
 
-			/* AUTOLOAD
-			 * Metodo mágico que vai carregar os arquivos 
-			 * das classes automaticamente com base no nome 
-			 * da classe. O nome do arquivo php deve ter o
-			 * mesmo nome da classe.
-			 */
+//Constantes de acesso ao MySQL
+	CONST HOST = "127.0.0.1";
+	CONST USER = "root";
+	CONST PASS = "";
+	CONST DB   = "cheff_delivery";
 
-			function __autoload($class_name) {
-				$class_name = strtolower($class_name);
-				$path = "classes/$class_name.class.php";
+//Atributos
+	public $con;
 
-				if (file_exists($path)) {
-					require_once($path);
-				} else {
-					die("Classe <b>".$class_name."</b> não encontrada no servidor!");
-				}
-			}
+//funções/metodos
 
-			// Iniciando a Conexão
-			$this->Conexao();
+//função de construtor de classe
+	public function __construct() {
+//abrindo a conexão automáticamente quando um objeto é instântanio
+		$this->AbrirConexao();
+		$this->configuracoes();
+	}
 
-			// Includes de configurações e funções globais do projeto
-			require_once("include/config.php");
-			require_once("include/functions.php");
-
-			// Poderia ser utilizado aqui também para incluir o HEADER do site
+	public function AbrirConexao() {
+//Abri conexão
+		$this->con = mysqli_connect(self::HOST, self::USER, self::PASS, self::DB);
+//Se deu erro, interrompe a execução
+		if (!$this->con) {
+			die("ERRO: Não foi possível conectar no banco de dados -> " . mysqli_connect_error());
 		}
+	}
 
-		public function Conexao() {
-			define('LOCAL', 'localhost:3306');
-			define('USER',  'root');
-			define('PASS',  '');
-			define('DB', 'minha_base_de_dados');
+	//	Função para gerenciar sessões e páginas restritas
+	public function Session() {
+			// Inicia a $_SESSION
+		session_start();
 
-			$this->conexao = mysqli_connect(LOCAL, USER, PASS, DB) or die ("Erro na conexao com o servidor.");
-		}
-
-		/** 
-		 * SITE DESTRUCT
-		 * Poderia ser usado aqui, a inclusão do FOOTER do site...
-		 */
-		public function __destruct() {
-			
-		}
+		// Verificando se existe a $_SESSION para carregar a página
+		if (!(isset($_SESSION['logado']) && $_SESSION['logado']==true)) {
+			header('Location: ../404.php');	
 
 	}
+
+	}
+
+	//	Função que carrega todas as configurações e definições do projeto
+	public function configuracoes() {
+
+		// Alterar hora do servidor
+		date_default_timezone_set('America/Sao_Paulo');
+
+		// Eliminar a exibição de avisos
+		error_reporting(0);
+
+	}
+
+	//	Função de alerta (estática)
+	public static function Alerta($tipo = null, $mensagem = null) {
+		//	Verificando se a mensagem é nula
+			if (empty($mensagem))
+				return 0;
+
+		//	Se for diferente dessas opções será info
+			switch ($tipo) {
+				case 'success':
+					break;
+				case 'info':
+					break;
+				case 'warning':
+					break;
+				case 'danger':
+					break;
+				default:
+					$tipo = 'info';
+					break;
+			}
+
+			$alerta['tipo'] = $tipo;
+			$alerta['mensagem'] = $mensagem;
+
+			$alerta = serialize($alerta);
+
+			setcookie('alerta', $alerta, time() + 120);
+
+			return 1;
+	}
+
+}
+
+// echo Site::Alerta('danger', '...');
+
+//	Para funções não estáticas tem que instanciar um objeto
+// $site = new Site();
+// $site ->Alerta;
+
+//	Para funções estáticas não é necessário
+// Site::Alerta();
+
 
 ?>

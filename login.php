@@ -1,3 +1,11 @@
+<?php
+
+	// Inclusão da classe abstrata do login
+    require_once "classes/login.class.php";
+
+    $login = new Login();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,8 +33,9 @@
 <div class="col-8 col-md-10 mt-5 offset-md-1" style="margin-top: -80px !important;">
 	<div class="card col-md-4 offset-md-4 offset-3 mt-5">
 		<div class="card-body"> 
+			<?php //Site::ChamaAlerta(); ?>
 			<form method="post" action="">
-				<div class="form-row">
+				<div class="form-row" >
 					<div class="col-md-12">
 						<label for="email"><strong>E-mail</strong></label>
 						<input type="email" class="form-control" id="email" name="email">
@@ -42,7 +51,7 @@
 				<div class="form-row">
 					<button type="submit" class="btn btn-outline-secondary col-md-12 mb-3 mt-3" name="btnEntrar">Entrar</button>
 
-					<button type="submit" class="btn btn-outline-danger col-md-12 mb-3 mt-3">Criar uma nova conta</button>
+					<button type="submit" class="btn btn-outline-danger col-md-12 mb-3 mt-3" name="botao_entrar">Criar uma nova conta</button>
 				</div>
 			</form>
 		</div>
@@ -51,7 +60,6 @@
 
 <?php
 	//inclusão do rodapé
-
 require_once "footer.php";
 ?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
