@@ -9,23 +9,21 @@
 	<link rel="stylesheet" href="media/css/main.css">
 </head>
 <body style="background-color: rgb(235, 226, 225);">
-
-	<?php
+    <?php
 	require_once "header.php";
 	?>
-
 	<div class="row">
 		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
-		" class="shadow" >
+		" class="shadow">
 		<div class="text-center my-5" >
-			<h1 class="text-white pt-3 ">Cardápio do dia</h1>
+			<h1 class="text-white pt-3">Cardápio do dia</h1>
 		</div> 
 	</div>
 </div>
 <section class="menu-area section-gap" id="menu">
 	<div class="container">
 		<ul class="filter-wrap filters col-lg-12 no-padding">
-			<li class="active " data-filter="*">Todo menu</li>
+			<li class="active" data-filter="*">Todo menu</li>
 			<li data-filter=".cafe_manha">Café da manhã</li>
 			<li data-filter=".almoco">Almoço</li>
 			<li data-filter=".jantar">Jantar</li>
@@ -99,7 +97,29 @@
 							Usage of the Internet is becoming more common due to rapid advance.
 						</p>									
 					</div>
-				</div>                            
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Tofu firme</h4>
+							<h4 class="price">R$3</h4>
+						</div>
+						<p>
+							Usage of the Internet is becoming more common due to rapid advance.
+						</p>									
+					</div>
+				</div>
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Torta de limão</h4>
+							<h4 class="price">R$13</h4>
+						</div>
+						<p>
+							Usage of the Internet is becoming more common due to rapid advance.
+						</p>									
+					</div>
+				</div>                        
 			</div>
 		</div>
 	</div>
@@ -107,8 +127,6 @@
 <?php
 //inclusão do rodapé
 require_once "footer.php";
-
-
 ?>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
