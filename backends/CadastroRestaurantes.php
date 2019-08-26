@@ -37,8 +37,9 @@ if (mysqli_query($con, $sqlRestaurante)) {
 	$idRestaurante = mysqli_insert_id($con);
 
 	//inserindo no BD
-    $idRestaurante = mysqli_insert_id($con);
- 
+	
+	$idRestaurante = mysqli_insert_id($con);
+
 	$sqlUsuario = "INSERT INTO usuarios 
 	VALUES (
 	DEFAULT, 
