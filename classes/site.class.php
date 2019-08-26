@@ -91,7 +91,24 @@ class Site {
 			return 1;
 	}
 
+	public static function ChamaAlerta() {
+	// Verificar se existe alerta via COOKIE
+		if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+		$alerta = unserialize($_COOKIE['alerta']);
+		setcookie('alerta');
+		}
+		//	Chamar o alerta
+		require_once "includes/alerta.php";
+	}
+
+	//	Função estática que chama a navbar
+	public static function Navbar() {
+		require_once "includes/navbar.php";
+	}
+
 }
+
+
 
 // echo Site::Alerta('danger', '...');
 

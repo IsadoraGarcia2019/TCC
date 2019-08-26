@@ -34,12 +34,11 @@ class Login extends Site {
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
 
-					
+
 					// Redirecionamento para a página inicial
 					header('Location: index.php');
 				} else {
-					// Retorna mensagem que usuário não está ativo
-					// Site::Alerta('warning', 'Seu usuário não está ativo, contate um administrador do sistema"');
+					// Retorna mensagem que usuário não está ativo1    
 					header('Location: login.php');
 				}
 			}
