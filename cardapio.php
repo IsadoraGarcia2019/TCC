@@ -139,6 +139,14 @@
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
+							<h4>Croissant</h4>
+							<h4 class="price">R$11</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
 							<h4>Brownie</h4>
 							<h4 class="price">R$12</h4>
 						</div>									
@@ -166,14 +174,6 @@
 							<h4>Tapioca</h4>
 							<h4 class="price">R$11</h4>
 						</div>								
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mix de frutas</h4>
-							<h4 class="price">R$9</h4>
-						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all almoco">
@@ -317,7 +317,7 @@
 				<div class="col-md-6 all sobremesa">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Banoffe</h4>
+							<h4>Banoffee pie</h4>
 							<h4 class="price">R$25</h4>
 						</div>								
 					</div> 
@@ -354,6 +354,14 @@
 						</div>									
 					</div>
 				</div>  
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Mix de Frutas</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div> 
 				<div class="col-md-6 all sobremesa">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
