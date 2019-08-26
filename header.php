@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 9efce293d0ca25200d05573cf3dd2ee68b61f02f
 <?php
 require_once"head.php";
 ?>
