@@ -1,3 +1,4 @@
+<?php require_once "classes/site.class.php";?>
 <link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
 
  <header>
@@ -42,7 +43,7 @@
           </div>
         </li> 
       </ul>
-      <?php //Site::Navbar(); ?>
+      <?php Site::Navbar(); ?>
       <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Vai pedir o que?" aria-label="Search">
         <button class="btn my-2 my-sm-0 text-light" type="submit" style="background-color: rgb(143, 19, 10);">Pesquisar</button>

@@ -103,7 +103,7 @@ class Site {
 
 	//	Função estática que chama a navbar
 	public static function Navbar() {
-		require_once "includes/navbar.php";
+		require_once "include/navbar.php";
 	}
 
 }
