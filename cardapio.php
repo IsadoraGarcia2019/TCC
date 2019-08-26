@@ -1,3 +1,9 @@
+<?php
+
+require_once"head.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +14,8 @@
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="media/css/main.css">
 </head>
-<body style="background-color: rgb(235, 226, 225);">
+<body style="background-color: rgb(235, 226, 225)!important;">
+	
 	<?php
 	require_once "header.php";
 	?>

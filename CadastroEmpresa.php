@@ -2,6 +2,7 @@
 
 require_once"backends/CadastroEmpresa.php";
 
+require_once"head.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

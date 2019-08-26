@@ -2,10 +2,9 @@
 
 require_once"backends/CadastroCliente.php";
 
+require_once"head.php";
+
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -21,14 +20,13 @@ require_once"backends/CadastroCliente.php";
 
   <body style="background-color: rgb(235, 226, 225);">
 
-
     <?php
     require_once "header.php";
     ?>
 
     <div class="row">
       <div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
-    " class="shadow" >
+      " class="shadow" >
       <div class="text-center my-5">
         <h1 class="text-white mb-5">Cadastro de Clientes</h1>
       </div> 

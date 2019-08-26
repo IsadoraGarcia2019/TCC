@@ -2,6 +2,8 @@
 
 require_once"backends/edicaoCliente.php";
 
+require_once"head.php";
+
 ?>
 
 <!DOCTYPE html>

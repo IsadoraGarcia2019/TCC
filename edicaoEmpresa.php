@@ -2,6 +2,8 @@
 
  require_once"backends/edicaoEmpresa.php";
 
+ require_once"head.php";
+
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
