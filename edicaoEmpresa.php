@@ -1,8 +1,8 @@
-<!-- <?php
+ <?php
 
-// require_once"backends/CadastroEmpresa.php";
+ require_once"backends/edicaoEmpresa.php";
 
-?> -->
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

@@ -27,10 +27,10 @@
   </div>
 
   <div class="row">
-    <button type="button" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso    </button>
-    <button type="button" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</button>
-    <button type="button" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</button>
+    <a href="edicaoUsuario?<?=$_SESSION['id']?>" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
+    <a href="edicaoCliente?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
+    <a href="edicaoEmpresa?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
+    <a href="edicaoRestaurante?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
   </div>
 </div>
 
