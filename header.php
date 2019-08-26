@@ -7,6 +7,10 @@ require_once"head.php";
 <link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
 
  <header>
+<<<<<<< HEAD
+=======
+
+>>>>>>> b00fcb7cf0b609f49ca0a1d3f8b2d4a47f183dd4
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828">
     <a href="index.php"><img src="media/images/cheffmenu2.png" style="height: 65px; width: 150px"></a>
 
