@@ -32,13 +32,11 @@ class Login extends Site {
 					$_SESSION['logado'] = true;
 					$_SESSION['id_usuario'] = $resultadoLogin['id'];
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
-					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
-
-
+				
 					// Redirecionamento para a página inicial
 					header('Location: index.php');
 				} else {
-					// Retorna mensagem que usuário não está ativo1    
+					// Retorna mensagem que usuário não está ativo    
 					header('Location: login.php');
 				}
 			}
