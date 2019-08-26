@@ -39,7 +39,7 @@
 							<h4 class="price">R$9</h4>
 						</div>			
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Porque um bom dia começa com um cappuccino e um sorriso
 						</p>									
 					</div>					                               
 				</div>                           
@@ -50,18 +50,18 @@
 							<h4 class="price">R$20</h4>
 						</div>			
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							A única regra é o feijão por cima do arroz
 						</p>									
 					</div>
 				</div>
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cereal Genérico</h4>
+							<h4>Cereal</h4>
 							<h4 class="price">R$45</h4>
 						</div>			
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Para acordar bem disposto, vai um cereal com frutas?
 						</p>									
 					</div>
 				</div>
@@ -72,7 +72,7 @@
 							<h4 class="price">R$49</h4>
 						</div>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Até porque, dia da pizza são todos os dias
 						</p>									
 					</div>
 				</div>
@@ -83,7 +83,18 @@
 							<h4 class="price">R$5</h4>
 						</div>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Gente que só funciona depois de um bom café
+						</p>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Waffles</h4>
+							<h4 class="price">R$10</h4>
+						</div>
+						<p>
+							Nada que uma grande pilha de waffles pela manhã não resolva
 						</p>									
 					</div>
 				</div>
@@ -94,18 +105,29 @@
 							<h4 class="price">R$20</h4>
 						</div>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							A vida é massa, basta caprichar no molho
 						</p>									
 					</div>
 				</div>
 				<div class="col-md-6 all Vegan">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Tofu firme</h4>
-							<h4 class="price">R$3</h4>
+							<h4>Tofu</h4>
+							<h4 class="price">R$5</h4>
 						</div>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Inovar nunca é demais
+						</p>									
+					</div>
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Yakisoba</h4>
+							<h4 class="price">R$20</h4>
+						</div>
+						<p>
+							Um pouco da cultura oriental para dentro da sua casa
 						</p>									
 					</div>
 				</div>
@@ -116,10 +138,33 @@
 							<h4 class="price">R$13</h4>
 						</div>
 						<p>
-							Usage of the Internet is becoming more common due to rapid advance.
+							Para começar o seu dia doce
 						</p>									
 					</div>
-				</div>                        
+				</div>  
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Bolo de chocolate</h4>
+							<h4 class="price">R$15</h4>
+						</div>
+						<p>
+							Tudo fica mais feliz com chocolate
+						</p>									
+					</div>
+				</div> 
+
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Torta de morango</h4>
+							<h4 class="price">R$13</h4>
+						</div>
+						<p>
+							Uma mistura de torta com a melhor fruta do mundo
+						</p>									
+					</div>
+				</div>           
 			</div>
 		</div>
 	</div>
