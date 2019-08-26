@@ -28,8 +28,10 @@ require_once"backends/CadastroEmpresa.php";
 </div>
 
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
+
 	<div class="card" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
+			
 			<form method="post" action="">
 				<h2><strong>Dados da Empresa</strong></h2>
 				<div class="form-row">

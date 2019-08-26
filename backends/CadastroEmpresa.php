@@ -31,6 +31,10 @@ if (isset($_POST['btnCadastrar'])) {
 	'$rua_empresa'
 )";
 
+var_dump($sqlEmpresa);
+die();
+
+
 // Executando o SQL
 if (mysqli_query($con, $sqlEmpresa)) {
 
@@ -46,24 +50,6 @@ if (mysqli_query($con, $sqlEmpresa)) {
 	'$idEmpresa'
 )";
 
-if (mysqli_query($con, $sqlUsuario)) {
-
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
-
-	$alerta = serialize($alerta);
-
-	setcookie('alerta', $alerta, time() + 120);
-}else {
-	$alerta['tipo'] = "danger";
-	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
-
-	$alerta = serialize($alerta);
-
-	setcookie('alerta', $alerta, time() + 120);
-
 }
 }
-}
-
 ?>
