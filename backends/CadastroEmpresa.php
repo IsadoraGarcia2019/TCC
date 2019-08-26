@@ -31,10 +31,6 @@ if (isset($_POST['btnCadastrar'])) {
 	'$rua_empresa'
 )";
 
-var_dump($sqlEmpresa);
-die();
-
-
 // Executando o SQL
 if (mysqli_query($con, $sqlEmpresa)) {
 
