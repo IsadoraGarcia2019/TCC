@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="media/css/main.css">
 </head>
 <body style="background-color: rgb(235, 226, 225);">
-    <?php
+	<?php
 	require_once "header.php";
 	?>
 	<div class="row">
@@ -37,10 +37,7 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cappuccino</h4>
 							<h4 class="price">R$9</h4>
-						</div>			
-						<p>
-							Porque um bom dia começa com um cappuccino e um sorriso
-						</p>									
+						</div>												
 					</div>					                               
 				</div>                           
 				<div class="col-md-6 all almoco">
@@ -48,10 +45,7 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Arroz com Feijão</h4>
 							<h4 class="price">R$20</h4>
-						</div>			
-						<p>
-							A única regra é o feijão por cima do arroz
-						</p>									
+						</div>											
 					</div>
 				</div>
 				<div class="col-md-6 all cafe_manha">
@@ -59,10 +53,7 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cereal</h4>
 							<h4 class="price">R$45</h4>
-						</div>			
-						<p>
-							Para acordar bem disposto, vai um cereal com frutas?
-						</p>									
+						</div>												
 					</div>
 				</div>
 				<div class="col-md-6 all jantar">
@@ -70,21 +61,47 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de Camarão</h4>
 							<h4 class="price">R$49</h4>
-						</div>
-						<p>
-							Até porque, dia da pizza são todos os dias
-						</p>									
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Batata recheada</h4>
+							<h4 class="price">R$18</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Creme de ervilha</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Lasanha</h4>
+							<h4 class="price">R$15</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Sopa cremosa</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Café Forte</h4>
+							<h4>Café</h4>
 							<h4 class="price">R$5</h4>
-						</div>
-						<p>
-							Gente que só funciona depois de um bom café
-						</p>									
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all cafe_manha">
@@ -92,32 +109,79 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Waffles</h4>
 							<h4 class="price">R$10</h4>
-						</div>
-						<p>
-							Nada que uma grande pilha de waffles pela manhã não resolva
-						</p>									
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Panquecas</h4>
+							<h4 class="price">R$10</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Brownie</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Cheesecake</h4>
+							<h4 class="price">R$15</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Omelete com bacon</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Tapioca</h4>
+							<h4 class="price">R$8</h4>
+						</div>								
+					</div>
+				</div>
+				<div class="col-md-6 all cafe_manha">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Mix de frutas</h4>
+							<h4 class="price">R$5</h4>
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Macarrão com Queijo</h4>
+							<h4>Macarrão com queijo</h4>
 							<h4 class="price">R$20</h4>
-						</div>
-						<p>
-							A vida é massa, basta caprichar no molho
-						</p>									
+						</div>									
 					</div>
 				</div>
-				<div class="col-md-6 all Vegan">
+				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Tofu</h4>
-							<h4 class="price">R$5</h4>
-						</div>
-						<p>
-							Inovar nunca é demais
-						</p>									
+							<h4>Estrogonoff de Frango</h4>
+							<h4 class="price">R$25</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all almoco">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Bife à parmegiana</h4>
+							<h4 class="price">R$14</h4>
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all Vegan">
@@ -125,10 +189,39 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Yakisoba</h4>
 							<h4 class="price">R$20</h4>
-						</div>
-						<p>
-							Um pouco da cultura oriental para dentro da sua casa
-						</p>									
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Pizza de brócolis</h4>
+							<h4 class="price">R$45</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Falafel</h4>
+							<h4 class="price">R$3</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Cuscuz de legumes</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Tofu</h4>
+							<h4 class="price">R$5</h4>
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all sobremesa">
@@ -136,10 +229,7 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta de limão</h4>
 							<h4 class="price">R$13</h4>
-						</div>
-						<p>
-							Para começar o seu dia doce
-						</p>									
+						</div>									
 					</div>
 				</div>  
 				<div class="col-md-6 all sobremesa">
@@ -147,24 +237,89 @@
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de chocolate</h4>
 							<h4 class="price">R$15</h4>
-						</div>
-						<p>
-							Tudo fica mais feliz com chocolate
-						</p>									
+						</div>									
 					</div>
 				</div> 
-
 				<div class="col-md-6 all sobremesa">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta de morango</h4>
 							<h4 class="price">R$13</h4>
-						</div>
-						<p>
-							Uma mistura de torta com a melhor fruta do mundo
-						</p>									
+						</div>									
 					</div>
-				</div>           
+				</div> 
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Torta alemã</h4>
+							<h4 class="price">R$20</h4>
+						</div>									
+					</div>
+				</div> 
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Mousse de maracujá</h4>
+							<h4 class="price">R$9</h4>
+						</div>								
+					</div>
+				</div> 
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Bolo de leite ninho</h4>
+							<h4 class="price">R$15</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Banoffe</h4>
+							<h4 class="price">R$18</h4>
+						</div>								
+					</div> 
+				</div>
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Pudim de leite condensado</h4>
+							<h4 class="price">R$12</h4>
+						</div>								
+					</div>
+				</div>	
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Petit gateau</h4>
+							<h4 class="price">R$13</h4>
+						</div>									
+					</div>
+				</div> 
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Arroz doce</h4>
+							<h4 class="price">R$9</h4>
+						</div>									
+					</div>
+				</div>
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Paleta mexicana</h4>
+							<h4 class="price">R$12</h4>
+						</div>									
+					</div>
+				</div>  
+				<div class="col-md-6 all sobremesa">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Sagu de vinho</h4>
+							<h4 class="price">R$7</h4>
+						</div>								
+					</div>
+				</div>       
 			</div>
 		</div>
 	</div>
