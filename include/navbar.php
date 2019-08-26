@@ -1,4 +1,4 @@
-	<div class="col-12 bg-white rounded mt-3 text-right py-2">
+	<div>
 		Olá, <?=$_SESSION['nome_usuario']?>
-		<a href="backends/logoff.php" class="btn btn-danger ml-3">SAIR</a>
+		<a href="backends/logoff.php" class="btn btn-dark ml-3">SAIR</a>
 	</div>
