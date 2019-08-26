@@ -1,3 +1,8 @@
+ <?php
+
+ require_once"backends/edicaoUsuario.php";
+
+?> 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
