@@ -1,5 +1,7 @@
 <?php
 require_once"backends/CadastroRestaurantes.php";
+
+require_once"head.php";
 ?>
 
 <!DOCTYPE html>

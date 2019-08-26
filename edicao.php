@@ -1,3 +1,7 @@
+<?php
+require_once"head.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -11,7 +15,6 @@
 <body>
 
   <body style="background-color: rgb(235, 226, 225);">
-
 
     <?php
     require_once "header.php";
