@@ -16,8 +16,8 @@
 	session_start();
 	
 	unset($_SESSION['logado']);
-	unset($_SESSION['nome']);
-	unset($_SESSION['id']);
+	unset($_SESSION['nome_usuario']);
+	unset($_SESSION['id_usuario']);
 
 	session_destroy();
 
