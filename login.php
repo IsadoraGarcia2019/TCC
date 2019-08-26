@@ -33,7 +33,7 @@
 <div class="col-8 col-md-10 mt-5 offset-md-1" style="margin-top: -80px !important;">
 	<div class="card col-md-4 offset-md-4 offset-3 mt-5">
 		<div class="card-body"> 
-			<?php //Site::ChamaAlerta(); ?>
+			<?php Site::ChamaAlerta(); ?>
 			<form method="post" action="">
 				<div class="form-row" >
 					<div class="col-md-12">

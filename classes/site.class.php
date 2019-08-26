@@ -98,7 +98,7 @@ class Site {
 		setcookie('alerta');
 		}
 		//	Chamar o alerta
-		require_once "includes/alerta.php";
+		require_once "include/alerta.php";
 	}
 
 	//	Função estática que chama a navbar

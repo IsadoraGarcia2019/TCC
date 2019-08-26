@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 <?php
 require_once"head.php";
 ?>
 <header>
-=======
 <?php require_once "classes/site.class.php";?>
 <link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
-
  <header>
->>>>>>> 8ea1e94fae30b18d7f5be5983aa251ae30cf67dc
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828">
     <a href="index.php"><img src="media/images/cheffmenu2.png" style="height: 65px; width: 150px"></a>
 
@@ -21,9 +17,11 @@ require_once"head.php";
         <li class="nav-item active">
           <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
         </li>
+        <?php //if () {?>
         <li class="nav-item">
           <a class="nav-link text-light" href="login.php" style="margin-left: 10px;">Login</a>
         </li>
+      <?php //} ?> 
         <li class="nav-item">
           <a class="nav-link text-light" href="contato.php" style="margin-left: 10px;">Contato</a>
         </li>        
