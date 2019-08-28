@@ -40,6 +40,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 				}
 
 				if ($resultadoCredencial['tp_usuario'] == 'restaurante') {
+					
 					$sqlCredencial = "SELECT * FROM restaurantes WHERE nome_restaurante = '$nome_restaurante'";
 					$queryCredencial = mysqli_query($con, $sqlCredencial);
 					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
