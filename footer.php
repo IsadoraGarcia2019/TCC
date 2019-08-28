@@ -14,9 +14,9 @@
  <div class="footer-item">
   <div class="row">
     <a href="caramba@deucerto.com" class="col-sm-12 col-md-3">E-mail: cheffDelivery@gmail.com   </a>
-    <a href="" class="col-sm-12 col-md-3">Twitter: @CheffDelivery </a>
     <a href=""class="col-sm-12 col-md-3">Facebook: Cheff Delivery</a>
     <a href=""class="col-sm-12 col-md-3">Instagram: @whoischeffdelivery_</a>
+    <a href="" class="col-sm-12 col-md-3">Twitter: @CheffDelivery </a>
   </div>
 </div>
 <div id="negrito" class="mt-4">
