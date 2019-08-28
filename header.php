@@ -8,7 +8,7 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828">
+    <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828; width: 100%;">
       <a href="index.php"><img src="media/images/cheffmenu2.png" style="height: 65px; width: 150px"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
