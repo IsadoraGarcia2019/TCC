@@ -15,7 +15,7 @@ class Login extends Site {
 
 			// Iniciar sessão
 		session_start();
-		    
+
 		    // Sistemática de Login
 		if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 				// Permitir o login
@@ -32,11 +32,13 @@ class Login extends Site {
 					$_SESSION['logado'] = true;
 					$_SESSION['id_usuario'] = $resultadoLogin['id'];
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
-				
+
 					// Redirecionamento para a página inicial
 					header('Location: index.php');
 				} else {
-					// Retorna mensagem que usuário não está ativo    
+					$_SESSION['logado'] = false;
+						// Criar mensagem de que credenciais são inválidas
+					Site::Alerta('danger', 'ERRO: E-mail ou Senha incorreto');
 					header('Location: login.php');
 				}
 			}
@@ -47,4 +49,4 @@ class Login extends Site {
 }
 
 
-	?>
+?>
