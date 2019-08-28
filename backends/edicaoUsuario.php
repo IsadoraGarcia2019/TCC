@@ -1,8 +1,16 @@
 <?php
 
-// Buscar informações dos usuarios
-$sqlUsuarios = "SELECT * FROM usuarios";
-$queryUsuarios = mysqli_query($con, $sqlUsuarios);
+// Buscar informações do usuario
+if (isset($id)) {
+	$sql = "SELECT * FROM usuarios WHERE id = $id";
+	$queryUsuarios = mysqli_query($con, $sql);
+	$resultadoUsuarios = mysqli_fetch_array($queryUsuarios);
+
+		// Verificar se o usuario existe
+	if (is_null($resultadoUsuarios)) {
+		die("Usuario não encontrado.");
+	}
+}
 
 	// Verificando ação de EDITAR
 if (isset($_POST['btnEditar'])) {
@@ -11,8 +19,8 @@ if (isset($_POST['btnEditar'])) {
 	$senha = $_POST['senha'];
 
 		// Identificando se é UPDATE ou INSERT
-	if (isset($id_aluno)) {
-		$sql = "UPDATE usuarios SET email = '$email', senha = '$senha' WHERE id = $id_cliente";
+	if (isset($id)) {
+		$sql = "UPDATE usuarios SET email = '$email', senha = '$senha' WHERE id = $id";
 	} else {
 		$sql = "INSERT INTO usuarios VALUES (DEFAULT, '$email', '$senha')";
 	}	

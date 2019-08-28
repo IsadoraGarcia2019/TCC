@@ -8,7 +8,7 @@ if (isset($_POST['btnCadastrar'])) {
 		// Recebendo os campos
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
-	$nome_empresa = $_POST['nome_empresa'];
+	$nome_empresa = $_POST['nome_empresa']; 
 	$cnpj = $_POST['cnpj'];
 	$numero_funcionarios = $_POST['numero_funcionarios'];
 	$turno = $_POST['turno'];
@@ -45,6 +45,11 @@ if (mysqli_query($con, $sqlEmpresa)) {
 	'empresa',
 	'$idEmpresa'
 )";
+
+if (mysqli_query($con, $sqlUsuario)) {
+
+//
+}
 
 }
 }
