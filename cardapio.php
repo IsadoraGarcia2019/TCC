@@ -98,16 +98,8 @@ require_once"head.php";
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Sopa cremosa</h4>
+							<h4>Sopa de macarrão</h4>
 							<h4 class="price">R$10</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>X-Salada</h4>
-							<h4 class="price">R$12</h4>
 						</div>									
 					</div>
 				</div>
@@ -217,6 +209,16 @@ require_once"head.php";
 						</div>											
 					</div>
 				</div>
+				<div class="col-md-6 all almoco">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Hamburguer</h4>
+							<h4 class="price ml-3">X-Salada R$12</h4>
+							<h4 class="price">X-Bacon R$14</h4>
+							<h4 class="price">X-Calabresa R$14</h4>
+						</div>											
+					</div>
+				</div>
 				<div class="col-md-6 all Vegan">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
@@ -309,7 +311,7 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de leite ninho</h4>
-							<h4 class="price">R$20</h4>
+							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div>
@@ -372,7 +374,7 @@ require_once"head.php";
 				<div class="col-md-6 all sobremesa">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Sagu de vinho</h4>
+							<h4>Sagu</h4>
 							<h4 class="price">R$9</h4>
 						</div>								
 					</div>
