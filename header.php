@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 9efce293d0ca25200d05573cf3dd2ee68b61f02f
-<?php
-require_once"head.php";
+<?php require_once"head.php";
+      require_once "classes/site.class.php";
 ?>
 <header>
-<?php require_once "classes/site.class.php";?>
+
 <link rel="shortcut icon" type="image/x-icon" href="./icone.ico">
  <header>
   <nav class="navbar navbar-expand-lg navbar-light"  style="background-color: #de2828">
@@ -21,7 +17,7 @@ require_once"head.php";
         <li class="nav-item active">
           <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
         </li>
-        <?php //if () {?>
+        <?php //if ($_SESSION['logado'] = true) {?>
         <li class="nav-item">
           <a class="nav-link text-light" href="login.php" style="margin-left: 10px;">Login</a>
         </li>
