@@ -28,43 +28,38 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 				$_SESSION['logado'] = true;
 
 
-				if (isset($nome_cliente)) {
+				if ($resultadoCredencial['tp_usuario'] == 'cliente') {
 
-					$sqlCredencialCliente = "SELECT * FROM clientes WHERE nome_cliente = '$nome_cliente'";
-					$queryCredencialCliente = mysqli_query($con, $sqlCredencialCliente);
-					$resultadoCredencialCliente = mysqli_fetch_array($queryCredencialCliente);
+					$sqlCredencial = "SELECT * FROM clientes WHERE nome_cliente = '$nome_cliente'";
+					$queryCredencial = mysqli_query($con, $sqlCredencial);
+					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
-					$_SESSION['nome_usuario'] = $resultadoCredencialCliente['nome_cliente'];
+					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_cliente'];
 					
 					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
 
-				if (isset($nome_restaurante)) {
+				if ($resultadoCredencial['tp_usuario'] == 'restaurante') {
+					$sqlCredencial = "SELECT * FROM restaurantes WHERE nome_restaurante = '$nome_restaurante'";
+					$queryCredencial = mysqli_query($con, $sqlCredencial);
+					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
-					$sqlCredencialRestaurante = "SELECT * FROM restaurantes WHERE nome_restaurante = '$nome_restaurante'";
-					$queryCredencialRestaurante = mysqli_query($con, $sqlCredencialRestaurante);
-					$resultadoCredencialRestaurante = mysqli_fetch_array($queryCredencialRestaurante);
-
-					$_SESSION['nome_usuario'] = $resultadoCredencialRestaurante['nome_restaurante'];
+					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_restaurante'];
 					
 					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
 
-				if (isset($nome_empresa)) {
+				if ($resultadoCredencial['tp_usuario'] == 'empresa') {
 
-					$sqlCredencialEmpresa = "SELECT * FROM empresas WHERE nome_empresa = '$nome_empresa'";
-					$queryCredencialEmpresa = mysqli_query($con, $sqlCredencialEmpresa);
-					$resultadoCredencialEmpresa = mysqli_fetch_array($queryCredencialEmpresa);
+					$sqlCredencial = "SELECT * FROM empresas WHERE nome_empresa = '$nome_empresa'";
+					$queryCredencial = mysqli_query($con, $sqlCredencial);
+					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
-					$_SESSION['nome_usuario'] = $resultadoCredencialEmpresa['nome_empresa'];
+					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_empresa'];
 					
 
 					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
-				else{
-					
-				}
-
 			} else {
 				$alerta['tipo'] = "danger";
 				$alerta['mensagem'] = "Seu usuario não esta ativo, contate um administrador";

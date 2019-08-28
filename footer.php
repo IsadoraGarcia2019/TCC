@@ -13,10 +13,9 @@
 <footer>
  <div class="footer-item">
   <div class="row">
-    <a href="caramba@deucerto.com" class="col-sm-12 col-md-3">E-mail: cheffDelivery@gmail.com   </a>
-    <a href="" class="col-sm-12 col-md-3">Twitter: @CheffDelivery </a>
-    <a href=""class="col-sm-12 col-md-3">Facebook: Cheff Delivery</a>
-    <a href=""class="col-sm-12 col-md-3">Instagram: @whoischeffdelivery_</a>
+    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTJtrnhxXwfpDgvhvzGsLRlLgjHgjcfzcQFCTNqvbqkMSDXnPTwMNHPSkbjVnnrBWWPBfJq" class="col-sm-12 col-md-3">E-mail: deliiverycheff@gmail.com   </a>
+    <a href="https://twitter.com/delivery_cheff" class="col-sm-12 col-md-3">Twitter: @delivery_cheff </a>
+    <a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"class="col-sm-12 col-md-3">Instagram: @deliiverycheff</a>
   </div>
 </div>
 <div id="negrito" class="mt-4">
