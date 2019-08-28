@@ -16,6 +16,10 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 		$email = $_POST['email'];
 		$senha = $_POST['senha'];
 
+		var_dump($_SESSION);
+
+				die();
+
 			// Verificar credenciais
 		$sqlCredencial = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 		$queryCredencial = mysqli_query($con, $sqlCredencial);
@@ -26,7 +30,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 			if ($resultadoCredencial['ativo'] == 1) {
 				// Criar sessão do usuário
 				$_SESSION['logado'] = true;
-
+				$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 
 				if ($resultadoCredencial['tp_usuario'] == 'cliente') {
 
@@ -35,21 +39,15 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
 					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_cliente'];
-					
-					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
-
 				if ($resultadoCredencial['tp_usuario'] == 'restaurante') {
-					
+
 					$sqlCredencial = "SELECT * FROM restaurantes WHERE nome_restaurante = '$nome_restaurante'";
 					$queryCredencial = mysqli_query($con, $sqlCredencial);
 					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
 					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_restaurante'];
-					
-					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
-
 				if ($resultadoCredencial['tp_usuario'] == 'empresa') {
 
 					$sqlCredencial = "SELECT * FROM empresas WHERE nome_empresa = '$nome_empresa'";
@@ -57,10 +55,8 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 					$resultadoCredencial = mysqli_fetch_array($queryCredencial);
 
 					$_SESSION['nome_usuario'] = $resultadoCredencial['nome_empresa'];
-					
-
-					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
+
 			} else {
 				$alerta['tipo'] = "danger";
 				$alerta['mensagem'] = "Seu usuario não esta ativo, contate um administrador";
@@ -70,6 +66,8 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 			$alerta['tipo'] = "danger";
 			$alerta['mensagem'] = "Credenciais invalidas";
 		}
+
+
 	}
 } 
 ?>

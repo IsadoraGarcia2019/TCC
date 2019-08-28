@@ -43,12 +43,28 @@ if (mysqli_query($con, $sqlEmpresa)) {
 	'$email',
 	'$senha', 
 	'empresa',
-	'$idEmpresa'
+	'$idEmpresa',
+	'1'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {
 
-//
+
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+}else {
+	$alerta['tipo'] = "danger";
+	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+
+}
 }
 
 }
