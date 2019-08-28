@@ -31,9 +31,7 @@ class Login extends Site {
 				if ($resultadoLogin != null) {
 					$_SESSION['logado'] = true;
 					$_SESSION['id_usuario'] = $resultadoLogin['id'];
-<<<<<<< HEAD
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
-=======
 
 					if ($resultadoLogin['tp_usuario'] == 'cliente') {
 						$sqlCliente = "SELECT * FROM clientes WHERE id = '".$resultadoLogin['fk_tipo']."'";
@@ -58,7 +56,6 @@ class Login extends Site {
 
 						$_SESSION['nome_usuario'] = $resultadoEmpresa['nome_empresa'];
 					}
->>>>>>> 283f1741ac85ddc252fd7df0053f6424d866d0df
 
 					// Redirecionamento para a página inicial
 					header('Location: index.php');
