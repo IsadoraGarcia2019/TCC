@@ -12,6 +12,7 @@ require_once"head.php";
 	<!-- link bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
+	<link rel="stylesheet" href="media/css/main.css">
 
 </head>
 <body style="background-color: rgb(235, 226, 225);">
@@ -34,6 +35,7 @@ require_once"head.php";
 		<div class="card-body" > 
 
 			<form class="col-sm" method="post" action="">
+				<h2 class="mb-3"><strong>Dados do Restaurante</strong></h2>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>

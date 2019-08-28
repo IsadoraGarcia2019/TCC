@@ -8,6 +8,7 @@ if (isset($_POST['btnCadastrar'])) {
 		// Recebendo os campos
 	$email = $_POST['email_cliente'];
 	$senha = $_POST['senha_cliente'];
+	$nome_cliente = $_POST['nome_cliente'];
 	$estado = $_POST['estado_cliente'];
 	$cidade = $_POST['cidade_cliente'];
 	$rua = $_POST['rua_cliente'];
@@ -21,6 +22,7 @@ if (isset($_POST['btnCadastrar'])) {
 	$sqlCliente = "INSERT INTO clientes 
 	VALUES (
 	DEFAULT, 
+	'$nome_cliente',
 	'$estado',
 	'$cidade',
 	'$rua',
