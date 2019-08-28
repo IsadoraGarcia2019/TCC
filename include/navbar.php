@@ -1,6 +1,6 @@
 <?php
 
-// session_start();
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -11,9 +11,9 @@
 <body>
 
 	<?php if(isset($_SESSION['nome_usuario'])) { ?>
-		<div>
+		<div class="text-white">
 			Olá, <?=$_SESSION['nome_usuario']?>
-			<a href="backends/logoff.php" class="btn btn-dark ml-3">SAIR</a>
+			<a href="backends/logoff.php" class="btn btn-dark ml-3 mr-3">SAIR</a>
 		</div>
 	<?php } ?>
 
