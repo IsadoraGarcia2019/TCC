@@ -122,22 +122,6 @@ require_once"head.php";
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pastel</h4>
-							<h4 class="price">R$5</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Coxinha de Frango</h4>
-							<h4 class="price">R$5</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
 							<h4>Frango Frito</h4>
 							<h4 class="price">R$9</h4>
 						</div>									
