@@ -24,7 +24,12 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 			if ($resultadoCredencial['ativo'] == 1) {
 				// Criar sessão do usuário
 				$_SESSION['logado'] = true;
+
+
+				
 				$_SESSION['nome_usuario'] = $resultadoCredencial['nome'];
+
+
 				$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 			} else {
 				$alerta['tipo'] = "danger";
