@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 <?php 
   require_once"head.php";
   require_once "classes/site.class.php";
   require_once"head.php";
+=======
+<?php require_once"head.php";
+      require_once "classes/site.class.php";
+      require_once"head.php";
+
+>>>>>>> a5ce34c0793d4f6ec70828726f60446e1268f525
 ?>
 
 <header>
