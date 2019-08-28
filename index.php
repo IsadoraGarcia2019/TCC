@@ -37,12 +37,12 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         <img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Café da Manhã</h3>
-          <p class="card-text">Seu café da manhã como você nunca viu antes..</p>
+          <p class="card-text">Seu café da manhã como você nunca viu antes.</p>
         </div>
       </div>
       <div class="card p-3 shadow">
         <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <p><strong>Temos promoções todos os dias para melhor atender você, faça seu pedido e o frete é totalmente gratuito</strong></p>
+          <p><strong>Temos promoções todos os dias para atender melhor você, faça seu pedido e o frete é totalmente gratuito.</strong></p>
         </blockquote>
       </div>
       <div class="card shadow">
@@ -56,12 +56,12 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         <img src="media/images/frenchfries.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Almoço</h3>
-          <p class="card-text">Temos vários combos e promoções para que suas refeições sejam mais que especiais</p>
+          <p class="card-text">Temos vários combos e promoções para que suas refeições sejam mais que especiais.</p>
         </div>
       </div>
       <div class="card p-3 text-danger text-center shadow">
         <blockquote class="blockquote mb-0 card-body">
-          <p><strong>Receber sua comida em casa nunca foi tão fácil</strong></p>
+          <p><strong>Receber sua comida em casa nunca foi tão fácil.</strong></p>
         </blockquote>
       </div>
       <div class="card shadow">
@@ -75,19 +75,19 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         <img src="media/images/massas1.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Jantar</h3>
-          <p class="card-text">Pizza para um jantar bem mais saboroso</p>
+          <p class="card-text">Pizza para um jantar bem mais saboroso.</p>
         </div>
       </div>
       <div class="card p-3 shadow">
         <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido</strong></p>
+          <p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido.</strong></p>
         </blockquote>
       </div>
       <div class="card shadow">
         <img src="media/images/vegetariano.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h3 class="card-title">Vegetariana</h3>
-          <p class="card-text">E para os amantes de comida vegetariana, temos um cardápio especial para vocês</p>
+          <p class="card-text">E para os amantes de comida vegetariana, temos um cardápio especial para vocês.</p>
         </div>
       </div>
     </div>
