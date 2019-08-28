@@ -62,7 +62,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 					$_SESSION['id_usuario'] = $resultadoCredencial['id'];
 				}
 				else{
-
+					
 				}
 
 			} else {

@@ -14,7 +14,7 @@ require_once"head.php";
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="media/css/main.css">
 </head>
-<body style="background-color: rgb(235, 226, 225)!important;">
+<body >
 	
 	<?php
 	require_once "header.php";
@@ -27,7 +27,7 @@ require_once"head.php";
 		</div> 
 	</div>
 </div>
-<section class="menu-area section-gap" id="menu">
+<section class="menu-area section-gap" id="menu" style="background-color: rgb(235, 226, 225)!important; ">
 	<div class="container">
 		<ul class="filter-wrap filters col-lg-12 no-padding">
 			<li class="active" data-filter="*">Todo menu</li>
