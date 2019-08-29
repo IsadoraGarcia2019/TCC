@@ -28,12 +28,11 @@ require_once"head.php";
 	</div>
 </div>
 
-
 <div class="container">
 	<div class="row">
-				<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
+		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
 			<div class="card shadow" style="margin-top: -60px;  min-height: 400px;">
-				<img src="media/images/combo.jpg" class="card-img-top"  style="max-height: 200px; max-width: 350px;" alt="...">
+				<img src="media/images/petiscos.jpg" class="card-img-top"  style="max-height: 200px; max-width: 350px;" alt="...">
 				<div class="card-body">
 					<h5 class="card-title text-danger">Básico</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Almoço ou jantar de segunda à sexta.</strong></p>
@@ -41,9 +40,10 @@ require_once"head.php";
 				</div>
 			</div>
 		</div>
+
 		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
 			<div class="card shadow"style="margin-top: -60px;  min-height: 400px;">
-				<img src="media/images/cafe-da-manha.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<img src="media/images/combo-cafe.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
 				<div class="card-body">
 					<h5 class="card-title text-danger">Intermediário</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Café da manhã e almoço de segunda à sábado.</strong></p>
@@ -51,9 +51,10 @@ require_once"head.php";
 				</div>
 			</div>
 		</div>
-				<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
+		
+		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
 			<div class="card shadow" style="margin-top: -60px; min-height: 400px;">
-				<img src="media/images/refeiçoes.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<img src="media/images/comborefeiçoes1.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
 				<div class="card-body">
 					<h5 class="card-title text-danger">Premium</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Café da manhã, almoço e jantar de segunda à segunda.</strong></p>
@@ -61,16 +62,39 @@ require_once"head.php";
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="col-10 col-md-3 p-0  offset-1 offset-md-0">
-		<div class="card shadow p-0" style="min-width:345px; min-height:400px;">
-			<img src="media/images/combo_personalizado.jpeg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
-			<div class="card-body">
-				<h5 class="card-title text-danger">Personalizado</h5>
-				<p class="card-text" style="max-height: 50px;"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas.</strong></p>
-				<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">Variável</a>
-			</div>
-		</div>	
+
+		<div class="col-10 col-md-4 offset-1 offset-1 offset-md-0">
+			<div class="card shadow" style="min-width:345px; min-height:400px;">
+				<img src="media/images/cafedamanha1.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Breakfast</h5>
+					<p class="card-text" style="max-height: 50px;"><strong>Café da manhã de segunda à segunda.</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">R$250,00</a>
+				</div>
+			</div>	
+		</div>
+
+		<div class="col-10 col-md-4 offset-1 offset-1 offset-md-0">
+			<div class="card shadow" style="min-width:345px; min-height:400px;">
+				<img src="media/images/candy.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Candy Box</h5>
+					<p class="card-text" style="max-height: 50px;"><strong>Exclusivo para sobremesas, dias de recebimento a critério do cliente.</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">Variável</a>
+				</div>
+			</div>	
+		</div>
+
+		<div class="col-10 col-md-4 offset-1 offset-1 offset-md-0">
+			<div class="card shadow" style="min-width:345px; min-height:400px;">
+				<img src="media/images/personalizado.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<div class="card-body">
+					<h5 class="card-title text-danger">Personalizado</h5>
+					<p class="card-text" style="max-height: 50px;"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas.</strong></p>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">Variável</a>
+				</div>
+			</div>	
+		</div>
 	</div>
 </div>
 
