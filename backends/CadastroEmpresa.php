@@ -66,7 +66,11 @@ if (mysqli_query($con, $sqlUsuario)) {
 
 }
 }
+<<<<<<< HEAD
 
 }
 
+=======
+}
+>>>>>>> b84f7cb3e18e85e76199a5068a1b7e9f2393392a
 ?>

@@ -3,7 +3,6 @@ require_once"head.php";
 
 require_once"include/verificacao_pagina_restrita.php";
 
-
 ?>
 
 <!DOCTYPE html>
