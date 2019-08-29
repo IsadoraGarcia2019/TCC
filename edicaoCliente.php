@@ -69,11 +69,11 @@ require_once"head.php";
               <?=$disabled?>> 
               <option>Nenhuma</option> 
               <option value="gluten" <?= ($resultadoCliente['restricao_alimentar']=="gluten") ? 'selected' : ''?>>Glúten</option> 
-              <option value="lactose"  <?= ($resultadoCliente['restricao_alimentar']=="lactose") ? 'selected' : ''?>>Lactose</option> 
-              <option value="acucar"  <?= ($resultadoCliente['restricao_alimentar']=="acucar") ? 'selected' : ''?>>Açúcar</option> 
-              <option value="soja"  <?= ($resultadoCliente['restricao_alimentar']=="soja") ? 'selected' : ''?>>Soja</option> 
-              <option value="ovos"  <?= ($resultadoCliente['restricao_alimentar']=="ovos") ? 'selected' : ''?>>Ovos</option> 
-              <option value="frutos_do_mar"  <?= ($resultadoCliente['restricao_alimentar']=="frutos_do_mar") ? 'selected' : ''?>>Frutos do mar</option> 
+              <option value="lactose" <?= ($resultadoCliente['restricao_alimentar']=="lactose") ? 'selected' : ''?>>Lactose</option> 
+              <option value="acucar" <?= ($resultadoCliente['restricao_alimentar']=="acucar") ? 'selected' : ''?>>Açúcar</option> 
+              <option value="soja" <?= ($resultadoCliente['restricao_alimentar']=="soja") ? 'selected' : ''?>>Soja</option> 
+              <option value="ovos" <?= ($resultadoCliente['restricao_alimentar']=="ovos") ? 'selected' : ''?>>Ovos</option> 
+              <option value="frutos_do_mar" <?= ($resultadoCliente['restricao_alimentar']=="frutos_do_mar") ? 'selected' : ''?>>Frutos do mar</option> 
             </select>
           </div>
         </div>
