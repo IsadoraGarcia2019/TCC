@@ -63,14 +63,8 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
-
-}
-}
-<<<<<<< HEAD
-
 }
 
-=======
 }
->>>>>>> b84f7cb3e18e85e76199a5068a1b7e9f2393392a
+}
 ?>
