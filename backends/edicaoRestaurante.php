@@ -1,5 +1,7 @@
 <?php 
 
+require_once"edicao.php";
+
 // Buscar informações do restaurante
 if (isset($id)) {
 	$sql = "SELECT * FROM restaurantes WHERE id = $id";

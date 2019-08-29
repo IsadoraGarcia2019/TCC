@@ -1,7 +1,9 @@
 <?php 
 require_once"head.php";
 require_once "classes/site.class.php";
-require_once"head.php";
+
+$site = new Site();
+$site->Session();
 ?>
 
 <header>
@@ -42,20 +44,20 @@ require_once"head.php";
               <a class="dropdown-item" href="combos.php">Pacotes</a>
             </div>
           </li>
+
+          <?php if(!isset($_SESSION['logado'])) { ?>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
               Cadastro
             </a>
-
-            <?php if(!isset($_SESSION['logado'])) { ?>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                 <a class="dropdown-item" href="CadastroCliente.php">Cliente</a>
                 <a class="dropdown-item" href="CadastroEmpresa.php">Empresa</a>
                 <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
               </div>
-            <?php } ?>
 
           </li>  
+          <?php } ?>
         </ul>
         <?php Site::Navbar(); ?>
 

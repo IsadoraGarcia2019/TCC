@@ -1,9 +1,17 @@
 <?php 
 
+require_once"classes/site.class.php";
+ $obj = new Site();
+
+	// Recuperar ID do cliente
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+}
+
 // Buscar informações do cliente
 if (isset($id)) {
 	$sql = "SELECT * FROM clientes WHERE id = $id";
-	$queryClientes = mysqli_query($con, $sql);
+	$queryClientes = mysqli_query($obj->con, $sql);
 	$resultadoCliente = mysqli_fetch_array($queryClientes);
 
 		// Verificar se o cliente existe

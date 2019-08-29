@@ -2,6 +2,8 @@
 
 require_once"backends/edicaoCliente.php";
 
+require_once"backends/edicao.php";
+
 require_once"head.php";
 
 ?>
@@ -25,6 +27,7 @@ require_once"head.php";
   <div class="row">
     <div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
     " class="shadow" >
+    <?php Site::navbar(); ?>
     <div class="text-center my-5">
       <h1 class="text-white mb-5">Edição dos meus dados pessoais </h1>
     </div> 
@@ -38,46 +41,51 @@ require_once"head.php";
       <form method="post" action="">
         <h2><strong>Dados Pessoais</strong></h2>
         <div class="form-group mt-3">
+          <label for="nome_cliente"><strong>Nome do Cliente</strong></label>
+          <input type="text" class="form-control" id="nome_cliente" name="nome_cliente" value="<?=$resultadoCliente['nome_cliente']?>">
+        </div>
+        <div class="form-group">
           <label for="estado_cliente" ><strong>Estado</strong></label>
-          <select id="estado_cliente" class="form-control" name="estado_cliente">
+          <select id="estado_cliente" class="form-control" name="estado_cliente" value="<?=$resultadoCliente['estado']?>">
             <option selected>SC</option>
           </select>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="cidade_cliente"><strong>Cidade</strong></label>
-            <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar" name="cidade_cliente">
+            <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar" name="cidade_cliente" value="<?=$resultadoCliente['cidade']?>">
           </div>
           <div class="form-group col-sm-6">
             <label for="rua_cliente"><strong>Rua</strong></label>
-            <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179" name="rua_cliente">
+            <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179" name="rua_cliente" value="<?=$resultadoCliente['rua']?>">
           </div>
           <div class="form-group col-sm-6 col-md-12">
             <label for="telefone_cliente"><strong>Número de telefone</strong></label>
-            <input type="text" class="form-control" id="telefone_cliente" name="numero_telefone_cliente">
+            <input type="text" class="form-control" id="telefone_cliente" name="numero_telefone_cliente" value="<?=$resultadoCliente['numero_telefone']?>">
           </div>
           <div class="form-group col-md-12">
             <label for="restricao"><strong>Restrição alimentar</strong></label>
-            <select id="restricao" class="form-control" name="restricao_alimentar">
+            <select id="restricao" class="form-control" name="restricao_alimentar" value="<?=$resultadoCliente['restricao_alimentar']?>">
+              <?=$disabled?>> 
               <option>Nenhuma</option> 
-              <option value="gluten">Glúten</option> 
-              <option value="lactose">Lactose</option> 
-              <option value="acucar">Açúcar</option> 
-              <option value="soja">Soja</option> 
-              <option value="ovos">Ovos</option> 
-              <option value="frutos_do_mar">Frutos do mar</option> 
+              <option value="gluten" <?= ($resultadoCliente['restricao_alimentar']=="gluten") ? 'selected' : ''?>>Glúten</option> 
+              <option value="lactose"  <?= ($resultadoCliente['restricao_alimentar']=="lactose") ? 'selected' : ''?>>Lactose</option> 
+              <option value="acucar"  <?= ($resultadoCliente['restricao_alimentar']=="acucar") ? 'selected' : ''?>>Açúcar</option> 
+              <option value="soja"  <?= ($resultadoCliente['restricao_alimentar']=="soja") ? 'selected' : ''?>>Soja</option> 
+              <option value="ovos"  <?= ($resultadoCliente['restricao_alimentar']=="ovos") ? 'selected' : ''?>>Ovos</option> 
+              <option value="frutos_do_mar"  <?= ($resultadoCliente['restricao_alimentar']=="frutos_do_mar") ? 'selected' : ''?>>Frutos do mar</option> 
             </select>
           </div>
         </div>
         <h2><strong>Preferências</strong></h2>
         <div class="form-group mt-3">
           <label for="comida_cliente"><strong>Comida</strong></label>
-          <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida">
+          <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida" value="<?=$resultadoCliente['preferencia_comida']?>">
         </div>
         <div class="form-group">
           <label for="restaurante_cliente"><strong>Restaurante</strong></label>
-          <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante">
-        </div>       
+          <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante" value="<?=$resultadoCliente['preferencia_restaurante']?>">
+        </div>    
 
         <?php if (empty($disabled)) { ?>
           <button type="submit" class="btn btn-outline-danger float-left mb-3 col-md-12 mt-3" name="btnExcluir">Excluir</button>

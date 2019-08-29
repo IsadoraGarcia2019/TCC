@@ -2,8 +2,9 @@
 
  require_once"backends/edicaoEmpresa.php";
 
- require_once"head.php";
+ require_once"backends/edicao.php";
 
+ require_once"head.php";
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -24,6 +25,7 @@
 	<div class="row">
 		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
 		" class="shadow" >
+			<?php Site::navbar(); ?>
 		<div class="text-center my-5">
 			<h1 class="text-white mb-5">Edição da minha empresa</h1>
 		</div> 

@@ -47,7 +47,7 @@ require_once"head.php";
 				<div class="card-body">
 					<h5 class="card-title text-danger">Intermediário</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Café da manhã e almoço de segunda à sábado.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3">R$432,00</a>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-4">R$432,00</a>
 				</div>
 			</div>
 		</div>
@@ -69,7 +69,7 @@ require_once"head.php";
 				<div class="card-body">
 					<h5 class="card-title text-danger">Breakfast</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Café da manhã de segunda à segunda.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">R$250,00</a>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-4">R$250,00</a>
 				</div>
 			</div>	
 		</div>
@@ -80,7 +80,7 @@ require_once"head.php";
 				<div class="card-body">
 					<h5 class="card-title text-danger">Candy Box</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Exclusivo para sobremesas, dias de recebimento a critério do cliente.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">Variável</a>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-1">Variável</a>
 				</div>
 			</div>	
 		</div>
@@ -91,7 +91,7 @@ require_once"head.php";
 				<div class="card-body">
 					<h5 class="card-title text-danger">Personalizado</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">Variável</a>
+					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-1">Variável</a>
 				</div>
 			</div>	
 		</div>

@@ -2,6 +2,8 @@
 
  require_once"backends/edicaoRestaurante.php";
 
+ require_once"backends/edicao.php";
+
  require_once"head.php";
 
  ?> 

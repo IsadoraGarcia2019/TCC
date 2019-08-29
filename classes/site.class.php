@@ -42,8 +42,8 @@ class Site {
 		session_start();
 
 		// Verificando se existe a $_SESSION para carregar a página
-		if (!(isset($_SESSION['logado']) && $_SESSION['logado']==true)) {
-			header('Location: ../404.php');	
+		if (!(isset($_SESSION['logado']) || $_SESSION['logado']==false)) {
+			header('Location: erros.php');	
 
 	}
 

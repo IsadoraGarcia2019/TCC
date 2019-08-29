@@ -1,5 +1,7 @@
 <?php 
 
+require_once"edicao.php";
+
 // Buscar informações da empresa
 if (isset($id)) {
 	$sql = "SELECT * FROM empresas WHERE id = $id";

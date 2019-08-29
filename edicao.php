@@ -3,6 +3,8 @@ require_once"head.php";
 
 require_once"include/verificacao_pagina_restrita.php";
 
+require_once"backends/edicao.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -34,16 +36,27 @@ require_once"include/verificacao_pagina_restrita.php";
   </div>
 
   <div class="row">
-    <a href="edicaoUsuario.php?<?=$_SESSION['id_usuario']?>" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
-    <a href="edicaoCliente.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
-    <a href="edicaoEmpresa.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
-    <a href="edicaoRestaurante.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
+    <a href="edicaoUsuario.php?id=<?=$_SESSION['id_usuario']?>" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
+
+
+    <?php if($_SESSION['tp_usuario'] == 'cliente'){ ?>
+      <a href="edicaoCliente.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
+    <?php } ?>
+
+    <?php if($_SESSION['tp_usuario'] == 'empresa'){ ?>
+      <a href="edicaoEmpresa.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
+    <?php } ?>
+
+    <?php if($_SESSION['tp_usuario'] == 'restaurante'){ ?>
+      <a href="edicaoRestaurante.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
+    <?php } ?>
+
   </div>
 </div>
 
 <?php
-      //inclusão do rodapé
-require_once "footer.php";
+    //inclusão do rodapé
+    require_once "footer.php";
 ?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
