@@ -34,7 +34,7 @@ require_once"head.php";
 			<li data-filter=".cafe_manha">Café da manhã</li>
 			<li data-filter=".almoco">Almoço</li>
 			<li data-filter=".jantar">Jantar</li>
-			<li data-filter=".Vegan">Vegana</li>
+			<li data-filter=".Vegan">Vegetariana</li>
 			<li data-filter=".sobremesa">Sobremesas</li>
 		</ul>
 		<div class="filters-content">
@@ -515,14 +515,6 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Churros com doce de leite</h4>
-							<h4 class="price">R$12</h4>
-						</div>									
-					</div>
-				</div>   
 				<div class="col-md-6 all sobremesa">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
