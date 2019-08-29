@@ -32,6 +32,8 @@ class Login extends Site {
 					$_SESSION['logado'] = true;
 					$_SESSION['id_usuario'] = $resultadoLogin['id'];
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
+					$_SESSION['tp_usuario'] = $resultadoLogin['tp_usuario'];
+					$_SESSION['fk_usuario'] = $resultadoLogin['fk_usuario'];
 
 					if ($resultadoLogin['tp_usuario'] == 'cliente') {
 						$sqlCliente = "SELECT * FROM clientes WHERE id = '".$resultadoLogin['fk_tipo']."'";

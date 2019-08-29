@@ -37,7 +37,7 @@
 			
 			<form method="post" action="">
 				<h2><strong>Dados da Empresa</strong></h2>
-				<div class="form-group">
+				<div class="form-group mt-3">
 					<label for="nome_empresa"><strong>Nome da empresa</strong></label>
 					<input type="text" class="form-control" id="nome_empresa" name="nome_empresa">
 				</div>

@@ -1,6 +1,8 @@
 <?php
 require_once"head.php";
 
+require_once"include/verificacao_pagina_restrita.php";
+
 
 ?>
 
@@ -33,10 +35,10 @@ require_once"head.php";
   </div>
 
   <div class="row">
-    <a href="edicaoUsuario?<?=$_SESSION['id']?>" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
-    <a href="edicaoCliente?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
-    <a href="edicaoEmpresa?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
-    <a href="edicaoRestaurante?<?=$_SESSION['id']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
+    <a href="edicaoUsuario.php?<?=$_SESSION['id_usuario']?>" class="btn btn-outline-danger btn-lg col-md-6 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
+    <a href="edicaoCliente.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
+    <a href="edicaoEmpresa.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
+    <a href="edicaoRestaurante.php?<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
   </div>
 </div>
 

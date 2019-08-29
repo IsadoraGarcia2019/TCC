@@ -37,7 +37,7 @@ require_once"head.php";
 
       <form method="post" action="">
         <h2><strong>Dados Pessoais</strong></h2>
-        <div class="form-group">
+        <div class="form-group mt-3">
           <label for="estado_cliente" ><strong>Estado</strong></label>
           <select id="estado_cliente" class="form-control" name="estado_cliente">
             <option selected>SC</option>
@@ -70,7 +70,7 @@ require_once"head.php";
           </div>
         </div>
         <h2><strong>Preferências</strong></h2>
-        <div class="form-group">
+        <div class="form-group mt-3">
           <label for="comida_cliente"><strong>Comida</strong></label>
           <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida">
         </div>
