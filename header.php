@@ -24,23 +24,22 @@ require_once"head.php";
             <li class="nav-item">
               <a class="nav-link text-light" href="login.php" style="margin-left: 10px;">Login</a>
             </li>
-          <?php //} ?> 
-          <li class="nav-item">
-            <a class="nav-link text-light" href="contato.php" style="margin-left: 10px;">Contato</a>
-          </li>        
-          <li class="nav-item">
-            <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-              Assinaturas
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
-              <a class="dropdown-item" href="combos.php">Pacotes</a>
-            </div>
-          </li>
-          <?php //if (!$_SESSION['logado'] = false) {?>
+            <?php //} ?> 
+            <li class="nav-item">
+              <a class="nav-link text-light" href="contato.php" style="margin-left: 10px;">Contato</a>
+            </li>        
+            <li class="nav-item">
+              <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+                Assinaturas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
+                <a class="dropdown-item" href="combos.php">Pacotes</a>
+              </div>
+            </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
                 Cadastro
@@ -50,15 +49,14 @@ require_once"head.php";
                 <a class="dropdown-item" href="CadastroEmpresa.php">Empresa</a>
                 <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
               </div>
-            </li> 
-          <?php //} ?> 
-        </ul>
-        <?php Site::Navbar(); ?>
+            </li>  
+          </ul>
+          <?php Site::Navbar(); ?>
 
-        <form action="buscar.php" method="POST" target="principal" class="form-inline my-2 my-lg-0">
-   <input name="buscar" type="text" class="form-control mr-sm-2" size="10" placeholder="Vai pedir o que?" aria-label="Search">
-   <input type="submit" value="buscar" class="btn my-2 my-sm-0 text-light" style="background-color: rgb(143, 19, 10);">
-</form>
-      </div>
-    </nav>
-  </header>
+          <form action="buscar.php" method="POST" target="principal" class="form-inline my-2 my-lg-0">
+           <input name="buscar" type="text" class="form-control mr-sm-2" size="10" placeholder="Vai pedir o que?" aria-label="Search">
+           <input type="submit" value="buscar" class="btn my-2 my-sm-0 text-light" style="background-color: rgb(143, 19, 10);">
+         </form>
+       </div>
+     </nav>
+   </header>

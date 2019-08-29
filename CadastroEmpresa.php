@@ -3,6 +3,8 @@
 require_once"backends/CadastroEmpresa.php";
 
 require_once"head.php";
+
+require_once"include/verificacao_logado.php";
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

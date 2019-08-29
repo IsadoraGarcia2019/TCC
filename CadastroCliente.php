@@ -4,6 +4,8 @@ require_once"backends/CadastroCliente.php";
 
 require_once"head.php";
 
+require_once"include/verificacao_logado.php";
+
 ?>
 
 <!DOCTYPE html>
