@@ -68,5 +68,5 @@ if (mysqli_query($con, $sqlUsuario)) {
 }
 
 }
-}
+
 ?>
