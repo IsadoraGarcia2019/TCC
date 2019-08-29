@@ -41,61 +41,61 @@
  				<div class="form-row">
  					<div class="form-group col-md-6 mt-3">
  						<label for="nome_restaurante"><strong>Nome do Restaurante</strong></label>
- 						<input type="text" class="form-control" name="nome_restaurante" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
+ 						<input type="text" class="form-control" name="nome_restaurante" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho" value="<?=$resultadoRestaurante['nome_restaurante']?>">
  					</div>
  					<div class="form-group col-md-6 mt-3">
  						<label for="telefone_restaurante"><strong>Número de telefone</strong></label>
- 						<input type="text" class="form-control" name="telefone_restaurante" id="telefone_restaurante">
+ 						<input type="text" class="form-control" name="telefone_restaurante" id="telefone_restaurante" value="<?=$resultadoRestaurante['numero_telefone']?>">
  					</div>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-md-6 col-xs-12">
  						<label for="horario_atendimento"><strong>Horário de Atendimento</strong></label>
- 						<select name="horario_atendimento" id="horario_atendimento" class="form-control">
- 							<option selected>Segunda à Sexta</option>
- 							<option >Segunda à Sábado</option>
- 							<option >Segunda à Segunda</option>
- 							<option >Terça à Sábado</option>
- 							<option >Outros dias </option>
+ 						<select name="horario_atendimento" id="horario_atendimento" class="form-control" value="<?=$resultadoRestaurante['horario_atendimento']?>">
+ 							<option selected value="segunda_a_sexta"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_sexta") ? 'selected' : ''?>>Segunda à Sexta</option>
+ 							<option value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_sabado") ? 'selected' : ''?>>Segunda à Sábado</option>
+ 							<option value="segunda_a_segunda" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_segunda") ? 'selected' : ''?>>Segunda à Segunda</option>
+ 							<option value="terca_a_sabado" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="terca_a_sabado") ? 'selected' : ''?>>Terça à Sábado</option>
+ 							<option value="outros_dias" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="outros_dias") ? 'selected' : ''?>>Outros dias </option>
  						</select>
  					</div>
  					<div class="form-group col-md-6 col-xs-12">
  						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
- 						<input type="text" class="form-control" name="dias_atendimento_restaurante" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
+ 						<input type="text" class="form-control" name="dias_atendimento_restaurante" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta" value="<?=$resultadoRestaurante['dias_atendimento']?>">
  					</div>
  				</div>
  				<div class="form-group col-sm p-0">
  					<label class="form-group col-md-12" for="avaliacao"><strong>Avaliação</strong></label>
- 					<select name="avaliacao" id="avaliacao" class="form-control">
- 						<option selected>Muito bom</option>
- 						<option >Bom</option>
- 						<option >Mais ou menos</option>
- 						<option >Ruim</option>
- 						<option >Péssimo</option>
+ 					<select name="avaliacao" id="avaliacao" class="form-control" value="<?=$resultadoRestaurante['avaliacao']?>">
+ 						<option selected value="muito_bom" <?= ($resultadoRestaurante['avaliacao']=="muito_bom") ? 'selected' : ''?>>Muito bom</option>
+ 						<option  value="bom"  <?= ($resultadoRestaurante['avaliacao']=="bom") ? 'selected' : ''?>>Bom</option>
+ 						<option  value="mais_ou_menos"  <?= ($resultadoRestaurante['avaliacao']=="mais_ou_menos") ? 'selected' : ''?>>Mais ou menos</option>
+ 						<option  value="ruim"  <?= ($resultadoRestaurante['avaliacao']=="ruim") ? 'selected' : ''?>>Ruim</option>
+ 						<option  value="pessimo"  <?= ($resultadoRestaurante['avaliacao']=="pessimo") ? 'selected' : ''?>>Péssimo</option>
  					</select>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm mt-3">
  						<label for="localizacao_restaurante"><strong>Localização</strong></label>
- 						<input type="text" class="form-control" name="localizacao_restaurante" id="localizacao_restaurante">
+ 						<input type="text" class="form-control" name="localizacao_restaurante" id="localizacao_restaurante" value="<?=$resultadoRestaurante['localizacao']?>">
  					</div>
  					<div class="form-group col-sm mt-3">
  						<label for="estado_restaurante"><strong>Estado</strong></label>
- 						<select name="estado_restaurante" id="estado_restaurante" class="form-control">
+ 						<select name="estado_restaurante" id="estado_restaurante" class="form-control" value="<?=$resultadoRestaurante['estado']?>">
  							<option selected>SC</option>
  						</select>
  					</div>
  				</div>
  				<div class="form-group p-0">
  					<label class="form-group col-md-12 mt-1 text-left" for="categoria"><strong>Categoria</strong></label>
- 					<select name="categoria" id="categoria" class="form-control">
- 						<option selected>Cafeteria</option>
- 						<option >Panificadora</option>
- 						<option >Restaurante Buffet</option>
- 						<option >Marmitex</option>
- 						<option >Vegetariana</option>
- 						<option >Pizzaria</option>
- 						<option >Lanches e Petiscos</option>
+ 					<select name="categoria" id="categoria" class="form-control" value="<?=$resultadoRestaurante['categoria']?>">
+ 						<option selected value="cafeteria" <?= ($resultadoRestaurante['categoria']=="cafeteria") ? 'selected' : ''?>>Cafeteria</option>
+ 						<option value="panificadora" <?= ($resultadoRestaurante['categoria']=="panificadora") ? 'selected' : ''?>>Panificadora</option>
+ 						<option  value="restaurante_buffet" <?= ($resultadoRestaurante['categoria']=="restaurante_buffet") ? 'selected' : ''?>>Restaurante Buffet</option>
+ 						<option value="marmitex" <?= ($resultadoRestaurante['categoria']=="marmitex") ? 'selected' : ''?>>Marmitex</option>
+ 						<option value="vegetariana" <?= ($resultadoRestaurante['categoria']=="vegetariana") ? 'selected' : ''?>>Vegetariana</option>
+ 						<option value="pizzaria" <?= ($resultadoRestaurante['categoria']=="pizzaria") ? 'selected' : ''?>>Pizzaria</option>
+ 						<option value="lanches_e_petiscos" <?= ($resultadoRestaurante['categoria']=="lanches_e_petiscos") ? 'selected' : ''?>>Lanches e Petiscos</option>
  					</select>
  				</div>
 
