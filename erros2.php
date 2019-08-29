@@ -24,7 +24,7 @@
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 	<div class="card" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
-			<h1>Você já está cadastrado e não pode criar outra conta enquanto estiver logado, por favor faça o logoff para poder se cadastrar</h1>
+			<h1>Você já está cadastrado e não pode criar outra conta enquanto estiver logado, <br> por favor faça o logoff para poder se cadastrar.</h1>
 			<a href="index.php" class="btn btn-outline-danger mt-3">Voltar</a>
 		</div>
 	</div>
