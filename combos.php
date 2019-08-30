@@ -87,7 +87,8 @@ require_once"head.php";
 
 		<div class="col-10 col-md-4 offset-1 offset-1 offset-md-0">
 			<div class="card shadow" style="min-width:345px; min-height:400px;">
-				<img src="media/images/personalizado.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
+				<!-- <img src="media/images/personalizado.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="..."> -->
+				<img src="media/images/montagem.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
 				<div class="card-body">
 					<h5 class="card-title text-danger">Personalizado</h5>
 					<p class="card-text" style="max-height: 50px;"><strong>Você escolhe o que quer receber e os dias que quer receber, o valor varia conforme as suas escolhas.</strong></p>
