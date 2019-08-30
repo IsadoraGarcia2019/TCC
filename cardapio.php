@@ -138,7 +138,7 @@ require_once"head.php";
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mingau</h4>
+							<h4>Vitamina</h4>
 							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
@@ -178,16 +178,16 @@ require_once"head.php";
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Donuts</h4>
-							<h4 class="price">R$5</h4>
-						</div>								
+							<h4>Cheesecake</h4>
+							<h4 class="price">R$20</h4>
+						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cheesecake</h4>
-							<h4 class="price">R$20</h4>
+							<h4>Torta de Maçã</h4>
+							<h4 class="price">R$15</h4>
 						</div>									
 					</div>
 				</div>
@@ -218,47 +218,15 @@ require_once"head.php";
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pão de Canela</h4>
-							<h4 class="price">R$9</h4>
-						</div>								
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
 							<h4>Sanduíche Integral</h4>
 							<h4 class="price">R$9</h4>
-						</div>								
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pão de Queijo</h4>
-							<h4 class="price">R$2</h4>
-						</div>								
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Misto Quente</h4>
-							<h4 class="price">R$5</h4>
-						</div>								
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Vitamina</h4>
-							<h4 class="price">R$11</h4>
 						</div>								
 					</div>
 				</div>
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Macarrão com queijo</h4>
+							<h4>Estrogonoff de Frango</h4>
 							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
@@ -266,7 +234,7 @@ require_once"head.php";
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Estrogonoff de Frango</h4>
+							<h4>Arroz com camarão</h4>
 							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
@@ -282,35 +250,15 @@ require_once"head.php";
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Porção de Batata Frita</h4>
-							<h4 class="price">Pequena R$9</h4>
-							<h4 class="price">Média R$20</h4>
-							<h4 class="price">Grande R$45</h4>
-						</div>											
-					</div>
-				</div>
-				<div class="col-md-6 all almoco">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Hamburguer</h4>
-							<h4 class="price ml-3">X-Salada R$12</h4>
-							<h4 class="price">X-Bacon R$14</h4>
-							<h4 class="price">X-Calabresa R$14</h4>
-						</div>											
-					</div>
-				</div>
-				<div class="col-md-6 all almoco">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Nhoque de Batata Doce</h4>
-							<h4 class="price">R$9</h4>
+							<h4>Cheeseburguer</h4>
+							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Purê de Batata</h4>
+							<h4>Nhoque de Batata Doce</h4>
 							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
@@ -334,7 +282,7 @@ require_once"head.php";
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Nuggets de Frango</h4>
+							<h4>Nuggets</h4>
 							<h4 class="price">R$5</h4>
 						</div>									
 					</div>
@@ -387,10 +335,18 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
-				<div class="col-md-6 all Vegan">
+					<div class="col-md-6 all Vegan">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mix de Salada</h4>
+							<h4>Bolo de Banana e aveia</h4>
+							<h4 class="price">R$11</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all Vegan">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Fricassê de legumes</h4>
 							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
@@ -398,7 +354,7 @@ require_once"head.php";
 				<div class="col-md-6 all Vegan">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Fricassê de legumes</h4>
+							<h4>Mix de Salada</h4>
 							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
@@ -515,22 +471,6 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mix de Frutas</h4>
-							<h4 class="price">R$9</h4>
-						</div>									
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Sagu</h4>
-							<h4 class="price">R$9</h4>
-						</div>								
-					</div>
-				</div>       
 			</div>
 		</div>
 	</div>
