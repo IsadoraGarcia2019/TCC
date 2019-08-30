@@ -45,8 +45,7 @@ if (mysqli_query($con, $sqlCliente)) {
 	'$email',
 	'$senha',
 	'cliente',
-	'$idCliente',
-	'1'
+	'$idCliente'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {
@@ -65,8 +64,8 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+}
+}
+}
 
-}
-}
-}
 ?>
