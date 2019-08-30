@@ -6,11 +6,6 @@ require_once"backends/edicao.php";
 
 require_once"head.php";
 
-// Verificar se existe alerta via COOKIE
-if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
-  $alerta = unserialize($_COOKIE['alerta']);
-  setcookie('alerta');
-}
 ?>
 
 <!DOCTYPE html>
@@ -53,22 +48,22 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
         </div>
         <div class="form-group">
           <label for="estado_cliente" ><strong>Estado</strong></label>
-          <select id="estado_cliente" class="form-control" name="estado_cliente" value="<?=$resultadoCliente['estado']?>">
+          <select id="estado_cliente" class="form-control" name="estado" value="<?=$resultadoCliente['estado']?>">
             <option selected>SC</option>
           </select>
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="cidade_cliente"><strong>Cidade</strong></label>
-            <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar" name="cidade_cliente" value="<?=$resultadoCliente['cidade']?>">
+            <input type="text" class="form-control" id="cidade_cliente" placeholder="Ex: Gaspar" name="cidade" value="<?=$resultadoCliente['cidade']?>">
           </div>
           <div class="form-group col-sm-6">
             <label for="rua_cliente"><strong>Rua</strong></label>
-            <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179" name="rua_cliente" value="<?=$resultadoCliente['rua']?>">
+            <input type="text" class="form-control" id="rua_cliente" placeholder="Ex: Rua Sábia 179" name="rua" value="<?=$resultadoCliente['rua']?>">
           </div>
           <div class="form-group col-sm-6 col-md-12">
             <label for="telefone_cliente"><strong>Número de telefone</strong></label>
-            <input type="text" class="form-control" id="telefone_cliente" name="numero_telefone_cliente" value="<?=$resultadoCliente['numero_telefone']?>">
+            <input type="text" class="form-control" id="telefone_cliente" name="numero_telefone" value="<?=$resultadoCliente['numero_telefone']?>">
           </div>
           <div class="form-group col-md-12">
             <label for="restricao"><strong>Restrição alimentar</strong></label>
@@ -92,8 +87,12 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
         <div class="form-group">
           <label for="restaurante_cliente"><strong>Restaurante</strong></label>
           <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante" value="<?=$resultadoCliente['preferencia_restaurante']?>">
-        </div>    
-
+        </div> 
+        <div class="form-group">
+          <label for="comentarios"><strong>Comentários</strong></label>
+          <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
+        </div>
+        
         <?php if (empty($disabled)) { ?>
           <button type="submit" class="btn btn-outline-secondary col-md-12 " name="btnEditar">Editar</button>
         <?php } ?>

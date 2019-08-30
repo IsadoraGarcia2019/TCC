@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Ago-2019 às 21:07
+-- Generation Time: 30-Ago-2019 às 20:49
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -32,16 +32,27 @@ USE `cheff_delivery`;
 
 CREATE TABLE `clientes` (
   `id` int(10) NOT NULL,
+  `nome_cliente` varchar(255) NOT NULL,
   `estado` varchar(255) NOT NULL,
   `cidade` varchar(255) NOT NULL,
   `rua` varchar(255) NOT NULL,
   `numero_telefone` int(10) NOT NULL,
   `restricao_alimentar` varchar(255) NOT NULL,
-  `preferencia_preco` int(11) NOT NULL,
   `preferencia_comida` int(11) NOT NULL,
   `preferencia_restaurante` int(11) NOT NULL,
   `comentarios` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `clientes`
+--
+
+INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `preferencia_comida`, `preferencia_restaurante`, `comentarios`) VALUES
+(30, '123', 'SC', '102', '123', 123, 'nenhuma', 13, 132, 13),
+(31, '123', 'SC', '102', '123', 123, 'nenhuma', 13, 132, 13),
+(32, '123', 'SC', '102', '123', 123, 'nenhuma', 13, 132, 13),
+(33, '123', 'SC', '102', '123', 123, 'nenhuma', 13, 132, 13),
+(34, '123', 'SC', '102', '123', 123, 'nenhuma', 13, 132, 13);
 
 -- --------------------------------------------------------
 
@@ -75,7 +86,8 @@ CREATE TABLE `restaurantes` (
   `dias_atendimento` varchar(255) NOT NULL,
   `avaliacao` varchar(255) NOT NULL,
   `localizacao` varchar(255) NOT NULL,
-  `estado` varchar(255) NOT NULL
+  `estado` varchar(255) NOT NULL,
+  `categoria` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -88,9 +100,21 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `tp_usuario` varchar(255) NOT NULL,
-  `fk_tipo` int(11) NOT NULL
+  `tp_usuario` enum('restaurante','empresa','cliente') NOT NULL,
+  `fk_tipo` int(11) NOT NULL,
+  `ativo` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `usuarios`
+--
+
+INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`) VALUES
+(31, 'oi@xp.com', '123', 'cliente', 30, 1),
+(32, 'oi@xp.com', '123', 'cliente', 31, 1),
+(33, 'oi@xp.com', '123', 'cliente', 32, 1),
+(34, 'oi@xp.com', '123', 'cliente', 33, 1),
+(35, 'oi@xp.com', '123', 'cliente', 34, 1);
 
 --
 -- Indexes for dumped tables
@@ -128,19 +152,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+
+--
+-- AUTO_INCREMENT for table `empresas`
+--
+ALTER TABLE `empresas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
 --
 ALTER TABLE `restaurantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

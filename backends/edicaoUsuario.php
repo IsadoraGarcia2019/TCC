@@ -29,7 +29,7 @@ if (isset($_POST['btnEditar'])) {
 	$senha = $_POST['senha'];
 
 	$sql = "UPDATE usuarios SET email = '$email', senha = '$senha' WHERE id = $id";
-}	
+	
 
 	// Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
@@ -40,6 +40,8 @@ if (mysqli_query($obj->con, $sql)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 }
+}
+
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 
@@ -66,7 +68,7 @@ if (isset($_POST['btnExcluir'])) {
 			
 		}
 
-		$alerta['tipo'] = "success";
+		$alerta['tipo'] = "danger";
 		$alerta['mensagem'] = "Dados excluidos com sucesso!";
 
 		$alerta = serialize($alerta);
