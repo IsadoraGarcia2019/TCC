@@ -4,8 +4,12 @@
 
 require_once"head.php";
 
-// require_once"include/alerta.php";
- 
+// Verificar se existe alerta via COOKIE
+if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+  $alerta = unserialize($_COOKIE['alerta']);
+  setcookie('alerta');
+}
+
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -35,6 +39,8 @@ require_once"head.php";
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 	<div class="card" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
+
+			<?php require_once"include/alerta.php"; ?>
 
 			<form method="post" action="">
 				

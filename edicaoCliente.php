@@ -6,7 +6,11 @@ require_once"backends/edicao.php";
 
 require_once"head.php";
 
-require_once"include/alerta.php";
+// Verificar se existe alerta via COOKIE
+if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+  $alerta = unserialize($_COOKIE['alerta']);
+  setcookie('alerta');
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,6 +42,8 @@ require_once"include/alerta.php";
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -20px !important;">
   <div class="card" style="margin-right: auto; margin-left: auto;">
     <div class="card-body" >
+
+      <?php require_once"include/alerta.php"; ?>
 
       <form method="post" action="">
         <h2><strong>Dados Pessoais</strong></h2>

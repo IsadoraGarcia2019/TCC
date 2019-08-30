@@ -45,7 +45,8 @@ if (mysqli_query($con, $sqlCliente)) {
 	'$email',
 	'$senha',
 	'cliente',
-	'$idCliente'
+	'$idCliente',
+	'1'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {

@@ -46,7 +46,8 @@ if (mysqli_query($con, $sqlRestaurante)) {
 	'$email',
 	'$senha', 
 	'restaurante',
-	'$idRestaurante'
+	'$idRestaurante',
+	'1'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {

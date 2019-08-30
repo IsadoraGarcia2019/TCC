@@ -1,3 +1,3 @@
-não está excluindo os dados dos clientes, empresas ou restaurantes, só o dos usuarios !!
 
 alerta dando bosta;;;
+

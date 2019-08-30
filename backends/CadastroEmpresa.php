@@ -43,7 +43,8 @@ if (mysqli_query($con, $sqlEmpresa)) {
 	'$email',
 	'$senha', 
 	'empresa',
-	'$idEmpresa'
+	'$idEmpresa',
+	'1'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {
