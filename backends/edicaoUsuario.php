@@ -1,9 +1,17 @@
 <?php
 
+require_once"classes/site.class.php";
+$obj = new Site();
+
+	// Recuperar ID do cliente
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+}
+
 // Buscar informações do usuario
 if (isset($id)) {
 	$sql = "SELECT * FROM usuarios WHERE id = $id";
-	$queryUsuarios = mysqli_query($con, $sql);
+	$queryUsuarios = mysqli_query($obj->con, $sql);
 	$resultadoUsuarios = mysqli_fetch_array($queryUsuarios);
 
 		// Verificar se o usuario existe
@@ -18,17 +26,30 @@ if (isset($_POST['btnEditar'])) {
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 
-		// Identificando se é UPDATE ou INSERT
-	if (isset($id)) {
-		$sql = "UPDATE usuarios SET email = '$email', senha = '$senha' WHERE id = $id";
-	} else {
-		$sql = "INSERT INTO usuarios VALUES (DEFAULT, '$email', '$senha')";
-	}	
-} 
+	$sql = "UPDATE usuarios SET email = '$email', senha = '$senha' WHERE id = $id";
+}	
+
+	// Executando o SQL
+if (mysqli_query($obj->con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados editados com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+}
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 	$sql = "DELETE FROM usuarios WHERE id = $id";
 
+}
+if (mysqli_query($obj->con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados excluidos com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
 }
 
 ?>

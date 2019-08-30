@@ -4,6 +4,8 @@ require_once"backends/CadastroRestaurantes.php";
 require_once"head.php";
 
 require_once"include/verificacao_logado.php";
+
+require_once"include/alerta.php";
 ?>
 
 <!DOCTYPE html>

@@ -1,11 +1,17 @@
 <?php 
 
-require_once"edicao.php";
+require_once"classes/site.class.php";
+$obj = new Site();
+
+	// Recuperar ID do cliente
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+}
 
 // Buscar informações da empresa
 if (isset($id)) {
 	$sql = "SELECT * FROM empresas WHERE id = $id";
-	$queryEmpresa = mysqli_query($con, $sql);
+	$queryEmpresa = mysqli_query($obj->con, $sql);
 	$resultadoEmpresa = mysqli_fetch_array($queryEmpresa);
 
 		// Verificar se a empresa existe
@@ -30,6 +36,30 @@ if (isset($_POST['btnEditar'])) {
 	$sql = "UPDATE empresas
 	SET nome_empresa = '$nome_empresa', cnpj = '$cnpj', numero_funcionarios = '$numero_funcionarios', turno = '$turno', tipo_empresa = '$tipo_empresa', numero_empresa = '$numero_empresa', cidade_empresa = '$cidade_empresa', rua_empresa = '$rua_empresa' 
 	WHERE id = $id";
+}
+
+	// Executando o SQL
+if (mysqli_query($obj->con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados editados com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+}
+
+	// Verificando ação de EXCLUIR
+if (isset($_POST['btnExcluir'])) {
+	$sql = "DELETE FROM empresas WHERE id = $id";
+
+}
+if (mysqli_query($obj->con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados excluidos com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
 }
 
 ?>
