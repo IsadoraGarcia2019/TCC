@@ -5,7 +5,7 @@ require_once"head.php";
 
 require_once"include/verificacao_logado.php";
 
-require_once"include/alerta.php";
+// require_once"include/alerta.php";
 ?>
 
 <!DOCTYPE html>
@@ -79,11 +79,11 @@ require_once"include/alerta.php";
 				<div class="form-group col-sm p-0">
 					<label class="form-group col-md-12" for="avaliacao"><strong>Avaliação</strong></label>
 					<select name="avaliacao" id="avaliacao" class="form-control">
-						<option selected>Muito bom</option>
-						<option >Bom</option>
-						<option >Mais ou menos</option>
-						<option >Ruim</option>
-						<option >Péssimo</option>
+						<option selected value="muito_bom">Muito bom</option>
+						<option value="bom">Bom</option>
+						<option value="mais_ou_menos">Mais ou menos</option>
+						<option value="ruim">Ruim</option>
+						<option value="pessimo">Péssimo</option>
 					</select>
 				</div>
 				<div class="form-row">
@@ -93,21 +93,21 @@ require_once"include/alerta.php";
 					</div>
 					<div class="form-group col-sm mt-3">
 						<label for="estado_restaurante"><strong>Estado</strong></label>
-						<select name="estado_restaurante" id="estado_restaurante" class="form-control">
+						<select name="estado_restaurante" id="estado_restaurante" class="form-control" >
 							<option selected>SC</option>
 						</select>
 					</div>
 				</div>
 				<div class="form-group p-0">
 					<label class="form-group col-md-12 mt-1 text-left" for="categoria"><strong>Categoria</strong></label>
-					<select name="categoria" id="categoria" class="form-control">
-						<option selected>Cafeteria</option>
-						<option >Panificadora</option>
-						<option >Restaurante Buffet</option>
-						<option >Marmitex</option>
-						<option >Vegetariana</option>
-						<option >Pizzaria</option>
-						<option >Lanches e Petiscos</option>
+					<select name="categoria" id="categoria" class="form-control" value="categoria" >
+						<option selecte value="cafeteria">Cafeteria</option>
+						<option value="panificadora">Panificadora</option>
+						<option value="restaurante_buffet">Restaurante Buffet</option>
+						<option value="marmitex">Marmitex</option>
+						<option value="vegetariana">Vegetariana</option>
+						<option value="pizzaria">Pizzaria</option>
+						<option value="lanches_e_petiscos">Lanches e Petiscos</option>
 					</select>
 				</div>
 				<?php if (empty($disabled)) { ?>

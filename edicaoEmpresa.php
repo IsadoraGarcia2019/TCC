@@ -91,10 +91,6 @@
  				</div>	
 
  				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-danger float-left mb-3 col-md-12" name="btnExcluir">Excluir</button>
- 				<?php } ?>
-
- 				<?php if (empty($disabled)) { ?>
  					<button type="submit" class="btn btn-outline-secondary col-md-12" name="btnEditar">Editar</button>
  				<?php } ?>
  			</form>

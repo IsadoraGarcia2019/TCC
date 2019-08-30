@@ -47,18 +47,5 @@ if (mysqli_query($obj->con, $sql)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 }
-	// Verificando ação de EXCLUIR
-if (isset($_POST['btnExcluir'])) {
-	$sql = "DELETE FROM restaurantes WHERE id = $id";
-
-}
-if (mysqli_query($obj->con, $sql)) {
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Dados excluidos com sucesso!";
-
-	$alerta = serialize($alerta);
-
-	setcookie('alerta', $alerta, time() + 120);
-}
 
 ?>

@@ -3,6 +3,8 @@
 	// Inclusão da classe abstrata do login
     require_once "classes/login.class.php";
 
+    require_once"head.php";
+
     require_once"include/alerta.php";
 
     $login = new Login();

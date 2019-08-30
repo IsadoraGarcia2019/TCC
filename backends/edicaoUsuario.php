@@ -40,16 +40,37 @@ if (mysqli_query($obj->con, $sql)) {
 }
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
+
 	$sql = "DELETE FROM usuarios WHERE id = $id";
+	
+	if (mysqli_query($obj->con, $sql)) {
+
+		if (isset($_SESSION['tp_usuario']) && $_SESSION['tp_usuario'] == 'cliente') {
+
+			$sql = "DELETE FROM clientes WHERE id = '{$_SESSION['fk_usuario']}'";
+			$query = mysqli_query($obj->con, $sql);
+
+		}
+		if (isset($_SESSION['tp_usuario']) && $_SESSION['tp_usuario'] == 'restaurante') {
+
+			$sql = "DELETE FROM restaurantes WHERE id = '{$_SESSION['fk_usuario']}'";
+			$query = mysqli_query($obj->con, $sql);
+			
+		}
+		if (isset($_SESSION['tp_usuario']) && $_SESSION['tp_usuario'] == 'empresa') {
+
+			$sql = "DELETE FROM empresas WHERE id = '{$_SESSION['fk_usuario']}'";
+			$query = mysqli_query($obj->con, $sql);
+			
+		}
+
+		$alerta['tipo'] = "success";
+		$alerta['mensagem'] = "Dados excluidos com sucesso!";
+
+		$alerta = serialize($alerta);
+
+		setcookie('alerta', $alerta, time() + 120);
+	}
 
 }
-if (mysqli_query($obj->con, $sql)) {
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Dados excluidos com sucesso!";
-
-	$alerta = serialize($alerta);
-
-	setcookie('alerta', $alerta, time() + 120);
-}
-
 ?>

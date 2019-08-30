@@ -6,7 +6,7 @@ require_once"head.php";
 
 require_once"include/verificacao_logado.php";
 
-require_once"include/alerta.php";
+// require_once"include/alerta.php";
 
 ?>
 

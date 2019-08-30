@@ -37,6 +37,7 @@ require_once"head.php";
 		<div class="card-body" > 
 
 			<form method="post" action="">
+				
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>

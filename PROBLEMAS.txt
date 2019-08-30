@@ -1,1 +1,3 @@
-não está editando nem excluindo os dados dos usuarios !!
+não está excluindo os dados dos clientes, empresas ou restaurantes, só o dos usuarios !!
+
+alerta dando bosta;;;

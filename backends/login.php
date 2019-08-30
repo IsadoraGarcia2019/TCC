@@ -6,9 +6,6 @@ require_once"../includes/conexao.php";
 
 session_start();
 
-	// Inclusão do arquivo de configuração
-require_once "include/config.php";
-
 	// Login
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 	if (isset($_POST['btnEntrar'])) {
@@ -18,7 +15,7 @@ if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) {
 
 		var_dump($_SESSION);
 
-				die();
+		die();
 
 			// Verificar credenciais
 		$sqlCredencial = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";

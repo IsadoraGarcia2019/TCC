@@ -93,17 +93,13 @@
  					<select name="categoria" id="categoria" class="form-control" value="<?=$resultadoRestaurante['categoria']?>">
  						<option selected value="cafeteria" <?= ($resultadoRestaurante['categoria']=="cafeteria") ? 'selected' : ''?>>Cafeteria</option>
  						<option value="panificadora" <?= ($resultadoRestaurante['categoria']=="panificadora") ? 'selected' : ''?>>Panificadora</option>
- 						<option  value="restaurante_buffet" <?= ($resultadoRestaurante['categoria']=="restaurante_buffet") ? 'selected' : ''?>>Restaurante Buffet</option>
+ 						<option value="restaurante_buffet" <?= ($resultadoRestaurante['categoria']=="restaurante_buffet") ? 'selected' : ''?>>Restaurante Buffet</option>
  						<option value="marmitex" <?= ($resultadoRestaurante['categoria']=="marmitex") ? 'selected' : ''?>>Marmitex</option>
  						<option value="vegetariana" <?= ($resultadoRestaurante['categoria']=="vegetariana") ? 'selected' : ''?>>Vegetariana</option>
  						<option value="pizzaria" <?= ($resultadoRestaurante['categoria']=="pizzaria") ? 'selected' : ''?>>Pizzaria</option>
  						<option value="lanches_e_petiscos" <?= ($resultadoRestaurante['categoria']=="lanches_e_petiscos") ? 'selected' : ''?>>Lanches e Petiscos</option>
  					</select>
  				</div>
-
- 				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-danger float-left mb-3 col-md-12 mt-3" name="btnExcluir">Excluir</button>
- 				<?php } ?>
  				
  				<?php if (empty($disabled)) { ?>
  					<button type="submit" class="btn btn-outline-secondary col-md-12" name="btnEditar">Editar</button>
