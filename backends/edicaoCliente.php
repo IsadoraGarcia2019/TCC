@@ -1,7 +1,7 @@
 <?php 
 
 require_once"classes/site.class.php";
- $obj = new Site();
+$obj = new Site();
 
 	// Recuperar ID do cliente
 if (isset($_GET['id'])) {
@@ -36,5 +36,28 @@ if (isset($_POST['btnEditar'])) {
 	SET estado = '$estado', cidade = '$cidade', rua = '$rua', numero_telefone = '$numero_telefone', restricao_alimentar = '$restricao_alimentar', preferencia_comida = '$preferencia_comida', preferencia_restaurante = '$preferencia_restaurante' 
 	WHERE id = $id";
 }
+	// Executando o SQL
+if (mysqli_query($con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados editados com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+}
+
+	// Verificando ação de EXCLUIR
+if (isset($_POST['btnExcluir'])) {
+	$sql = "DELETE FROM clientes WHERE id = $id";
+
+}
+if (mysqli_query($con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "Dados excluidos com sucesso!";
+
+	$alerta = serialize($alerta);
+
+	setcookie('alerta', $alerta, time() + 120);
+} 
 
 ?>

@@ -5,7 +5,7 @@ require_once"include/conexao.php";
 
 	// botão de cadastrar
 if (isset($_POST['btnCadastrar'])) {
-		// Recebendo os campos
+	// Recebendo os campos
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 	$nome_empresa = $_POST['nome_empresa']; 
@@ -43,12 +43,10 @@ if (mysqli_query($con, $sqlEmpresa)) {
 	'$email',
 	'$senha', 
 	'empresa',
-	'$idEmpresa',
-	'1'
+	'$idEmpresa'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {
-
 
 	$alerta['tipo'] = "success";
 	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
@@ -64,7 +62,7 @@ if (mysqli_query($con, $sqlUsuario)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 }
+}
+}
 
-}
-}
 ?>

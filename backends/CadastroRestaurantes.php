@@ -3,9 +3,9 @@
 //conexao com o banco de dados
 require_once"include/conexao.php";
 
-
+    // botão de cadastrar
 if (isset($_POST['salvar'])) {
-
+    // Recebendo os campos
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 	$nome_restaurante = $_POST['nome_restaurante'];
@@ -16,7 +16,8 @@ if (isset($_POST['salvar'])) {
 	$localizacao_restaurante = $_POST['localizacao_restaurante'];
 	$estado_restaurante = $_POST['estado_restaurante'];
 	$categoria = $_POST['categoria'];
-
+    
+    //inserindo no BD
 	$sqlRestaurante = "INSERT INTO restaurantes 
 	VALUES (
 	DEFAULT, 
@@ -33,7 +34,6 @@ if (isset($_POST['salvar'])) {
 // Executando o SQL
 if (mysqli_query($con, $sqlRestaurante)) {
 
-
 	$idRestaurante = mysqli_insert_id($con);
 
 	//inserindo no BD
@@ -46,8 +46,7 @@ if (mysqli_query($con, $sqlRestaurante)) {
 	'$email',
 	'$senha', 
 	'restaurante',
-	'$idRestaurante',
-	'1'
+	'$idRestaurante'
 )";
 
 if (mysqli_query($con, $sqlUsuario)) {
@@ -65,7 +64,6 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
-
 }
 }
 }

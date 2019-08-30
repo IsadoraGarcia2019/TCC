@@ -3,6 +3,9 @@
  require_once"backends/edicaoUsuario.php";
 
 require_once"head.php";
+
+// require_once"include/alerta.php";
+ 
 ?> 
 <!DOCTYPE html>
 <html lang="pt-br">

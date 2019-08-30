@@ -6,6 +6,7 @@ require_once"backends/edicao.php";
 
 require_once"head.php";
 
+require_once"include/alerta.php";
 ?>
 
 <!DOCTYPE html>
