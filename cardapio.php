@@ -67,6 +67,13 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
+					<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Pizza de Quatro Queijos</h4>
+						</div>									
+					</div>
+				</div>
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
@@ -105,14 +112,35 @@ require_once"head.php";
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cachorro Quente</h4>>
+							<h4>Cachorro Quente</h4>
 						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Frango Frito</h4>
+							<h4>Cheeseburguer</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>X-Salada</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>X-burguer</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all jantar">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>X-Calabresa</h4>
 						</div>									
 					</div>
 				</div>
@@ -224,7 +252,7 @@ require_once"head.php";
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cheeseburguer</h4>
+							<h4>Pizza de Calabresa</h4>
 						</div>									
 					</div>
 				</div>
@@ -260,6 +288,20 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Macarronada</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all almoco">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Batata Frita</h4>
+						</div>									
+					</div>
+				</div>
+					<div class="col-md-6 all almoco">
+					<div class="single-menu">
+						<div class="title-wrap d-flex justify-content-between">
+							<h4>Frango Assado</h4>
 						</div>									
 					</div>
 				</div>
