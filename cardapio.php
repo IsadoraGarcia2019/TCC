@@ -43,7 +43,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cappuccino</h4>
-							<h4 class="price">R$9</h4>
 						</div>												
 					</div>					                               
 				</div>                           
@@ -51,7 +50,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Feijoada</h4>
-							<h4 class="price">R$30</h4>
 						</div>											
 					</div>
 				</div>
@@ -59,7 +57,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Café</h4>
-							<h4 class="price">R$9</h4>
 						</div>												
 					</div>
 				</div>
@@ -67,7 +64,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de Camarão</h4>
-							<h4 class="price">R$49</h4>
 						</div>									
 					</div>
 				</div>
@@ -75,7 +71,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Batata recheada</h4>
-							<h4 class="price">R$18</h4>
 						</div>									
 					</div>
 				</div>
@@ -83,7 +78,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Creme de ervilha</h4>
-							<h4 class="price">R$5</h4>
 						</div>									
 					</div>
 				</div>
@@ -91,7 +85,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Lasanha</h4>
-							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div>
@@ -99,7 +92,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Sopa de macarrão</h4>
-							<h4 class="price">R$10</h4>
 						</div>									
 					</div>
 				</div>
@@ -107,15 +99,13 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Esfiha</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
 				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cachorro Quente</h4>
-							<h4 class="price">R$9</h4>
+							<h4>Cachorro Quente</h4>>
 						</div>									
 					</div>
 				</div>
@@ -123,7 +113,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Frango Frito</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -131,7 +120,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Chocolate Quente</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -139,7 +127,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Vitamina</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -147,7 +134,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Waffles</h4>
-							<h4 class="price">R$10</h4>
 						</div>									
 					</div>
 				</div>
@@ -155,7 +141,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Panquecas</h4>
-							<h4 class="price">R$10</h4>
 						</div>									
 					</div>
 				</div>
@@ -163,7 +148,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Croissant</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>
@@ -171,7 +155,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Brownie</h4>
-							<h4 class="price">R$12</h4>
 						</div>									
 					</div>
 				</div>
@@ -179,7 +162,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cheesecake</h4>
-							<h4 class="price">R$20</h4>
 						</div>									
 					</div>
 				</div>
@@ -187,7 +169,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta de Maçã</h4>
-							<h4 class="price">R$15</h4>
 						</div>									
 					</div>
 				</div>
@@ -195,7 +176,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torrada e melado</h4>
-							<h4 class="price">R$5</h4>
 						</div>									
 					</div>
 				</div>
@@ -203,7 +183,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Ovos com bacon</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>
@@ -211,7 +190,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Tapioca</h4>
-							<h4 class="price">R$11</h4>
 						</div>								
 					</div>
 				</div>
@@ -219,7 +197,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Sanduíche Integral</h4>
-							<h4 class="price">R$9</h4>
 						</div>								
 					</div>
 				</div>
@@ -227,7 +204,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Estrogonoff de Frango</h4>
-							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div>
@@ -235,7 +211,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Arroz com camarão</h4>
-							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div>
@@ -243,7 +218,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bife à parmegiana</h4>
-							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div>
@@ -251,7 +225,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cheeseburguer</h4>
-							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div>
@@ -259,7 +232,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Nhoque de Batata Doce</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -267,7 +239,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Fricassê de Frango</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>	
@@ -275,7 +246,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Carne de Panela</h4>
-							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div>
@@ -283,7 +253,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Nuggets</h4>
-							<h4 class="price">R$5</h4>
 						</div>									
 					</div>
 				</div>
@@ -291,7 +260,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Macarronada</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>
@@ -299,7 +267,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Yakisoba</h4>
-							<h4 class="price">R$30</h4>
 						</div>									
 					</div>
 				</div>
@@ -307,7 +274,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de brócolis</h4>
-							<h4 class="price">R$45</h4>
 						</div>									
 					</div>
 				</div>
@@ -315,7 +281,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Falafel</h4>
-							<h4 class="price">R$3</h4>
 						</div>									
 					</div>
 				</div>
@@ -323,7 +288,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Cuscuz de legumes</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -331,7 +295,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Tofu</h4>
-							<h4 class="price">R$5</h4>
 						</div>									
 					</div>
 				</div>
@@ -339,7 +302,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de Banana e aveia</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>
@@ -347,7 +309,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Fricassê de legumes</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -355,7 +316,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Mix de Salada</h4>
-							<h4 class="price">R$9</h4>
 						</div>									
 					</div>
 				</div>
@@ -363,7 +323,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta de limão</h4>
-							<h4 class="price">R$15</h4>
 						</div>									
 					</div>
 				</div>  
@@ -371,7 +330,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de chocolate</h4>
-							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div> 
@@ -379,7 +337,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta de morango</h4>
-							<h4 class="price">R$15</h4>
 						</div>									
 					</div>
 				</div> 
@@ -387,7 +344,7 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Torta alemã</h4>
-							<h4 class="price">R$25</h4>
+
 						</div>									
 					</div>
 				</div> 
@@ -395,7 +352,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Mousse de maracujá</h4>
-							<h4 class="price">R$9</h4>
 						</div>								
 					</div>
 				</div> 
@@ -403,7 +359,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de leite ninho</h4>
-							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div>
@@ -411,7 +366,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bolo de churros</h4>
-							<h4 class="price">R$25</h4>
 						</div>									
 					</div>
 				</div>
@@ -419,7 +373,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Banoffee pie</h4>
-							<h4 class="price">R$25</h4>
 						</div>								
 					</div> 
 				</div>
@@ -427,7 +380,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pudim de leite condensado</h4>
-							<h4 class="price">R$14</h4>
 						</div>								
 					</div>
 				</div>	
@@ -435,7 +387,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Petit gateau</h4>
-							<h4 class="price">R$14</h4>
 						</div>									
 					</div>
 				</div> 
@@ -443,7 +394,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Arroz doce</h4>
-							<h4 class="price">R$11</h4>
 						</div>									
 					</div>
 				</div>
@@ -451,7 +401,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Paleta mexicana</h4>
-							<h4 class="price">R$12</h4>
 						</div>									
 					</div>
 				</div>  
@@ -459,7 +408,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Palha Italiana</h4>
-							<h4 class="price">R$12</h4>
 						</div>									
 					</div>
 				</div>
@@ -467,7 +415,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza sensação</h4>
-							<h4 class="price">R$45</h4>
 						</div>									
 					</div>
 				</div>
