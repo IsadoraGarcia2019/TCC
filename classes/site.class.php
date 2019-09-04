@@ -45,8 +45,7 @@ class Site {
 		if (!(isset($_SESSION['logado']) || $_SESSION['logado']==false)) {
 			header('Location: erros.php');	
 
-	}
-
+		}
 	}
 
 	//	Função que carrega todas as configurações e definições do projeto
@@ -63,39 +62,39 @@ class Site {
 	//	Função de alerta (estática)
 	public static function Alerta($tipo = null, $mensagem = null) {
 		//	Verificando se a mensagem é nula
-			if (empty($mensagem))
-				return 0;
+		if (empty($mensagem))
+			return 0;
 
 		//	Se for diferente dessas opções será info
-			switch ($tipo) {
-				case 'success':
-					break;
-				case 'info':
-					break;
-				case 'warning':
-					break;
-				case 'danger':
-					break;
-				default:
-					$tipo = 'info';
-					break;
-			}
+		switch ($tipo) {
+			case 'success':
+			break;
+			case 'info':
+			break;
+			case 'warning':
+			break;
+			case 'danger':
+			break;
+			default:
+			$tipo = 'info';
+			break;
+		}
 
-			$alerta['tipo'] = $tipo;
-			$alerta['mensagem'] = $mensagem;
+		$alerta['tipo'] = $tipo;
+		$alerta['mensagem'] = $mensagem;
 
-			$alerta = serialize($alerta);
+		$alerta = serialize($alerta);
 
-			setcookie('alerta', $alerta, time() + 120);
+		setcookie('alerta', $alerta, time() + 120);
 
-			return 1;
+		return 1;
 	}
 
 	public static function ChamaAlerta() {
 	// Verificar se existe alerta via COOKIE
 		if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
-		$alerta = unserialize($_COOKIE['alerta']);
-		setcookie('alerta');
+			$alerta = unserialize($_COOKIE['alerta']);
+			setcookie('alerta');
 		}
 		//	Chamar o alerta
 		require_once "include/alerta.php";

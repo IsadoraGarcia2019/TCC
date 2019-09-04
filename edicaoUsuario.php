@@ -1,18 +1,16 @@
- <?php
+<?php
 
- require_once"backends/edicaoUsuario.php";
+require_once"backends/edicaoUsuario.php";
 
- require_once"head.php";
+require_once"head.php";
 
 // Verificar se existe alerta via COOKIE
- if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  	$alerta = unserialize($_COOKIE['alerta']);
  	setcookie('alerta');
- }
+}
 
-
-
- ?> 
+?> 
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
