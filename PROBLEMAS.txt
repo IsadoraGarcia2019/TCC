@@ -1,9 +1,3 @@
-não esta buscando as informações dos campos de edição
-
-edição de clientes edita só depois que clicar no botão SAIR e o alerta também só aparece após o clique 
-
-quando exclui um usuario não aparece o alerta e nao faz o logoff 
-
 login de administrador
 
-alerta bugado
+não tá mudando na NAVBAR
