@@ -18,7 +18,6 @@ if (isset($_POST['btnCadastrar'])) {
 	$preferencia_restaurante = $_POST['preferencia_restaurante'];
 	$comentarios = $_POST['comentarios'];
 
-
 	//inserindo no BD
 	$sqlCliente = "INSERT INTO clientes 
 	VALUES (

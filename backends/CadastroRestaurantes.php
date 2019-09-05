@@ -16,7 +16,7 @@ if (isset($_POST['btnCadastrar'])) {
 	$localizacao_restaurante = $_POST['localizacao_restaurante'];
 	$estado_restaurante = $_POST['estado_restaurante'];
 	$categoria = $_POST['categoria'];
-	
+
     //inserindo no BD
 	$sqlRestaurante = "INSERT INTO restaurantes 
 	VALUES (
@@ -37,9 +37,6 @@ if (mysqli_query($con, $sqlRestaurante)) {
 	$idRestaurante = mysqli_insert_id($con);
 
 	//inserindo no BD
-	
-	$idRestaurante = mysqli_insert_id($con);
-
 	$sqlUsuario = "INSERT INTO usuarios 
 	VALUES (
 	DEFAULT, 
@@ -60,8 +57,7 @@ if (mysqli_query($con, $sqlUsuario)) {
 	setcookie('alerta', $alerta, time() + 120);
 
 	header('Refresh:0');
-}
-else {
+}else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
