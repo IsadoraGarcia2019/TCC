@@ -1,5 +1,6 @@
 <?php 
 
+require_once"include/conexao.php";
 require_once"classes/site.class.php";
 $obj = new Site();
 
@@ -33,13 +34,25 @@ if (isset($_POST['btnEditar'])) {
 	$categoria = $_POST['categoria'];
 
 		// inserindo edição na tabela
-	$sql = "UPDATE restaurantes
-	SET nome_restaurante = '$nome_restaurante', telefone_restaurante = '$telefone_restaurante', horario_atendimento = '$horario_atendimento', dias_atendimento_restaurante = '$dias_atendimento_restaurante', avaliacao = '$avaliacao', localizacao_restaurante = '$localizacao_restaurante', estado_restaurante = '$estado_restaurante', categoria = '$categoria' 
+	$sqlRestaurante = "UPDATE restaurantes
+	SET nome_restaurante = '$nome_restaurante',
+	    telefone_restaurante = '$telefone_restaurante',
+	    horario_atendimento = '$horario_atendimento',
+	    dias_atendimento_restaurante = '$dias_atendimento_restaurante', 
+	    avaliacao = '$avaliacao',
+	    localizacao_restaurante = '$localizacao_restaurante',
+	    estado_restaurante = '$estado_restaurante',
+	    categoria = '$categoria'
 	WHERE id = $id";
 }
 
 	// Executando o SQL
-if (mysqli_query($obj->con, $sql)) {
+if (mysqli_query($obj->con, $sqlRestaurante)) {
+
+	$idRestaurante = mysqli_insert_id($con);
+	$idRestaurante = mysqli_insert_id($con);
+	
+	
 	$alerta['tipo'] = "success";
 	$alerta['mensagem'] = "Dados editados com sucesso!";
 
