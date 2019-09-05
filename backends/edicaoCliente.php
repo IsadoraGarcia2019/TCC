@@ -5,6 +5,8 @@ require_once"include/conexao.php";
 require_once"classes/site.class.php";
 $obj = new Site();
 
+// session_start();
+
 	// Recuperar ID do cliente
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
@@ -50,6 +52,8 @@ if (isset($_POST['btnEditar'])) {
 	if (mysqli_query($obj->con, $sql)) {
 		$alerta['tipo'] = "success";
 		$alerta['mensagem'] = "Dados editados com sucesso!";
+
+		// $_SESSION['nome_usuario'];
 
 		$alerta = serialize($alerta);
 
