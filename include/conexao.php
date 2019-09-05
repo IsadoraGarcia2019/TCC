@@ -1,16 +1,16 @@
 <?php
-	error_reporting(0);
-	
+error_reporting(0);
+
 		// Conexão com o banco de dados 
-	CONST HOST = "127.0.0.1";
-	CONST USER = "root";
-	CONST PASS = "";
-	CONST DB   = "cheff_delivery";
+CONST HOST = "cheffdelivery.cf:3306";
+CONST USER = "cheffdel";
+CONST PASS = "entra21@Blusoft";
+CONST DB   = "cheffdel_master";
 
-	$con = mysqli_connect(HOST, USER, PASS, DB);
+$con = mysqli_connect(HOST, USER, PASS, DB);
 
-	if (!$con) {
-		die("ERRO: Não foi possível conectar no banco de dados -> " . mysqli_connect_error());
-	}
+if (!$con) {
+	die("ERRO: Não foi possível conectar no banco de dados -> " . mysqli_connect_error());
+}
 
 ?>

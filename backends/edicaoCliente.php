@@ -53,7 +53,7 @@ if (isset($_POST['btnEditar'])) {
 	$sql = "UPDATE clientes
 	SET  nome_cliente = '$nome_cliente', estado = '$estado', cidade = '$cidade', rua = '$rua', numero_telefone = '$numero_telefone', restricao_alimentar = '$restricao_alimentar', preferencia_comida = '$preferencia_comida', preferencia_restaurante = '$preferencia_restaurante', comentarios = '$comentarios' 
 	WHERE id = $id";
-
+	
 	// Executando o SQL
 	if (mysqli_query($obj->con, $sql)) {
 		$alerta['tipo'] = "success";

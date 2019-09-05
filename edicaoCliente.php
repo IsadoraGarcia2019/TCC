@@ -2,7 +2,7 @@
 
 require_once"backends/edicaoCliente.php";
 
-require_once"backends/edicao.php";
+//equire_once"backends/edicao.php";
 
 require_once"head.php";
 

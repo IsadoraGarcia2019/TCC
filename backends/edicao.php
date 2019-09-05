@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 require_once"include/conexao.php";
 
 	// Recuperar ID do cliente
@@ -42,4 +42,4 @@ if (isset($_GET['id'])) {
 		}
 	}
 }
-?>
+?> -->
