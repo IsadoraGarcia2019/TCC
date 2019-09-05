@@ -55,13 +55,18 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
-}else {
+
+	header('Refresh:0');
+}
+else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+
+	header('Refresh:0');
 }
 }
 }

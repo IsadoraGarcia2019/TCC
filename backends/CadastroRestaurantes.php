@@ -4,7 +4,7 @@
 require_once"include/conexao.php";
 
     // botão de cadastrar
-if (isset($_POST['salvar'])) {
+if (isset($_POST['btnCadastrar'])) {
     // Recebendo os campos
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
@@ -16,7 +16,7 @@ if (isset($_POST['salvar'])) {
 	$localizacao_restaurante = $_POST['localizacao_restaurante'];
 	$estado_restaurante = $_POST['estado_restaurante'];
 	$categoria = $_POST['categoria'];
-    
+	
     //inserindo no BD
 	$sqlRestaurante = "INSERT INTO restaurantes 
 	VALUES (
@@ -58,13 +58,18 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
-}else {
+
+	header('Refresh:0');
+}
+else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
 
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+
+	header('Refresh:0');
 }
 }
 }

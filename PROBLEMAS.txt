@@ -1,3 +1,16 @@
-login de administrador
 
 não tá mudando na NAVBAR
+
+CADASTRO DE EMPRESA E RESTAURANTE DO NADA COMEÇOU A DAR ERRADO E NAO APARECE O NOME DO USUÁRIO QAUNDO ESTÁ LOGADO
+
+erro no gitBash pra mandar os trem do BD
+
+
+
+
+
+
+
+
+
+login de administrador

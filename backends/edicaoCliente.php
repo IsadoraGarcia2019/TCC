@@ -5,6 +5,8 @@ require_once"include/conexao.php";
 require_once"classes/site.class.php";
 $obj = new Site();
 
+session_start();
+
 // session_start();
 
 	// Recuperar ID do cliente
@@ -42,6 +44,10 @@ if (isset($_POST['btnEditar'])) {
 	$preferencia_comida = $_POST['preferencia_comida'];
 	$preferencia_restaurante = $_POST['preferencia_restaurante'];
 	$comentarios = $_POST['comentarios'];
+
+		// mudando o nome da seesao
+	$_SESSION['nome_usuario'] = $nome_cliente;
+
 
 		// inserindo edição na tabela
 	$sql = "UPDATE clientes

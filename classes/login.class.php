@@ -71,9 +71,7 @@ class Login extends Site {
 		} else {
 			header('Location: index.php');
 		}
-	if (isset($_POST['botao_entrar'])) {
-		header('Location: CadastroCliente.php');
-	}
+	
 	}
 }
 

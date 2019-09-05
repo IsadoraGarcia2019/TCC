@@ -3,6 +3,8 @@
 require_once"classes/site.class.php";
 $obj = new Site();
 
+session_start();
+
 	// Recuperar ID do cliente
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
@@ -31,6 +33,9 @@ if (isset($_POST['btnEditar'])) {
 	$localizacao_restaurante = $_POST['localizacao_restaurante'];
 	$estado_restaurante = $_POST['estado_restaurante'];
 	$categoria = $_POST['categoria'];
+
+		// mudando o nome da seesao
+	$_SESSION['nome_usuario'] = $nome_cliente;
 
 		// inserindo edição na tabela
 	$sql = "UPDATE restaurantes

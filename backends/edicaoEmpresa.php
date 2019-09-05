@@ -3,6 +3,8 @@
 require_once"classes/site.class.php";
 $obj = new Site();
 
+session_start();
+
 	// Recuperar ID do cliente
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
@@ -31,6 +33,10 @@ if (isset($_POST['btnEditar'])) {
 	$numero_empresa = $_POST['numero_empresa'];
 	$cidade_empresa = $_POST['cidade_empresa'];
 	$rua_empresa = $_POST['rua_empresa'];
+
+			// mudando o nome da seesao
+	$_SESSION['nome_usuario'] = $nome_cliente;
+
 
 		// inserindo edição na tabela
 	$sql = "UPDATE empresas

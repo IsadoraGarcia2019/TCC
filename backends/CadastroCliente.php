@@ -18,6 +18,7 @@ if (isset($_POST['btnCadastrar'])) {
 	$preferencia_restaurante = $_POST['preferencia_restaurante'];
 	$comentarios = $_POST['comentarios'];
 
+
 	//inserindo no BD
 	$sqlCliente = "INSERT INTO clientes 
 	VALUES (
@@ -58,6 +59,8 @@ if (mysqli_query($con, $sqlUsuario)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 
+	header('Refresh:0');
+
 } else {
 	$alerta['tipo'] = "danger";
 	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
@@ -65,6 +68,8 @@ if (mysqli_query($con, $sqlUsuario)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+
+	header('Refresh:0');
 }
 }
 }
