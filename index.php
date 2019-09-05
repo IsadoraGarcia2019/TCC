@@ -54,7 +54,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         </div>
       </div>
       <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/frenchfries.jpg" class="card-img-top" alt="..."></a>
+        <a href="cardapio.php"><img src="media/images/petiscos.jpg" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Almoço</h3>
           <p class="card-text">Temos vários combos e promoções para que suas refeições sejam mais que especiais.</p>
@@ -66,7 +66,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         </blockquote>
       </div>
       <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/sobremesas.jpg" class="card-img-top" alt="..."></a>
+        <a href="cardapio.php"><img src="media/images/candy.jpg" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Sobremesas</h3>
           <p class="card-text">Porque depois do almoço sempre tem aquela sobremesa não é mesmo? Peça a sua agora!</p>
