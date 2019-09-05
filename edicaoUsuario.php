@@ -47,11 +47,11 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  				<div class="form-row">
  					<div class="form-group col-md-6">
  						<label for="email"><strong>E-mail</strong></label>
- 						<input type="email" class="form-control" id="email" name="email">
+ 						<input type="email" class="form-control" id="email" name="email" value="<?= $resultadoUsuarios['email']?>">
  					</div>
  					<div class="form-group col-sm">
  						<label for="senha"><strong>Senha</strong></label>
- 						<input type="password" class="form-control" id="senha" name="senha">
+ 						<input type="password" class="form-control" id="senha" name="senha" value="<?= $resultadoUsuarios['senha']?>">
  					</div>
  				</div>
 

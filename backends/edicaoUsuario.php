@@ -32,14 +32,16 @@ if (isset($_POST['btnEditar'])) {
 	
 
 	// Executando o SQL
-if (mysqli_query($obj->con, $sql)) {
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Dados editados com sucesso!";
+	if (mysqli_query($obj->con, $sql)) {
+		$alerta['tipo'] = "success";
+		$alerta['mensagem'] = "Dados editados com sucesso!";
 
-	$alerta = serialize($alerta);
+		$alerta = serialize($alerta);
 
-	setcookie('alerta', $alerta, time() + 120);
-}
+		setcookie('alerta', $alerta, time() + 120);
+
+		header('Refresh:0');
+	}
 }
 
 	// Verificando ação de EXCLUIR
@@ -74,6 +76,9 @@ if (isset($_POST['btnExcluir'])) {
 		$alerta = serialize($alerta);
 
 		setcookie('alerta', $alerta, time() + 120);
+
+		header('Location:backends/logoff.php');
+
 	}
 
 }

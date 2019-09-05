@@ -1,9 +1,9 @@
+não esta buscando as informações dos campos de edição
 
-edição de usuario aparece que editou mas na verdade deixou os campos de login nulos
-
-edição de clientes edita só depois que clicar no botão SAIR e o alerta tambpém só aparece após o clique 
+edição de clientes edita só depois que clicar no botão SAIR e o alerta também só aparece após o clique 
 
 quando exclui um usuario não aparece o alerta e nao faz o logoff 
 
 login de administrador
 
+alerta bugado

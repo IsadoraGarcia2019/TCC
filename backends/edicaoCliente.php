@@ -54,6 +54,8 @@ if (isset($_POST['btnEditar'])) {
 		$alerta = serialize($alerta);
 
 		setcookie('alerta', $alerta, time() + 120);
+
+		header('Refresh:0');
 	}
 
 }
