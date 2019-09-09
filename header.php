@@ -73,9 +73,10 @@ $site->Session();
             <?php } ?>
           <?php } ?>
           <?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
+
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-                ADM
+                Cadastro
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                 <a class="dropdown-item" href="CadastroPacotes.php">Cadastrar pacotes</a>
@@ -83,7 +84,7 @@ $site->Session();
               </div>
             </li>  
 
-             <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
                 Edição
               </a>

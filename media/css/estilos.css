@@ -5,6 +5,19 @@
 * {
 	font-family: arial !important;
 }
+.topo{
+  background-image: url('media/images/food-pattern.png'); 
+  background-color: #f13d3d;
+  min-height: 100px; 
+  min-width: 100%; 
+  background-size: 30%; 
+  background-position: center 1050px;
+}
+
+.topo_adm{
+  background-color: #212020 !important;
+}
+
 .box {
   background-color: white;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);

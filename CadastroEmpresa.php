@@ -30,8 +30,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 	?>
 
 	<div class="row">
-		<div style="background-image: url('media/images/food-pattern.png'); background-color: #f13d3d; min-height: 100px; min-width: 100%;  background-size: 30%;   background-position: center 1050px;
-		" class="shadow" >
+		<div class="shadow topo" >
 		<div class="text-center my-5">
 			<h1 class="text-white mb-5">Cadastro de Empresas</h1>
 		</div> 
