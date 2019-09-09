@@ -63,8 +63,8 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 						<input type="text" class="form-control" name="nome_restaurante" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho">
 					</div>
 					<div class="form-group col-md-6 mt-3">
-						<label for="telefone_restaurante"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" name="telefone_restaurante" id="telefone_restaurante">
+						<label for="numero_telefone"><strong>Número de telefone</strong></label>
+						<input type="text" class="form-control" name="numero_telefone" id="numero_telefone">
 					</div>
 				</div>
 				<div class="form-row">
@@ -79,8 +79,8 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 						</select>
 					</div>
 					<div class="form-group col-md-6 col-xs-12">
-						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
-						<input type="text" class="form-control" name="dias_atendimento_restaurante" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta">
+						<label for="dias_atendimento"><strong>Quais dias?</strong></label>
+						<input type="text" class="form-control" name="dias_atendimento" id="dias_atendimento" placeholder="Segunda, Quarta e Sexta">
 					</div>
 				</div>
 				<div class="form-group col-sm p-0">
@@ -95,12 +95,12 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 				</div>
 				<div class="form-row">
 					<div class="form-group col-sm mt-3">
-						<label for="localizacao_restaurante"><strong>Localização</strong></label>
-						<input type="text" class="form-control" name="localizacao_restaurante" id="localizacao_restaurante">
+						<label for="localizacao"><strong>Localização</strong></label>
+						<input type="text" class="form-control" name="localizacao" id="localizacao">
 					</div>
 					<div class="form-group col-sm mt-3">
-						<label for="estado_restaurante"><strong>Estado</strong></label>
-						<select name="estado_restaurante" id="estado_restaurante" class="form-control" >
+						<label for="estado"><strong>Estado</strong></label>
+						<select name="estado" id="estado" class="form-control" >
 							<option selected>SC</option>
 						</select>
 					</div>
@@ -118,7 +118,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 					</select>
 				</div>
 				<?php if (empty($disabled)) { ?>
-					<input type="submit" class="btn btn-outline-secondary col-md-12" name="salvar" value="Cadastrar">
+					<input type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar" value="Cadastrar">
 				<?php } ?>
 			</form>
 		</div>

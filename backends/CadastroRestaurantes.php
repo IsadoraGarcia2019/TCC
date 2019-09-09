@@ -3,71 +3,73 @@
 //conexao com o banco de dados
 require_once"include/conexao.php";
 
-    // botão de cadastrar
+	// botão de cadastrar
 if (isset($_POST['btnCadastrar'])) {
-    // Recebendo os campos
+	// Recebendo os campos
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
-	$nome_restaurante = $_POST['nome_restaurante'];
-	$telefone_restaurante = $_POST['telefone_restaurante'];
+	$nome_restaurante = $_POST['nome_restaurante']; 
+	$numero_telefone = $_POST['numero_telefone'];
 	$horario_atendimento = $_POST['horario_atendimento'];
-	$dias_atendimento_restaurante = $_POST['dias_atendimento_restaurante'];
+	$dias_atendimento = $_POST['dias_atendimento'];
 	$avaliacao = $_POST['avaliacao'];
-	$localizacao_restaurante = $_POST['localizacao_restaurante'];
-	$estado_restaurante = $_POST['estado_restaurante'];
+	$localizacao = $_POST['localizacao'];
+	$estado = $_POST['estado'];
 	$categoria = $_POST['categoria'];
 
-    //inserindo no BD
-	$sqlRestaurante = "INSERT INTO restaurantes 
-	VALUES (
-	DEFAULT, 
-	'$nome_restaurante',
-	'$telefone_restaurante',
-	'$horario_atendimento',
-	'$dias_atendimento_restaurante',
-	'$avaliacao',
-	'$localizacao_restaurante',
-	'$estado_restaurante',
-	'$categoria'
-)";
-
-// Executando o SQL
-if (mysqli_query($con, $sqlRestaurante)) {
-
-	$idRestaurante = mysqli_insert_id($con);
-
 	//inserindo no BD
-	$sqlUsuario = "INSERT INTO usuarios 
-	VALUES (
-	DEFAULT, 
-	'$email',
-	'$senha', 
-	'restaurante',
-	'$idRestaurante',
-	'1'
-)";
+	$sqlRestaurante = "INSERT INTO restaurantes 
+			VALUES (
+			DEFAULT, 
+			'$nome_restaurante',
+			'$numero_telefone',
+			'$horario_atendimento',
+			'$dias_atendimento',
+			'$avaliacao',
+			'$localizacao',
+			'$estado',
+			'$categoria'
+		)";
 
-if (mysqli_query($con, $sqlUsuario)) {
+		// Executando o SQL
+	if (mysqli_query($con, $sqlRestaurante)) {
 
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
+		$idRestaurante = mysqli_insert_id($con);
 
-	$alerta = serialize($alerta);
+			//inserindo no BD
+		$sqlUsuario = "INSERT INTO usuarios 
+						VALUES (
+						DEFAULT, 
+						'$email',
+						'$senha', 
+						'restaurante',
+						'$idRestaurante',
+						'1'
+					)";
 
-	setcookie('alerta', $alerta, time() + 120);
+		if (mysqli_query($con, $sqlUsuario)) {
 
-	header('Refresh:0');
-}else {
-	$alerta['tipo'] = "danger";
-	$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
+			$alerta['tipo'] = "success";
+			$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
 
-	$alerta = serialize($alerta);
+			$alerta = serialize($alerta);
 
-	setcookie('alerta', $alerta, time() + 120);
+			setcookie('alerta', $alerta, time() + 120);
 
-	header('Refresh:0');
-}
-}
+			header('Refresh:0');
+		} else {
+			$alerta['tipo'] = "danger";
+			$alerta['mensagem'] = "Erro ao salvar seu cadastro.";
+
+			$alerta = serialize($alerta);
+
+			setcookie('alerta', $alerta, time() + 120);
+
+			header('Refresh:0');
+		}
+
+	}
+
 }
 
 ?>
