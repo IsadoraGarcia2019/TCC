@@ -1,7 +1,7 @@
 <?php 
 require_once"head.php";
-require_once "classes/site.class.php";
-
+require_once"classes/site.class.php";
+require_once"classes/login.class.php";
 $site = new Site();
 $site->Session();
 ?>
@@ -19,7 +19,9 @@ $site->Session();
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <?php if ($resultadoLogin['tp_usuario'] !== 'admistrador') { ?>
+
+          <?php if ($_SESSION['nome_usuario'] !== 'Administrador') { ?>
+
             <li class="nav-item active">
               <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
             </li>
@@ -60,7 +62,7 @@ $site->Session();
               </li>  
             <?php } ?>
           <?php } ?>
-          <?php if ($resultadoLogin['tp_usuario'] == 'admistrador') { ?>
+          <?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
                 ADM

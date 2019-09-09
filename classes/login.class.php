@@ -42,11 +42,12 @@ class Login extends Site {
 
 						$_SESSION['nome_usuario'] = $resultadoCliente['nome_cliente'];
 					}
-					if ($resultadoLogin['tp_usuario'] == 'admistrador') {
-						$queryCliente = mysqli_query($this->con, $sqlCliente);
-						$resultadoCliente = mysqli_fetch_array($queryCliente);
-
-						$_SESSION['nome_usuario'] = $resultadoCliente['nome_cliente'];
+					if ($resultadoLogin['tp_usuario'] == 'administrador') {
+						$sqlAdm = "SELECT * FROM usuarios WHERE id = '".$resultadoLogin['fk_tipo']."'";
+						$queryAdm = mysqli_query($this->con, $sqlAdm);
+						$resultadoAdm = mysqli_fetch_array($queryAdm);
+                        echo "PIMBA";
+						$_SESSION['nome_usuario'] = 'Administrador';
 					}
 
 					if ($resultadoLogin['tp_usuario'] == 'restaurante') {
