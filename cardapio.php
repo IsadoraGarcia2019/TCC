@@ -34,8 +34,6 @@ require_once"head.php";
 			<li data-filter=".cafe_manha">Café da manhã</li>
 			<li data-filter=".almoco">Almoço</li>
 			<li data-filter=".jantar">Jantar</li>
-			<li data-filter=".Vegan">Vegetariana</li>
-			<li data-filter=".sobremesa">Sobremesas</li>
 		</ul>
 		<div class="filters-content">
 			<div class="row grid">
@@ -59,15 +57,8 @@ require_once"head.php";
 							<h4>Café</h4>
 						</div>												
 					</div>
-				</div>
+				</div>				
 				<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pizza de Camarão</h4>
-						</div>									
-					</div>
-				</div>
-					<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de Quatro Queijos</h4>
@@ -78,13 +69,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Batata recheada</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Creme de ervilha</h4>
 						</div>									
 					</div>
 				</div>
@@ -123,24 +107,10 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
-					<div class="col-md-6 all jantar">
+				<div class="col-md-6 all jantar">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>X-Salada</h4>
-						</div>									
-					</div>
-				</div>
-					<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>X-burguer</h4>
-						</div>									
-					</div>
-				</div>
-					<div class="col-md-6 all jantar">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>X-Calabresa</h4>
 						</div>									
 					</div>
 				</div>
@@ -196,20 +166,6 @@ require_once"head.php";
 				<div class="col-md-6 all cafe_manha">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Torta de Maçã</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Torrada e melado</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all cafe_manha">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
 							<h4>Ovos com bacon</h4>
 						</div>									
 					</div>
@@ -238,13 +194,6 @@ require_once"head.php";
 				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
-							<h4>Arroz com camarão</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all almoco">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
 							<h4>Bife à parmegiana</h4>
 						</div>									
 					</div>
@@ -253,13 +202,6 @@ require_once"head.php";
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Pizza de Calabresa</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all almoco">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Nhoque de Batata Doce</h4>
 						</div>									
 					</div>
 				</div>
@@ -291,182 +233,27 @@ require_once"head.php";
 						</div>									
 					</div>
 				</div>
-					<div class="col-md-6 all almoco">
+				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Batata Frita</h4>
 						</div>									
 					</div>
 				</div>
-					<div class="col-md-6 all almoco">
+				<div class="col-md-6 all almoco">
 					<div class="single-menu">
 						<div class="title-wrap d-flex justify-content-between">
 							<h4>Frango Assado</h4>
 						</div>									
 					</div>
 				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Yakisoba</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pizza de brócolis</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Falafel</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Cuscuz de legumes</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Tofu</h4>
-						</div>									
-					</div>
-				</div>
-					<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Bolo de Banana e aveia</h4>
-						</div>									
-					</div>
-				</div>
-					<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Fricassê de legumes</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all Vegan">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mix de Salada</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Torta de limão</h4>
-						</div>									
-					</div>
-				</div>  
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Bolo de chocolate</h4>
-						</div>									
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Torta de morango</h4>
-						</div>									
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Torta alemã</h4>
-
-						</div>									
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Mousse de maracujá</h4>
-						</div>								
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Bolo de leite ninho</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Bolo de churros</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Banoffee pie</h4>
-						</div>								
-					</div> 
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pudim de leite condensado</h4>
-						</div>								
-					</div>
-				</div>	
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Petit gateau</h4>
-						</div>									
-					</div>
-				</div> 
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Arroz doce</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Paleta mexicana</h4>
-						</div>									
-					</div>
-				</div>  
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Palha Italiana</h4>
-						</div>									
-					</div>
-				</div>
-				<div class="col-md-6 all sobremesa">
-					<div class="single-menu">
-						<div class="title-wrap d-flex justify-content-between">
-							<h4>Pizza sensação</h4>
-						</div>									
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
-<?php
+	<?php
 //inclusão do rodapé
-require_once "footer.php";
-?>
+	require_once "footer.php";
+	?>
 </section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

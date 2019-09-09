@@ -41,7 +41,7 @@ $site->Session();
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
-              <a class="dropdown-item" href="combos.php">Pacotes</a>
+              <a class="dropdown-item" href="pacotes.php">Pacotes</a>
             </div>
           </li>
 
