@@ -48,16 +48,6 @@ $site->Session();
               </li>
             <?php } ?>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-                Assinaturas
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
-                <a class="dropdown-item" href="combos.php">Pacotes</a>
-              </div>
-            </li>
-
             <?php if(!isset($_SESSION['logado'])) { ?>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
