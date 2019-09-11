@@ -30,7 +30,10 @@ if (isset($_POST['btnCadastrar'])) {
 	'$restricao_alimentar',
 	'$preferencia_comida',
 	'$preferencia_restaurante',
-	'$comentarios'
+	'$comentarios',
+	 0,
+	 0,
+	 0
 )";
 
 // Executando o SQL
