@@ -111,7 +111,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 			</div>
 		</div>
 	</div>
-
+</div>
 	<?php
 //INCLUSÃO DO RODAPÉ
 	require_once "footer.php";

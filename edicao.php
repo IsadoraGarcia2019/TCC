@@ -48,11 +48,11 @@ require_once"backends/edicao.php";
     <?php } ?>
 
     <?php if($_SESSION['tp_usuario'] == 'empresa'){ ?>
-      <a href="edicaoEmpresa.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados da minha Empresa</a>
+      <a href="edicaoEmpresa.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnEmpresas">Editar dados da minha Empresa</a>
     <?php } ?>
 
     <?php if($_SESSION['tp_usuario'] == 'restaurante'){ ?>
-      <a href="edicaoRestaurante.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnClientes">Editar dados do meu Restaurante</a>
+      <a href="edicaoRestaurante.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-outline-secondary btn-lg col-md-6 mr-3 mb-4 offset-md-3" name="btnRestaurantes">Editar dados do meu Restaurante</a>
     <?php } ?>
 
   </div>
