@@ -7,8 +7,8 @@ require_once"include/verificacao_logado.php";
 
 // Verificar se existe alerta via COOKIE
 if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
-  $alerta = unserialize($_COOKIE['alerta']);
-  setcookie('alerta');
+	$alerta = unserialize($_COOKIE['alerta']);
+	setcookie('alerta');
 }
 
 ?>
@@ -31,7 +31,12 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 	?>
 
 	<div class="row">
-		<div class="shadow topo" >
+		<div class="shadow " style="  background-color: #f2392c ;
+		background-image: url('media/images/food-pattern.png');
+		min-height: 100px; 
+		min-width: 100%; 
+		background-size: 30%; 
+		background-position: center 1050px;" >
 		<div class="text-center my-5">
 			<h1 class="text-white mb-5">Cadastro de Restaurantes</h1>
 		</div> 

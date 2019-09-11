@@ -20,7 +20,12 @@ require_once"head.php";
 	require_once "header.php";
 	?>
 	<div class="row">
-	<div class="shadow topo" >
+		<div class="shadow" style="  background-color: #f2392c ;
+		background-image: url('media/images/food-pattern.png');
+		min-height: 100px; 
+		min-width: 100%; 
+		background-size: 30%; 
+		background-position: center 1050px;">
 		<div class="text-center my-5" >
 			<h1 class="text-white pt-3">Cardápio do dia</h1>
 		</div> 

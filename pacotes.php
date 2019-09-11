@@ -20,7 +20,12 @@ require_once"head.php";
 	?>
 
 	<div class="row">
-		<div class="shadow topo" >
+		<div class="shadow" style="  background-color: #f2392c ;
+		background-image: url('media/images/food-pattern.png');
+		min-height: 100px; 
+		min-width: 100%; 
+		background-size: 30%; 
+		background-position: center 1050px;">
 		<div class="text-center my-5" >
 			<h1 class="text-white pt-3 ">Pacotes</h1>
 		</div> 
@@ -50,7 +55,7 @@ require_once"head.php";
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
 			<div class="card shadow" style="margin-top: -60px; min-height: 400px;">
 				<img src="media/images/comborefeiçoes1.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
