@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 //conexao com o banco de dados
 require_once"include/conexao.php";

@@ -47,13 +47,6 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         </blockquote>
       </div>
       <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/japonesa.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Asiática</h3>
-          <p class="card-text">Vamos de sushi hoje?</p>
-        </div>
-      </div>
-      <div class="card shadow">
         <a href="cardapio.php"><img src="media/images/petiscos.jpg" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Almoço</h3>
@@ -66,13 +59,6 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         </blockquote>
       </div>
       <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/candy.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Sobremesas</h3>
-          <p class="card-text">Porque depois do almoço sempre tem aquela sobremesa não é mesmo? Peça a sua agora!</p>
-        </div>
-      </div>
-      <div class="card shadow">
         <a href="cardapio.php"><img src="media/images/massas1.jpg" class="card-img-top" alt="..."></a>
         <div class="card-body">
           <h3 class="card-title">Jantar</h3>
@@ -83,13 +69,6 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
         <blockquote class="blockquote mb-0 card-body text-center text-danger">
           <p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido.</strong></p>
         </blockquote>
-      </div>
-      <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/vegetariano.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Vegetariana</h3>
-          <p class="card-text">E para os amantes de comida vegetariana, temos um cardápio especial para vocês.</p>
-        </div>
       </div>
     </div>
   </div>

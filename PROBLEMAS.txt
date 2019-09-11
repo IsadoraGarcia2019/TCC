@@ -10,6 +10,12 @@ login de administrador
 IMAGEM DO FUNDO SUMIU
 
 
+CONST HOST = "cheffdelivery.cf:3306";
+CONST USER = "cheffdel";
+CONST PASS = "entra21@Blusoft";
+CONST DB   = "cheffdel_master";
+
+
 
 
 // require_once"include/verificacao_logado.php";
