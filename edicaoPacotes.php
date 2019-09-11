@@ -28,7 +28,7 @@
  	?>
 
  	<div class="row">
- 		<div class="shadow " style="  background-color: #f2392c !important;
+ 		<div class="shadow " style="  background-color: #1a1818	!important;
  		background-image: url('media/images/food-pattern.png');
  		min-height: 100px; 
  		min-width: 100%; 

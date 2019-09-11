@@ -9,7 +9,9 @@ if (isset($_POST['btnCadastrar'])) {
 	$nome_pacote = $_POST['nome_pacote'];
 	$descricao_pacote = $_POST['descricao_pacote'];
 	$preco_pacote = $_POST['preco_pacote'];
-	$quantidade  = $_POST['quantidade'];
+	$quantidade_cafe  = $_POST['quantidade_cafe'];
+	$quantidade_almoco  = $_POST['quantidade_almoco'];
+	$quantidade_janta  = $_POST['quantidade_janta'];
 
 	//inserindo no BD
 	$sql = "INSERT INTO pacotes 
@@ -18,7 +20,9 @@ if (isset($_POST['btnCadastrar'])) {
 			'$nome_pacote',
 			'$descricao_pacote',
 			'$preco_pacote',
-			'$quantidade'
+			'$quantidade_cafe',
+			'$quantidade_almoco',
+			'$quantidade_janta'
 )";
 
 	if (mysqli_query($con, $sql)) {

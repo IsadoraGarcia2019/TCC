@@ -30,7 +30,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 	?> 
 
 	<div class="row">
-		<div class="shadow " style="  background-color: #f2392c !important;
+		<div class="shadow " style="  background-color: #1a1818 !important;
 		background-image: url('media/images/food-pattern.png');
 		min-height: 100px; 
 		min-width: 100%; 
@@ -73,7 +73,21 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
-						<label for="quantidade"><strong>Quantidade</strong></label>
+						<label for="quantidade"><strong>Quantidade de cafés da manhã</strong></label>
+						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-12 col-xs-12">
+						<label for="quantidade"><strong>Quantidade de almoços</strong></label>
+						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-12 col-xs-12">
+						<label for="quantidade"><strong>Quantidade jantares</strong></label>
 						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
 					</div>
 				</div>
