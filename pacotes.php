@@ -2,13 +2,18 @@
 
 require_once"head.php";
 
+require_once"include/conexao.php";
+
+$lista = "SELECT * FROM pacotes";
+$queryPacote = mysqli_query($con, $lista);
+$resultadoPacote = mysqli_fetch_array($queryPacote);
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
 	<meta charset="utf-8">
-	<title>Combos</title>
+	<title>Pacotes</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 	<link rel="stylesheet" href="media/css/main.css">
@@ -34,38 +39,19 @@ require_once"head.php";
 
 <div class="container">
 	<div class="row">
-		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
-			<div class="card shadow" style="margin-top: -60px;  min-height: 400px;">
-				<img src="media/images/petiscos.jpg" class="card-img-top"  style="max-height: 200px; max-width: 350px;" alt="...">
-				<div class="card-body">
-					<h5 class="card-title text-danger">Básico</h5>
-					<p class="card-text" style="max-height: 50px;"><strong>20 almoços durante o mês, o usuários escolhe os dias em que uqer receber.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-4">R$260,00</a>
-				</div>
-			</div>
-		</div>
+		<?php foreach ($lista as $resultadoPacote) { ?>
+			<tr>
+				<th><?=$resultadoPacote['nome_pacote']?></th>
+				<td><?=$resultadoPacote['nome_imagem']?></td>
+				<td><?=$resultadoPacote['descricao_pacote']?></td>
+				<td><?=$resultadoPacote['preco_pacote']?></td>
+				<td><?=$resultadoPacote['quantidade_cafe']?></td>
+				<td><?=$resultadoPacote['quantidade_almoco']?></td>
+				<td><?=$resultadoPacote['quantidade_janta']?></td>
 
-		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
-			<div class="card shadow"style="margin-top: -60px;  min-height: 400px;">
-				<img src="media/images/combo-cafe.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
-				<div class="card-body">
-					<h5 class="card-title text-danger">Intermediário</h5>
-					<p class="card-text" style="max-height: 50px;"><strong>20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-4">R$500,00</a>
-				</div>
-			</div>
-		</div>
+			</tr>
 
-		<div class="col-10 col-md-4 mt-5 mb-5 offset-1 offset-md-0">
-			<div class="card shadow" style="margin-top: -60px; min-height: 400px;">
-				<img src="media/images/comborefeiçoes1.jpg" class="card-img-top" style="max-height: 200px; max-width: 350px;"  alt="...">
-				<div class="card-body">
-					<h5 class="card-title text-danger">Premium</h5>
-					<p class="card-text" style="max-height: 50px;"><strong>20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber.</strong></p>
-					<a href="#" class="btn btn-outline-danger col-md-6 offset-md-3 mt-3">R$760,00</a>
-				</div>
-			</div>
-		</div>
+		<?php } ?>
 	</div>
 </div>
 

@@ -1,29 +1,37 @@
-	<?php
+<?php
 
 //conexao com o banco de dados
-require_once"include/conexao.php";
+	require_once"include/conexao.php";
+
+	require_once"classes/upload.class.php";
 
 	// botão de cadastrar
-if (isset($_POST['btnCadastrar'])) {
+	if (isset($_POST['btnCadastrar'])) {
 		// Recebendo os campos
-	$nome_pacote = $_POST['nome_pacote'];
-	$descricao_pacote = $_POST['descricao_pacote'];
-	$preco_pacote = $_POST['preco_pacote'];
-	$quantidade_cafe  = $_POST['quantidade_cafe'];
-	$quantidade_almoco  = $_POST['quantidade_almoco'];
-	$quantidade_janta  = $_POST['quantidade_janta'];
+		$nome_pacote = $_POST['nome_pacote'];
+		$descricao_pacote = $_POST['descricao_pacote'];
+		$preco_pacote = $_POST['preco_pacote'];
+		$quantidade_cafe  = $_POST['quantidade_cafe'];
+		$quantidade_almoco  = $_POST['quantidade_almoco'];
+		$quantidade_janta  = $_POST['quantidade_janta'];
+
+		// Instância uma classe para o upload
+		$upload = new Uploader('foto_capa');
+		$uploads = $upload->upload();
+		$uploads = $uploads[0]['dados']['nome_novo'];
 
 	//inserindo no BD
-	$sql = "INSERT INTO pacotes 
-			VALUES (
-			DEFAULT, 
-			'$nome_pacote',
-			'$descricao_pacote',
-			'$preco_pacote',
-			'$quantidade_cafe',
-			'$quantidade_almoco',
-			'$quantidade_janta'
-)";
+		$sql = "INSERT INTO pacotes 
+		VALUES (
+		DEFAULT, 
+		'$nome_pacote',
+		'$descricao_pacote',
+		'$preco_pacote',
+		'$quantidade_cafe',
+		'$quantidade_almoco',
+		'$quantidade_janta',
+		'$uploads'
+	)";
 
 	if (mysqli_query($con, $sql)) {
 
@@ -37,7 +45,7 @@ if (isset($_POST['btnCadastrar'])) {
 		header('Refresh:0');
 
 	} else {
-		$alerta['tipo'] = "danger";
+		$alerta['tipo'] = "danger";    
 		$alerta['mensagem'] = "Erro ao salvar o pacote.";
 
 		$alerta = serialize($alerta);
@@ -47,3 +55,5 @@ if (isset($_POST['btnCadastrar'])) {
 		header('Refresh:0');
 	}
 }
+
+?>

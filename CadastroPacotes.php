@@ -48,7 +48,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 
 			<?php require_once"include/alerta.php"; ?> 
 
-			<form class="col-sm" method="post" action="">
+			<form class="col-sm" method="post" action=""  enctype="multipart/form-data">
 
 				<h2 class="mb-3"><strong>Dados do Pacote</strong></h2>
 
@@ -56,6 +56,13 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 					<div class="form-group col-md-12 mt-3">
 						<label for="nome_pacote"><strong>Nome do Pacote</strong></label>
 						<input type="text" class="form-control" name="nome_pacote" id="nome_pacote" placeholder="Ex: Basicão">
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="form-group col-md-12 col-xs-12">
+						<label for="fFoto">Foto de capa do pacote</label><br>
+						<input type="file" name="foto_capa[]" id="fFoto" multiple="" accept="image/*, video/*">
 					</div>
 				</div>
 
@@ -92,6 +99,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 					</div>
 				</div>
 
+				
 				<?php if (empty($disabled)) { ?>
 					<div class="form-row">
 						<input type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnCadastrar" value="Cadastrar">
