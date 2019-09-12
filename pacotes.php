@@ -45,16 +45,22 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 				<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">				
 				<div class="card-body">
 					<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
-					<p class="card-text"><?=$item['descricao_pacote']?></p>
+					<p class="card-text"><?=utf8_encode($item['descricao_pacote'])?></p>
 					<div class="row">
-						<div class="alert alert-primary col-md-3 mr-1" role="alert">
-							<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+						<div class="col-md-4 m-0" role="alert">
+							<div class="alert alert-primary text-center">
+								<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+							</div>
 						</div>
-						<div class="alert alert-secondary col-md-3 mr-1" role="alert">
-							<img src="media/images/hamburger.png" style="max-height: 30px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+						<div class=" col-md-4 m-0" role="alert">
+							<div class="alert alert-danger text-center">
+								<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+							</div>
 						</div>
-						<div class="alert alert-danger col-md-3 mr-1" role="alert">
-							<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_janta']?>
+						<div class=" col-md-4 m-0" role="alert">
+							<div class="alert alert-secondary text-center">
+								<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_janta']?>
+							</div>
 						</div>
 					</div>
 					<center>
