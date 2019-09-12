@@ -32,6 +32,8 @@ CONST DB   = "cheffdel_master";
 
 
 
+ignora esse némero: 5762696426
+
 
 
 // require_once"include/verificacao_logado.php";
