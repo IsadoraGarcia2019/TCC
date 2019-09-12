@@ -1,2 +1,2 @@
 # TCC - Cheff Delivery
-Cheff Delivery - Clube de Assinatura de Entrega de Refeições
+Cheff Delivery - Clube de Assinatura de Recebimento de Refeições
