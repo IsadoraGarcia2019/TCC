@@ -41,36 +41,61 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 	<div class="row">
 		<?php foreach ($lista as $item) { ?>
 
-			<div class="card shadow offset-sm-4 offset-md-0 mb-5" style="max-height:750px; width: 350px; margin-right: 15px; margin-top: -30px !important;">
-				<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">				
-				<div class="card-body">
-					<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
-					<p class="card-text"><?=utf8_encode($item['descricao_pacote'])?></p>
-					<div class="row">
-						<div class="col-md-4 m-0" role="alert">
-							<div class="alert alert-primary text-center">
-								<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
-							</div>
-						</div>
-						<div class=" col-md-4 m-0" role="alert">
-							<div class="alert alert-danger text-center">
-								<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
-							</div>
-						</div>
-						<div class=" col-md-4 m-0" role="alert">
-							<div class="alert alert-secondary text-center">
-								<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_janta']?>
-							</div>
-						</div>
-					</div>
-					<center>
-						<a href="#" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-					</center>
-				</div>
-			</div>		
+			<div class="col-md-4 col-10 offset-1 mb-5 " style=" margin-top: -30px !important;">
 
+				<div class="card shadow">
+
+					<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">	
+
+					<div class="card-body">
+
+						<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
+
+						<p class="card-text"><?=utf8_encode($item['descricao_pacote'])?></p>
+
+						<h5 class="text-danger text-center mb-3">O que está incluso?</h5>
+
+						<div class="row">
+
+							<?php if ($item['quantidade_cafe'] != 0) { ?>
+								<div class="col-md-4 m-0" role="alert">
+
+									<div class="alert alert-primary text-center">
+										<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+									</div>
+								</div>
+
+							<?php } ?>
+
+							<?php if ($item['quantidade_almoco'] != 0) { ?>
+								<div class=" col-md-4 m-0" role="alert">
+
+									<div class="alert alert-danger text-center">
+										<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+									</div>
+								</div>
+
+							<?php } ?>
+
+							<?php if ($item['quantidade_janta'] != 0) { ?>
+								<div class=" col-md-4 m-0" role="alert">
+
+									<div class="alert alert-secondary text-center">
+										<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_janta']?>
+									</div>
+								</div>
+
+							<?php } ?>
+
+
+						</div>
+						<a href="#" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+					</div>
+				</div>
+			</div>
 		<?php } ?>
-	</div>
+	</div>		
+
 </div>
 
 <?php
