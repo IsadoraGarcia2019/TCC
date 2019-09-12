@@ -41,7 +41,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 	<div class="row">
 		<?php foreach ($lista as $item) { ?>
 
-			<div class="col-md-4 col-10 offset-1 mb-5 " style=" margin-top: -30px !important;">
+			<div class="col-md-4 col-10 offset-1 offset-md-0 mb-5 " style=" margin-top: -30px !important;">
 
 				<div class="card shadow">
 
