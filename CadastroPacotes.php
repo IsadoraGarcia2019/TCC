@@ -74,28 +74,28 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
 						<label for="preco_pacote"><strong>Preço do Pacote</strong></label>
-						<input type="text" class="form-control" name="preco_pacote" id="preco_pacote" placeholder="Ex: 200 pila">
+						<input type="text" class="form-control" name="preco_pacote" id="preco_pacote" placeholder="Ex: R$ 200,00">
 					</div>
 				</div>
 
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
 						<label for="quantidade"><strong>Quantidade de cafés da manhã</strong></label>
-						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
+						<input type="text" class="form-control" name="quantidade_cafe" id="quantidade" placeholder="Ex: 20">
 					</div>
 				</div>
 
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
 						<label for="quantidade"><strong>Quantidade de almoços</strong></label>
-						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
+						<input type="text" class="form-control" name="quantidade_almoco" id="quantidade" placeholder="Ex: 20">
 					</div>
 				</div>
 
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
 						<label for="quantidade"><strong>Quantidade jantares</strong></label>
-						<input type="text" class="form-control" name="quantidade" id="quantidade" placeholder="Ex: 20">
+						<input type="text" class="form-control" name="quantidade_janta" id="quantidade" placeholder="Ex: 20">
 					</div>
 				</div>
 

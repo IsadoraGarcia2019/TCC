@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 require_once"include/conexao.php";
 
 require_once"classes/site.class.php";
@@ -51,11 +53,30 @@ if (mysqli_query($obj->con, $sqlPacote)) {
 	
 	
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Dados editados com sucesso!";
+	$alerta['mensagem'] = "Pacote editado com sucesso!";
 
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+}
+	// Verificando ação de EXCLUIR
+if (isset($_POST['btnExcluir'])) {
+
+	$sql = "DELETE FROM pacotes WHERE id = $id";
+	
+	if (mysqli_query($obj->con, $sql)) {
+		$query = mysqli_query($obj->con, $sql);
+
+		$alerta['tipo'] = "danger";
+		$alerta['mensagem'] = "Pacote excluido com sucesso!";
+
+		$alerta = serialize($alerta);
+
+		setcookie('alerta', $alerta, time() + 120);
+
+		header('Refresh:0');
+
+	}
 }
 
 ?>

@@ -79,6 +79,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 	</div>
 </div>
 
+
 <?php
 
 //inclusão do rodapé

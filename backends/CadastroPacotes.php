@@ -25,12 +25,12 @@
 		VALUES (
 		DEFAULT, 
 		'$nome_pacote',
+		'$uploads',
 		'$descricao_pacote',
 		'$preco_pacote',
 		'$quantidade_cafe',
 		'$quantidade_almoco',
-		'$quantidade_janta',
-		'$uploads'
+		'$quantidade_janta'
 	)";
 
 	if (mysqli_query($con, $sql)) {

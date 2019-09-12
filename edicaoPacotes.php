@@ -51,47 +51,51 @@
  				<h2><strong>Dados do Pacote</strong></h2>
 
  				<div class="form-row">
- 					<div class="form-group col-md-12 mt-3">
+ 					<div class="form-group col-md-12">
  						<label for="nome_pacote"><strong>Nome do Pacote</strong></label>
  						<input type="text" class="form-control" name="nome_pacote" id="nome_pacote" placeholder="Ex: Basicão" value="<?=$resultadoPacote['nome_pacote']?>">
  					</div>
  				</div>
 
  				<div class="form-row">
- 					<div class="form-group col-md-12 mt-3">
+ 					<div class="form-group col-md-12">
  						<label for="descricao_pacote"><strong>Descrição do Pacote</strong></label>
  						<input type="text" class="form-control" name="descricao_pacote" id="descricao_pacote" value="<?=$resultadoPacote['descricao_pacote']?>">
  					</div>
  				</div>
 
  				<div class="form-row">
- 					<div class="form-group col-sm mt-3">
+ 					<div class="form-group col-sm">
  						<label for="preco_pacote"><strong>Preço do Pacote</strong></label>
  						<input type="text" class="form-control" name="preco_pacote" id="preco_pacote" value="<?=$resultadoPacote['preco_pacote']?>">
  					</div>
  				</div>
 
  				<div class="form-row">
- 					<div class="form-group col-sm mt-3">
+ 					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade de cafés da manhã</strong></label>
  						<input type="text" name="quantidade_cafe" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
  					</div>
  				</div>
  				<div class="form-row">
- 					<div class="form-group col-sm mt-3">
+ 					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade almoços</strong></label>
  						<input type="text" name="quantidade_almoco" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
  					</div>
  				</div>
  				<div class="form-row">
- 					<div class="form-group col-sm mt-3">
+ 					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade de jantares</strong></label>
  						<input type="text" name="quantidade_jantar" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
  					</div>
  				</div>
  				
  				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnEditar">Editar</button>
+ 					<button type="submit" class="btn btn-outline-secondary col-md-12 col-12 mt-3" name="btnEditar">Editar</button>
+ 				<?php } ?>
+
+ 				<?php if (empty($disabled)) { ?>
+ 					<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3" name="btnExcluir">Excluir</button>
  				<?php } ?>
  			</form>
  		</div>

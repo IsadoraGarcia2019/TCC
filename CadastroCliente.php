@@ -39,7 +39,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
     </div>
   </div>
 
-  <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
+  <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="" >
     <div class="card" style="margin-right: auto; margin-left: auto;">
       <div class="card-body" > 
 
