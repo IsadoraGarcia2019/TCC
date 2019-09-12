@@ -43,7 +43,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
       </div>
       <div class="card p-3 shadow">
         <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <p><strong>Temos promoções todos os dias para atender melhor você, faça seu pedido e o frete é totalmente gratuito.</strong></p>
+          <a href="pacotes.php" class="text-danger"><p><strong>Temos promoções todos os dias para atender melhor você, faça seu pedido e o frete é totalmente gratuito.</strong></p></a>
         </blockquote>
       </div>
       <div class="card shadow">
@@ -55,7 +55,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
       </div>
       <div class="card p-3 text-danger text-center shadow">
         <blockquote class="blockquote mb-0 card-body">
-          <p><strong>Receber sua comida em casa nunca foi tão fácil.</strong></p>
+          <a href="CadastroCliente.php" class="text-danger"><p><strong>Receber sua comida em casa nunca foi tão fácil.</strong></p></a>
         </blockquote>
       </div>
       <div class="card shadow">
@@ -67,7 +67,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
       </div>
       <div class="card p-3 shadow">
         <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido.</strong></p>
+          <a href="pacotes.php" class="text-danger"><p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido.</strong></p></a>
         </blockquote>
       </div>
     </div>

@@ -6,7 +6,7 @@ require_once"include/conexao.php";
 
 $lista = "SELECT * FROM pacotes";
 $queryPacote = mysqli_query($con, $lista);
-$resultadoPacote = mysqli_fetch_array($queryPacote);
+$lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -39,17 +39,29 @@ $resultadoPacote = mysqli_fetch_array($queryPacote);
 
 <div class="container">
 	<div class="row">
-		<?php foreach ($lista as $resultadoPacote) { ?>
-			<tr>
-				<th><?=$resultadoPacote['nome_pacote']?></th>
-				<td><?=$resultadoPacote['nome_imagem']?></td>
-				<td><?=$resultadoPacote['descricao_pacote']?></td>
-				<td><?=$resultadoPacote['preco_pacote']?></td>
-				<td><?=$resultadoPacote['quantidade_cafe']?></td>
-				<td><?=$resultadoPacote['quantidade_almoco']?></td>
-				<td><?=$resultadoPacote['quantidade_janta']?></td>
+		<?php foreach ($lista as $item) { ?>
 
-			</tr>
+			<div class="card shadow offset-sm-4 offset-md-0 mb-5" style="max-height:750px; width: 350px; margin-right: 15px; margin-top: -30px !important;">
+				<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">				
+				<div class="card-body">
+					<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
+					<p class="card-text"><?=$item['descricao_pacote']?></p>
+					<div class="row">
+						<div class="alert alert-primary col-md-3 mr-1" role="alert">
+							<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+						</div>
+						<div class="alert alert-secondary col-md-3 mr-1" role="alert">
+							<img src="media/images/hamburger.png" style="max-height: 30px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+						</div>
+						<div class="alert alert-danger col-md-3 mr-1" role="alert">
+							<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_janta']?>
+						</div>
+					</div>
+					<center>
+						<a href="#" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+					</center>
+				</div>
+			</div>		
 
 		<?php } ?>
 	</div>
