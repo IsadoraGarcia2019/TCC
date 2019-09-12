@@ -14,24 +14,35 @@ require_once"head.php";
   <link rel="stylesheet" href="media/css/main.css">
 </head>
 
-<body style="background-image: url('media/images/food-pattern.png'); 
-background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: no-repeat;">
+<body style="background-color: rgb(235, 226, 225);">
 
-<?php require_once "header.php"; ?>
+  <?php require_once "header.php"; ?>
 
-<div class="container"> 
-  <div class="row"> 
-    <div class="box col-md-12" style="background-color: white; ">
-      <h1 class="titulo-box text-center" style="color:#de2828"><strong>Nosso cardápio</strong></h1>
-      <div class="alert alert-secondary" role="alert">
-        <strong>Para você comer no café da manhã, almoço e jantar.</strong>
-      </div>
+  <div class="row">
+    <div class="shadow " style="  background-color: #f2392c ;
+    background-image: url('media/images/food-pattern.png');
+    min-height: 100px; 
+    min-width: 100%; 
+    background-size: 30%; 
+    background-position: center 1050px;" >
+    <div class="text-center my-5">
+      <h1 class="text-white mb-5" style="font-size: 40px;">Receber sua comida em casa nunca foi tão fácil!</h1>
+    </div> 
+  </div>
+</div>
+
+<div class="col-10 col-md-8 mt-5 offset-md-2 offset-1" style="margin-top: -30px !important;">
+  <div class="card" style="margin-right: auto; margin-left: auto;">
+    <div class="card-body" >
+      <h3 class="mb-3"><strong>Quem somos?</strong></h3>
+
+      <a href="#" type="submit" class="btn btn-outline-secondary col-md-12">Visualizar nossos pacotes</a>
     </div>
   </div>
 </div>
-</div>
 
-<div class="container">
+
+<!-- <div class="container">
   <div class="card-index">
     <div class="card-columns">
       <div class="card shadow">
@@ -53,7 +64,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
           <p class="card-text">Temos vários combos e promoções para que suas refeições sejam mais que especiais.</p>
         </div>
       </div>
-      <div class="card p-3 text-danger text-center shadow">
+      <div class="card p-3 text-danger text-center shadow" style="height: 150px;">
         <blockquote class="blockquote mb-0 card-body">
           <a href="CadastroCliente.php" class="text-danger"><p><strong>Receber sua comida em casa nunca foi tão fácil.</strong></p></a>
         </blockquote>
@@ -74,6 +85,7 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
   </div>
 </div>
 </div>
+-->
 
 <?php require_once "footer.php"; ?>
 
@@ -82,4 +94,3 @@ background-size: 100%; background-color: rgb(235, 226, 225); background-repeat: 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
