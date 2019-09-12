@@ -28,14 +28,18 @@ if (isset($_POST['btnEditar'])) {
 	$nome_pacote = $_POST['nome_pacote'];
 	$descricao_pacote = $_POST['descricao_pacote'];
 	$preco_pacote = $_POST['preco_pacote'];
-	$quantidade = $_POST['quantidade'];
+	$quantidade_cafe = $_POST['quantidade_cafe'];
+	$quantidade_almoco = $_POST['quantidade_almoco'];
+	$quantidade_jantar = $_POST['quantidade_jantar'];
 	
 		// inserindo edição na tabela
 	$sqlPacote = "UPDATE pacotes
-	SET nome_restaurante = '$nome_restaurante',
+	SET nome_pacote = '$nome_pacote',
 	descricao_pacote = '$descricao_pacote',
 	preco_pacote = '$preco_pacote',
-	quantidade = '$quantidade', 
+	quantidade_cafe = '$quantidade_cafe', 
+	quantidade_almoco = '$quantidade_almoco', 
+	quantidade_jantar = '$quantidade_jantar', 
 	WHERE id = $id";
 }
 

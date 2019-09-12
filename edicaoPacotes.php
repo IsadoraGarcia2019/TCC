@@ -73,8 +73,20 @@
 
  				<div class="form-row">
  					<div class="form-group col-sm mt-3">
- 						<label for="quantidade"><strong>Quantidade</strong></label>
- 						<input type="text" name="quantidade" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 						<label for="quantidade"><strong>Quantidade de cafés da manhã</strong></label>
+ 						<input type="text" name="quantidade_cafe" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 					</div>
+ 				</div>
+ 				<div class="form-row">
+ 					<div class="form-group col-sm mt-3">
+ 						<label for="quantidade"><strong>Quantidade almoços</strong></label>
+ 						<input type="text" name="quantidade_almoco" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 					</div>
+ 				</div>
+ 				<div class="form-row">
+ 					<div class="form-group col-sm mt-3">
+ 						<label for="quantidade"><strong>Quantidade de jantares</strong></label>
+ 						<input type="text" name="quantidade_jantar" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
  					</div>
  				</div>
  				
