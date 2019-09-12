@@ -15,7 +15,7 @@
  <html lang="pt-br">
  <head>
  	<meta charset="utf-8">
- 	<title>Edição de Pacote</title>
+ 	<title>Edição de Pacotes</title>
  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
  	<link rel="stylesheet" href="media/css/main.css">
@@ -35,7 +35,7 @@
  		background-size: 30%; 
  		background-position: center 1050px;"> 
  		<div class="text-center my-5">
- 			<h1 class="text-white mb-5">Edição de Pacote</h1>
+ 			<h1 class="text-white mb-5">Edição de Pacotes</h1>
  		</div> 
  	</div>
  </div>
