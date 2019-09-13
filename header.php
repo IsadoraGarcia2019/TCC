@@ -75,7 +75,7 @@ $site->Session();
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                   <a class="dropdown-item" href="CadastroPacotes.php">Cadastrar pacotes</a>
-                  <a class="dropdown-item" href="CadastroCardapio.php">Cadastrar cardapio do dia</a>
+                  <a class="dropdown-item" href="CadastroCardapio.php">Cadastrar cardápio do dia</a>
                 </div>
               </li>  
 
@@ -84,7 +84,16 @@ $site->Session();
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                   <a class="dropdown-item" href="edicaoPacotes.php">Edição de Pacotes</a>
-                  <a class="dropdown-item" href="edicaoCardapio.php">Edição de cardapio do dia</a>
+                  <a class="dropdown-item" href="edicaoCardapio.php">Edição de cardápio do dia</a>
+                </div>
+              </li> 
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Vizualizar</a>
+
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                  <a class="dropdown-item" href="pacotes.php">Pacotes</a>
+                  <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
                 </div>
               </li> 
 

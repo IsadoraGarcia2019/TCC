@@ -2,8 +2,6 @@
 
 session_start();
 
-require_once"include/conexao.php";
-
 require_once"classes/site.class.php";
 $obj = new Site();
 
@@ -35,7 +33,7 @@ if (isset($_POST['btnEditar'])) {
 	$quantidade_jantar = $_POST['quantidade_jantar'];
 	
 		// inserindo edição na tabela
-	$sqlPacote = "UPDATE pacotes
+	$sql = "UPDATE pacotes
 	SET nome_pacote = '$nome_pacote',
 	descricao_pacote = '$descricao_pacote',
 	preco_pacote = '$preco_pacote',
@@ -46,7 +44,7 @@ if (isset($_POST['btnEditar'])) {
 }
 
 	// Executando o SQL
-if (mysqli_query($obj->con, $sqlPacote)) {
+if (mysqli_query($obj->con, $sql)) {
 
 	$idPacote = mysqli_insert_id($con);
 	$idPacote = mysqli_insert_id($con);
@@ -58,6 +56,8 @@ if (mysqli_query($obj->con, $sqlPacote)) {
 	$alerta = serialize($alerta);
 
 	setcookie('alerta', $alerta, time() + 120);
+
+	header('Refresh:0');
 }
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
