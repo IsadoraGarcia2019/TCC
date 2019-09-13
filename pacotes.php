@@ -87,9 +87,11 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
 							<?php } ?>
 
-
 						</div>
 						<a href="#" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
+							<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
+						<?php } ?>
 					</div>
 				</div>
 			</div>

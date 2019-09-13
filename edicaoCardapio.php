@@ -60,9 +60,9 @@
  				<div class="form-row">
  					<label class="form-group col-md-12 mt-1 text-left" for="categoria_comida"><strong>Categoria da Comida</strong></label>
  					<select name="categoria_comida" id="categoria_comida" class="form-control" value="<?=$resultadoCardapio['categoria_comida']?>">
- 						<option selected value="cafe_manha" <?= ($resultadoCardapio['categoria_comida']=="cafe_manha") ? 'selected' : ''?>> Café da manhã</option>
- 						<option value="almoco" <?= ($resultadoCardapio['categoria_comida']=="almoco") ? 'selected' : ''?>> Almoço</option>
- 						<option value="jantar" <?= ($resultadoCardapio['categoria_comida']=="jantar") ? 'selected' : ''?>> Jantar</option>
+ 						<option selected value="cafe_manha <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="cafe_manha") ? 'selected' : ''?>"> Café da manhã</option>
+ 						<option value="almoco <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="almoco") ? 'selected' : ''?>"> Almoço</option>
+ 						<option value="jantar <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="janta") ? 'selected' : ''?>"> Jantar</option>
  					</select>
  				</div>
  				
@@ -70,6 +70,12 @@
  					<div class="form-row">
  						<button type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnEditar">Editar</button>
  					</div>
+ 				<?php } ?>
+
+ 				<?php if (empty($disabled)) { ?>
+ 					<div class="form-row">
+ 						<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3" name="btnExcluir">Excluir</button>
+ 					</div>	
  				<?php } ?>
  			</form>
  		</div>

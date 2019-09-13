@@ -46,10 +46,9 @@ class Login extends Site {
 						$sqlAdm = "SELECT * FROM usuarios WHERE id = '".$resultadoLogin['fk_tipo']."'";
 						$queryAdm = mysqli_query($this->con, $sqlAdm);
 						$resultadoAdm = mysqli_fetch_array($queryAdm);
-                        echo "PIMBA";
+						echo "PIMBA";
 						$_SESSION['nome_usuario'] = 'Administrador';
 					}
-
 					if ($resultadoLogin['tp_usuario'] == 'restaurante') {
 						$sqlRestaurantes = "SELECT * FROM restaurantes WHERE id = '".$resultadoLogin['fk_tipo']."'";
 						$queryRestaurantes = mysqli_query($this->con, $sqlRestaurantes);
@@ -78,9 +77,9 @@ class Login extends Site {
 		} else {
 			header('Location: index.php');
 		}
-	if (isset($_POST['botao_entrar'])) {
-		header('Location: CadastroCliente.php');
-	}
+		if (isset($_POST['botao_entrar'])) {
+			header('Location: CadastroCliente.php');
+		}
 	}
 }
 

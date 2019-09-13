@@ -27,28 +27,50 @@ if (isset($_POST['btnEditar'])) {
 
 		// Recebimento dos campos
 	$nome_comida = $_POST['nome_comida'];
-
 	$categoria_comida = $_POST['categoria_comida'];
+
 		// inserindo edição na tabela
-	$sqlCardapio = "UPDATE cardapio_dia
-	SET nome_comida] = '$nome_restaurante',
+	$sql = "UPDATE cardapio_dia
+	SET nome_comida = '$nome_comida',
 	categoria_comida = '$categoria_comida',
 	WHERE id = $id";
-}
 
 	// Executando o SQL
-if (mysqli_query($obj->con, $sqlCardapio)) {
+	if (mysqli_query($obj->con, $sql)) {
 
-	$idCardapio = mysqli_insert_id($con);
-	$idCardapio = mysqli_insert_id($con);
+		$idCardapio = mysqli_insert_id($con);
+		$idCardapio = mysqli_insert_id($con);
+		
+		
+		$alerta['tipo'] = "success";
+		$alerta['mensagem'] = "Dados editados com sucesso!";
+
+		$alerta = serialize($alerta);
+
+		setcookie('alerta', $alerta, time() + 120);
+
+		header('Refresh:0');
+	}
+}
+
+	// Verificando ação de EXCLUIR
+if (isset($_POST['btnExcluir'])) {
+
+	$sql = "DELETE FROM pacotes WHERE id = $id";
 	
-	
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Dados editados com sucesso!";
+	if (mysqli_query($obj->con, $sql)) {
+		$query = mysqli_query($obj->con, $sql);
 
-	$alerta = serialize($alerta);
+		$alerta['tipo'] = "danger";
+		$alerta['mensagem'] = "Pacote excluído com sucesso!";
 
-	setcookie('alerta', $alerta, time() + 120);
+		$alerta = serialize($alerta);
+
+		setcookie('alerta', $alerta, time() + 120);
+
+		header('Refresh:0');
+
+	}
 }
 
 ?>

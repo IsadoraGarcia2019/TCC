@@ -41,23 +41,25 @@ if (isset($_POST['btnEditar'])) {
 	quantidade_almoco = '$quantidade_almoco', 
 	quantidade_jantar = '$quantidade_jantar', 
 	WHERE id = $id";
-}
+
 
 	// Executando o SQL
-if (mysqli_query($obj->con, $sql)) {
+	if (mysqli_query($obj->con, $sql)) {
 
-	$idPacote = mysqli_insert_id($con);
-	$idPacote = mysqli_insert_id($con);
-	
-	
-	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Pacote editado com sucesso!";
+		$idPacote = mysqli_insert_id($con);
+		$idPacote = mysqli_insert_id($con);
+		
+		
+		$alerta['tipo'] = "success";
+		$alerta['mensagem'] = "Pacote editado com sucesso!";
 
-	$alerta = serialize($alerta);
+		$alerta = serialize($alerta);
 
-	setcookie('alerta', $alerta, time() + 120);
+		setcookie('alerta', $alerta, time() + 120);
 
-	header('Refresh:0');
+		header('Refresh:0');
+	}
+
 }
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
@@ -68,7 +70,7 @@ if (isset($_POST['btnExcluir'])) {
 		$query = mysqli_query($obj->con, $sql);
 
 		$alerta['tipo'] = "danger";
-		$alerta['mensagem'] = "Pacote excluido com sucesso!";
+		$alerta['mensagem'] = "Pacote excluído com sucesso!";
 
 		$alerta = serialize($alerta);
 

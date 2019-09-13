@@ -4,7 +4,7 @@
 
  require_once"head.php";
 
- // Verificar se existe alerta via COOKIE
+  // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  	$alerta = unserialize($_COOKIE['alerta']);
  	setcookie('alerta');
