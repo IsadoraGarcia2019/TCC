@@ -34,58 +34,51 @@ require_once"head.php";
 <div class="col-10 col-md-8 mt-5 offset-md-2 offset-1" style="margin-top: -30px !important;">
   <div class="card" style="margin-right: auto; margin-left: auto;">
     <div class="card-body" >
-      <h3 class="mb-3"><strong>Quem somos?</strong></h3>
+      <h3 class="mb-3" style="color: #d42626;"><strong>Quem somos?</strong></h3>
+      <p style="font-size: 18px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é grátis. "Somos aquilo que fazemos repetidamente: excelência". Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia. Entre em contato conosco e vire nosso cliente!</p>
+
+      <h3 class="mb-3" style="color: #d42626;"><strong>Como fazer seu pedido?</strong></h3>
+
+      <h5 style="font-size: 18px; font-weight: bold;">Passo 1:</h5> 
+      <p style="font-size: 18px;">Entre na página cadastro e preencha com suas informações, seja você Cliente, Empresa ou Restaurante.</p>
+
+      <h5 style="font-size: 18px; font-weight: bold;">Passo 2:</h5>
+      <p style="font-size: 18px;">Já cadastrado, escolha o pacote de seu interesse. A partir disso, dependendo do pacote que você selecionou, você poderá escolher a refeição que vai querer no dia que quiser comer.</p>
+
+      <h5 style="font-size: 18px; font-weight: bold;">Passo 3:</h5>
+      <p style="font-size: 18px;">Recebe a sua comida em casa sem se preocupar com o frete, e bom apetite!</p>
 
       <a href="#" type="submit" class="btn btn-outline-secondary col-md-12">Visualizar nossos pacotes</a>
     </div>
   </div>
 </div>
 
-
-<!-- <div class="container">
+ <div class="container">
+  <h2 style="margin-top: 20px; color: #d42626; text-align: center;"><strong>Nossos Cardápio</h2></strong>
   <div class="card-index">
     <div class="card-columns">
-      <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Café da Manhã</h3>
-          <p class="card-text">Seu café da manhã como você nunca viu antes.</p>
+      <div class="card shadow mt-4">
+        <a href="pacotes.php"><img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body" style="height: 90px;">
+          <h3 class="card-title" style="text-align: center;">Café da Manhã</h3>
         </div>
       </div>
-      <div class="card p-3 shadow">
-        <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <a href="pacotes.php" class="text-danger"><p><strong>Temos promoções todos os dias para atender melhor você, faça seu pedido e o frete é totalmente gratuito.</strong></p></a>
-        </blockquote>
-      </div>
-      <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/petiscos.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Almoço</h3>
-          <p class="card-text">Temos vários combos e promoções para que suas refeições sejam mais que especiais.</p>
+      <div class="card shadow mt-4">
+        <a href="pacotes.php"><img src="media/images/petiscos.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body" style="height: 85px;">
+          <h3 class="card-title" style="text-align: center;">Almoço</h3>
         </div>
       </div>
-      <div class="card p-3 text-danger text-center shadow" style="height: 150px;">
-        <blockquote class="blockquote mb-0 card-body">
-          <a href="CadastroCliente.php" class="text-danger"><p><strong>Receber sua comida em casa nunca foi tão fácil.</strong></p></a>
-        </blockquote>
-      </div>
-      <div class="card shadow">
-        <a href="cardapio.php"><img src="media/images/massas1.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body">
-          <h3 class="card-title">Jantar</h3>
-          <p class="card-text">Pizza para um jantar bem mais saboroso.</p>
+      <div class="card shadow mt-4">
+        <a href="pacotes.php"><img src="media/images/massas1.jpg" class="card-img-top" alt="..."></a>
+        <div class="card-body" style="height: 90px;">
+          <h3 class="card-title" style="text-align: center;">Jantar</h3>
         </div>
-      </div>
-      <div class="card p-3 shadow">
-        <blockquote class="blockquote mb-0 card-body text-center text-danger">
-          <a href="pacotes.php" class="text-danger"><p><strong>Trabalhamos com pagamentos mensais onde você recebe em casa a sua fatura! Muito mais prático e rápido.</strong></p></a>
-        </blockquote>
       </div>
     </div>
   </div>
 </div>
 </div>
--->
 
 <?php require_once "footer.php"; ?>
 
