@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 12-Set-2019 às 20:41
+-- Generation Time: 16-Set-2019 às 21:32
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -33,8 +33,32 @@ USE `cheff_delivery`;
 CREATE TABLE `cardapio_dia` (
   `id_cardapio` int(11) NOT NULL,
   `nome_comida` varchar(255) NOT NULL,
-  `categoria_comida` varchar(255) NOT NULL
+  `categoria_comida` enum('cafe_manha','almoco','jantar') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `cardapio_dia`
+--
+
+INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`) VALUES
+(1, 'Capuccino', 'cafe_manha'),
+(2, 'Café Expresso', 'cafe_manha'),
+(3, 'Waffles', 'cafe_manha'),
+(4, 'Panquecas', 'cafe_manha'),
+(5, 'Brownie', 'cafe_manha'),
+(6, 'Cheesecake', 'cafe_manha'),
+(13, 'Strogonoff de Frango', 'almoco'),
+(14, 'Nuggets', 'almoco'),
+(15, 'Batata Frita', 'almoco'),
+(16, 'Macarronada', 'almoco'),
+(17, 'Bife à Parmegiana', 'almoco'),
+(18, 'Risoto de Brócolis', 'almoco'),
+(19, 'Pizza Calabresa', 'jantar'),
+(20, 'Sopa de macarrão', 'jantar'),
+(21, 'Esfiha', 'jantar'),
+(22, 'Cachorro Quente', 'jantar'),
+(23, 'Lasanha', 'jantar'),
+(24, 'Cheeseburger', 'jantar');
 
 -- --------------------------------------------------------
 
@@ -115,7 +139,6 @@ CREATE TABLE `pacotes` (
 --
 
 INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_janta`) VALUES
-(1, 'Básico', 'batata.jpg', '20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que ele quer receber.', 'R$ 260,00', 0, 20, 0),
 (2, 'Intermediário', 'combo-cafe.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 500,00', 20, 20, 0),
 (3, 'Premium', 'comboo.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 760,00', 20, 20, 20);
 
@@ -167,10 +190,10 @@ INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`
 (1036, 'oiaiaiaia@gmail.com', '123', 'empresa', 1, 1),
 (1037, 'oiaiaiaia@gmail.com', '123', 'empresa', 2, 1),
 (1038, 'oi@oi.com', '123', 'empresa', 3, 1),
-(1039, 'habs@gmail.com', '123', 'restaurante', 1, 1),
-(1042, 'deliiverycheff@gmail.com', 'cheffdelivery2019', 'administrador', 1042, 1),
-(1044, 'eucansei@1.com', '123', 'cliente', 1038, 1),
-(1047, 'algo@oi.com', '123', 'cliente', 1040, 1);
+(1039, 'habs@gmail.com', '123', 'restaurante', 4, 1),
+(1042, 'deliiverycheff@gmail.com', 'cheffdelivery2019', 'administrador', 5, 1),
+(1044, 'eucansei@1.com', '123', 'cliente', 6, 1),
+(1047, 'algo@oi.com', '123', 'cliente', 7, 1);
 
 --
 -- Indexes for dumped tables
@@ -220,7 +243,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `clientes`
@@ -232,7 +255,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT for table `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `pacotes`

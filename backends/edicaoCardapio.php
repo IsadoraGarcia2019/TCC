@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
 // Buscar informações do pacote
 if (isset($id)) {
-	$sql = "SELECT * FROM cardapio_dia WHERE id = $id";
+	$sql = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
 	$queryCardapio = mysqli_query($obj->con, $sql);
 	$resultadoCardapio = mysqli_fetch_array($queryCardapio);
 
@@ -62,7 +62,7 @@ if (isset($_POST['btnExcluir'])) {
 		$query = mysqli_query($obj->con, $sql);
 
 		$alerta['tipo'] = "danger";
-		$alerta['mensagem'] = "Pacote excluído com sucesso!";
+		$alerta['mensagem'] = "Cardápio excluído com sucesso!";
 
 		$alerta = serialize($alerta);
 
