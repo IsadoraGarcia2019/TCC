@@ -25,7 +25,7 @@ if (isset($id)) {
 	// Verificando ação de EDITAR
 if (isset($_POST['btnEditar'])) {
 
-		// Recebimento dos campos
+        // Recebimento dos campos
 	$nome_comida = $_POST['nome_comida'];
 	$categoria_comida = $_POST['categoria_comida'];
 
@@ -33,7 +33,7 @@ if (isset($_POST['btnEditar'])) {
 	$sql = "UPDATE cardapio_dia
 	SET nome_comida = '$nome_comida',
 	categoria_comida = '$categoria_comida',
-	WHERE id = $id";
+	WHERE id_cardapio = $id";
 
 	// Executando o SQL
 	if (mysqli_query($obj->con, $sql)) {
@@ -56,7 +56,7 @@ if (isset($_POST['btnEditar'])) {
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 
-	$sql = "DELETE FROM pacotes WHERE id = $id";
+	$sql = "DELETE FROM pacotes WHERE id_cardapio = $id";
 	
 	if (mysqli_query($obj->con, $sql)) {
 		$query = mysqli_query($obj->con, $sql);

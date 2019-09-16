@@ -28,7 +28,7 @@
  	?>
 
  	<div class="row">
- 		<div class="shadow " style="  background-color: #1a1818 !important;
+ 		<div class="shadow " style="background-color: #1a1818 !important;
  		background-image: url('media/images/food-pattern.png');
  		min-height: 100px; 
  		min-width: 100%; 
@@ -60,9 +60,9 @@
  				<div class="form-row">
  					<label class="form-group col-md-12 mt-1 text-left" for="categoria_comida"><strong>Categoria da Comida</strong></label>
  					<select name="categoria_comida" id="categoria_comida" class="form-control" value="<?=$resultadoCardapio['categoria_comida']?>">
- 						<option selected value="cafe_manha <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="cafe_manha") ? 'selected' : ''?>"> Café da manhã</option>
- 						<option value="almoco <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="almoco") ? 'selected' : ''?>"> Almoço</option>
- 						<option value="jantar <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="janta") ? 'selected' : ''?>"> Jantar</option>
+ 						<option value="cafe_manha" <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="cafe_manha") ? 'selected' : ''?>> Café da manhã</option>
+ 						<option value="almoco" <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="almoco") ? 'selected' : ''?>> Almoço</option>
+ 						<option value="jantar" <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="jantar") ? 'selected' : ''?>> Jantar</option>
  					</select>
  				</div>
  				
