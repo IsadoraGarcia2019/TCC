@@ -13,11 +13,4 @@ ignora esse número: 5762696426
 
 ja coloquei o utf8 encode e mesmo assim ta com o negocio do BD
 
-nao ta puxando o nome e nem a categoria da comida na página de edição
-
-<<<<<<< HEAD
-=======
- -feito- não ta puxando as quantidades de comida no edicao de pacotes -feito-
-
->>>>>>> 25bd6b6b71b34fbceba5428cebbfaabb13068514
 não aparece o alerta quando edita e quando exclui tambem nao e aparece usuario nao encontrado e eu ja coloquei o refresh
