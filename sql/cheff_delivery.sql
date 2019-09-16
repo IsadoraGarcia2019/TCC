@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Set-2019 às 21:32
+-- Generation Time: 16-Set-2019 às 21:43
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -139,8 +139,9 @@ CREATE TABLE `pacotes` (
 --
 
 INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_janta`) VALUES
-(2, 'Intermediário', 'combo-cafe.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 500,00', 20, 20, 0),
-(3, 'Premium', 'comboo.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 760,00', 20, 20, 20);
+(5, 'Básico', 'batata.jpg', '20 almoços durante todo o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
+(6, 'Intermediário', 'combo-cafe.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 500,00', 20, 20, 0),
+(7, 'Premium', 'comboo.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 760,00', 20, 20, 20);
 
 -- --------------------------------------------------------
 
@@ -261,7 +262,7 @@ ALTER TABLE `empresas`
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
