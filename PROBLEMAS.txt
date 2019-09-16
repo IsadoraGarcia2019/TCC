@@ -5,6 +5,8 @@ CONST USER = "cheffdel";
 CONST PASS = "entra21@Blusoft";
 CONST DB   = "cheffdel_master";
 
+ "Somos aquilo que fazemos repetidamente: excelência".
+
 
 ignora esse número: 5762696426
 
@@ -17,3 +19,5 @@ nao ta puxando o nome e nem a categoria da comida na página de edição
  -feito- não ta puxando as quantidades de comida no edicao de pacotes -feito-
 
 não aparece o alerta quando edita e quando exclui tambem nao e aparece usuario nao encontrado e eu ja coloquei o refresh
+
+TO APANHANDO DOS CARDS, ELES NÃO ESTÃO ALINHADOS E NEM TA FICANDO CERTO

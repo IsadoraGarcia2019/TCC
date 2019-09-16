@@ -10,7 +10,7 @@ require_once"head.php";
 	<meta charset="utf-8">
 	<title>Cheff Delivery</title>
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="media/css/main.css">
 </head>
 
@@ -25,59 +25,65 @@ require_once"head.php";
     min-width: 100%; 
     background-size: 30%; 
     background-position: center 1050px;" >
-    <div class="text-center my-5">
-      <h1 class="text-white mb-5" style="font-size: 40px;">Receber sua comida em casa nunca foi tão fácil!</h1>
-    </div> 
   </div>
 </div>
 
-<div class="col-10 col-md-8 mt-5 offset-md-2 offset-1" style="margin-top: -30px !important;">
-  <div class="card" style="margin-right: auto; margin-left: auto;">
-    <div class="card-body" >
-      <h3 class="mb-3" style="color: #d42626;"><strong>Quem somos?</strong></h3>
-      <p style="font-size: 18px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é grátis. "Somos aquilo que fazemos repetidamente: excelência". Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia. Entre em contato conosco e vire nosso cliente!</p>
+<div class="row">
+  <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -30px !important;">
+    <div class="card" style="margin-right: auto; margin-left: auto;">
+      <div class="card-body" >
+        <div class="box">
+          RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
+        </div>
+        <div class="mb-3" id="quem_somos">
+          Quem somos?
+        </div>
+        <p class="box">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
 
-      <h3 class="mb-3" style="color: #d42626;"><strong>Como fazer seu pedido?</strong></h3>
+        <div class="text-center mt-5 mb-4" id="quem_somos">
+          Como fazer meu pedido?
+        </div>
 
-      <h5 style="font-size: 18px; font-weight: bold;">Passo 1:</h5> 
-      <p style="font-size: 18px;">Entre na página cadastro e preencha com suas informações, seja você Cliente, Empresa ou Restaurante.</p>
+        <div class="row">
 
-      <h5 style="font-size: 18px; font-weight: bold;">Passo 2:</h5>
-      <p style="font-size: 18px;">Já cadastrado, escolha o pacote de seu interesse. A partir disso, dependendo do pacote que você selecionou, você poderá escolher a refeição que vai querer no dia que quiser comer.</p>
+          <div class=" col-md-4 col-12">
+            <div class="card border-danger mb-3 " style="min-height: 300px;">
+              <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 1</div></div>
+              <div class="card-body text-danger">
+                <h5 class="card-title text-danger text-center mt-4 ">Como começar?</h5>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">Entre na página cadastro e preencha com suas informações, seja você Cliente, Empresa ou Restaurante.</p>
+              </div>
+            </div>
+          </div>
 
-      <h5 style="font-size: 18px; font-weight: bold;">Passo 3:</h5>
-      <p style="font-size: 18px;">Recebe a sua comida em casa sem se preocupar com o frete, e bom apetite!</p>
+          <div class=" col-md-4 col-12">
+            <div class="card border-danger mb-3 " style="min-height: 300px;">
+              <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 2</div></div>
+              <div class="card-body text-danger">
+                <h5 class="card-title text-danger text-center mt-3">O que fazer depois?</h5>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">Já cadastrado, escolha o pacote de seu interesse. A partir disso, dependendo do pacote que você selecionou, você poderá escolher a refeição que vai querer no dia que quiser comer.</p>
+              </div>
+            </div>
+          </div>
 
-      <a href="#" type="submit" class="btn btn-outline-secondary col-md-12">Visualizar nossos pacotes</a>
+          <div class=" col-md-4 col-12">
+            <div class="card border-danger mb-3 " style="min-height: 300px;">
+              <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 3</div></div>
+              <div class="card-body text-danger">
+                <h5 class="card-title text-danger text-center mt-3">Pronto, e agora?</h5>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">Receba a sua comida em casa sem se preocupar com o frete, e bom apetite!</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="pacotes.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
+          <a href="cardapio.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
+
+        </div>
+
+      </div>
     </div>
   </div>
-</div>
-
- <div class="container">
-  <h2 style="margin-top: 20px; color: #d42626; text-align: center;"><strong>Nossos Cardápio</h2></strong>
-  <div class="card-index">
-    <div class="card-columns">
-      <div class="card shadow mt-4">
-        <a href="pacotes.php"><img src="media/images/cafedamanha2.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body" style="height: 90px;">
-          <h3 class="card-title" style="text-align: center;">Café da Manhã</h3>
-        </div>
-      </div>
-      <div class="card shadow mt-4">
-        <a href="pacotes.php"><img src="media/images/petiscos.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body" style="height: 85px;">
-          <h3 class="card-title" style="text-align: center;">Almoço</h3>
-        </div>
-      </div>
-      <div class="card shadow mt-4">
-        <a href="pacotes.php"><img src="media/images/massas1.jpg" class="card-img-top" alt="..."></a>
-        <div class="card-body" style="height: 90px;">
-          <h3 class="card-title" style="text-align: center;">Jantar</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 
 <?php require_once "footer.php"; ?>
