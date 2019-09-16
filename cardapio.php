@@ -43,9 +43,9 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 			<li class="active" data-filter="*">Todo menu</li>
 			<li data-filter=".cafe_manha">Café da manhã</li>
 			<li data-filter=".almoco">Almoço</li>
-			<li data-filter=".janta">Jantar</li>
+			<li data-filter=".jantar">Jantar</li>
 		</ul>
-		<div class="filters-content">
+		<div class="filters-content pb-5">
 			<div class="row grid">
 
 				<?php foreach ($lista as $item) { ?>
@@ -76,8 +76,8 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 						</div>
 					<?php } ?>
 
-					<?php if (utf8_encode($item['categoria_comida']) == 'janta' ){ ?>
-						<div class="col-md-6 all janta">
+					<?php if (utf8_encode($item['categoria_comida']) == 'jantar' ){ ?>
+						<div class="col-md-6 all jantar">
 							<div class="single-menu">
 								<div class="title-wrap d-flex justify-content-between">
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
