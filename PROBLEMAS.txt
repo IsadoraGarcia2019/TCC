@@ -17,5 +17,3 @@ nao ta puxando a categoria da comida na página de edição
 não ta puxando as quantidades de comida no edicao de pacotes
 
 não aparece o alerta quando edita e quando exclui tambem nao e aparece usuario nao encontrado e eu ja coloquei o refresh
-
-A COR NÃO CHEGA ATÉ O FINAL DO SITE NO CARDÁPIO
