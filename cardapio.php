@@ -57,7 +57,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
 								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>				
+									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>				
 								<?php } ?>  
 							</div>					                               
 						</div>   
@@ -70,7 +70,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
 								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
+									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
 								<?php } ?>
 							</div>
 						</div>
@@ -83,7 +83,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
 								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
+									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
 								<?php } ?>
 							</div>
 						</div>
