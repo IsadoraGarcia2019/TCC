@@ -10,7 +10,7 @@
 
       <a href="https://twitter.com/delivery_cheff"><img src="media/images/twitter.png" alt="twitter" title="twitter" class="icones"></a>
 
-      <img src="media/images/linkedin.png" alt="Rede Social 4" title="Rede Social 4" id="linkedin" class="icones">
+      <img src="media/images/linkedin.png" alt="linkedin" title="linkedin" id="linkedin" class="icones">
 
     </center>
   </div>
