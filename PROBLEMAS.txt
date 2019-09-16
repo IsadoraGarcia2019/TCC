@@ -13,9 +13,6 @@ ignora esse número: 5762696426
 
 ja coloquei o utf8 encode e mesmo assim ta com o negocio do BD
 
-<<<<<<< HEAD
 As páginas de edição do cardápio e pacotes não estão editando 
 
-=======
->>>>>>> 9b2ff1c9107b902f29536713a6b7008a25d11867
 não aparece o alerta quando edita e quando exclui tambem nao e aparece usuario nao encontrado e eu ja coloquei o refresh

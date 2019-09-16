@@ -86,7 +86,7 @@
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade de jantares</strong></label>
- 						<input type="text" name="quantidade_janta" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade_janta']?>"> 							
+ 						<input type="text" name="quantidade_janta" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade_jantar']?>"> 							
  					</div>
  				</div>
  				
