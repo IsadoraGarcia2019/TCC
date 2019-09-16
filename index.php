@@ -40,7 +40,7 @@ require_once"head.php";
         </div>
         <p class="box">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
 
-        <div class="text-center mt-5 mb-4" id="quem_somos">
+        <div class="text-center mt-4 mb-4" id="quem_somos">
           Como fazer meu pedido?
         </div>
 
