@@ -74,19 +74,19 @@
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade de cafés da manhã</strong></label>
- 						<input type="text" name="quantidade_cafe" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 						<input type="text" name="quantidade_cafe" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade_cafe']?>"> 							
  					</div>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade almoços</strong></label>
- 						<input type="text" name="quantidade_almoco" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 						<input type="text" name="quantidade_almoco" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade_almoco']?>"> 							
  					</div>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="quantidade"><strong>Quantidade de jantares</strong></label>
- 						<input type="text" name="quantidade_jantar" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade']?>"> 							
+ 						<input type="text" name="quantidade_janta" id="quantidade" class="form-control" value="<?=$resultadoPacote['quantidade_jantar']?>"> 							
  					</div>
  				</div>
  				

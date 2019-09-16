@@ -5,17 +5,14 @@ CONST USER = "cheffdel";
 CONST PASS = "entra21@Blusoft";
 CONST DB   = "cheffdel_master";
 
+ "Somos aquilo que fazemos repetidamente: excelência".
+
 
 ignora esse número: 5762696426
 
-PERGUNTA: POSSO TIRAR OS BOTÕES DE EDIÇÃO JA QUE DA PRA EDITAR PELA PRÓPRIA PÁGINA?
 
 ja coloquei o utf8 encode e mesmo assim ta com o negocio do BD
 
-nao ta puxando a categoria da comida na página de edição
-
-não ta puxando as quantidades de comida no edicao de pacotes
+As páginas de edição do cardápio e pacotes não estão editando 
 
 não aparece o alerta quando edita e quando exclui tambem nao e aparece usuario nao encontrado e eu ja coloquei o refresh
-
-A COR NÃO CHEGA ATÉ O FINAL DO SITE NO CARDÁPIO

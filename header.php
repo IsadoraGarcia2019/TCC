@@ -84,15 +84,6 @@ $site->Session();
               </li>  
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Edição</a>
-
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="edicaoPacotes.php">Edição de Pacotes</a>
-                  <a class="dropdown-item" href="edicaoCardapio.php">Edição de cardápio do dia</a>
-                </div>
-              </li> 
-
-              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Vizualizar</a>
 
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown2">

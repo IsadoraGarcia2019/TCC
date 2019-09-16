@@ -95,7 +95,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 				<div class="form-row">
 					<div class="form-group col-md-12 col-xs-12">
 						<label for="quantidade"><strong>Quantidade jantares</strong></label>
-						<input type="text" class="form-control" name="quantidade_janta" id="quantidade" placeholder="Ex: 20">
+						<input type="text" class="form-control" name="quantidade_jantar" id="quantidade" placeholder="Ex: 20">
 					</div>
 				</div>
 
