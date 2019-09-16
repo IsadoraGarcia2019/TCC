@@ -43,7 +43,7 @@ if (isset($_POST['btnEditar'])) {
 		
 		
 		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = "Dados editados com sucesso!";
+		$alerta['mensagem'] = "Cardápio editado com sucesso!";
 
 		$alerta = serialize($alerta);
 

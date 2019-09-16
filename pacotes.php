@@ -77,7 +77,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
 							<?php } ?>
 
-							<?php if ($item['quantidade_janta'] != 0) { ?>
+							<?php if ($item['quantidade_jantar'] != 0) { ?>
 								<div class=" col-md-4 m-0" role="alert">
 
 									<div class="alert alert-secondary text-center">
