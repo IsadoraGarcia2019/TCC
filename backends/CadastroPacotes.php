@@ -13,7 +13,7 @@
 		$preco_pacote = $_POST['preco_pacote'];
 		$quantidade_cafe  = $_POST['quantidade_cafe'];
 		$quantidade_almoco  = $_POST['quantidade_almoco'];
-		$quantidade_janta  = $_POST['quantidade_janta'];
+		$quantidade_jantar  = $_POST['quantidade_jantar'];
 
 		// Instância uma classe para o upload
 		$upload = new Uploader('foto_capa');
@@ -30,7 +30,7 @@
 		'$preco_pacote',
 		'$quantidade_cafe',
 		'$quantidade_almoco',
-		'$quantidade_janta'
+		'$quantidade_jantar'
 	)";
 
 	if (mysqli_query($con, $sql)) {
