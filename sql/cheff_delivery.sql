@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Set-2019 às 21:45
+-- Generation Time: 17-Set-2019 às 21:05
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -58,7 +58,7 @@ INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`) VA
 (21, 'Esfiha', 'jantar'),
 (22, 'Cachorro Quente', 'jantar'),
 (23, 'Lasanha', 'jantar'),
-(24, 'Cheeseburger', 'jantar');
+(32, 'Cheeseburger ', 'jantar');
 
 -- --------------------------------------------------------
 
@@ -131,15 +131,15 @@ CREATE TABLE `pacotes` (
   `preco_pacote` varchar(255) NOT NULL,
   `quantidade_cafe` int(11) NOT NULL,
   `quantidade_almoco` int(11) NOT NULL,
-  `quantidade_janta` int(11) NOT NULL
+  `quantidade_jantar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `pacotes`
 --
 
-INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_janta`) VALUES
-(5, 'Básico', 'batata.jpg', '20 almoços durante todo o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
+INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_jantar`) VALUES
+(5, 'BÃ¡sico', 'batata.jpg', '20 almoï¿½os durante todo o mï¿½s, o usuï¿½rio escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
 (6, 'Intermediário', 'combo-cafe.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 500,00', 20, 20, 0),
 (7, 'Premium', 'comboo.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 760,00', 20, 20, 20);
 
@@ -192,7 +192,7 @@ INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`
 (1037, 'oiaiaiaia@gmail.com', '123', 'empresa', 2, 1),
 (1038, 'oi@oi.com', '123', 'empresa', 3, 1),
 (1039, 'habs@gmail.com', '123', 'restaurante', 4, 1),
-(1042, 'deliiverycheff@gmail.com', 'cheffdelivery2019', 'administrador', 5, 1),
+(1042, 'deliiverycheff@gmail.com', '2019', 'administrador', 5, 1),
 (1044, 'eucansei@1.com', '123', 'cliente', 6, 1),
 (1047, 'algo@oi.com', '123', 'cliente', 7, 1);
 
@@ -244,7 +244,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `clientes`
@@ -262,7 +262,7 @@ ALTER TABLE `empresas`
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
