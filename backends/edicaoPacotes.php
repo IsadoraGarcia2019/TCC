@@ -39,15 +39,15 @@ if (isset($_POST['btnEditar'])) {
 	preco_pacote = '$preco_pacote',
 	quantidade_cafe = '$quantidade_cafe', 
 	quantidade_almoco = '$quantidade_almoco', 
-	quantidade_jantar = '$quantidade_jantar', 
+	quantidade_jantar = '$quantidade_jantar'
 	WHERE id = $id";
 
 
 	// Executando o SQL
 	if (mysqli_query($obj->con, $sql)) {
 
-		$idPacote = mysqli_insert_id($con);
-		$idPacote = mysqli_insert_id($con);
+		$id = mysqli_insert_id($con);
+		$id = mysqli_insert_id($con);
 		
 		
 		$alerta['tipo'] = "success";

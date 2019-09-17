@@ -32,7 +32,7 @@ if (isset($_POST['btnEditar'])) {
 		// inserindo edição na tabela
 	$sql = "UPDATE cardapio_dia
 	SET nome_comida = '$nome_comida',
-	categoria_comida = '$categoria_comida',
+	categoria_comida = '$categoria_comida'
 	WHERE id_cardapio = $id";
 
 	// Executando o SQL
