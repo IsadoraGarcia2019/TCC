@@ -1,5 +1,7 @@
 <?php
 
+require_once"backends/finalizacao.php";
+
 require_once"head.php";
 
 ?>
@@ -38,27 +40,27 @@ require_once"head.php";
       <form>
         <div class="form-group">
           <label for="NameInput">Nome:</label>
-          <input type="text" class="form-control" id="NameInput" placeholder="Fulano">
+          <input type="text" class="form-control" id="nome_cliente" placeholder="Ex: Felipe da Silva"> name="nome_cliente" value="<?=$resultadoCliente['nome_cliente']?>">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Email:</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Fulano@gmail.com">
+          <input type="email" class="form-control" id="email" name="email" placeholder="felipe.silva@gmail.com" value="<?= $resultadoUsuarios['email']?>">
         </div>
         <div class="row">
           <div class="col-md-6">
             <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Ex: Rua Bahia N°123">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Ex: Rua Bahia N°123" name="rua" value="<?=$resultadoCliente['rua']?>">
           </div>
           <div class="col-md-6">
             <label for="inputAddress2">Complemento</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Ex: Casa">
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Ex: Casa" name="complemento">
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-6 mt-2">
             <label for="inputCity">Cidade</label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Ex: Blumenau">
+            <input type="text" class="form-control" id="inputCity" placeholder="Ex: Blumenau" name="cidade" value="<?=$resultadoCliente['cidade']?>">
           </div>
           <div class="col-md-6 mt-2">
             <label for="inputState">Estado</label>
@@ -71,37 +73,37 @@ require_once"head.php";
         <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de pagamento</strong></h3>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
           <label class="form-check-label" for="exampleRadios1">
             Dinheiro
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
           <label class="form-check-label" for="exampleRadios2">
             Cheque
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option3">
+          <label class="form-check-label" for="exampleRadios3">
             Boleto Bancário
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+          <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="option4">
+          <label class="form-check-label" for="exampleRadios4">
             Cartão de Crédito
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios5" value="option5">
+          <label class="form-check-label" for="exampleRadios5">
             Cartão de Débito
           </label>
         </div>
 
-        <button type="submit" class="btn btn-outline-danger col-md-12 mt-3">Finalizar</button>
+        <button type="submit" class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</button>
 
       </form>
     </div>
