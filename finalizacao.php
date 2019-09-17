@@ -1,5 +1,7 @@
 <?php
 
+require_once"backends/finalizacao.php";
+
 require_once"head.php";
 
 // require_once"backends/finalizacao.php";
@@ -44,14 +46,17 @@ require_once"head.php";
           <label for="nome_cliente">Nome</label>
           <input type="text" class="form-control" id="nome_cliente" name="nome_cliente" value="<?=$resultadoCliente['nome_cliente']?>">
         </div>
+
         <div class="form-group">
           <label for="email_cliente">Email</label>
           <input type="email" class="form-control" id="email_cliente" name="email_cliente" value="<?=$resultadoCliente['email_cliente']?>">
         </div>
+
         <div class="form-group">
           <label for="rua">Endereço</label>
           <input type="text" class="form-control" id="rua" name="rua" value="<?=$resultadoCliente['rua']?>">
         </div>  
+
         <div class="row">
           <div class="col-md-6 mt-2">
             <label for="cidade">Cidade</label>
@@ -68,37 +73,31 @@ require_once"head.php";
         <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="forma_pagamento" id="dinheiro" value="dinheiro" >
-          <label class="form-check-label" for="dinheiro">
-            Dinheiro
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="forma_pagamento" id="cheque" value="cheque">
-          <label class="form-check-label" for="cheque">
-            Cheque
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
-          <label class="form-check-label" for="boleto_bancario">
-            Boleto Bancário
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
-          <label class="form-check-label" for="cartao_credito">
-            Cartão de Crédito
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
-          <label class="form-check-label" for="cartao_debito">
-            Cartão de Débito
-          </label>
-        </div>
+         <label class="form-check-label" for="dinheiro">Dinheiro</label>
+         <input class="form-check-input" type="radio" name="forma_pagamento" id="dinheiro" value="dinheiro" >
+       </div>
 
-        <a href="#" class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</a>
+       <div class="form-check">
+         <label class="form-check-label" for="cheque">Cheque</label>
+         <input class="form-check-input" type="radio" name="forma_pagamento" id="cheque" value="cheque">
+       </div>
+
+       <div class="form-check">
+         <label class="form-check-label" for="boleto_bancario">Boleto Bancário</label>
+         <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
+       </div>
+
+       <div class="form-check">
+        <label class="form-check-label" for="cartao_credito">Cartão de Crédito</label>
+        <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
+      </div>
+
+      <div class="form-check">
+        <label class="form-check-label" for="cartao_debito">Cartão de Débito</label>
+        <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
+      </div>
+
+      <a href="#" class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</a>
 
       </form>
     </div>
