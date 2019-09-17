@@ -60,7 +60,7 @@ $site->Session();
                 </div>
 
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="Finalizacao.php" style="margin-left: 10px;">Finalização do pedido</a>
+                  <a class="nav-link text-light" href="finalizacao.php" style="margin-left: 10px;">Finalização do pedido</a>
                 </li> 
 
               </li>  

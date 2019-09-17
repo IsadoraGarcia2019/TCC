@@ -19,9 +19,9 @@ require_once"head.php";
   <?php require_once "header.php"; ?>
 
   <div class="row">
-    <div class="shadow " style="  background-color: #f2392c ;
+    <div class="shadow " style="  background-color: #f2392c;
     background-image: url('media/images/food-pattern.png');
-    min-height: 100px; 
+    min-height: 139px;
     min-width: 100%; 
     background-size: 30%; 
     background-position: center 1050px;" >
@@ -30,8 +30,8 @@ require_once"head.php";
 
 <div class="row">
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -30px !important;">
-    <div class="card" style="margin-right: auto; margin-left: auto;">
-      <div class="card-body" >
+    <div class="card shadow">
+      <div class="card-body">
         <div class="box">
           RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
         </div>

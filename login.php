@@ -38,8 +38,8 @@ $login = new Login();
 	</div>
 </div>
 
-<div class="col-8 col-md-10 mt-5 offset-md-1" style="margin-top: -80px !important;">
-	<div class="card col-md-4 offset-md-4 offset-3 mt-5">
+<div class="col-8 col-md-10 mt-5 offset-md-1 " style="margin-top: -80px !important;">
+	<div class="card col-md-4 offset-md-4 offset-3 mt-5 shadow">
 		<div class="card-body"> 
 			<?php require_once"include/alerta.php"; ?>
 			<form method="post" action="">
@@ -48,18 +48,15 @@ $login = new Login();
 						<label for="email"><strong>E-mail</strong></label>
 						<input type="email" class="form-control" id="email" name="email">
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-12 mt-3">
 						<label for="senha"><strong>Senha</strong></label>
 						<input type="password" class="form-control" id="senha" name="senha">
 					</div>
 				</div>
 				<div class="form-row">
-					<a href="#" class="col-sm-12 col-md-12 text-center text-danger mt-3" >Esqueci minha senha</a> 
-				</div>
-				<div class="form-row">
-					<button type="submit" class="btn btn-outline-secondary col-md-12 mb-3 mt-3" name="btnEntrar">Entrar</button>
+					<button type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnEntrar">Entrar</button>
 
-					<button type="submit" class="btn btn-outline-danger col-md-12 mb-3 mt-3" name="botao_entrar">Criar uma nova conta</button>
+					<button type="submit" class="btn btn-outline-danger col-md-12 mt-3" name="botao_entrar">Criar uma nova conta</button>
 				</div>
 			</form>
 		</div>

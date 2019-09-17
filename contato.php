@@ -26,7 +26,7 @@ require_once"head.php";
 </div>
 </div>
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
-	<div class="card" style="margin-right: auto; margin-left: auto;">
+	<div class="card shadow" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
 
 			<br>
