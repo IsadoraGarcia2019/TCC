@@ -37,7 +37,8 @@ require_once"head.php";
   <div class="card" style="margin-right: auto; margin-left: auto;">
     <div class="card-body" >
 
-      <form>
+      <form method="post" action="">
+        <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados Pessoais</strong></h3>
         <div class="form-group">
           <label for="NameInput">Nome:</label>
           <input type="text" class="form-control" id="nome_cliente" placeholder="Ex: Felipe da Silva"> name="nome_cliente" value="<?=$resultadoCliente['nome_cliente']?>">
@@ -70,40 +71,69 @@ require_once"head.php";
           </div>
         </div>
 
-        <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de pagamento</strong></h3>
+        <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
 
         <div class="form-check">
+<<<<<<< HEAD
           <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
           <label class="form-check-label" for="exampleRadios1">
+=======
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="dinheiro" value="dinheiro" >
+          <label class="form-check-label" for="dinheiro">
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
             Dinheiro
           </label>
         </div>
         <div class="form-check">
+<<<<<<< HEAD
           <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios2" value="option2">
           <label class="form-check-label" for="exampleRadios2">
+=======
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cheque" value="cheque">
+          <label class="form-check-label" for="cheque">
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
             Cheque
           </label>
         </div>
         <div class="form-check">
+<<<<<<< HEAD
           <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios3" value="option3">
           <label class="form-check-label" for="exampleRadios3">
+=======
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
+          <label class="form-check-label" for="boleto_bancario">
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
             Boleto Bancário
           </label>
         </div>
         <div class="form-check">
+<<<<<<< HEAD
           <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios4" value="option4">
           <label class="form-check-label" for="exampleRadios4">
+=======
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
+          <label class="form-check-label" for="cartao_credito">
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
             Cartão de Crédito
           </label>
         </div>
         <div class="form-check">
+<<<<<<< HEAD
           <input class="form-check-input" type="radio" name="exampleRadios5" id="exampleRadios5" value="option5">
           <label class="form-check-label" for="exampleRadios5">
+=======
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
+          <label class="form-check-label" for="cartao_debito">
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
             Cartão de Débito
           </label>
         </div>
 
+<<<<<<< HEAD
         <button type="submit" class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</button>
+=======
+        <a href="#" class="btn btn-outline-danger col-md-12 mt-3">Finalizar</a>
+>>>>>>> 56e6a163fa43f82489a8e381b54c9b6235f090a1
 
       </form>
     </div>
