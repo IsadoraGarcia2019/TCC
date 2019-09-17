@@ -56,7 +56,7 @@ if (isset($_POST['btnEditar'])) {
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 
-	$sql = "DELETE FROM pacotes WHERE id_cardapio = $id";
+	$sql = "DELETE FROM cardapio_dia WHERE id_cardapio = $id";
 	
 	if (mysqli_query($obj->con, $sql)) {
 		$query = mysqli_query($obj->con, $sql);
