@@ -35,7 +35,8 @@ require_once"head.php";
   <div class="card" style="margin-right: auto; margin-left: auto;">
     <div class="card-body" >
 
-      <form>
+      <form method="post" action="">
+        <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados Pessoais</strong></h3>
         <div class="form-group">
           <label for="NameInput">Nome:</label>
           <input type="text" class="form-control" id="NameInput" placeholder="Fulano">
@@ -68,40 +69,40 @@ require_once"head.php";
           </div>
         </div>
 
-        <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de pagamento</strong></h3>
+        <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
 
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="dinheiro" value="dinheiro" >
+          <label class="form-check-label" for="dinheiro">
             Dinheiro
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cheque" value="cheque">
+          <label class="form-check-label" for="cheque">
             Cheque
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
+          <label class="form-check-label" for="boleto_bancario">
             Boleto Bancário
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
+          <label class="form-check-label" for="cartao_credito">
             Cartão de Crédito
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
+          <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
+          <label class="form-check-label" for="cartao_debito">
             Cartão de Débito
           </label>
         </div>
 
-        <button type="submit" class="btn btn-outline-danger col-md-12 mt-3">Finalizar</button>
+        <a href="#" class="btn btn-outline-danger col-md-12 mt-3">Finalizar</a>
 
       </form>
     </div>
