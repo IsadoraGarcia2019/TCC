@@ -58,11 +58,6 @@ $site->Session();
                   <a class="dropdown-item" href="CadastroEmpresa.php">Empresa</a>
                   <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
                 </div>
-
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="finalizacao.php" style="margin-left: 10px;">Finalização do pedido</a>
-                </li> 
-
               </li>  
             <?php } ?>
           <?php } ?>

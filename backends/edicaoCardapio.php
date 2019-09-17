@@ -68,11 +68,7 @@ if (isset($_POST['btnExcluir'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-<<<<<<< HEAD
 		header('Location:CadastroCardapio.php');
-=======
-		header('Refresh:0');
->>>>>>> c08fefbd483ce868c7b4a229be7659b0f9d3789b
 
 	}
 }

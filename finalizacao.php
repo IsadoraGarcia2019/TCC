@@ -76,11 +76,6 @@ require_once"head.php";
        </div>
 
        <div class="form-check">
-         <input class="form-check-input" type="radio" name="forma_pagamento" id="cheque" value="cheque">
-         <label class="form-check-label" for="cheque">Cheque</label>
-       </div>
-
-       <div class="form-check">
          <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
          <label class="form-check-label" for="boleto_bancario">Boleto Bancário</label>
        </div>
@@ -95,10 +90,10 @@ require_once"head.php";
         <label class="form-check-label" for="cartao_debito">Cartão de Débito</label>
       </div>
 
-      <a href="#" class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</a>
+      <button class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</button>
 
-      </form>
-    </div>
+        </form>
+     </div>
   </div>
 </div>
 

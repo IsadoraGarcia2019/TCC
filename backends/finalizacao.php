@@ -5,6 +5,8 @@ require_once"include/conexao.php";
 require_once"classes/site.class.php";
 $obj = new Site();
 
+session_start();
+
 	// Recuperar ID do pacote
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
@@ -28,9 +30,10 @@ if (isset($_POST['btnFinalizar'])) {
         // Recebimento dos campos
 	$nome_cliente = $_POST['nome_cliente'];
 	$email_cliente = $_POST['email_cliente'];
+	$rua = $_POST['rua'];
 	$estado = $_POST['estado'];
 	$cidade = $_POST['cidade'];
-	$rua = $_POST['rua'];
+	$forma_pagamento = $_POST['forma_pagamento'];
 
 	// inserindo edição na tabela
 	$sql = "INSERT INTO finalizacao 
@@ -40,7 +43,9 @@ if (isset($_POST['btnFinalizar'])) {
 	'$email_cliente',
 	'$estado',
 	'$cidade',
-	'$rua'
+	'$rua',
+	'$forma_pagamento',
+	'pendente'
 )";
 
 	// Executando o SQL
