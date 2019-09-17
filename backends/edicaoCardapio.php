@@ -68,7 +68,7 @@ if (isset($_POST['btnExcluir'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-		header('Refresh:0');
+		header('Location:cardapio.php');
 
 	}
 }

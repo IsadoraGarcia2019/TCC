@@ -11,33 +11,32 @@ if (isset($_POST['btnCadastrar'])) {
 	
 	//inserindo no BD
 	$sql = "INSERT INTO cardapio_dia 
-			VALUES (
-			DEFAULT, 
-			'$nome_comida',
-			'$categoria_comida'
+	VALUES (
+	DEFAULT, 
+	'$nome_comida',
+	'$categoria_comida'
 
 )";
 
+if (mysqli_query($con, $sql)) {
 
-	if (mysqli_query($con, $sql)) {
+	$alerta['tipo'] = "success";
+	$alerta['mensagem'] = "A comida foi salva com sucesso!";
 
-		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = "A comida foi salvo com sucesso!";
+	$alerta = serialize($alerta);
 
-		$alerta = serialize($alerta);
+	setcookie('alerta', $alerta, time() + 120);
 
-		setcookie('alerta', $alerta, time() + 120);
+	header('Refresh:0');
 
-		header('Refresh:0');
+} else {
+	$alerta['tipo'] = "danger";
+	$alerta['mensagem'] = "Erro ao salvar a comida.";
 
-	} else {
-		$alerta['tipo'] = "danger";
-		$alerta['mensagem'] = "Erro ao salvar a comida.";
+	$alerta = serialize($alerta);
 
-		$alerta = serialize($alerta);
+	setcookie('alerta', $alerta, time() + 120);
 
-		setcookie('alerta', $alerta, time() + 120);
-
-		header('Refresh:0');
-	}
+	header('Refresh:0');
+}
 }
