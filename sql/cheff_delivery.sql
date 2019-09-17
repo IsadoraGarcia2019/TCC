@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Set-2019 às 21:05
+-- Generation Time: 17-Set-2019 às 22:16
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -120,6 +120,23 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `finalizacao`
+--
+
+CREATE TABLE `finalizacao` (
+  `id` int(11) NOT NULL,
+  `nome_cliente` varchar(255) NOT NULL,
+  `email_cliente` varchar(255) NOT NULL,
+  `rua_cliente` varchar(255) NOT NULL,
+  `cidade_cliente` varchar(255) NOT NULL,
+  `estado_cliente` varchar(255) NOT NULL,
+  `forma_pagamento` enum('dinheiro','boleto_bancario','cartao_credito','cartao_debito') NOT NULL,
+  `status_pagamento` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `pacotes`
 --
 
@@ -219,6 +236,12 @@ ALTER TABLE `empresas`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `finalizacao`
+--
+ALTER TABLE `finalizacao`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pacotes`
 --
 ALTER TABLE `pacotes`
@@ -244,7 +267,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `clientes`
@@ -259,10 +282,16 @@ ALTER TABLE `empresas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `finalizacao`
+--
+ALTER TABLE `finalizacao`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
