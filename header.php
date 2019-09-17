@@ -95,12 +95,6 @@ $site->Session();
         </ul>
 
         <?php Site::Navbar(); ?>
-
-        <form action="buscar.php" method="POST" target="principal" class="form-inline my-2 my-lg-0">
-         <input name="buscar" type="text" class="form-control mr-sm-2" size="10" placeholder="Vai pedir o que?" aria-label="Search">
-         <input type="submit" value="buscar" class="btn my-2 my-sm-0 text-light" style="background-color: rgb(143, 19, 10);">
-
-       </form>
-     </div>
-   </nav>
- </header>
+      </div>
+    </nav>
+  </header>
