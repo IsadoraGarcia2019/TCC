@@ -79,6 +79,4 @@ class Login extends Site {
 		}
 	}
 }
-
-
 ?>
