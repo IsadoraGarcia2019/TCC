@@ -59,6 +59,10 @@ $site->Session();
                   <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
                 </div>
 
+                <li class="nav-item">
+                  <a class="nav-link text-light" href="Finalizacao.php" style="margin-left: 10px;">Finalização do pedido</a>
+                </li> 
+
               </li>  
             <?php } ?>
           <?php } ?>
@@ -86,7 +90,7 @@ $site->Session();
                   <a class="dropdown-item" href="pacotes.php">Pacotes</a>
                   <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
                 </div>
-              </li> 
+              </li>
 
             </ul>
             
