@@ -29,7 +29,7 @@ require_once"head.php";
 </div>
 
 <div class="row">
-  <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -30px !important;">
+  <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
       <div class="card-body">
         <div class="box">
