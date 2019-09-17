@@ -13,11 +13,6 @@ session_start();
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 
-	 // buscar o FK_TIPO deste ID no banco
-	 // $sql = "SELECT * FROM usuarios WHERE id = $id";
-
-	// $id = $fk_tipo;
-
 }
 
 // Buscar informações do cliente

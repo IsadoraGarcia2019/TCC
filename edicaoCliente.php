@@ -1,9 +1,6 @@
 <?php
 
 require_once"backends/edicaoCliente.php";
-
-//equire_once"backends/edicao.php";
-
 require_once"head.php";
 
 ?>

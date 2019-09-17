@@ -53,7 +53,7 @@
  				<div class="form-row">
  					<div class="form-group col-md-12">
  						<label for="nome_pacote"><strong>Nome do Pacote</strong></label>
- 						<input type="text" class="form-control" name="nome_pacote" id="nome_pacote" placeholder="Ex: Basicão" value="<?=$resultadoPacote['nome_pacote']?>">
+ 						<input type="text" class="form-control" name="nome_pacote" id="nome_pacote" placeholder="Ex: Basicão" value="<?=utf8_encode($resultadoPacote['nome_pacote'])?>">
  					</div>
  				</div>
 

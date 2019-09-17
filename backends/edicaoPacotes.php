@@ -39,7 +39,7 @@ if (isset($_POST['btnEditar'])) {
 	preco_pacote = '$preco_pacote',
 	quantidade_cafe = '$quantidade_cafe', 
 	quantidade_almoco = '$quantidade_almoco', 
-	quantidade_jantar = '$quantidade_jantar', 
+	quantidade_jantar = '$quantidade_jantar' 
 	WHERE id = $id";
 
 
