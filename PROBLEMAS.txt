@@ -15,4 +15,4 @@ Já coloquei o utf8 encode e mesmo assim ta com o negocio do BD;
 
 Não to conseguindo puxar os dados do cliente na página de finalização;
 
-Não ta mais aparecendo o botão de sair nem o nome do clientee da empresa;
+Não ta mais aparecendo o botão de sair nem o nome da empresa;

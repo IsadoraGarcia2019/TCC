@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 17-Set-2019 às 22:16
+-- Generation Time: 18-Set-2019 às 18:46
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -87,7 +87,8 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `preferencia_comida`, `preferencia_restaurante`, `comentarios`, `saldo_cafe`, `saldo_almoco`, `saldo_janta`) VALUES
-(1040, 'pedro', 'SC', 'bnu', 'pedro', 33445566, 'acucar', 'vegana', 'mc donalds', 'ODEIO CARNE ', 0, 0, 0);
+(1040, 'pedro', 'SC', 'bnu', 'pedro', 33445566, 'acucar', 'vegana', 'mc donalds', 'ODEIO CARNE ', 0, 0, 0),
+(1042, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', '123', 'ovo frito', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -115,7 +116,8 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 (1, 'pacifico', 114563298, 2550, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 33369854, 'Blumenau', 'Rua Bahia, 5800'),
 (2, 'pacifico', 114563298, 2550, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 33369854, 'Blumenau', 'Rua Bahia, 5800'),
 (3, 'Isadora Zancanaro', 22554250, 25896, 'Matutino', 'Sociedade Simples (SS)', 36985741, 'Blumenau', 'Rua Bahia, 5800'),
-(4, '123', 123, 132, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 123, '132', '321');
+(4, '123', 123, 132, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 123, '132', '321'),
+(5, 'pacifico sul', 2147483647, 21696, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 2147483647, 'Blumenau', 'Rua Bahia, 5800');
 
 -- --------------------------------------------------------
 
@@ -183,7 +185,8 @@ CREATE TABLE `restaurantes` (
 --
 
 INSERT INTO `restaurantes` (`id`, `nome_restaurante`, `numero_telefone`, `horario_atendimento`, `dias_atendimento`, `avaliacao`, `localizacao`, `estado`, `categoria`) VALUES
-(1, 'habibs', 33695821, 'Segunda Ã  Segunda', '', 'bom', 'rua nao sei', 'SC', 'lanches_e_petiscos');
+(1, 'habibs', 33695821, 'Segunda Ã  Segunda', '', 'bom', 'rua nao sei', 'SC', 'lanches_e_petiscos'),
+(2, 'habibs', 2147483647, 'Segunda Ã  Segunda', '', 'muito_bom', 'Blumenau', 'SC', 'lanches_e_petiscos');
 
 -- --------------------------------------------------------
 
@@ -205,13 +208,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`) VALUES
-(1036, 'oiaiaiaia@gmail.com', '123', 'empresa', 1, 1),
-(1037, 'oiaiaiaia@gmail.com', '123', 'empresa', 2, 1),
-(1038, 'oi@oi.com', '123', 'empresa', 3, 1),
-(1039, 'habs@gmail.com', '123', 'restaurante', 4, 1),
 (1042, 'deliiverycheff@gmail.com', '2019', 'administrador', 5, 1),
-(1044, 'eucansei@1.com', '123', 'cliente', 6, 1),
-(1047, 'algo@oi.com', '123', 'cliente', 7, 1);
+(1049, 'isa@feia.comn', '123', 'cliente', 1042, 1),
+(1050, '2@provedor.com', '123', 'empresa', 5, 1),
+(1051, 'habs@gmail.com', '123', 'restaurante', 2, 1);
 
 --
 -- Indexes for dumped tables
@@ -267,19 +267,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1041;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1043;
 
 --
 -- AUTO_INCREMENT for table `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `finalizacao`
@@ -291,19 +291,19 @@ ALTER TABLE `finalizacao`
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
 --
 ALTER TABLE `restaurantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1048;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1052;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

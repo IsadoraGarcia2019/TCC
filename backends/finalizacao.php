@@ -73,5 +73,4 @@ if (mysqli_query($obj->con, $sql)) {
 	header('Refresh:0');
 }
 }
-}
 ?>
