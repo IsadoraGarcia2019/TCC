@@ -15,7 +15,7 @@ require_once"head.php";
 <body style="background-color: rgb(235, 226, 225);">
 
 	<?php
-	
+
 	require_once "header.php";
 	?>
 
@@ -25,9 +25,49 @@ require_once"head.php";
 		</div>
 	</div>
 
+	<table class="table table-bordered " style="margin-left:50px; margin-right:150px; margin-top: 100px;background-color: rgb(235, 226, 225)!important;">
+		<thead>
+			<tr>
+				<th scope="col">Pacote</th>
+				<th scope="col">Preço</th>
+				<th scope="col">Data da compra</th>
+				<th scope="col">Quantidade de café</th>
+				<th scope="col">Quantidade de almoço</th>
+				<th scope="col">Quantidade de jantar</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<th scope="row">Básico</th>
+				<td>R$ 260,00</td>
+				<td>18/09/2019</td>
+				<td>0</td>
+				<td>20</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th scope="row">Intermediário</th>
+				<td>R$ 500,00</td>
+				<td>18/09/2019</td>
+				<td>20</td>
+				<td>20</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<th scope="row">Premium</th>
+				<td>R$  760,00</td>
+				<td>18/09/2019</td>
+				<td>20</td>
+				<td>20</td>
+				<td>20</td>
+			</tr>
+
+		</tbody>
+	</table>
+
 	<?php
 
-//inclusão do rodapé
+    //inclusão do rodapé
 	require_once "footer.php";
 	?>
 
