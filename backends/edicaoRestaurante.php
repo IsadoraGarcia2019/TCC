@@ -28,12 +28,12 @@ if (isset($id)) {
 if (isset($_POST['btnEditar'])) {
 		// Recebimento dos campos
 	$nome_restaurante = $_POST['nome_restaurante'];
-	$telefone_restaurante = $_POST['telefone_restaurante'];
+	$numero_telefone = $_POST['numero_telefone'];
 	$horario_atendimento = $_POST['horario_atendimento'];
-	$dias_atendimento_restaurante = $_POST['dias_atendimento_restaurante'];
+	$dias_atendimento = $_POST['dias_atendimento'];
 	$avaliacao = $_POST['avaliacao'];
-	$localizacao_restaurante = $_POST['localizacao_restaurante'];
-	$estado_restaurante = $_POST['estado_restaurante'];
+	$localizacao = $_POST['localizacao'];
+	$estado = $_POST['estado'];
 	$categoria = $_POST['categoria'];
 
 		// mudando o nome da seesao
@@ -42,12 +42,12 @@ if (isset($_POST['btnEditar'])) {
 		// inserindo edição na tabela
 	$sqlRestaurante = "UPDATE restaurantes
 	SET nome_restaurante = '$nome_restaurante',
-	    telefone_restaurante = '$telefone_restaurante',
+	    numero_telefone = '$numero_telefone',
 	    horario_atendimento = '$horario_atendimento',
-	    dias_atendimento_restaurante = '$dias_atendimento_restaurante', 
+	    dias_atendimento = '$dias_atendimento', 
 	    avaliacao = '$avaliacao',
-	    localizacao_restaurante = '$localizacao_restaurante',
-	    estado_restaurante = '$estado_restaurante',
+	    localizacao = '$localizacao',
+	    estado = '$estado',
 	    categoria = '$categoria'
 	WHERE id = $id";
 }

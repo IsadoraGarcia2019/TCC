@@ -56,8 +56,8 @@
  						<input type="text" class="form-control" name="nome_restaurante" id="nome_restaurante" placeholder="Ex: Canto do Chiquinho" value="<?=$resultadoRestaurante['nome_restaurante']?>">
  					</div>
  					<div class="form-group col-md-6 mt-3">
- 						<label for="telefone_restaurante"><strong>Número de telefone</strong></label>
- 						<input type="text" class="form-control" name="telefone_restaurante" id="telefone_restaurante" value="<?=$resultadoRestaurante['numero_telefone']?>">
+ 						<label for="numero_telefone"><strong>Número de telefone</strong></label>
+ 						<input type="text" class="form-control" name="numero_telefone" id="numero_telefone" value="<?=$resultadoRestaurante['numero_telefone']?>">
  					</div>
  				</div>
  				<div class="form-row">
@@ -72,8 +72,8 @@
  						</select>
  					</div>
  					<div class="form-group col-md-6 col-xs-12">
- 						<label for="dias_atendimento_restaurante"><strong>Quais dias?</strong></label>
- 						<input type="text" class="form-control" name="dias_atendimento_restaurante" id="dias_atendimento_restaurante" placeholder="Segunda, Quarta e Sexta" value="<?=$resultadoRestaurante['dias_atendimento']?>">
+ 						<label for="dias_atendimento"><strong>Quais dias?</strong></label>
+ 						<input type="text" class="form-control" name="dias_atendimento" id="dias_atendimento" placeholder="Segunda, Quarta e Sexta" value="<?=$resultadoRestaurante['dias_atendimento']?>">
  					</div>
  				</div>
  				<div class="form-group col-sm p-0">
@@ -88,12 +88,12 @@
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm mt-3">
- 						<label for="localizacao_restaurante"><strong>Localização</strong></label>
- 						<input type="text" class="form-control" name="localizacao_restaurante" id="localizacao_restaurante" value="<?=$resultadoRestaurante['localizacao']?>">
+ 						<label for="localizacao"><strong>Localização</strong></label>
+ 						<input type="text" class="form-control" name="localizacao" id="localizacao" value="<?=$resultadoRestaurante['localizacao']?>">
  					</div>
  					<div class="form-group col-sm mt-3">
- 						<label for="estado_restaurante"><strong>Estado</strong></label>
- 						<select name="estado_restaurante" id="estado_restaurante" class="form-control" value="<?=$resultadoRestaurante['estado']?>">
+ 						<label for="estado"><strong>Estado</strong></label>
+ 						<select name="estado" id="estado" class="form-control" value="<?=$resultadoRestaurante['estado']?>">
  							<option selected>SC</option>
  						</select>
  					</div>
