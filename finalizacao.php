@@ -42,70 +42,74 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
       <form method="post" action="">
 
-        <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados do pacote</strong></h3>
+        <h2 class="mb-3 mt-3" style="color: #de2828;">Dados do pacote</h2>
         
         <?php $_SESSION['id_pacote'] = $resultadoPacote['id']; ?>
 
         <?php foreach ($lista as $item) { ?>
 
-          <h5 class="text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
+          <h3 class="nome_pacote mb-3 text-center"><?=utf8_encode($item['nome_pacote'])?></h3>
 
-          <p><?=utf8_encode($item['descricao_pacote'])?></p>
+          <p class="font-italic" style="font-size: 17px;"><?=utf8_encode($item['descricao_pacote'])?></p>
 
-          <?php if ($item['quantidade_cafe'] != 0) { ?>
-            <div class="col-md-4 m-0" role="alert">
+          <h5 class="text-danger text-center mb-3">O que está incluso?</h5>
 
-              <div class="alert alert-primary text-center">
-                <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+          <div class="row">
+            <?php if ($item['quantidade_cafe'] != 0) { ?>
+              <div class="col-md-4 m-0" role="alert">
+
+                <div class="alert alert-primary text-center">
+                  <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+                </div>
               </div>
-            </div>
 
-          <?php } ?>
+            <?php } ?>
 
-          <?php if ($item['quantidade_almoco'] != 0) { ?>
-            <div class=" col-md-4 m-0" role="alert">
+            <?php if ($item['quantidade_almoco'] != 0) { ?>
+              <div class=" col-md-4 m-0" role="alert">
 
-              <div class="alert alert-danger text-center">
-                <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+                <div class="alert alert-danger text-center">
+                  <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+                </div>
               </div>
-            </div>
 
-          <?php } ?>
+            <?php } ?>
 
-          <?php if ($item['quantidade_jantar'] != 0) { ?>
-            <div class=" col-md-4 m-0" role="alert">
+            <?php if ($item['quantidade_jantar'] != 0) { ?>
+              <div class=" col-md-4 m-0" role="alert">
 
-              <div class="alert alert-secondary text-center">
-                <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
+                <div class="alert alert-secondary text-center">
+                  <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
+                </div>
               </div>
-            </div>
 
-          <?php } ?>
+            <?php } ?>
+          </div>
 
-          <p><?=$item['preco_pacote']?></p>
+          <p class="font-weight-bold text-center text-danger box  "><?=$item['preco_pacote']?></p>
 
         <?php } ?>
 
-        <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
+        <h2 class="mb-3 mt-3" style="color: #de2828;">Formas de Pagamento</h2>
 
         <div class="form-check">
          <input class="form-check-input" type="radio" name="forma_pagamento" id="dinheiro" value="dinheiro" >
-         <label class="form-check-label" for="dinheiro">Dinheiro</label>
+         <label class="form-check-label" for="dinheiro" style="font-size: 17px;">Dinheiro</label>
        </div>
 
        <div class="form-check">
          <input class="form-check-input" type="radio" name="forma_pagamento" id="boleto_bancario" value="boleto_bancario" >
-         <label class="form-check-label" for="boleto_bancario">Boleto Bancário</label>
+         <label class="form-check-label" for="boleto_bancario" style="font-size: 17px;">Boleto Bancário</label>
        </div>
 
        <div class="form-check">
         <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_credito" value="cartao_credito">
-        <label class="form-check-label" for="cartao_credito">Cartão de Crédito</label>
+        <label class="form-check-label" for="cartao_credito" style="font-size: 17px;">Cartão de Crédito</label>
       </div>
 
       <div class="form-check">
         <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
-        <label class="form-check-label" for="cartao_debito">Cartão de Débito</label>
+        <label class="form-check-label" for="cartao_debito" style="font-size: 17px;">Cartão de Débito</label>
       </div>
 
       <button class="btn btn-outline-danger col-md-12 mt-3" name="btyComprar">Comprar</button>

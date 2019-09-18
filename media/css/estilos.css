@@ -21,6 +21,9 @@
   padding-bottom: 10px;
   padding-top: 10px;
 }
+.nome_pacote{
+  color: #333030;
+}
 
 .alerta {
   padding: 20px;

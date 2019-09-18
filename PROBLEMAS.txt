@@ -13,13 +13,7 @@ ignora esse número: 5762696426
 
 Já coloquei o utf8 encode e mesmo assim ta com o negocio do BD;
 
-Não to conseguindo puxar os dados do cliente na página de finalização;
-
-id_cliente
-pacote_comprado
-data_compra
-forma_pagamento
-status_pagamento
+Na finalização tá aparecendo todos os pacotes e não apenas o selecionado;
 
 
 
