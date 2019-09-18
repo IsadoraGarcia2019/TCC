@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Set-2019 às 18:46
+-- Generation Time: 18-Set-2019 às 22:24
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -127,12 +127,9 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 
 CREATE TABLE `finalizacao` (
   `id` int(11) NOT NULL,
-  `nome_cliente` varchar(255) NOT NULL,
-  `email_cliente` varchar(255) NOT NULL,
-  `rua_cliente` varchar(255) NOT NULL,
-  `cidade_cliente` varchar(255) NOT NULL,
-  `estado_cliente` varchar(255) NOT NULL,
+  `fk_cliente` int(11) NOT NULL,
   `forma_pagamento` enum('dinheiro','boleto_bancario','cartao_credito','cartao_debito') NOT NULL,
+  `fk_pacote` int(11) NOT NULL,
   `status_pagamento` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -158,9 +155,9 @@ CREATE TABLE `pacotes` (
 --
 
 INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_jantar`) VALUES
-(5, 'BÃ¡sico', 'batata.jpg', '20 almoï¿½os durante todo o mï¿½s, o usuï¿½rio escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
-(6, 'Intermediário', 'combo-cafe.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 500,00', 20, 20, 0),
-(7, 'Premium', 'comboo.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 760,00', 20, 20, 20);
+(5, 'Básico', 'massas1.jpg', '20 almoços durante todo o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
+(8, 'Intermediário', 'waffles1.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 500,00', 20, 20, 0),
+(9, 'Premium', 'refeicoes.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 760,00', 20, 20, 20);
 
 -- --------------------------------------------------------
 
@@ -291,7 +288,7 @@ ALTER TABLE `finalizacao`
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
@@ -304,6 +301,17 @@ ALTER TABLE `restaurantes`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1052;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Limitadores para a tabela `finalizacao`
+--
+ALTER TABLE `finalizacao`
+  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`id`) REFERENCES `clientes` (`id`),
+  ADD CONSTRAINT `fk_pacote` FOREIGN KEY (`id`) REFERENCES `pacotes` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
