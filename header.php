@@ -41,6 +41,9 @@ $site->Session();
             <li class="nav-item">
               <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
             </li>
+             <li class="nav-item">
+              <a class="nav-link text-light" href="meuspagamentos.php" style="margin-left: 10px;">Meus Pagamentos</a>
+            </li>
           <?php } ?>
           <?php if(!isset($_SESSION['logado'])) { ?>
             <li class="nav-item dropdown">
