@@ -25,7 +25,7 @@ require_once"head.php";
 		</div>
 	</div>
 
-	<table class="table table-bordered " style="margin-left:50px; margin-right:150px; margin-top: 100px;background-color: rgb(235, 226, 225)!important;">
+	<table class="table table-hover" style="margin-top: 65px;text-align: center;background-color: rgb(255, 255, 255)!important;">
 		<thead>
 			<tr>
 				<th scope="col">Pacote</th>
@@ -61,6 +61,7 @@ require_once"head.php";
 				<td>20</td>
 				<td>20</td>
 			</tr>
+			
 
 		</tbody>
 	</table>
