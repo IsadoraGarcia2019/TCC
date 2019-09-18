@@ -2,14 +2,18 @@
 
 require_once"head.php";
 
-// require_once"backends/finalizacao.php";
+require_once"backends/finalizacao.php";
+
+$lista = "SELECT * FROM pacotes";
+$queryPacote = mysqli_query($con, $lista);
+$lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Cheff Delivery</title>
+	<title>Finalização de Compra</title>
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="media/css/main.css">
@@ -27,7 +31,7 @@ require_once"head.php";
     background-size: 30%; 
     background-position: center 1050px;" >
     <div class="text-center my-5">
-      <h1 class="text-white mb-5" style="font-size: 35px;">Finalização do pedido</h1>
+      <h1 class="text-white mb-5" style="font-size: 35px;">Finalização de compra</h1>
     </div> 
   </div>
 </div>
@@ -39,6 +43,48 @@ require_once"head.php";
       <form method="post" action="">
 
         <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados do pacote</strong></h3>
+        
+        <?php $_SESSION['id_pacote'] = $resultadoPacote['id']; ?>
+
+        <?php foreach ($lista as $item) { ?>
+
+          <h5 class="text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
+
+          <p><?=utf8_encode($item['descricao_pacote'])?></p>
+
+          <?php if ($item['quantidade_cafe'] != 0) { ?>
+            <div class="col-md-4 m-0" role="alert">
+
+              <div class="alert alert-primary text-center">
+                <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+              </div>
+            </div>
+
+          <?php } ?>
+
+          <?php if ($item['quantidade_almoco'] != 0) { ?>
+            <div class=" col-md-4 m-0" role="alert">
+
+              <div class="alert alert-danger text-center">
+                <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+              </div>
+            </div>
+
+          <?php } ?>
+
+          <?php if ($item['quantidade_jantar'] != 0) { ?>
+            <div class=" col-md-4 m-0" role="alert">
+
+              <div class="alert alert-secondary text-center">
+                <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
+              </div>
+            </div>
+
+          <?php } ?>
+
+          <p><?=$item['preco_pacote']?></p>
+
+        <?php } ?>
 
         <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
 
@@ -62,11 +108,11 @@ require_once"head.php";
         <label class="form-check-label" for="cartao_debito">Cartão de Débito</label>
       </div>
 
-      <button class="btn btn-outline-danger col-md-12 mt-3" name="btnFinalizar">Finalizar</button>
+      <button class="btn btn-outline-danger col-md-12 mt-3" name="btyComprar">Comprar</button>
 
-        </form>
-     </div>
+    </form>
   </div>
+</div>
 </div>
 
 <?php require_once "footer.php"; ?>

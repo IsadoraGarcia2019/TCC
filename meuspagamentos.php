@@ -25,46 +25,47 @@ require_once"head.php";
 		</div>
 	</div>
 
-	<table class="table table-hover" style="margin-top: 65px;text-align: center;background-color: rgb(255, 255, 255)!important;">
-		<thead>
-			<tr>
-				<th scope="col">Pacote</th>
-				<th scope="col">Preço</th>
-				<th scope="col">Data da compra</th>
-				<th scope="col">Quantidade de café</th>
-				<th scope="col">Quantidade de almoço</th>
-				<th scope="col">Quantidade de jantar</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th scope="row">Básico</th>
-				<td>R$ 260,00</td>
-				<td>18/09/2019</td>
-				<td>0</td>
-				<td>20</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<th scope="row">Intermediário</th>
-				<td>R$ 500,00</td>
-				<td>18/09/2019</td>
-				<td>20</td>
-				<td>20</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<th scope="row">Premium</th>
-				<td>R$  760,00</td>
-				<td>18/09/2019</td>
-				<td>20</td>
-				<td>20</td>
-				<td>20</td>
-			</tr>
-			
+	<div class="row">
+		<table class="table table-borderless table-dark col-md-10 offset-md-1 mt-5">
+			<thead>
+				<tr>
+					<th scope="col">Pacote</th>
+					<th scope="col">Preço</th>
+					<th scope="col">Data da compra</th>
+					<th scope="col">Quantidade de café</th>
+					<th scope="col">Quantidade de almoço</th>
+					<th scope="col">Quantidade de jantar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Básico</th>
+					<td>R$ 260,00</td>
+					<td>18/09/2019</td>
+					<td>0</td>
+					<td>20</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Intermediário</th>
+					<td>R$ 500,00</td>
+					<td>18/09/2019</td>
+					<td>20</td>
+					<td>20</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<th scope="row">Premium</th>
+					<td>R$  760,00</td>
+					<td>18/09/2019</td>
+					<td>20</td>
+					<td>20</td>
+					<td>20</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
-		</tbody>
-	</table>
 
 	<?php
 

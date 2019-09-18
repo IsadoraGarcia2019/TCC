@@ -23,7 +23,7 @@ if (isset($id)) {
 }
 
 	// Verificando ação de finalizar
-if (isset($_POST['btnFinalizar'])) {
+if (isset($_POST['btnComprar'])) {
 
         // Recebimento dos campos
 	$nome_cliente = $_POST['nome_cliente'];
@@ -37,12 +37,9 @@ if (isset($_POST['btnFinalizar'])) {
 	$sql = "INSERT INTO finalizacao 
 	VALUES (
 	DEFAULT,
-	'$nome_cliente',
-	'$email_cliente',
-	'$rua_cliente',
-	'$cidade_cliente',
-	'$estado_cliente',
+	'$fk_cliente'
 	'$forma_pagamento',
+	'$fk_pacote',
 	'pendente'
 )";
 

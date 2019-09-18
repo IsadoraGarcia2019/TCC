@@ -40,75 +40,70 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 <div class="container">
 	<div class="row">
 
-		<form method="post" action="">
-			
-			<?php $_SESSION['id_pacote'] = $resultadoPacote['id']; ?>
+		<?php foreach ($lista as $item) { ?>
 
-			<?php foreach ($lista as $item) { ?>
+			<div class="col-md-4 col-10 offset-1 offset-md-0 mb-5 " style=" margin-top: -30px !important;">
 
-				<div class="col-md-4 col-10 offset-1 offset-md-0 mb-5 " style=" margin-top: -30px !important;">
+				<div class="card shadow">
 
-					<div class="card shadow">
+					<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">	
 
-						<img src="media/images/<?=$item['nome_imagem']?>" class="card-img-top" style="max-height: 230px;">	
+					<div class="card-body">
 
-						<div class="card-body">
+						<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
 
-							<h5 class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></h5>
+						<p class="card-text"><?=utf8_encode($item['descricao_pacote'])?></p>
 
-							<p class="card-text"><?=utf8_encode($item['descricao_pacote'])?></p>
+						<h5 class="text-danger text-center mb-3">O que está incluso?</h5>
 
-							<h5 class="text-danger text-center mb-3">O que está incluso?</h5>
+						<div class="row">
 
-							<div class="row">
+							<?php if ($item['quantidade_cafe'] != 0) { ?>
+								<div class="col-md-4 m-0" role="alert">
 
-								<?php if ($item['quantidade_cafe'] != 0) { ?>
-									<div class="col-md-4 m-0" role="alert">
-
-										<div class="alert alert-primary text-center">
-											<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
-										</div>
+									<div class="alert alert-primary text-center">
+										<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
 									</div>
+								</div>
 
-								<?php } ?>
-
-								<?php if ($item['quantidade_almoco'] != 0) { ?>
-									<div class=" col-md-4 m-0" role="alert">
-
-										<div class="alert alert-danger text-center">
-											<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
-										</div>
-									</div>
-
-								<?php } ?>
-
-								<?php if ($item['quantidade_jantar'] != 0) { ?>
-									<div class=" col-md-4 m-0" role="alert">
-
-										<div class="alert alert-secondary text-center">
-											<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
-										</div>
-									</div>
-
-								<?php } ?>
-
-							</div>
-							<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-								<a href="finalizacao.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
 							<?php } ?>
 
-							<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-								<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+							<?php if ($item['quantidade_almoco'] != 0) { ?>
+								<div class=" col-md-4 m-0" role="alert">
+
+									<div class="alert alert-danger text-center">
+										<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+									</div>
+								</div>
+
 							<?php } ?>
 
-							<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
+							<?php if ($item['quantidade_jantar'] != 0) { ?>
+								<div class=" col-md-4 m-0" role="alert">
+
+									<div class="alert alert-secondary text-center">
+										<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
+									</div>
+								</div>
+
 							<?php } ?>
+
 						</div>
+						<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+							<a href="finalizacao.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php } ?>
+
+						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+							<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php } ?>
+
+						<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
+							<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
+						<?php } ?>
 					</div>
 				</div>
-			<?php } ?>
-		</form>
+			</div>
+		<?php } ?>
 	</div>		
 </div>
 
