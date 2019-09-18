@@ -32,9 +32,6 @@ require_once"head.php";
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
       <div class="card-body">
-        <div class="box">
-          RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
-        </div>
         <div class="mb-3" id="quem_somos">
           Quem somos?
         </div>
@@ -75,11 +72,15 @@ require_once"head.php";
               </div>
             </div>
           </div>
-
-          <a href="pacotes.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
-          <a href="cardapio.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
-
         </div>
+
+        <div class="box mt-4 mb-4">
+          RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
+        </div>
+
+        <a href="pacotes.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
+        <a href="cardapio.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
+
 
       </div>
     </div>
