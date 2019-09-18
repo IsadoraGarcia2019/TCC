@@ -28,9 +28,9 @@ if (isset($_POST['btnFinalizar'])) {
         // Recebimento dos campos
 	$nome_cliente = $_POST['nome_cliente'];
 	$email_cliente = $_POST['email_cliente'];
-	$rua = $_POST['rua'];
-	$estado = $_POST['estado'];
-	$cidade = $_POST['cidade'];
+	$rua_cliente = $_POST['rua'];
+	$estado_cliente = $_POST['estado_cliente'];
+	$cidade_cliente = $_POST['cidade_cliente'];
 	$forma_pagamento = $_POST['forma_pagamento'];
 
 	// inserindo edição na tabela
@@ -39,9 +39,9 @@ if (isset($_POST['btnFinalizar'])) {
 	DEFAULT,
 	'$nome_cliente',
 	'$email_cliente',
-	'$estado',
-	'$cidade',
-	'$rua',
+	'$rua_cliente',
+	'$cidade_cliente',
+	'$estado_cliente',
 	'$forma_pagamento',
 	'pendente'
 )";
@@ -54,7 +54,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Pacote adicionado com sucesso!";
+	$alerta['mensagem'] = "Sua compra foi concluída com sucesso!";
 
 	$alerta = serialize($alerta);
 
@@ -64,7 +64,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 } else{		
 	$alerta['tipo'] = "danger";
-	$alerta['mensagem'] = "Erro ao adicionar pacote.";
+	$alerta['mensagem'] = "Erro ao concluir sua compra.";
 
 	$alerta = serialize($alerta);
 

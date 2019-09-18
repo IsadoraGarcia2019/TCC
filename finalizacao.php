@@ -38,35 +38,7 @@ require_once"head.php";
 
       <form method="post" action="">
 
-        <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados Pessoais</strong></h3>
-
-        <div class="form-group">
-          <label for="nome_cliente">Nome</label>
-          <input type="text" class="form-control" id="nome_cliente" name="nome_cliente" value="<?=$resultadoCliente['nome_cliente']?>">
-        </div>
-
-        <div class="form-group">
-          <label for="email_cliente">Email</label>
-          <input type="email" class="form-control" id="email_cliente" name="email_cliente" value="<?=$resultadoCliente['email_cliente']?>">
-        </div>
-
-        <div class="form-group">
-          <label for="rua">Endereço</label>
-          <input type="text" class="form-control" id="rua" name="rua" value="<?=$resultadoCliente['rua']?>">
-        </div>  
-
-        <div class="row">
-          <div class="col-md-6 mt-2">
-            <label for="cidade">Cidade</label>
-            <input type="text" class="form-control" id="cidade" name="cidade" value="<?=$resultadoCliente['cidade']?>">
-          </div>
-          <div class="col-md-6 mt-2">
-            <label for=" estado">Estado</label>
-            <select id=" estado" class="form-control" name="estado" value="<?=$resultadoCliente['estado']?>">
-              <option selected>SC</option>
-            </select>
-          </div>
-        </div>
+        <h3 class="mb-3 mt-3" style="color: black;"><strong>Dados do pacote</strong></h3>
 
         <h3 class="mb-3 mt-3" style="color: black;"><strong>Formas de Pagamento</strong></h3>
 

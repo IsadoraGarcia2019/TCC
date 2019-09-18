@@ -15,9 +15,15 @@ Já coloquei o utf8 encode e mesmo assim ta com o negocio do BD;
 
 Não to conseguindo puxar os dados do cliente na página de finalização;
 
-Não to conseguindo puxar os dados do cliente na página de finalização;
+id_cliente
+pacote_comprado
+data_compra
+forma_pagamento
+status_pagamento
 
 
+
+**************************************** O QUE FALTA FAZER: ****************************************
 
 quando o cliente escolher o cardápio do dia, redirecionar ele para algum lugar ou colocar um alerta;
 
