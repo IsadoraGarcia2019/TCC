@@ -13,10 +13,20 @@ ignora esse número: 5762696426
 
 Já coloquei o utf8 encode e mesmo assim ta com o negocio do BD;
 
-<<<<<<< HEAD
 Não to conseguindo puxar os dados do cliente na página de finalização;
 
-Não ta mais aparecendo o botão de sair nem o nome da empresa;
-=======
 Não to conseguindo puxar os dados do cliente na página de finalização;
->>>>>>> 411d254a498966691e161f428dd90279edb2cc09
+
+
+
+quando o cliente escolher o cardápio do dia, redirecionar ele para algum lugar ou colocar um alerta;
+
+página de finalização de compra está incompleta (admin, usuário e tabela);
+
+página de contato;
+
+fazer o saldo do cliente abaixar conforme ele for recebendo as refeições durante o mês;
+
+alguns ajustes (idioma pacotes, admin não pode assinar um pacote);
+
+colocar o BD no servidor novamente;

@@ -44,22 +44,12 @@
   width: 100%;
 }
 .icones {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   margin-top: 50px;
+  margin-right: 20px;
 
 }
-#linkedin{
-  width: 70px;
-  height: 70px;
-
-}
-
-#instagram{
-  width: 90px;
-  height: 90px;
-}
-
 footer {
 	background-color: rgba(47, 47, 47);
 	overflow: hidden;
