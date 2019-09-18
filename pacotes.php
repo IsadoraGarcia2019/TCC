@@ -94,7 +94,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 						<?php } ?>
 						 -->
 						<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-							<a href="finalizacao.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+							<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
 						<?php } ?>
 
 						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
