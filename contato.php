@@ -1,5 +1,7 @@
 <?php
 
+require_once"backends/edicaoUsuario.php";
+require_once"backends/edicaoCliente.php";
 require_once"head.php";
 
 ?>
@@ -7,8 +9,8 @@ require_once"head.php";
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8">
 	<title>Contato</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
 	<link rel="stylesheet" href="media/css/main.css">
@@ -34,11 +36,11 @@ require_once"head.php";
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="nome"><strong>Nome</strong></label>
-						<input type="text" class="form-control" id="nome" placeholder="Ex: Fulano">
+						<input type="text" class="form-control" id="nome" placeholder="Ex: Fulano" value="<?=$_SESSION['nome_usuario']?>">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email" placeholder="fulano@provedor.com">
+						<input type="email" class="form-control" id="email" name="email" placeholder="fulano@provedor.com" value="<?=$resultadoUsuarios['email']?>">
 					</div>
 				</div>
 				<div class="form-row">
