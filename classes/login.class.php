@@ -31,6 +31,7 @@ class Login extends Site {
 				if ($resultadoLogin != null) {
 					$_SESSION['logado'] = true;
 					$_SESSION['id_usuario'] = $resultadoLogin['id'];
+					$_SESSION['email'] = $resultadoLogin['email'];
 					$_SESSION['nome_usuario'] = $resultadoLogin['nome'];
 					$_SESSION['tp_usuario'] = $resultadoLogin['tp_usuario'];
 					$_SESSION['fk_usuario'] = $resultadoLogin['fk_tipo'];
@@ -41,6 +42,7 @@ class Login extends Site {
 						$resultadoCliente = mysqli_fetch_array($queryCliente);
 
 						$_SESSION['nome_usuario'] = $resultadoCliente['nome_cliente'];
+						$_SESSION['numero_telefone'] = $resultadoCliente['numero_telefone'];
 					}
 					if ($resultadoLogin['tp_usuario'] == 'administrador') {
 						$sqlAdm = "SELECT * FROM usuarios WHERE id = '".$resultadoLogin['fk_tipo']."'";
@@ -55,6 +57,7 @@ class Login extends Site {
 						$resultadoRestaurantes = mysqli_fetch_array($queryRestaurantes);
 
 						$_SESSION['nome_usuario'] = $resultadoRestaurantes['nome_restaurante'];
+						$_SESSION['numero_telefone'] = $resultadoRestaurantes['numero_telefone'];
 					}
 
 					if ($resultadoLogin['tp_usuario'] == 'empresa') {
@@ -63,6 +66,7 @@ class Login extends Site {
 						$resultadoEmpresa = mysqli_fetch_array($queryEmpresa);
 
 						$_SESSION['nome_usuario'] = $resultadoEmpresa['nome_empresa'];
+						$_SESSION['numero_telefone'] = $resultadoEmpresa['empresa_numero'];
 					}
 
 					// Redirecionamento para a página inicial

@@ -40,13 +40,13 @@ require_once"head.php";
 					</div>
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="fulano@provedor.com" value="<?=$resultadoUsuarios['email']?>">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Ex: fulano@provedor.com" value="<?=$_SESSION['email']?>">
 					</div>
 				</div>
 				<div class="form-row">
 					<div class="form-group col-sm-6">
 						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" id="telefone_cliente" placeholder="99663311">
+						<input type="text" class="form-control" id="telefone_cliente" placeholder="Ex: 999663311" value="<?=$_SESSION['numero_telefone']?>">
 					</div>
 					<div class="form-group col-sm-6">
 						<label for="tipo_comentario"><strong>Tipo do comentário</strong></label>
