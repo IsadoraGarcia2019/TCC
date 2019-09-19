@@ -6,31 +6,26 @@ require_once"classes/site.class.php";
 $obj = new Site();
 
 	// Recuperar ID do pacote
-if (isset($_GET['id'])) {
-	$id = $_GET['id'];
+if (isset($_GET['id_pacote'])) {
+	$id = $_GET['id_pacote'];
 }
 
 // Buscar informações do pacote
 if (isset($id)) {
-	$sql = "SELECT * FROM clientes WHERE id = $id";
-	$queryCliente = mysqli_query($obj->con, $sql);
-	$resultadoCliente = mysqli_fetch_array($queryCliente);
+	$sql = "SELECT * FROM pacotes WHERE id_pacote = $id";
+	$queryPacote = mysqli_query($obj->con, $sql);
+	$resultadoPacote = mysqli_fetch_array($queryPacote);
 
-		// Verificar se o cliente existe
-	if (is_null($resultadoCliente)) {
-		die("Cliente não encontrado.");
+		// Verificar se o pacote existe
+	if (is_null($resultadoPacote)) {
+		die("Pacote não encontrado.");
 	}
 }
 
-	// Verificando ação de finalizar
+	// Verificando ação de comprar
 if (isset($_POST['btnComprar'])) {
 
         // Recebimento dos campos
-	$nome_cliente = $_POST['nome_cliente'];
-	$email_cliente = $_POST['email_cliente'];
-	$rua_cliente = $_POST['rua'];
-	$estado_cliente = $_POST['estado_cliente'];
-	$cidade_cliente = $_POST['cidade_cliente'];
 	$forma_pagamento = $_POST['forma_pagamento'];
 
 	// inserindo edição na tabela
@@ -43,7 +38,9 @@ if (isset($_POST['btnComprar'])) {
 	'pendente'
 )";
 
-	// Executando o SQL
+$_SESSION['fk_pacote'] = $resultadoPacote['id'];
+
+// Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
 
 	$id = mysqli_insert_id($con);

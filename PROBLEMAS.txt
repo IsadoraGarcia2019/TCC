@@ -11,22 +11,23 @@ CONST DB   = "cheffdel_master";
 ignora esse número: 5762696426
 
 
-Já coloquei o utf8 encode e mesmo assim ta com o negocio do BD;
+Já coloquei o utf8_encode e mesmo assim quando edita volta tudo bugado;
 
-Na finalização diz "cliente não encontrado!";
+não to conseguindo mostrar apenas o pacote selelcionado na hora da finalização de compra;
 
 
 
 **************************************** O QUE FALTA FAZER: ****************************************
 
-quando o cliente escolher o cardápio do dia, redirecionar ele para algum lugar ou colocar um alerta;
 
 página de finalização de compra está incompleta (admin, usuário e tabela);
-
-página de contato;
 
 fazer o saldo do cliente abaixar conforme ele for recebendo as refeições durante o mês;
 
 alguns ajustes (idioma pacotes, admin não pode assinar um pacote);
 
+quando o cliente escolher o cardápio do dia, redirecionar ele para algum lugar ou colocar um alerta;
+
 colocar o BD no servidor novamente;
+
+página de contato;

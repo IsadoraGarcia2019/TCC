@@ -44,7 +44,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
         <h2 class="mb-3 mt-3" style="color: #de2828;">Dados do pacote</h2>
         
-        <?php $_SESSION['id_pacote'] = $resultadoPacote['id']; ?>
+        <?php $_SESSION['fk_pacote'] = $resultadoPacote['id']; ?>
 
         <?php foreach ($lista as $item) { ?>
 

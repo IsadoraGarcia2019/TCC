@@ -6,13 +6,13 @@ require_once"classes/site.class.php";
 $obj = new Site();
 
 	// Recuperar ID do pacote
-if (isset($_GET['id'])) {
-	$id = $_GET['id'];
+if (isset($_GET['id_pacote'])) {
+	$id = $_GET['id_pacote'];
 }
 
 // Buscar informações do pacote
 if (isset($id)) {
-	$sql = "SELECT * FROM pacotes WHERE id = $id";
+	$sql = "SELECT * FROM pacotes WHERE id_pacote = $id";
 	$queryPacote = mysqli_query($obj->con, $sql);
 	$resultadoPacote = mysqli_fetch_array($queryPacote);
 
@@ -40,7 +40,7 @@ if (isset($_POST['btnEditar'])) {
 	quantidade_cafe = '$quantidade_cafe', 
 	quantidade_almoco = '$quantidade_almoco', 
 	quantidade_jantar = '$quantidade_jantar'
-	WHERE id = $id";
+	WHERE id_pacote = $id";
 
 
 	// Executando o SQL
@@ -64,7 +64,7 @@ if (isset($_POST['btnEditar'])) {
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 
-	$sql = "DELETE FROM pacotes WHERE id = $id";
+	$sql = "DELETE FROM pacotes WHERE id_pacote = $id";
 	
 	if (mysqli_query($obj->con, $sql)) {
 		$query = mysqli_query($obj->con, $sql);
