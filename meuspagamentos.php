@@ -2,6 +2,11 @@
 
 require_once"head.php";
 
+require_once"include/conexao.php";
+
+$lista = "SELECT * FROM pacotes";
+$queryPacote = mysqli_query($con, $lista);
+$lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,6 +31,9 @@ require_once"head.php";
 	</div>
 
 	<div class="row">
+
+		<?php foreach ($lista as $item) { ?>
+
 		<table class="table table-borderless table-dark col-md-10 offset-md-1 mt-5">
 			<thead>
 				<tr>
@@ -39,31 +47,17 @@ require_once"head.php";
 			</thead>
 			<tbody>
 				<tr>
-					<th scope="row">Básico</th>
-					<td>R$ 260,00</td>
-					<td>18/09/2019</td>
-					<td>0</td>
-					<td>20</td>
-					<td>0</td>
+					<td class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></td>
+					<td><?=$item['preco_pacote']?></td>
+					<td>19/09/2019</td>
+					<td><?=$item['quantidade_cafe']?></td>
+					<td><?=$item['quantidade_almoco']?></td>
+					<td><?=$item['quantidade_jantar']?></td>
 				</tr>
-				<tr>
-					<th scope="row">Intermediário</th>
-					<td>R$ 500,00</td>
-					<td>18/09/2019</td>
-					<td>20</td>
-					<td>20</td>
-					<td>0</td>
-				</tr>
-				<tr>
-					<th scope="row">Premium</th>
-					<td>R$  760,00</td>
-					<td>18/09/2019</td>
-					<td>20</td>
-					<td>20</td>
-					<td>20</td>
-				</tr>
+		
 			</tbody>
 		</table>
+	<?php } ?>
 	</div>
 
 
