@@ -18,7 +18,7 @@ $site->Session();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto">
-        <?php if ($_SESSION['nome_usuario'] != 'Administrador') { ?>
+        <?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
           <li class="nav-item active">
             <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>
           </li>
@@ -41,8 +41,8 @@ $site->Session();
             <li class="nav-item">
               <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
             </li>
-             <li class="nav-item">
-              <a class="nav-link text-light" href="meuspagamentos.php" style="margin-left: 10px;">Meus Pagamentos</a>
+            <li class="nav-item">
+              <a class="nav-link text-light" href="meuspedidos.php" style="margin-left: 10px;">Meus Pedidos</a>
             </li>
           <?php } ?>
           <?php if(!isset($_SESSION['logado'])) { ?>
@@ -58,7 +58,7 @@ $site->Session();
             </li>  
           <?php } ?>
         <?php } ?>
-        <?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
+        <?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página inicial <span class="sr-only">(current)</span></a>

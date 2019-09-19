@@ -68,7 +68,7 @@ require_once"head.php";
               <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 3</div></div>
               <div class="card-body text-danger">
                 <h5 class="card-title text-danger text-center mt-3">Pronto, e agora?</h5>
-                <p class="card-text text-dark text-center" style="font-size: 15px;">Receba a sua comida em casa sem se preocupar com o frete, e bom apetite!</p>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">Receba a sua comida em casa ou na empresa sem se preocupar com o frete, e bom apetite!</p>
               </div>
             </div>
           </div>

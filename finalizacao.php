@@ -4,9 +4,15 @@ require_once"head.php";
 
 require_once"backends/finalizacao.php";
 
-$lista = "SELECT * FROM pacotes";
+$lista = "SELECT * FROM pacotes WHERE id = $id";
 $queryPacote = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
+
+// Verificar se existe alerta via COOKIE
+if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+  $alerta = unserialize($_COOKIE['alerta']);
+  setcookie('alerta');
+}
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +118,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
         <label class="form-check-label" for="cartao_debito" style="font-size: 17px;">Cartão de Débito</label>
       </div>
 
-      <button class="btn btn-outline-danger col-md-12 mt-3" name="btyComprar">Comprar</button>
+      <button class="btn btn-outline-danger col-md-12 mt-3" name="btnComprar">Comprar</button>
 
     </form>
   </div>

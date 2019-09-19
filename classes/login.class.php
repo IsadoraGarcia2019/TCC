@@ -48,7 +48,7 @@ class Login extends Site {
 						$sqlAdm = "SELECT * FROM usuarios WHERE id = '".$resultadoLogin['fk_tipo']."'";
 						$queryAdm = mysqli_query($this->con, $sqlAdm);
 						$resultadoAdm = mysqli_fetch_array($queryAdm);
-						echo "PIMBA";
+						
 						$_SESSION['nome_usuario'] = 'Administrador';
 					}
 					if ($resultadoLogin['tp_usuario'] == 'restaurante') {

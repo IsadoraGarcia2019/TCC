@@ -11,18 +11,6 @@ if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
 
-// Buscar informações do pacote
-if (isset($id)) {
-	$sql = "SELECT * FROM pacotes WHERE id = $id";
-	$queryPacote = mysqli_query($obj->con, $sql);
-	$resultadoPacote = mysqli_fetch_array($queryPacote);
-
-		// Verificar se o pacote existe
-	if (is_null($resultadoPacote)) {
-		die("Pacote não encontrado.");
-	}
-}
-
 	// Verificando ação de comprar
 if (isset($_POST['btnComprar'])) {
 
@@ -33,9 +21,9 @@ if (isset($_POST['btnComprar'])) {
 	$sql = "INSERT INTO finalizacao 
 	VALUES (
 	DEFAULT,
-	'$id_cliente',
+	'".$_SESSION['id_usuario']."',
+	'$id',
 	'$forma_pagamento',
-	'$id_pacote',
 	'pendente'
 )";
 
@@ -53,7 +41,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 
-	header('Refresh:0');
+	header('Location:meuspedidos.php');
 
 } else{		
 	$alerta['tipo'] = "danger";

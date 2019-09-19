@@ -4,6 +4,7 @@ require_once"head.php";
 
 require_once"include/conexao.php";
 
+
 $lista = "SELECT * FROM pacotes";
 $queryPacote = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
@@ -89,32 +90,27 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 							<?php } ?>
 
 						</div>
-					<!-- 	<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-							<a href="erros4.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+
+						<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+							<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
+								<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+							<?php } ?>
+
+							<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+								<a href="erros4.php." class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Pacote</a>
+							<?php } ?>
 						<?php } ?>
-					-->
-					<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-						<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-						
-						<?php if ($resultadoLogin['tp_usuario'] == 'restaurante') { ?>
-							<a href="erros5.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-						<?php } ?> 
-						
-					<?php } ?>
 
-
-					<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-						<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-					<?php } ?>
-
-					<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-						<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
-					<?php } ?>
+						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+							<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php } ?>
+								
+					</div>
 				</div>
 			</div>
-		</div>
-	<?php } ?>
-</div>		
+		<?php } ?>
+	</div>		
 </div>
 
 <?php
