@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Set-2019 às 22:24
+-- Generation Time: 19-Set-2019 às 19:50
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -88,7 +88,8 @@ CREATE TABLE `clientes` (
 
 INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `preferencia_comida`, `preferencia_restaurante`, `comentarios`, `saldo_cafe`, `saldo_almoco`, `saldo_janta`) VALUES
 (1040, 'pedro', 'SC', 'bnu', 'pedro', 33445566, 'acucar', 'vegana', 'mc donalds', 'ODEIO CARNE ', 0, 0, 0),
-(1042, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', '123', 'ovo frito', '', 0, 0, 0);
+(1042, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', '123', 'ovo frito', '', 0, 0, 0),
+(1043, 'jose', 'SC', '', '', 0, 'nenhuma', '', '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -117,7 +118,8 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 (2, 'pacifico', 114563298, 2550, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 33369854, 'Blumenau', 'Rua Bahia, 5800'),
 (3, 'Isadora Zancanaro', 22554250, 25896, 'Matutino', 'Sociedade Simples (SS)', 36985741, 'Blumenau', 'Rua Bahia, 5800'),
 (4, '123', 123, 132, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 123, '132', '321'),
-(5, 'pacifico sul', 2147483647, 21696, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 2147483647, 'Blumenau', 'Rua Bahia, 5800');
+(5, 'pacifico sul', 2147483647, 21696, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 2147483647, 'Blumenau', 'Rua Bahia, 5800'),
+(6, 'karsten', 0, 0, '-', '-', 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -127,9 +129,9 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 
 CREATE TABLE `finalizacao` (
   `id` int(11) NOT NULL,
-  `fk_cliente` int(11) NOT NULL,
+  `id_cliente` int(11) NOT NULL,
+  `id_pacote` int(11) NOT NULL,
   `forma_pagamento` enum('dinheiro','boleto_bancario','cartao_credito','cartao_debito') NOT NULL,
-  `fk_pacote` int(11) NOT NULL,
   `status_pagamento` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -140,7 +142,7 @@ CREATE TABLE `finalizacao` (
 --
 
 CREATE TABLE `pacotes` (
-  `id` int(11) NOT NULL,
+  `id_pacote` int(11) NOT NULL,
   `nome_pacote` varchar(255) NOT NULL,
   `nome_imagem` varchar(255) NOT NULL,
   `descricao_pacote` varchar(255) NOT NULL,
@@ -154,7 +156,7 @@ CREATE TABLE `pacotes` (
 -- Extraindo dados da tabela `pacotes`
 --
 
-INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_jantar`) VALUES
+INSERT INTO `pacotes` (`id_pacote`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `preco_pacote`, `quantidade_cafe`, `quantidade_almoco`, `quantidade_jantar`) VALUES
 (5, 'Básico', 'massas1.jpg', '20 almoços durante todo o mês, o usuário escolhe os dias em que quer receber e o que quer receber.', 'R$ 260,00', 0, 20, 0),
 (8, 'Intermediário', 'waffles1.jpg', '20 cafés da manhã e 20 almoços durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 500,00', 20, 20, 0),
 (9, 'Premium', 'refeicoes.jpg', '20 cafés da manhã, 20 almoços e 20 jantares durante o mês, o usuário escolhe os dias em que quer receber e o que quer receber.\r\n', 'R$ 760,00', 20, 20, 20);
@@ -183,7 +185,8 @@ CREATE TABLE `restaurantes` (
 
 INSERT INTO `restaurantes` (`id`, `nome_restaurante`, `numero_telefone`, `horario_atendimento`, `dias_atendimento`, `avaliacao`, `localizacao`, `estado`, `categoria`) VALUES
 (1, 'habibs', 33695821, 'Segunda Ã  Segunda', '', 'bom', 'rua nao sei', 'SC', 'lanches_e_petiscos'),
-(2, 'habibs', 2147483647, 'Segunda Ã  Segunda', '', 'muito_bom', 'Blumenau', 'SC', 'lanches_e_petiscos');
+(2, 'habibs', 2147483647, 'Segunda Ã  Segunda', '', 'muito_bom', 'Blumenau', 'SC', 'lanches_e_petiscos'),
+(3, 'zecao', 0, 'Segunda Ã  Sexta', '', 'muito_bom', '', 'SC', 'cafeteria');
 
 -- --------------------------------------------------------
 
@@ -205,10 +208,10 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`) VALUES
-(1042, 'deliiverycheff@gmail.com', '2019', 'administrador', 5, 1),
-(1049, 'isa@feia.comn', '123', 'cliente', 1042, 1),
-(1050, '2@provedor.com', '123', 'empresa', 5, 1),
-(1051, 'habs@gmail.com', '123', 'restaurante', 2, 1);
+(1052, 'oi@xp.com', '123', 'cliente', 1043, 1),
+(1053, 'deliiverycheff@gmail.com', '2019', 'administrador', 0, 1),
+(1057, 'oi@oi.com', '123', 'empresa', 6, 1),
+(1058, 'oiaiaiaia@gmail.com', '123', 'restaurante', 3, 1);
 
 --
 -- Indexes for dumped tables
@@ -236,13 +239,15 @@ ALTER TABLE `empresas`
 -- Indexes for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_pacote` (`id_pacote`),
+  ADD KEY `fk_cliente` (`id_cliente`);
 
 --
 -- Indexes for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_pacote`);
 
 --
 -- Indexes for table `restaurantes`
@@ -270,13 +275,13 @@ ALTER TABLE `cardapio_dia`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1043;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
 
 --
 -- AUTO_INCREMENT for table `empresas`
 --
 ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `finalizacao`
@@ -288,19 +293,19 @@ ALTER TABLE `finalizacao`
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_pacote` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `restaurantes`
 --
 ALTER TABLE `restaurantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1052;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1059;
 
 --
 -- Constraints for dumped tables
@@ -310,8 +315,8 @@ ALTER TABLE `usuarios`
 -- Limitadores para a tabela `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`id`) REFERENCES `clientes` (`id`),
-  ADD CONSTRAINT `fk_pacote` FOREIGN KEY (`id`) REFERENCES `pacotes` (`id`);
+  ADD CONSTRAINT `fk_cliente` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id`),
+  ADD CONSTRAINT `fk_pacote` FOREIGN KEY (`id_pacote`) REFERENCES `pacotes` (`id_pacote`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

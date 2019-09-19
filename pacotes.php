@@ -92,23 +92,29 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 					<!-- 	<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
 							<a href="erros4.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
 						<?php } ?>
-						 -->
-						<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-							<a href="finalizacao.php?id=<?=$item['id_pacote']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-						<?php } ?>
+					-->
+					<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+						<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						
+						<?php if ($resultadoLogin['tp_usuario'] == 'restaurante') { ?>
+							<a href="erros5.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php } ?> 
+						
+					<?php } ?>
 
-						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-							<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-						<?php } ?>
 
-						<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-							<a href="edicaoPacotes.php?id=<?=$item['id_pacote']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
-						<?php } ?>
-					</div>
+					<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+						<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+					<?php } ?>
+
+					<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
+						<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3"  >Editar Pacote</a>
+					<?php } ?>
 				</div>
 			</div>
-		<?php } ?>
-	</div>		
+		</div>
+	<?php } ?>
+</div>		
 </div>
 
 <?php

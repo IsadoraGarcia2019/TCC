@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 require_once"include/conexao.php";
 
@@ -6,13 +7,13 @@ require_once"classes/site.class.php";
 $obj = new Site();
 
 	// Recuperar ID do pacote
-if (isset($_GET['id_pacote'])) {
-	$id = $_GET['id_pacote'];
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
 }
 
 // Buscar informações do pacote
 if (isset($id)) {
-	$sql = "SELECT * FROM pacotes WHERE id_pacote = $id";
+	$sql = "SELECT * FROM pacotes WHERE id = $id";
 	$queryPacote = mysqli_query($obj->con, $sql);
 	$resultadoPacote = mysqli_fetch_array($queryPacote);
 
@@ -32,13 +33,11 @@ if (isset($_POST['btnComprar'])) {
 	$sql = "INSERT INTO finalizacao 
 	VALUES (
 	DEFAULT,
-	'$fk_cliente'
+	'$id_cliente',
 	'$forma_pagamento',
-	'$fk_pacote',
+	'$id_pacote',
 	'pendente'
 )";
-
-$_SESSION['fk_pacote'] = $resultadoPacote['id'];
 
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
