@@ -72,10 +72,10 @@ $site->Session();
             </li>  
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Vizualizar</a>
-
               <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                 <a class="dropdown-item" href="pacotes.php">Pacotes</a>
                 <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
+                <a class="dropdown-item" href="vendas.php">Vendas</a>
               </div>
             </li>
           </ul>

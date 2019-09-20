@@ -1,6 +1,6 @@
  <?php
 
- require_once"backends/edicaoPacotes.php";
+ require_once"backends/edicaoVendas.php";
 
  require_once"head.php";
 
@@ -53,40 +53,40 @@
  				<div class="form-row">
  					<div class="form-group col-md-12">
  						<label for="nome_cliente"><strong>Nome do Cliente</strong></label>
- 						<input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Basicão" value="<?=utf8_encode($resultadoCliente['nome_cliente'])?>">
+ 						<input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Basicão" value="<?=utf8_encode($resultadoCliente['nome_cliente'])?>"<?=$disabled?>>
  					</div>
  				</div>
 
  				<div class="form-row">
  					<div class="form-group col-md-12">
  						<label for="email_cliente"><strong>E-mail do Cliente</strong></label>
- 						<input type="text" class="form-control" name="email_cliente" id="email_cliente" value="<?=$resultadoCliente['email_cliente']?>">
+ 						<input type="text" class="form-control" name="email_cliente" id="email_cliente" value="<?=$resultadoCliente['email_cliente']?>"<?=$disabled?>> 
  					</div>
  				</div>
 
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="preco_pacote"><strong>Preço do Pacote</strong></label>
- 						<input type="text" class="form-control" name="preco_pacote" id="preco_pacote" value="<?=$resultadoPacote['preco_pacote']?>">
+ 						<input type="text" class="form-control" name="preco_pacote" id="preco_pacote" value="<?=$resultadoPacote['preco_pacote']?>"<?=$disabled?>>
  					</div>
  				</div>
 
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="rua_cliente"><strong>Endereço do Cliente</strong></label>
- 						<input type="text" name="rua" id="rua_cliente" class="form-control" value="<?=$resultadoCliente['rua']?>"> 							
+ 						<input type="text" name="rua" id="rua_cliente" class="form-control" value="<?=$resultadoCliente['rua']?>"<?=$disabled?>> 							
  					</div>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="cidade_cliente"><strong>Cidade do Cliente</strong></label>
- 						<input type="text" name="cidade" id="cidade_cliente" class="form-control" value="<?=$resultadoCliente['cidade']?>"> 							
+ 						<input type="text" name="cidade" id="cidade_cliente" class="form-control" value="<?=$resultadoCliente['cidade']?>"<?=$disabled?>> 							
  					</div>
  				</div>
  				<div class="form-row">
  					<div class="form-group col-sm">
  						<label for="estado_cliente"><strong>Estado do Cliente</strong></label>
- 						<input type="text" name="estado" id="estado_cliente" class="form-control" value="<?=$resultadoCliente['estado']?>"> 							
+ 						<input type="text" name="estado" id="estado_cliente" class="form-control" value="<?=$resultadoCliente['estado']?>"<?=$disabled?>> 							
  					</div>
  				</div>
 
@@ -99,20 +99,13 @@
  				
  					<div class="form-row">
  					<div class="form-group col-sm">
- 						<label for="status_pagamento"><strong>Forma de Pagamento</strong></label>
+ 						<label for="status_pagamento"><strong>Estado do Pagamento</strong></label>
  						<input type="text" name="status_pagamento" id="status_pagamento" class="form-control" value="<?=$resultadoFinalizacao['status_pagamento']?>"> 							
  					</div>
  				</div>
- 				
- 				
- 				<?php if (empty($disabled)) { ?>
  					<button type="submit" class="btn btn-outline-secondary col-md-12 col-12 mt-3" name="btnEditar">Editar</button>
- 				<?php } ?>
-
- 				<?php if (empty($disabled)) { ?>
  					<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3" name="btnExcluir">Excluir</button>
- 				<?php } ?>
- 			</form>
+ 			 			</form>
  		</div>
  	</div>
  </div>
