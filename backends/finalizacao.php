@@ -16,6 +16,7 @@ if (isset($_POST['btnComprar'])) {
 
         // Recebimento dos campos
 	$forma_pagamento = $_POST['forma_pagamento'];
+	$data_compra = $_POST['data_compra'];
 
 	// inserindo edição na tabela
 	$sql = "INSERT INTO finalizacao 
@@ -24,8 +25,12 @@ if (isset($_POST['btnComprar'])) {
 	'".$_SESSION['id_usuario']."',
 	'$id',
 	'$forma_pagamento',
-	'pendente'
+	'pendente',
+	'$data_compra'
 )";
+
+var_dump($sql);
+die();
 
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {

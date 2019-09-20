@@ -114,9 +114,12 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
       </div>
 
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debit" value="cartao_debito" >
+        <input class="form-check-input" type="radio" name="forma_pagamento" id="cartao_debito" value="cartao_debito" >
         <label class="form-check-label" for="cartao_debito" style="font-size: 17px;">Cartão de Débito</label>
       </div>
+
+      <label class="form-group mt-3 text-danger mr-3" for="data_compra" style="font-size: 17px; font-weight: 700;">Data da Compra</label>
+      <input class="form-group border border-secondary rounded" type="date" name="data_compra" id="data_compra" value="data_compra" >
 
       <button class="btn btn-outline-danger col-md-12 mt-3" name="btnComprar">Comprar</button>
 

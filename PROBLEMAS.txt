@@ -13,8 +13,6 @@ ignora esse número: 5762696426
 
 Já coloquei o utf8_encode e mesmo assim quando edita volta tudo bugado;
 
-não to conseguindo mostrar apenas o pacote selelcionado na hora da finalização de compra e nem mandar os dados para a tabela de finalização;
-
 
 
 **************************************** O QUE FALTA FAZER: ****************************************

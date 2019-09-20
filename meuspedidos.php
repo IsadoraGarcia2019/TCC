@@ -4,9 +4,11 @@ require_once"head.php";
 
 require_once"include/conexao.php";
 
-$lista = "SELECT * FROM pacotes";
-$queryPacote = mysqli_query($con, $lista);
-$lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
+require_once"backends/meuspedidos.php";
+
+$lista = "SELECT * FROM pacotes WHERE id = $id";
+$queryVenda = mysqli_query($con, $lista);
+$lista = mysqli_fetch_all($queryVenda, MYSQLI_ASSOC);
 
 // Verificar se existe alerta via COOKIE
 if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
@@ -17,7 +19,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Meus pagamentos</title>
+	<title>Meus pedidos</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
@@ -32,7 +34,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 
 	<div class="row">
 		<div class="shadow " style="  background-color: #f2392c ;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;">
-			<h1 class="text-white mb-5 text-center mt-5">Meus pagamentos</h1>
+			<h1 class="text-white mb-5 text-center mt-5">Meus pedidos</h1>
 		</div>
 	</div>
 
@@ -45,20 +47,20 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 					<tr>
 						<th scope="col">Pacote</th>
 						<th scope="col">Preço</th>
-						<th scope="col">Data da compra</th>
 						<th scope="col">Quantidade de café</th>
 						<th scope="col">Quantidade de almoço</th>
 						<th scope="col">Quantidade de jantar</th>
+						<th scope="col">Data da compra</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td class="card-title text-danger"><?=utf8_encode($item['nome_pacote'])?></td>
+						<td class="card-title text-danger"><?=utf8_encode($item['id_pacote'])?></td>
 						<td><?=$item['preco_pacote']?></td>
-						<td>19/09/2019</td>
 						<td><?=$item['quantidade_cafe']?></td>
 						<td><?=$item['quantidade_almoco']?></td>
 						<td><?=$item['quantidade_jantar']?></td>
+						<td><?=$item['data_compra']?></td>
 					</tr>
 					
 				</tbody>

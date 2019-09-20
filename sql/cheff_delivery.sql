@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 19-Set-2019 às 22:12
+-- Generation Time: 20-Set-2019 às 21:48
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -30,6 +30,7 @@ USE `cheff_delivery`;
 -- Estrutura da tabela `cardapio_dia`
 --
 
+DROP TABLE IF EXISTS `cardapio_dia`;
 CREATE TABLE `cardapio_dia` (
   `id_cardapio` int(11) NOT NULL,
   `nome_comida` varchar(255) NOT NULL,
@@ -66,6 +67,7 @@ INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`) VA
 -- Estrutura da tabela `clientes`
 --
 
+DROP TABLE IF EXISTS `clientes`;
 CREATE TABLE `clientes` (
   `id` int(10) NOT NULL,
   `nome_cliente` varchar(255) NOT NULL,
@@ -97,6 +99,7 @@ INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero
 -- Estrutura da tabela `empresas`
 --
 
+DROP TABLE IF EXISTS `empresas`;
 CREATE TABLE `empresas` (
   `id` int(11) NOT NULL,
   `nome_empresa` varchar(255) NOT NULL,
@@ -127,22 +130,22 @@ INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `tu
 -- Estrutura da tabela `finalizacao`
 --
 
+DROP TABLE IF EXISTS `finalizacao`;
 CREATE TABLE `finalizacao` (
   `id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_pacote` int(11) NOT NULL,
   `forma_pagamento` enum('dinheiro','boleto_bancario','cartao_credito','cartao_debito') NOT NULL,
-  `status_pagamento` varchar(255) NOT NULL
+  `status_pagamento` enum('pendente','pago','atrasado') NOT NULL,
+  `data_compra` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `finalizacao`
 --
 
-INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`) VALUES
-(10, 1052, 5, 'dinheiro', 'pendente'),
-(11, 1052, 5, 'boleto_bancario', 'pendente'),
-(12, 1052, 8, 'dinheiro', 'pendente');
+INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`, `data_compra`) VALUES
+(14, 1057, 8, 'cartao_debito', 'pendente', '2019-02-20');
 
 -- --------------------------------------------------------
 
@@ -150,6 +153,7 @@ INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `
 -- Estrutura da tabela `pacotes`
 --
 
+DROP TABLE IF EXISTS `pacotes`;
 CREATE TABLE `pacotes` (
   `id` int(11) NOT NULL,
   `nome_pacote` varchar(255) NOT NULL,
@@ -176,6 +180,7 @@ INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `
 -- Estrutura da tabela `restaurantes`
 --
 
+DROP TABLE IF EXISTS `restaurantes`;
 CREATE TABLE `restaurantes` (
   `id` int(11) NOT NULL,
   `nome_restaurante` varchar(255) NOT NULL,
@@ -203,6 +208,7 @@ INSERT INTO `restaurantes` (`id`, `nome_restaurante`, `numero_telefone`, `horari
 -- Estrutura da tabela `usuarios`
 --
 
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -296,7 +302,7 @@ ALTER TABLE `empresas`
 -- AUTO_INCREMENT for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `pacotes`
