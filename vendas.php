@@ -31,38 +31,36 @@
  	?>
 
  	<div class="row">
- 		<div class="shadow " style="background-color: #1a1818	!important;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;"> 
+ 		<div class="shadow " style="background-color: #1a1818 !important; background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;"> 
  			<div class="text-center my-5">
  				<h1 class="text-white mb-5">Vendas</h1>
  			</div> 
  		</div>
  	</div>
 
- 	<div class="row">
- 		<?php foreach ($lista as $item) { ?>
-	 			<table class="table table-dark col-md-10 offset-md-1 mt-5" style="background-color: rgba(47, 47, 47);">
- 				<thead>
- 					<tr>
- 						<th scope="col">Id</th>
- 						<th scope="col">Data da compra</th>
- 						<th scope="col">id do pacote</th>
- 						<th scope="col">forma de pagamento</th>
- 						<th scope="col">estado do pagamento</th>
- 					</tr>
- 				</thead>
- 				<tbody>
- 					<tr>
- 						<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
- 						<td>19/09/2019</td>
- 						<td><?=$item['id_pacote']?></td>
- 						<td><?=$item['forma_pagamento']?></td>
- 						<td><?=$item['status_pagamento']?></td>
- 						<td><a class="btn btn-daek text-danger col-md-12" href="edicaoVendas.php?id=<?=$item['id']?>">Editar </a></td>
- 					</tr>
- 				</tbody>
- 			</table>
- 		<?php } ?>
- 	</div>
+ 	<table class="table table-dark col-md-10 offset-md-1 mt-5" style="background-color: rgba(47, 47, 47);">
+ 		<thead>
+ 			<tr>
+ 				<th scope="col">Id</th>
+ 				<th scope="col">Data da compra</th>
+ 				<th scope="col">Id do pacote</th>
+ 				<th scope="col">Forma de pagamento</th>
+ 				<th scope="col">Status do pagamento</th>
+ 			</tr>
+ 		</thead>
+ 		<tbody>
+ 			<?php foreach ($lista as $item) { ?>
+ 				<tr>
+ 					<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
+ 					<td><?=$item['data_compra']?></td>
+ 					<td><?=$item['id_pacote']?></td>
+ 					<td><?=$item['forma_pagamento']?></td>
+ 					<td><?=$item['status_pagamento']?></td>
+ 					<td><a class="btn btn-daek text-danger col-md-12" href="edicaoVendas.php?id=<?=$item['id']?>">Editar </a></td>
+ 				<?php } ?>
+ 			</tr>
+ 		</tbody>
+ 	</table>
 
  	<?php
 //INCLUSÃO DO RODAPÉ
