@@ -56,7 +56,17 @@
  					<td><?=$item['id_pacote']?></td>
  					<td><?=$item['forma_pagamento']?></td>
  					<td><?=$item['status_pagamento']?></td>
- 					<td><a class="btn btn-daek text-danger col-md-12" href="edicaoVendas.php?id=<?=$item['id']?>">Editar </a></td>
+ 					<td><div class="btn-group" role="group">
+    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+      <a class="dropdown-item" href="#">pendente</a>
+      <a class="dropdown-item" href="#">pago</a>
+      <a class="dropdown-item" href="#">atrasado</a>
+    </div>
+  </div>
+</div></td>
  				<?php } ?>
  			</tr>
  		</tbody>
