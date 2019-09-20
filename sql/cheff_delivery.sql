@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Set-2019 às 21:48
+-- Generation Time: 20-Set-2019 às 22:17
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -145,7 +145,9 @@ CREATE TABLE `finalizacao` (
 --
 
 INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`, `data_compra`) VALUES
-(14, 1057, 8, 'cartao_debito', 'pendente', '2019-02-20');
+(14, 1057, 8, 'cartao_debito', 'pendente', '2019-02-20'),
+(15, 1057, 9, 'cartao_debito', 'pendente', '2020-02-20'),
+(16, 1052, 9, 'boleto_bancario', 'pendente', '2015-02-20');
 
 -- --------------------------------------------------------
 
@@ -302,7 +304,7 @@ ALTER TABLE `empresas`
 -- AUTO_INCREMENT for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `pacotes`
