@@ -55,32 +55,29 @@
  					<td><?=$item['data_compra']?></td>
  					<td><?=$item['id_pacote']?></td>
  					<td><?=$item['forma_pagamento']?></td>
- 					<td><?=$item['status_pagamento']?></td>
  					<td><div class="btn-group" role="group">
-    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown
-    </button>
-    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-      <a class="dropdown-item" href="#">pendente</a>
-      <a class="dropdown-item" href="#">pago</a>
-      <a class="dropdown-item" href="#">atrasado</a>
-    </div>
-  </div>
-</div></td>
- 				<?php } ?>
- 			</tr>
- 		</tbody>
- 	</table>
+ 						<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
+ 						<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+ 							<a class="dropdown-item" name="btnStatus" href="alterarVenda.php?status=pendente&id=<?=$item['id']?>">Pendente</a>
+ 							<a class="dropdown-item" name="btnStatus" href="alterarVenda.php?status=pendente&id=<?=$item['id']?>">Pago</a>
+ 							<a class="dropdown-item" name="btnStatus" href="alterarVenda.php?status=pendente&id=<?=$item['id']?>">Atrasado</a>
+ 						</div>
+ 					</div>
+ 				</div></td>
+ 			<?php } ?>
+ 		</tr>
+ 	</tbody>
+ </table>
 
- 	<?php
+ <?php
 //INCLUSÃO DO RODAPÉ
- 	require_once "footer.php";
- 	?>
+ require_once "footer.php";
+ ?>
 
- 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
- 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- </body>
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 
- </html>
+</html>
 

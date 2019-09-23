@@ -7,7 +7,7 @@ $obj = new Site();
 
 session_start();
 
-	// Recuperar ID do cliente
+	// Recuperar ID do restaurante
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
