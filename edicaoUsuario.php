@@ -64,8 +64,9 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 				<?php } ?>
 
 				<?php if (empty($disabled)) { ?>
-					<button type="submit" class="btn btn-outline-danger float-left col-md-12" name="btnExcluir">Excluir</button>
+					<button type="submit" class="btn btn-outline-danger float-left mb-3 col-md-12" name="btnExcluir">Excluir</button>
 				<?php } ?>
+				<a href="edicao.php" class="btn btn-outline-primary col-md-12 col-10 offset-1 offset-md-0 float-left mb-4 " >Voltar</a>
 
 			</form>
 		</div>

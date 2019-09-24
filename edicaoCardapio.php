@@ -65,18 +65,20 @@
  						<option value="jantar" <?=(utf8_encode($resultadoCardapio['categoria_comida'])=="jantar") ? 'selected' : ''?>> Jantar</option>
  					</select>
  				</div>
- 				
- 				<?php if (empty($disabled)) { ?>
- 					<div class="form-row">
+ 				<div class="form-row">
+ 					<?php if (empty($disabled)) { ?>
+ 						
  						<button type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnEditar">Editar</button>
- 					</div>
- 				<?php } ?>
+ 						
+ 					<?php } ?>
 
- 				<?php if (empty($disabled)) { ?>
- 					<div class="form-row">
- 						<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3" name="btnExcluir">Excluir</button>
- 					</div>	
- 				<?php } ?>
+ 					<?php if (empty($disabled)) { ?>
+ 						
+ 						<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3 mb-3" name="btnExcluir">Excluir</button>
+ 						<a href="cardapio.php" class="btn btn-outline-primary col-md-12 col-10 offset-1 offset-md-0 float-left mb-4 " >Voltar</a>
+ 						
+ 					<?php } ?>
+ 				</div>	
  			</form>
  		</div>
  	</div>

@@ -127,7 +127,6 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 		</div>
 	</div>
 </section>
-
 <center>
 	<div class="redes-sociais" style="background-color: #de2828;">
 		<div class="container">
@@ -136,10 +135,16 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
 			<a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"><img src="media/images/instagram.png" alt="instagram" title="instagram" id="instagram " class="icones"></a>
 
+<<<<<<< HEAD
 			<a href="https://twitter.com/delivery_cheff"><img src="media/images/twitter.png" alt="twitter" title="twitter" class="icones"></a>
 
 		</center>
 	</div>
+=======
+      <a href="https://twitter.com/delivery_cheff"><img src="media/images/twitter.png" alt="twitter" title="twitter" class="icones"></a>
+    </center>
+  </div>
+>>>>>>> 1b04540a66ab8b47f49bf53b3f089c27d8603122
 </div>
 <footer>
 	<div class="footer-item">
@@ -154,7 +159,6 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 		<p class="mt-5 font-italic">2019 &copy; <strong>Projeto desenvolvido por alunos da turma de PHP - Entra21/2019</strong></p>
 	</div>
 </footer>
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
