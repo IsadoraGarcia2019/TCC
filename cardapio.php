@@ -56,9 +56,21 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<div class="title-wrap d-flex justify-content-between">
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
-								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>				
-								<?php } ?>  
+								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
+										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<?php } ?>
+
+									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+									<?php } ?>
+								<?php } ?>
+
+								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+								<?php } ?>
+								
 							</div>					                               
 						</div>   
 					<?php } ?>                        
@@ -69,8 +81,19 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<div class="title-wrap d-flex justify-content-between">
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
-								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
+										<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
+										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<?php } ?>
+
+									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+									<?php } ?>
+								<?php } ?>
+
+								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>
@@ -82,8 +105,19 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<div class="title-wrap d-flex justify-content-between">
 									<h4><?=utf8_encode($item['nome_comida'])?></h4>
 								</div>	
-								<?php if ($_SESSION['nome_usuario'] == 'Administrador') { ?>
-									<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>	
+										<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
+										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<?php } ?>
+
+									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+									<?php } ?>
+								<?php } ?>
+
+								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>
@@ -95,30 +129,30 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 </section>
 
 <center>
-  <div class="redes-sociais" style="background-color: #de2828;">
-    <div class="container">
+	<div class="redes-sociais" style="background-color: #de2828;">
+		<div class="container">
 
-      <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRmTgXbBSZDhPSBJsPLwHzgBPqskCzpPtNTPhwSkgLdBBXnbmRScSHtKdnmsdqlgZFHsnsQ"><img src="media/images/email.png" alt="email" title="email" class="icones"></a>
+			<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRmTgXbBSZDhPSBJsPLwHzgBPqskCzpPtNTPhwSkgLdBBXnbmRScSHtKdnmsdqlgZFHsnsQ"><img src="media/images/email.png" alt="email" title="email" class="icones"></a>
 
-      <a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"><img src="media/images/instagram.png" alt="instagram" title="instagram" id="instagram " class="icones"></a>
+			<a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"><img src="media/images/instagram.png" alt="instagram" title="instagram" id="instagram " class="icones"></a>
 
-      <a href="https://twitter.com/delivery_cheff"><img src="media/images/twitter.png" alt="twitter" title="twitter" class="icones"></a>
+			<a href="https://twitter.com/delivery_cheff"><img src="media/images/twitter.png" alt="twitter" title="twitter" class="icones"></a>
 
-    </center>
-  </div>
+		</center>
+	</div>
 </div>
 <footer>
- <div class="footer-item">
-  <div class="row">
-    <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTJtrnhxXwfpDgvhvzGsLRlLgjHgjcfzcQFCTNqvbqkMSDXnPTwMNHPSkbjVnnrBWWPBfJq" class="col-sm-12 col-md-3">E-mail: deliiverycheff@gmail.com</a>
-    <a href="https://twitter.com/delivery_cheff" class="col-sm-12 col-md-3">Twitter: @delivery_cheff </a>
-    <a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"class="col-sm-12 col-md-3">Instagram: @deliiverycheff</a>
-    <a href=""class="col-sm-12 col-md-3">Telefone: +55 (47) 3768-3352</a>
-  </div>
-</div>
-<div id="negrito" class="mt-4">
-  <p class="mt-5 font-italic">2019 &copy; <strong>Projeto desenvolvido por alunos da turma de PHP - Entra21/2019</strong></p>
-</div>
+	<div class="footer-item">
+		<div class="row">
+			<a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTJtrnhxXwfpDgvhvzGsLRlLgjHgjcfzcQFCTNqvbqkMSDXnPTwMNHPSkbjVnnrBWWPBfJq" class="col-sm-12 col-md-3">E-mail: deliiverycheff@gmail.com</a>
+			<a href="https://twitter.com/delivery_cheff" class="col-sm-12 col-md-3">Twitter: @delivery_cheff </a>
+			<a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"class="col-sm-12 col-md-3">Instagram: @deliiverycheff</a>
+			<a href=""class="col-sm-12 col-md-3">Telefone: +55 (47) 3768-3352</a>
+		</div>
+	</div>
+	<div id="negrito" class="mt-4">
+		<p class="mt-5 font-italic">2019 &copy; <strong>Projeto desenvolvido por alunos da turma de PHP - Entra21/2019</strong></p>
+	</div>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

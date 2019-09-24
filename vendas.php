@@ -4,6 +4,8 @@
 
  require_once"include/conexao.php";
 
+ require_once"backends/alterarVenda.php";
+
  $lista = "SELECT * FROM finalizacao";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);

@@ -66,9 +66,9 @@
  						<select name="horario_atendimento" id="horario_atendimento" class="form-control" value="<?=$resultadoRestaurante['horario_atendimento']?>">
  							<option selected value="segunda_a_sexta"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_sexta") ? 'selected' : ''?>>Segunda à Sexta</option>
  							<option value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_sabado") ? 'selected' : ''?>>Segunda à Sábado</option>
- 							<option value="segunda_a_segunda" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_segunda") ? 'selected' : ''?>>Segunda à Segunda</option>
- 							<option value="terca_a_sabado" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="terca_a_sabado") ? 'selected' : ''?>>Terça à Sábado</option>
- 							<option value="outros_dias" value="segunda_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="outros_dias") ? 'selected' : ''?>>Outros dias </option>
+ 							<option value="segunda_a_segunda"<?= ($resultadoRestaurante['horario_atendimento']=="segunda_a_segunda") ? 'selected' : ''?>>Segunda à Segunda</option>
+ 							<option value="terca_a_sabado"<?= ($resultadoRestaurante['horario_atendimento']=="terca_a_sabado") ? 'selected' : ''?>>Terça à Sábado</option>
+ 							<option value="outros_dias" <?= ($resultadoRestaurante['horario_atendimento']=="outros_dias") ? 'selected' : ''?>>Outros dias </option>
  						</select>
  					</div>
  					<div class="form-group col-md-6 col-xs-12">
