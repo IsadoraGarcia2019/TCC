@@ -36,7 +36,7 @@
 	if (mysqli_query($con, $sql)) {
 
 		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = "O pacote foi salvo com sucesso!";
+		$alerta['mensagem'] = 'O pacote foi salvo com sucesso! <a href="pacotes.php" class="alert-link">Vizualizar</a>';
 
 		$alerta = serialize($alerta);
 

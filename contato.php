@@ -61,7 +61,7 @@ require_once"head.php";
 					<textarea class="form-control" id="comentarios" rows="3"></textarea>
 				</div>
 				<input type="hidden"name="redirect" value="http://www.gmail.com.br">
-				<button type="submit" class="btn btn-outline-secondary col-md-12">Enviar</button>
+				<button type="submit" class="btn btn-dark col-md-12">Enviar</button>
 				<input name="recipient" value="deliiverycheff@gmail.com" type="hidden">
 			</form>
 		</div>

@@ -51,7 +51,7 @@ if (isset($_POST['btnEditar'])) {
 		
 		
 		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = "Pacote editado com sucesso!";
+		$alerta['mensagem'] = 'Pacote editado com sucesso! <a href="pacotes.php" class="alert-link">Vizualizar</a>';
 
 		$alerta = serialize($alerta);
 
@@ -70,7 +70,7 @@ if (isset($_POST['btnExcluir'])) {
 		$query = mysqli_query($obj->con, $sql);
 
 		$alerta['tipo'] = "danger";
-		$alerta['mensagem'] = "Pacote excluído com sucesso!";
+		$alerta['mensagem'] = 'Pacote excluído com sucesso! <a href="pacotes.php" class="alert-link">Vizualizar</a>';
 
 		$alerta = serialize($alerta);
 

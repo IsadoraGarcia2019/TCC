@@ -93,17 +93,17 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
 						<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
 							<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-								<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+								<a href="finalizacao.php?id=<?=$item['id']?>" class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
 							<?php } ?>
 
 							<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-								<a href="erros4.php." class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
-								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Pacote</a>
+								<a href="erros4.php." class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
+								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Pacote</a>
 							<?php } ?>
 						<?php } ?>
 
 						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-							<a href="erros3.php" class="btn btn-outline-danger col-md-12"><?=$item['preco_pacote']?></a>
+							<a href="erros3.php" class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
 						<?php } ?>
 								
 					</div>

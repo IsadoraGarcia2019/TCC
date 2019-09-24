@@ -27,9 +27,9 @@
 		<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 			<div class="card" style="margin-right: auto; margin-left: auto;">
 				<div class="card-body" > 
-					<h2 class="box">Você precisa estar logado para assinar um pacote, por favor faça o login ou se cadastre.</h2>
-					<a href="login.php" class="btn btn-outline-secondary mt-3 col-12 col-md-12">Voltar</a>
-					<a href="CadastroCliente.php" class="btn btn-outline-danger mt-3 col-12 col-md-12">Cadastre-se aqui</a>
+					<h2 class="box">Você precisa estar logado para assinar um pacote, faça o login ou cadastre-se!</h2>
+					<a href="login.php" class="btn btn-dark mt-3 col-12 col-md-12">Voltar</a>
+					<a href="CadastroCliente.php" class="btn btn-danger mt-3 col-12 col-md-12">Cadastre-se aqui</a>
 				</div>
 			</div>
 		</div>

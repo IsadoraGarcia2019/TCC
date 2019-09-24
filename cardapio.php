@@ -58,17 +58,17 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								</div>	
 								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
 									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 									<?php } ?>
 
 									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+										<a href="erros6.php." class="btn btn-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
 									<?php } ?>
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<a href="erros7.php" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 								
 							</div>					                               
@@ -83,17 +83,17 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								</div>	
 								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
 									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 									<?php } ?>
 
 									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+										<a href="erros6.php." class="btn btn-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
 									<?php } ?>
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<a href="erros7.php" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>
@@ -107,17 +107,17 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								</div>	
 								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
 									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="#" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+										<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 									<?php } ?>
 
 									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="erros6.php." class="btn btn-outline-danger col-md-12">Pedir agora</a>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-outline-dark col-md-12 mt-3">Editar Cardápio</a>
+										<a href="erros6.php." class="btn btn-danger col-md-12">Pedir agora</a>
+										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
 									<?php } ?>
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="erros7.php" class="btn btn-outline-danger col-md-12">Pedir agora</a>
+									<a href="erros7.php" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>

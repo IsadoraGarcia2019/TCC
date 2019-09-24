@@ -102,7 +102,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 				
 				<?php if (empty($disabled)) { ?>
 					<div class="form-row">
-						<input type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnCadastrar" value="Cadastrar">
+						<input type="submit" class="btn btn-dark col-md-12 mt-3" name="btnCadastrar" value="Cadastrar">
 					</div>
 				<?php } ?>
 

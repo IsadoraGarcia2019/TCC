@@ -28,7 +28,7 @@
 			<div class="card" style="margin-right: auto; margin-left: auto;">
 				<div class="card-body" > 
 					<h2 class="box">Administrador não pode assinar nenhum pacote mensal.</h2>
-					<a href="pacotes.php" class="btn btn-outline-secondary mt-3 col-12 col-md-12">Voltar</a>
+					<a href="pacotes.php" class="btn btn-dark mt-3 col-12 col-md-12">Voltar</a>
 				</div>
 			</div>
 		</div>

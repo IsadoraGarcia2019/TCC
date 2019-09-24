@@ -107,7 +107,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
             <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
           </div>
           <?php if (empty($disabled)) { ?>
-            <button type="submit" class="btn btn-outline-secondary col-md-12" name="btnCadastrar">Cadastrar</button>
+            <button type="submit" class="btn btn-dark col-md-12" name="btnCadastrar">Cadastrar</button>
           <?php } ?>
         </form>
       </div>

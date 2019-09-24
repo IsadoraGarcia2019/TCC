@@ -28,7 +28,7 @@
 		<div class="card" style="margin-right: auto; margin-left: auto;">
 			<div class="card-body" > 
 				<h1 class="box">Credenciais Inválidas, faça login para continuar</h1>
-				<a href="login.php" class="btn btn-outline-danger mt-3 col-12 col-md-12 offset-md-0">Voltar</a>
+				<a href="login.php" class="btn btn-dark mt-3 col-12 col-md-12 offset-md-0">Voltar</a>
 			</div>
 		</div>
 	</div>

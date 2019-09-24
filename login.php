@@ -54,7 +54,7 @@ $login = new Login();
 					</div>
 				</div>
 				<div class="form-row">
-					<button type="submit" class="btn btn-outline-secondary col-md-12 mt-3" name="btnEntrar">Entrar</button>
+					<button type="submit" class="btn btn-outline-dark col-md-12 mt-3" name="btnEntrar">Entrar</button>
 
 					<a href="CadastroCliente.php" class="btn btn-outline-danger col-md-12 mt-3" name="botao_entrar">Criar uma nova conta</a>
 				</div>

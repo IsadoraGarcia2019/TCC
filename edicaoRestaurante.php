@@ -112,9 +112,8 @@
  				</div>
  				
  				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-secondary col-md-12 mb-4" name="btnEditar">Editar</button>
+ 					<button type="submit" class="btn btn-dark col-md-12 mb-4" name="btnEditar">Editar</button>
  				<?php } ?>
- 				<a href="edicao.php" class="btn btn-outline-primary col-md-12 col-10 offset-1 offset-md-0 float-left mb-4 " >Voltar</a>
  			</form>
  		</div>
  	</div>

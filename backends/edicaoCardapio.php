@@ -43,7 +43,7 @@ if (isset($_POST['btnEditar'])) {
 		
 		
 		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = "Cardápio editado com sucesso!";
+		$alerta['mensagem'] = 'Cardápio editado com sucesso! <a href="cardapio.php" class="alert-link">Vizualizar</a>';
 
 		$alerta = serialize($alerta);
 
@@ -62,7 +62,7 @@ if (isset($_POST['btnExcluir'])) {
 		$query = mysqli_query($obj->con, $sql);
 
 		$alerta['tipo'] = "danger";
-		$alerta['mensagem'] = "Cardápio excluído com sucesso!";
+		$alerta['mensagem'] = 'Cardápio excluído com sucesso! <a href="cardapio.php" class="alert-link">Vizualizar</a>';
 
 		$alerta = serialize($alerta);
 

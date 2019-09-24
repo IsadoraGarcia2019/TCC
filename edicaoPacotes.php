@@ -91,13 +91,12 @@
  				</div>
  				
  				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-secondary col-md-12 col-12 mt-3" name="btnEditar">Editar</button>
+ 					<button type="submit" class="btn btn-dark col-md-12 col-12 mt-3" name="btnEditar">Editar</button>
  				<?php } ?>
 
  				<?php if (empty($disabled)) { ?>
- 					<button type="submit" class="btn btn-outline-danger col-md-12 col-12 mt-3 mb-3" name="btnExcluir">Excluir</button>
+ 					<button type="submit" class="btn btn-danger col-md-12 col-12 mt-3 mb-3" name="btnExcluir">Excluir</button>
  				<?php } ?>
- 				    <a href="pacotes.php" class="btn btn-outline-primary col-md-12 col-10 offset-1 offset-md-0 float-left mb-4 " >Voltar</a>
  			</form>
  		</div>
  	</div>

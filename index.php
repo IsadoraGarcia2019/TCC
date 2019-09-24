@@ -78,8 +78,8 @@ require_once"head.php";
           RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
         </div>
 
-        <a href="pacotes.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
-        <a href="cardapio.php" class="btn btn-outline-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
+        <a href="pacotes.php" class="btn btn-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
+        <a href="cardapio.php" class="btn btn-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
 
 
       </div>

@@ -28,7 +28,7 @@
 			<div class="card" style="margin-right: auto; margin-left: auto;">
 				<div class="card-body" > 
 					<h2 class="box">Administrador não pode escolher o cardápio do dia.</h2>
-					<a href="cardapio.php" class="btn btn-outline-secondary mt-3 col-12 col-md-12">Voltar</a>
+					<a href="cardapio.php" class="btn btn-dark mt-3 col-12 col-md-12">Voltar</a>
 				</div>
 			</div>
 		</div>
