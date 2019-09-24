@@ -18,13 +18,7 @@ Já coloquei o utf8_encode e mesmo assim quando edita volta tudo bugado;
 **************************************** O QUE FALTA FAZER: ****************************************
 
 
-página de finalização de compra está incompleta (admin, usuário e tabela);
-
 fazer o saldo do cliente abaixar conforme ele for recebendo as refeições durante o mês;
-
-alguns ajustes (idioma pacotes, admin não pode assinar um pacote);
-
-quando o cliente escolher o cardápio do dia, redirecionar ele para algum lugar ou colocar um alerta;
 
 colocar o BD no servidor novamente;
 

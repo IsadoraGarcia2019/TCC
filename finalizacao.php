@@ -46,12 +46,12 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
   <div class="card shadow">
     <div class="card-body" >
 
-      <form method="post" action="">
+      <?php require_once "include/alerta.php"; ?>
+
+      <form id="cadform" name="cadform" method="post" action="" onsubmit="return validaCampo();">
 
         <h2 class="mb-3 mt-3" style="color: #de2828;">Dados do pacote</h2>
         
-        <?php $_SESSION['fk_pacote'] = $resultadoPacote['id']; ?>
-
         <?php foreach ($lista as $item) { ?>
 
           <h3 class="nome_pacote mb-3 text-center"><?=utf8_encode($item['nome_pacote'])?></h3>
@@ -63,39 +63,30 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
           <div class="row">
             <?php if ($item['quantidade_cafe'] != 0) { ?>
               <div class="col-md-4 m-0" role="alert">
-
                 <div class="alert alert-primary text-center">
                   <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
                 </div>
               </div>
-
             <?php } ?>
 
             <?php if ($item['quantidade_almoco'] != 0) { ?>
               <div class=" col-md-4 m-0" role="alert">
-
                 <div class="alert alert-danger text-center">
                   <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
                 </div>
               </div>
-
             <?php } ?>
 
             <?php if ($item['quantidade_jantar'] != 0) { ?>
               <div class=" col-md-4 m-0" role="alert">
-
                 <div class="alert alert-secondary text-center">
                   <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
                 </div>
               </div>
-
             <?php } ?>
           </div>
-
           <p class="font-weight-bold text-center text-danger box  "><?=$item['preco_pacote']?></p>
-
         <?php } ?>
-
         <h2 class="mb-3 mt-3" style="color: #de2828;">Formas de Pagamento</h2>
 
         <div class="form-check">
@@ -118,20 +109,20 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
         <label class="form-check-label" for="cartao_debito" style="font-size: 17px;">Cartão de Débito</label>
       </div>
 
-      <label class="form-group mt-3 text-danger mr-3" for="data_compra" style="font-size: 17px; font-weight: 700;">Data da Compra</label>
-      <input class="form-group border border-secondary rounded" type="date" name="data_compra" id="data_compra" value="data_compra" >
-
       <button class="btn btn-outline-danger col-md-12 mt-3" name="btnComprar">Comprar</button>
-
     </form>
   </div>
 </div>
 </div>
+
 
 <?php require_once "footer.php"; ?>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
 </body>
 </html>

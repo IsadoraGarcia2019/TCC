@@ -16,7 +16,6 @@ if (isset($_POST['btnComprar'])) {
 
         // Recebimento dos campos
 	$forma_pagamento = $_POST['forma_pagamento'];
-	$data_compra = $_POST['data_compra'];
 
 	// inserindo edição na tabela
 	$sql = "INSERT INTO finalizacao 
@@ -26,11 +25,8 @@ if (isset($_POST['btnComprar'])) {
 	'$id',
 	'$forma_pagamento',
 	'pendente',
-	'$data_compra'
+	now()
 )";
-
-var_dump($sql);
-die();
 
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
@@ -46,7 +42,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 	setcookie('alerta', $alerta, time() + 120);
 
-	header('Location:meuspedidos.php');
+	header('Refresh:0');
 
 } else{		
 	$alerta['tipo'] = "danger";

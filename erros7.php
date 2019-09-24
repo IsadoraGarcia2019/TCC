@@ -27,8 +27,9 @@
 		<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 			<div class="card" style="margin-right: auto; margin-left: auto;">
 				<div class="card-body" > 
-					<h2 class="box">Somente clientes podem escolher o cardápio do dia.</h2>
+					<h2 class="box">Somente clientes podem escolher o cardápio do dia, faça login ou cadastre-se!</h2>
 					<a href="cardapio.php" class="btn btn-dark mt-3 col-12 col-md-12">Voltar</a>
+					<a href="cardapio.php" class="btn btn-danger mt-3 col-12 col-md-12">Cadastre-se aqui</a>
 				</div>
 			</div>
 		</div>
