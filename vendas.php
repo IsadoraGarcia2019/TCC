@@ -68,7 +68,7 @@
  										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status=atrasado&id=<?=$item['id']?>">Atrasado</a>
  									</div>
  								</div>
- 							</div></td>
+ 							</div></td>		
  						<?php } ?>
  					</tr>
  				</tbody>
