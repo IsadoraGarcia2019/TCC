@@ -43,8 +43,6 @@
  	<div class="col-10 col-md-10 mt-5 offset-md- offset-1" style="margin-top: -30px !important;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
  			<div class="card-body" > 
-
-
  				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
  					<thead>
  						<tr>
@@ -78,7 +76,7 @@
  		</div>
  	</div>
  </div>
- 
+
  <?php
 //INCLUSÃO DO RODAPÉ
  require_once "footer.php";
