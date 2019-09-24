@@ -1,5 +1,5 @@
 <?php 
-require_once"include/conexao.php";
+require_once"../include/conexao.php";
 
 // Recuperar ID do pacote
 if (isset($_GET['id'])) {
@@ -8,14 +8,14 @@ if (isset($_GET['id'])) {
 
 // Buscar informações da empresa
 if (isset($id)) {
-	$sql = "SELECT * FROM finalizacao WHERE id = $id";
-	$query = mysqli_query($obj->con, $sql);
-	$resultado = mysqli_fetch_array($query);
 
-		// Verificar se a empresa existe
-	if (is_null($resultado)) {
-		die("Pacote não encontrado.");
-	}
+	$status_pagamento = $_GET['status'];
+
+    $sql = "UPDATE finalizacao
+			SET status_pagamento = '$status_pagamento'
+			WHERE id = $id";
+	$query = mysqli_query($con, $sql);
+
+	header('Location: ../vendas.php');
 }
-
 ?>
