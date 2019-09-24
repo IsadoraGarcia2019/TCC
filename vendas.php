@@ -40,37 +40,45 @@
  		</div>
  	</div>
 
- 	<table class="table table-dark col-md-10 offset-md-1 mt-5" style="background-color: rgba(47, 47, 47);">
- 		<thead>
- 			<tr>
- 				<th scope="col">Id</th>
- 				<th scope="col">Data da compra</th>
- 				<th scope="col">Id do pacote</th>
- 				<th scope="col">Forma de pagamento</th>
- 				<th scope="col">Status do pagamento</th>
- 			</tr>
- 		</thead>
- 		<tbody>
- 			<?php foreach ($lista as $item) { ?>
- 				<tr>
- 					<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
- 					<td><?=$item['data_compra']?></td>
- 					<td><?=$item['id_pacote']?></td>
- 					<td><?=$item['forma_pagamento']?></td>
- 					<td><div class="btn-group" role="group">
- 						<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
- 						<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
- 							<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status=pendente&id=<?=$item['id']?>">Pendente</a>
- 							<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status=pago&id=<?=$item['id']?>">Pago</a>
- 							<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status=atrasado&id=<?=$item['id']?>">Atrasado</a>
- 						</div>
- 					</div>
- 				</div></td>
- 			<?php } ?>
- 		</tr>
- 	</tbody>
- </table>
+ 	<div class="col-10 col-md-10 mt-5 offset-md- offset-1" style="margin-top: -30px !important;">
+ 		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
+ 			<div class="card-body" > 
 
+
+ 				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
+ 					<thead>
+ 						<tr>
+ 							<th scope="col">Id</th>
+ 							<th scope="col">Data da compra</th>
+ 							<th scope="col">Id do pacote</th>
+ 							<th scope="col">Forma de pagamento</th>
+ 							<th scope="col">Status do pagamento</th>
+ 						</tr>
+ 					</thead>
+ 					<tbody>
+ 						<?php foreach ($lista as $item) { ?>
+ 							<tr>
+ 								<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
+ 								<td><?=$item['data_compra']?></td>
+ 								<td><?=$item['id_pacote']?></td>
+ 								<td><?=$item['forma_pagamento']?></td>
+ 								<td><div class="btn-group" role="group">
+ 									<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
+ 									<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
+ 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status=pendente&id=<?=$item['id']?>">Pendente</a>
+ 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status=pago&id=<?=$item['id']?>">Pago</a>
+ 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status=atrasado&id=<?=$item['id']?>">Atrasado</a>
+ 									</div>
+ 								</div>
+ 							</div></td>
+ 						<?php } ?>
+ 					</tr>
+ 				</tbody>
+ 			</table>
+ 		</div>
+ 	</div>
+ </div>
+ 
  <?php
 //INCLUSÃO DO RODAPÉ
  require_once "footer.php";
