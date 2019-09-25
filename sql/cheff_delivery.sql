@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 20-Set-2019 às 22:17
+-- Generation Time: 25-Set-2019 às 20:09
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -34,32 +34,34 @@ DROP TABLE IF EXISTS `cardapio_dia`;
 CREATE TABLE `cardapio_dia` (
   `id_cardapio` int(11) NOT NULL,
   `nome_comida` varchar(255) NOT NULL,
-  `categoria_comida` enum('cafe_manha','almoco','jantar') NOT NULL
+  `categoria_comida` enum('cafe_manha','almoco','jantar') NOT NULL,
+  `data_cardapio` datetime NOT NULL,
+  `excluido` enum('sim','nao') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `cardapio_dia`
 --
 
-INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`) VALUES
-(1, 'Capuccino', 'cafe_manha'),
-(2, 'Café Expresso', 'cafe_manha'),
-(3, 'Waffles', 'cafe_manha'),
-(4, 'Panquecas', 'cafe_manha'),
-(5, 'Brownie', 'cafe_manha'),
-(6, 'Cheesecake', 'cafe_manha'),
-(13, 'Strogonoff de Frango', 'almoco'),
-(14, 'Nuggets', 'almoco'),
-(15, 'Batata Frita', 'almoco'),
-(16, 'Macarronada', 'almoco'),
-(17, 'Bife à Parmegiana', 'almoco'),
-(18, 'Risoto de Brócolis', 'almoco'),
-(19, 'Pizza Calabresa', 'jantar'),
-(20, 'Sopa de macarrão', 'jantar'),
-(21, 'Esfiha', 'jantar'),
-(22, 'Cachorro Quente', 'jantar'),
-(23, 'Lasanha', 'jantar'),
-(32, 'Cheeseburger ', 'jantar');
+INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`, `data_cardapio`, `excluido`) VALUES
+(1, 'Capuccino', 'cafe_manha', '2019-09-25 00:00:00', 'nao'),
+(2, 'Café Expresso', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
+(3, 'Waffles', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
+(4, 'Panquecas', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
+(5, 'Brownie', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
+(6, 'Cheesecake', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
+(13, 'Strogonoff de Frango', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(14, 'Nuggets', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(15, 'Batata Frita', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(16, 'Macarronada', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(17, 'Bife à Parmegiana', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(18, 'Risoto de Brócolis', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(19, 'Pizza Calabresa', 'jantar', '0000-00-00 00:00:00', 'nao'),
+(20, 'Sopa de macarrão', 'jantar', '0000-00-00 00:00:00', 'nao'),
+(21, 'Esfiha', 'jantar', '0000-00-00 00:00:00', 'nao'),
+(22, 'Cachorro Quente', 'jantar', '0000-00-00 00:00:00', 'nao'),
+(23, 'Lasanha', 'jantar', '0000-00-00 00:00:00', 'nao'),
+(32, 'Cheeseburger ', 'jantar', '0000-00-00 00:00:00', 'nao');
 
 -- --------------------------------------------------------
 
@@ -96,37 +98,6 @@ INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `empresas`
---
-
-DROP TABLE IF EXISTS `empresas`;
-CREATE TABLE `empresas` (
-  `id` int(11) NOT NULL,
-  `nome_empresa` varchar(255) NOT NULL,
-  `CNPJ` int(11) NOT NULL,
-  `numero_funcionarios` int(11) NOT NULL,
-  `turno` varchar(255) NOT NULL,
-  `tipo_empresa` varchar(255) NOT NULL,
-  `numero_empresa` int(11) NOT NULL,
-  `cidade_empresa` varchar(255) NOT NULL,
-  `rua_empresa` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `empresas`
---
-
-INSERT INTO `empresas` (`id`, `nome_empresa`, `CNPJ`, `numero_funcionarios`, `turno`, `tipo_empresa`, `numero_empresa`, `cidade_empresa`, `rua_empresa`) VALUES
-(1, 'pacifico', 114563298, 2550, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 33369854, 'Blumenau', 'Rua Bahia, 5800'),
-(2, 'pacifico', 114563298, 2550, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 33369854, 'Blumenau', 'Rua Bahia, 5800'),
-(3, 'Isadora Zancanaro', 22554250, 25896, 'Matutino', 'Sociedade Simples (SS)', 36985741, 'Blumenau', 'Rua Bahia, 5800'),
-(4, '123', 123, 132, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 123, '132', '321'),
-(5, 'pacifico sul', 2147483647, 21696, 'Matutino', 'Sociedade EmpresÃ¡ria Limitada (Ltda.)', 2147483647, 'Blumenau', 'Rua Bahia, 5800'),
-(6, 'karsten', 0, 0, '-', '-', 0, '', '');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `finalizacao`
 --
 
@@ -145,9 +116,9 @@ CREATE TABLE `finalizacao` (
 --
 
 INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`, `data_compra`) VALUES
-(14, 1057, 8, 'cartao_debito', 'pendente', '2019-02-20'),
-(15, 1057, 9, 'cartao_debito', 'pendente', '2020-02-20'),
-(16, 1052, 9, 'boleto_bancario', 'pendente', '2015-02-20');
+(16, 1052, 9, 'boleto_bancario', 'pendente', '2015-02-20'),
+(17, 1052, 5, 'dinheiro', 'pendente', '2019-02-20'),
+(22, 1052, 5, 'boleto_bancario', 'pendente', '2019-09-24 16:28:41');
 
 -- --------------------------------------------------------
 
@@ -179,34 +150,6 @@ INSERT INTO `pacotes` (`id`, `nome_pacote`, `nome_imagem`, `descricao_pacote`, `
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `restaurantes`
---
-
-DROP TABLE IF EXISTS `restaurantes`;
-CREATE TABLE `restaurantes` (
-  `id` int(11) NOT NULL,
-  `nome_restaurante` varchar(255) NOT NULL,
-  `numero_telefone` int(11) NOT NULL,
-  `horario_atendimento` varchar(255) NOT NULL,
-  `dias_atendimento` varchar(255) NOT NULL,
-  `avaliacao` varchar(255) NOT NULL,
-  `localizacao` varchar(255) NOT NULL,
-  `estado` varchar(255) NOT NULL,
-  `categoria` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `restaurantes`
---
-
-INSERT INTO `restaurantes` (`id`, `nome_restaurante`, `numero_telefone`, `horario_atendimento`, `dias_atendimento`, `avaliacao`, `localizacao`, `estado`, `categoria`) VALUES
-(1, 'habibs', 33695821, 'Segunda Ã  Segunda', '', 'bom', 'rua nao sei', 'SC', 'lanches_e_petiscos'),
-(2, 'habibs', 2147483647, 'Segunda Ã  Segunda', '', 'muito_bom', 'Blumenau', 'SC', 'lanches_e_petiscos'),
-(3, 'zecao', 0, 'Segunda Ã  Sexta', '', 'muito_bom', '', 'SC', 'cafeteria');
-
--- --------------------------------------------------------
-
---
 -- Estrutura da tabela `usuarios`
 --
 
@@ -215,7 +158,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `senha` varchar(255) NOT NULL,
-  `tp_usuario` enum('restaurante','empresa','cliente','administrador') NOT NULL,
+  `tp_usuario` enum('cliente','administrador') NOT NULL,
   `fk_tipo` int(11) NOT NULL,
   `ativo` int(11) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -226,9 +169,7 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`) VALUES
 (1052, 'oi@xp.com', '123', 'cliente', 1043, 1),
-(1053, 'deliiverycheff@gmail.com', '2019', 'administrador', 0, 1),
-(1057, 'oi@oi.com', '123', 'empresa', 6, 1),
-(1058, 'oiaiaiaia@gmail.com', '123', 'restaurante', 3, 1);
+(1053, 'deliiverycheff@gmail.com', '2019', 'administrador', 0, 1);
 
 --
 -- Indexes for dumped tables
@@ -247,12 +188,6 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `empresas`
---
-ALTER TABLE `empresas`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
@@ -264,12 +199,6 @@ ALTER TABLE `finalizacao`
 -- Indexes for table `pacotes`
 --
 ALTER TABLE `pacotes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `restaurantes`
---
-ALTER TABLE `restaurantes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -295,28 +224,16 @@ ALTER TABLE `clientes`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
 
 --
--- AUTO_INCREMENT for table `empresas`
---
-ALTER TABLE `empresas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
 -- AUTO_INCREMENT for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `pacotes`
 --
 ALTER TABLE `pacotes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `restaurantes`
---
-ALTER TABLE `restaurantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
