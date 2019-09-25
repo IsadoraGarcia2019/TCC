@@ -10,6 +10,10 @@
  	setcookie('alerta');
  }
 
+if ($_SESSION['tp_usuario'] != 'administrador') {
+  header('Location:erros.php?mesagem= Somente o administrador pode editar os dados do cardápio!');
+} 
+
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">

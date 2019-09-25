@@ -10,6 +10,10 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 	setcookie('alerta');
 }
 
+if ($_SESSION['tp_usuario'] != 'administrador') {
+  header('Location:erros.php?mesagem= Somente o administrador pode cadastar o cardápio do dia!');
+} 
+
 ?> 
 
 <!DOCTYPE html>

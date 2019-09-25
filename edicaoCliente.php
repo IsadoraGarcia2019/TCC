@@ -3,8 +3,15 @@
 require_once"backends/edicaoCliente.php";
 require_once"head.php";
 
-?>
 
+if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
+  header('Location:erros.php?mesagem= Você não está logado e por isso não pode editar nenhum dado');
+
+if ($_SESSION['tp_usuario'] != 'cliente') {
+  header('Location:erros.php?mesagem= Somente clientes podem editar seus dados!');
+} 
+} 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

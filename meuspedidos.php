@@ -15,6 +15,13 @@
  	$alerta = unserialize($_COOKIE['alerta']);
  	setcookie('alerta');
  }
+ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
+  header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
+
+if ($_SESSION['tp_usuario'] == 'restaurante') {
+  header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
+} 
+} 
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">

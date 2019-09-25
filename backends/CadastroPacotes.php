@@ -5,6 +5,9 @@
 
 	require_once"classes/upload.class.php";
 
+	require_once"classes/site.class.php";
+
+
 	// botão de cadastrar
 	if (isset($_POST['btnCadastrar'])) {
 		// Recebendo os campos

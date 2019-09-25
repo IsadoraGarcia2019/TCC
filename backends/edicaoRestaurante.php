@@ -5,8 +5,6 @@ require_once"include/conexao.php";
 require_once"classes/site.class.php";
 $obj = new Site();
 
-session_start();
-
 	// Recuperar ID do restaurante
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];

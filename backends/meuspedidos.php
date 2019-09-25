@@ -1,7 +1,5 @@
 <?php 
 
-session_start();
-
 require_once"classes/site.class.php";
 $obj = new Site();
 

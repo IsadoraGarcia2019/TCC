@@ -8,6 +8,15 @@ require_once"include/conexao.php";
 $lista = "SELECT * FROM pacotes";
 $queryPacote = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
+
+
+if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
+  header('Location:erros.php?mesagem= Você não está logado e por isso não pode assinar nenhum pacote');
+
+if ($_SESSION['tp_usuario'] == 'restaurante') {
+  header('Location:erros.php?mesagem= Restaurantes não podem assinar os nossos pacotes!');
+} 
+}
 ?>
 
 <!DOCTYPE html>
@@ -97,15 +106,10 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 							<?php } ?>
 
 							<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-								<a href="erros4.php." class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
 								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Pacote</a>
 							<?php } ?>
 						<?php } ?>
-
-						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-							<a href="erros3.php" class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
-						<?php } ?>
-								
+											
 					</div>
 				</div>
 			</div>

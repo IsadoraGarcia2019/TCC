@@ -27,8 +27,12 @@
 	<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 		<div class="card" style="margin-right: auto; margin-left: auto;">
 			<div class="card-body" > 
-				<h1 class="box">Credenciais Inválidas, faça login para continuar</h1>
-				<a href="login.php" class="btn btn-dark mt-3 col-12 col-md-12 offset-md-0">Voltar</a>
+				<h1 class="box">
+					<?php
+					echo $_GET['mesagem'];
+					?>
+				</h1>
+				<a href="index.php" class="btn btn-dark mt-3 col-12 col-md-12 offset-md-0">Voltar</a>
 			</div>
 		</div>
 	</div>

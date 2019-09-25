@@ -13,6 +13,10 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
   $alerta = unserialize($_COOKIE['alerta']);
   setcookie('alerta');
 }
+
+if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
+  header('Location:erros.php?mesagem= Você não está logado e por isso não pode acessar essa página!');
+}
 ?>
 
 <!DOCTYPE html>
