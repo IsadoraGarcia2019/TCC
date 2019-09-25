@@ -4,9 +4,9 @@
 
  require_once"include/conexao.php";
 
- // require_once"backends/meuspedidos.php";
+//require_once"backends/meuspedidos.php";
 
- $lista = "SELECT * FROM finalizacao";
+ $lista = "SELECT * FROM finalizacao WHERE id_usuario = {$_SESSION['id_usuario']}";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
 
@@ -16,9 +16,16 @@
  	setcookie('alerta');
  }
  if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
-  header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
+ 	header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
 
+<<<<<<< HEAD
 } 
+=======
+ 	if ($_SESSION['tp_usuario'] == 'restaurante') {
+ 		header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
+ 	} 
+ } 
+>>>>>>> 1f46f4120ca434c42f64721e9f3dc91692d9baf3
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
@@ -60,13 +67,14 @@
  				<tbody>
  					<?php foreach ($lista as $item) { ?>
  						<tr>
- 							<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
+
+ 							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
  							<td><?=$item['data_compra']?></td>
  							<td><?=$item['id_pacote']?></td>
  							<td><?=$item['forma_pagamento']?></td>
  							<td><?=$item['status_pagamento']?></td>
- 						<?php } ?>
- 					</tr>
+ 						</tr>
+ 					<?php } ?>
  				</tbody>
  			</table>
  		</div>

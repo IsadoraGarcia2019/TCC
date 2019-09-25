@@ -3,22 +3,20 @@
 require_once"classes/site.class.php";
 $obj = new Site();
 
-	// Recuperar ID do pacote
+	// Recuperar ID do pedido
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
 
-// Buscar informações do pacote
+// Buscar informações do pedido
 if (isset($id)) {
-	$sql = "SELECT * FROM finalizacao WHERE id_usuario = $_SESSION['id_usuario']
-	JOIN pacotes ON pacotes.id = finalizacao.id_pacote";
+	$sql = "SELECT * FROM finalizacao WHERE id_usuario = $_SESSION['id_usuario']"
+	$queryPedido = mysqli_query($obj->con, $sql);
+	$resultadoPedido = mysqli_fetch_array($queryPedido);
 
-	$queryVenda = mysqli_query($obj->con, $sql);
-	$resultadoVenda = mysqli_fetch_array($queryVenda);
-
-		// Verificar se o pacote existe
-	if (is_null($resultadoVenda)) {
-		die("Pacote não encontrado.");
+		// Verificar se o pedido existe
+	if (is_null($resultadoPedido)) {
+		die("Pedido não encontrado.");
 	}
 }
 ?>
