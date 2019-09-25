@@ -8,10 +8,6 @@ $lista = "SELECT * FROM cardapio_dia";
 $queryCardapio = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
-if ($_SESSION['tp_usuario'] == 'restaurante') {
-  header('Location:erros.php?mesagem= Restaurantes não podem esollher o cardápio do dia :(');
-} 
-
 ?>
 
 <!DOCTYPE html>

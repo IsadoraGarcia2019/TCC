@@ -16,9 +16,9 @@
  	setcookie('alerta');
  }
 
-if ($_SESSION['tp_usuario'] != 'administrador') {
-  header('Location:erros.php?mesagem= Somente o administrador pode ter acesso à essa página!');
-}
+ if ($_SESSION['tp_usuario'] != 'administrador') {
+ 	header('Location:erros.php?mesagem= Somente o administrador pode ter acesso à essa página!');
+ }
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">

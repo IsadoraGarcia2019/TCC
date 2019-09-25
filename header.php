@@ -33,7 +33,6 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
               </li>
-              <?php if ($_SESSION['tp_usuario'] != 'restaurante') { ?>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
                     Assinaturas
@@ -46,7 +45,6 @@
                 <li class="nav-item">
                   <a class="nav-link text-light" href="meuspedidos.php" style="margin-left: 10px;">Meus Pedidos</a>
                 </li>
-              <?php } ?>
             <?php } ?>
             <?php if(!isset($_SESSION['logado'])) { ?>
               <li class="nav-item dropdown">

@@ -14,7 +14,8 @@ if (isset($_POST['btnCadastrar'])) {
 	VALUES (
 	DEFAULT, 
 	'$nome_comida',
-	'$categoria_comida'
+	'$categoria_comida',
+	now()
 
 )";
 

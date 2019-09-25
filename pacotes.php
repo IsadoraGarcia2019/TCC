@@ -13,9 +13,7 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
   header('Location:erros.php?mesagem= Você não está logado e por isso não pode assinar nenhum pacote');
 
-if ($_SESSION['tp_usuario'] == 'restaurante') {
-  header('Location:erros.php?mesagem= Restaurantes não podem assinar os nossos pacotes!');
-} 
+
 }
 ?>
 
