@@ -79,15 +79,19 @@
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
  									case "dinheiro":
+ 									echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
  									echo "Dinheiro";
  									break;
  									case "boleto_bancario":
+ 									echo '<i class="fas fa-money-check-alt text-info mr-3"></i>';
  									echo "Boleto Bancário";
  									break;
  									case "cartao_credito":
+ 									echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
  									echo "Cartão de Crédito";
  									break;
  									case "cartao_debito":
+ 									echo '<i class="fas fa-credit-card text-warning mr-3"></i>';
  									echo "Cartão de Débito";
  									break;
  								}
