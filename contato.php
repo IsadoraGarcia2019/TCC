@@ -33,7 +33,7 @@ require_once"head.php";
 			<form>
 				<div class="form-row">
 					<div class="form-group col-md-6">
-						<label for="nome"><strong>Nome</strong></label>
+						<label for="nome"><strong><i class="fas fa-car-battery"></i>Nome</strong></label>
 						<input type="text" class="form-control" id="nome" placeholder="Ex: Fulano" value="<?=$_SESSION['nome_usuario']?>">
 					</div>
 					<div class="form-group col-md-6">

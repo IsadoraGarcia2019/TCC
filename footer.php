@@ -17,6 +17,7 @@
  <div class="footer-item">
   <div class="row">
     <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTJtrnhxXwfpDgvhvzGsLRlLgjHgjcfzcQFCTNqvbqkMSDXnPTwMNHPSkbjVnnrBWWPBfJq" class="col-sm-12 col-md-3">E-mail: deliiverycheff@gmail.com</a>
+
     <a href="https://twitter.com/delivery_cheff" class="col-sm-12 col-md-3">Twitter: @delivery_cheff </a>
     <a href="https://www.instagram.com/deliiverycheff/?hl=pt-br"class="col-sm-12 col-md-3">Instagram: @deliiverycheff</a>
     <a href=""class="col-sm-12 col-md-3">Telefone: +55 (47) 3768-3352</a>
@@ -27,3 +28,6 @@
 
 </div>
 </footer>
+
+
+<script src="https://kit.fontawesome.com/e1dc1a407b.js"></script>
