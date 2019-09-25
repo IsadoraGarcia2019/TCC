@@ -6,13 +6,13 @@
 
 //require_once"backends/meuspedidos.php";
 
- $lista = "SELECT * FROM finalizacao WHERE id_usuario = {$_SESSION['id_usuario']}";
+ $lista = "SELECT * FROM finalizacao
+ JOIN pacotes p ON p.id = finalizacao.id_pacote
+ 		WHERE id_usuario = {$_SESSION['id_usuario']}
+
+ ";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
-
- $lista2 = "SELECT * FROM pacotes";
- $queryPacotes = mysqli_query($con, $lista2);
- $lista2 = mysqli_fetch_all($queryPacotes, MYSQLI_ASSOC);
 
   // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
@@ -67,32 +67,45 @@
  					</tr>
  				</thead>
  				<tbody>
- 					<?php foreach ($lista as $item) { foreach ($lista2 as $item2) { ?>
+ 					<?php foreach ($lista as $item) { ?>
  						<tr>
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
  							<td><?=$item['data_compra']?></td>
- 							<td><?=$item2['nome_pacote']?></td>
- 							<td><?php if ($item['forma_pagamento'] == "dinheiro") { ?>
- 							Dinheiro<?php } ?></td>
- 							<td><?php if ($item['forma_pagamento'] == "boleto_bancario") { ?>
- 							Boleto Bancário<?php } ?></td>
- 							<td><?php if ($item['forma_pagamento'] == "cartao_credito") { ?>
- 							Cartão de crédito<?php } ?></td>
- 							<td><?php if ($item['forma_pagamento'] == "cartao_debito") { ?>
- 							cartão de débito<?php } ?></td>
- 							<td><?php if ($item['status_pagamento'] == "pendente") { ?>
- 							Pendente<?php } ?></td>
- 							<td><?php if ($item['status_pagamento'] == "pago") { ?>
- 							Pago<?php } ?></td>
- 							<td><?php if ($item['status_pagamento'] == "atrasado") { ?>
- 							Atrasado<?php } ?></td> 
-
-
-
-
+ 							<td><?=utf8_encode($item['nome_pacote'])?></td>
+ 							<td>
+ 								<?php switch ($item['forma_pagamento']) { 
+ 										case "dinheiro":
+ 											echo "Dinheiro";
+ 											break;
+ 										case "boleto_bancario":
+ 											echo "Boleto Bancário";
+ 											break;
+ 										case "cartao_credito":
+ 											echo "Cartão de Crédito";
+ 											break;
+ 										case "cartao_debito":
+ 											echo "Cartão de Débito";
+ 											break;
+ 									   }
+ 								?>
+ 							</td>
+ 							<td>
+ 								<?php switch ($item['status_pagamento']) { 
+ 										case "pendente":
+ 											echo "<span class='text-warning font-weight-bolder'>Pendente</span>";
+ 											break;
+ 										case "pago":
+ 											echo "<span class='text-success font-weight-bolder'>Pago</span>";
+ 											break;
+ 										case "atrasado":
+ 											echo "<span class='text-danger font-weight-bolder'>Atrasado</span>";
+ 											break;
+ 									   }
+ 								?>
+ 							</td> 
  						</tr>
- 					<?php } }?>
+ 					<?php } ?>
  				</tbody>
  			</table>
  		</div>
