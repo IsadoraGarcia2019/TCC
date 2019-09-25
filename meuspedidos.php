@@ -1,5 +1,6 @@
  <?php
 
+
  require_once"head.php";
 
  require_once"include/conexao.php";
@@ -28,7 +29,14 @@
  	header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
  } 
 
+<<<<<<< HEAD
+=======
+ date_default_timezone_set('America/Sao_Paulo');
+
+>>>>>>> 45ed58857ae4ae45db033911639ca586affd12e9
  ?> 
+
+
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
@@ -72,9 +80,16 @@
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
 
+<<<<<<< HEAD
  							<td><?php
  							$data = mktime($item['data_compra']);
  							echo date("d-m-Y H:i", $data)."<br>";?></td>
+=======
+ 
+ 							<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
+
+
+>>>>>>> 45ed58857ae4ae45db033911639ca586affd12e9
  							<td><?=utf8_encode($item['nome_pacote'])?></td>
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
