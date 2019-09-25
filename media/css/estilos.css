@@ -3,7 +3,7 @@
 @charset "UTF-8";
 
 * {
-	font-family: arial !important;
+	font-family: arial;
 }
 .box {
   background-color: #e6e3e3;
