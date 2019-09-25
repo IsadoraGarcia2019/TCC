@@ -10,6 +10,10 @@
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
 
+ $lista2 = "SELECT * FROM pacotes";
+ $queryPacotes = mysqli_query($con, $lista2);
+ $lista2 = mysqli_fetch_all($queryPacotes, MYSQLI_ASSOC);
+
   // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  	$alerta = unserialize($_COOKIE['alerta']);
@@ -18,14 +22,10 @@
  if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
  	header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
 
-<<<<<<< HEAD
-} 
-=======
- 	if ($_SESSION['tp_usuario'] == 'restaurante') {
- 		header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
- 	} 
  } 
->>>>>>> 1f46f4120ca434c42f64721e9f3dc91692d9baf3
+ if ($_SESSION['tp_usuario'] == 'restaurante') {
+ 	header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
+ } 
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
@@ -59,22 +59,38 @@
  					<tr>
  						<th scope="col">Id</th>
  						<th scope="col">Data da compra</th>
- 						<th scope="col">Id do pacote</th>
+ 						<th scope="col">Nome do pacote</th>
  						<th scope="col">Forma de pagamento</th>
  						<th scope="col">Status do pagamento</th>
  					</tr>
  				</thead>
  				<tbody>
- 					<?php foreach ($lista as $item) { ?>
+ 					<?php foreach ($lista as $item) { foreach ($lista2 as $item2) { ?>
  						<tr>
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
  							<td><?=$item['data_compra']?></td>
- 							<td><?=$item['id_pacote']?></td>
- 							<td><?=$item['forma_pagamento']?></td>
- 							<td><?=$item['status_pagamento']?></td>
+ 							<td><?=$item2['nome_pacote']?></td>
+ 							<td><?php if ($item['forma_pagamento'] == "dinheiro") { ?>
+ 							Dinheiro<?php } ?></td>
+ 							<td><?php if ($item['forma_pagamento'] == "boleto_bancario") { ?>
+ 							Boleto Bancário<?php } ?></td>
+ 							<td><?php if ($item['forma_pagamento'] == "cartao_credito") { ?>
+ 							Cartão de crédito<?php } ?></td>
+ 							<td><?php if ($item['forma_pagamento'] == "cartao_debito") { ?>
+ 							cartão de débito<?php } ?></td>
+ 							<td><?php if ($item['status_pagamento'] == "pendente") { ?>
+ 							Pendente<?php } ?></td>
+ 							<td><?php if ($item['status_pagamento'] == "pago") { ?>
+ 							Pago<?php } ?></td>
+ 							<td><?php if ($item['status_pagamento'] == "atrasado") { ?>
+ 							Atrasado<?php } ?></td> 
+
+
+
+
  						</tr>
- 					<?php } ?>
+ 					<?php } }?>
  				</tbody>
  			</table>
  		</div>
