@@ -47,16 +47,9 @@
                 </li>
             <?php } ?>
             <?php if(!isset($_SESSION['logado'])) { ?>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-                  Cadastro
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="CadastroCliente.php">Cliente</a>
-                  <a class="dropdown-item" href="CadastroEmpresa.php">Empresa</a>
-                  <a class="dropdown-item" href="CadastroRestaurantes.php">Restaurante</a>
-                </div>
-              </li>  
+              <li class="nav-item">
+              <a class="nav-link text-light" href="CadastroCliente.php" style="margin-left: 10px;">Cadastrar-me</a>
+            </li>    
             <?php } ?>
           <?php } ?>
           <?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
