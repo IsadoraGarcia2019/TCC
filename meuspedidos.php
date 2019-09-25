@@ -8,7 +8,7 @@
 
  $lista = "SELECT * FROM finalizacao
  JOIN pacotes p ON p.id = finalizacao.id_pacote
- WHERE id_usuario = {$_SESSION['id_usuario']}
+ 		WHERE id_usuario = {$_SESSION['id_usuario']}
 
  ";
  $queryFinalizacao = mysqli_query($con, $lista);
@@ -27,8 +27,8 @@
  if ($_SESSION['tp_usuario'] == 'restaurante') {
  	header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
  } 
-
- ?> 
+  
+  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
@@ -71,40 +71,37 @@
  						<tr>
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
-
- 							<td><?php
- 							$data = mktime($item['data_compra']);
- 							 echo date("d-m-Y H:i", $data)."<br>";?></td>
+ 							<td><?=$item['data_compra']?></td>
  							<td><?=utf8_encode($item['nome_pacote'])?></td>
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
- 									case "dinheiro":
- 									echo "Dinheiro";
- 									break;
- 									case "boleto_bancario":
- 									echo "Boleto Bancário";
- 									break;
- 									case "cartao_credito":
- 									echo "Cartão de Crédito";
- 									break;
- 									case "cartao_debito":
- 									echo "Cartão de Débito";
- 									break;
- 								}
+ 										case "dinheiro":
+ 											echo "Dinheiro";
+ 											break;
+ 										case "boleto_bancario":
+ 											echo "Boleto Bancário";
+ 											break;
+ 										case "cartao_credito":
+ 											echo "Cartão de Crédito";
+ 											break;
+ 										case "cartao_debito":
+ 											echo "Cartão de Débito";
+ 											break;
+ 									   }
  								?>
  							</td>
  							<td>
  								<?php switch ($item['status_pagamento']) { 
- 									case "pendente":
- 									echo "<span class='text-warning font-weight-bolder'>Pendente</span>";
- 									break;
- 									case "pago":
- 									echo "<span class='text-success font-weight-bolder'>Pago</span>";
- 									break;
- 									case "atrasado":
- 									echo "<span class='text-danger font-weight-bolder'>Atrasado</span>";
- 									break;
- 								}
+ 										case "pendente":
+ 											echo "<span class='text-warning font-weight-bolder'>Pendente</span>";
+ 											break;
+ 										case "pago":
+ 											echo "<span class='text-success font-weight-bolder'>Pago</span>";
+ 											break;
+ 										case "atrasado":
+ 											echo "<span class='text-danger font-weight-bolder'>Atrasado</span>";
+ 											break;
+ 									   }
  								?>
  							</td> 
  						</tr>
