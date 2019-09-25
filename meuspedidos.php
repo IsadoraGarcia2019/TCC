@@ -1,5 +1,6 @@
  <?php
 
+
  require_once"head.php";
 
  require_once"include/conexao.php";
@@ -27,8 +28,12 @@
  if ($_SESSION['tp_usuario'] == 'restaurante') {
  	header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
  } 
- 
+
+ date_default_timezone_set('America/Sao_Paulo');
+
  ?> 
+
+
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
@@ -71,7 +76,11 @@
  						<tr>
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
- 							<td><?=$item['data_compra']?></td>
+
+ 
+ 							<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
+
+
  							<td><?=utf8_encode($item['nome_pacote'])?></td>
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
