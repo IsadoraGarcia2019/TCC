@@ -17,15 +17,7 @@
  }
  if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
  	header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
-
-<<<<<<< HEAD
-} 
-=======
- 	if ($_SESSION['tp_usuario'] == 'restaurante') {
- 		header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
- 	} 
  } 
->>>>>>> 1f46f4120ca434c42f64721e9f3dc91692d9baf3
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
