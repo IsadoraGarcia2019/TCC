@@ -74,20 +74,24 @@
 
  							<td><?php
  							$data = mktime($item['data_compra']);
- 							 echo date("d-m-Y H:i", $data)."<br>";?></td>
+ 							echo date("d-m-Y H:i", $data)."<br>";?></td>
  							<td><?=utf8_encode($item['nome_pacote'])?></td>
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
  									case "dinheiro":
+ 									echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
  									echo "Dinheiro";
  									break;
  									case "boleto_bancario":
+ 									echo '<i class="fas fa-money-check-alt text-primary mr-3"></i>';
  									echo "Boleto Bancário";
  									break;
  									case "cartao_credito":
+ 									echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
  									echo "Cartão de Crédito";
  									break;
  									case "cartao_debito":
+ 									echo '<i class="fas fa-credit-card text-secondary mr-3"></i>';
  									echo "Cartão de Débito";
  									break;
  								}
@@ -96,13 +100,13 @@
  							<td>
  								<?php switch ($item['status_pagamento']) { 
  									case "pendente":
- 									echo "<span class='text-warning font-weight-bolder'>Pendente</span>";
+ 									echo "<span class='text-warning font-italic'>Pendente</span>";
  									break;
  									case "pago":
- 									echo "<span class='text-success font-weight-bolder'>Pago</span>";
+ 									echo "<span class='text-success font-italic'>Pago</span>";
  									break;
  									case "atrasado":
- 									echo "<span class='text-danger font-weight-bolder'>Atrasado</span>";
+ 									echo "<span class='text-danger font-italic'>Atrasado</span>";
  									break;
  								}
  								?>
