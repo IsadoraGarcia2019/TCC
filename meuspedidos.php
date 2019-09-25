@@ -27,7 +27,7 @@
  if ($_SESSION['tp_usuario'] == 'restaurante') {
  	header('Location:erros.php?mesagem= Somente clientes podem vizualizar seus pedidos!');
  } 
- 
+
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
@@ -71,24 +71,23 @@
  						<tr>
 
  							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
- 							<td><?=$item['data_compra']?></td>
+
+ 							<td><?php
+ 							$data = mktime($item['data_compra']);
+ 							 echo date("d-m-Y H:i", $data)."<br>";?></td>
  							<td><?=utf8_encode($item['nome_pacote'])?></td>
  							<td>
  								<?php switch ($item['forma_pagamento']) { 
  									case "dinheiro":
- 									echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
  									echo "Dinheiro";
  									break;
  									case "boleto_bancario":
- 									echo '<i class="fas fa-money-check-alt text-info mr-3"></i>';
  									echo "Boleto Bancário";
  									break;
  									case "cartao_credito":
- 									echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
  									echo "Cartão de Crédito";
  									break;
  									case "cartao_debito":
- 									echo '<i class="fas fa-credit-card text-warning mr-3"></i>';
  									echo "Cartão de Débito";
  									break;
  								}

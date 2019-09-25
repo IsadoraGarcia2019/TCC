@@ -62,8 +62,28 @@
  							<tr>
  								<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
  								<td><?=$item['data_compra']?></td>
- 								<td><?=$item['id_pacote']?></td>
- 								<td><?=$item['forma_pagamento']?></td>
+ 								<td><?=utf8_encode($item['nome_pacote'])?></td>
+ 								<td>
+ 									<?php switch ($item['forma_pagamento']) { 
+ 										case "dinheiro":
+ 										echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
+ 										echo "Dinheiro";
+ 										break;
+ 										case "boleto_bancario":
+ 										echo '<i class="fas fa-money-check-alt text-info mr-3"></i>';
+ 										echo "Boleto Bancário";
+ 										break;
+ 										case "cartao_credito":
+ 										echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
+ 										echo "Cartão de Crédito";
+ 										break;
+ 										case "cartao_debito":
+ 										echo '<i class="fas fa-credit-card text-warning mr-3"></i>';
+ 										echo "Cartão de Débito";
+ 										break;
+ 									}
+ 									?>
+ 								</td>
  								<td><div class="btn-group" role="group">
  									<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
  									<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
