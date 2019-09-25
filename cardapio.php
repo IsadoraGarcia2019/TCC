@@ -4,7 +4,9 @@ require_once"head.php";
 
 require_once"include/conexao.php";
 
-$lista = "SELECT * FROM cardapio_dia";
+$lista = "SELECT * FROM cardapio_dia WHERE DATE(data_cardapio) = CURRENT_DATE() AND excluido <> 'sim'";
+// var_dump($lista);
+// die();
 $queryCardapio = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
@@ -47,6 +49,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 		</ul>
 		<div class="filters-content pb-5">
 			<div class="row grid">
+
 
 				<?php foreach ($lista as $item) { ?>
 

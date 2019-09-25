@@ -54,19 +54,6 @@ if (isset($_POST['btnExcluir'])) {
 			$query = mysqli_query($obj->con, $sql);
 
 		}
-		if (isset($_SESSION['tp_usuario']) && $_SESSION['tp_usuario'] == 'restaurante') {
-
-			$sql = "DELETE FROM restaurantes WHERE id = '{$_SESSION['fk_usuario']}'";
-			$query = mysqli_query($obj->con, $sql);
-			
-		}
-		if (isset($_SESSION['tp_usuario']) && $_SESSION['tp_usuario'] == 'empresa') {
-
-			$sql = "DELETE FROM empresas WHERE id = '{$_SESSION['fk_usuario']}'";
-			$query = mysqli_query($obj->con, $sql);
-			
-		}
-
 		$alerta['tipo'] = "danger";
 		$alerta['mensagem'] = "Dados excluidos com sucesso!";
 

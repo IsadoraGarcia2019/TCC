@@ -12,7 +12,7 @@ if (isset($_GET['id'])) {
 
 // Buscar informações do pacote
 if (isset($id)) {
-	$sql = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
+	$sql = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id" ;
 	$queryCardapio = mysqli_query($obj->con, $sql);
 	$resultadoCardapio = mysqli_fetch_array($queryCardapio);
 
@@ -56,7 +56,10 @@ if (isset($_POST['btnEditar'])) {
 	// Verificando ação de EXCLUIR
 if (isset($_POST['btnExcluir'])) {
 
-	$sql = "DELETE FROM cardapio_dia WHERE id_cardapio = $id";
+	$sql = "UPDATE cardapio_dia
+	SET exclido = 'sim'
+	
+	WHERE id_cardapio = $id";
 	
 	if (mysqli_query($obj->con, $sql)) {
 		$query = mysqli_query($obj->con, $sql);

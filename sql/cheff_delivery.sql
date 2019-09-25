@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 25-Set-2019 às 20:09
+-- Generation Time: 25-Set-2019 às 21:13
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -44,24 +44,25 @@ CREATE TABLE `cardapio_dia` (
 --
 
 INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`, `data_cardapio`, `excluido`) VALUES
-(1, 'Capuccino', 'cafe_manha', '2019-09-25 00:00:00', 'nao'),
-(2, 'Café Expresso', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
-(3, 'Waffles', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
-(4, 'Panquecas', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
-(5, 'Brownie', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
-(6, 'Cheesecake', 'cafe_manha', '0000-00-00 00:00:00', 'nao'),
-(13, 'Strogonoff de Frango', 'almoco', '0000-00-00 00:00:00', 'nao'),
-(14, 'Nuggets', 'almoco', '0000-00-00 00:00:00', 'nao'),
-(15, 'Batata Frita', 'almoco', '0000-00-00 00:00:00', 'nao'),
-(16, 'Macarronada', 'almoco', '0000-00-00 00:00:00', 'nao'),
-(17, 'Bife à Parmegiana', 'almoco', '0000-00-00 00:00:00', 'nao'),
+(1, 'Capuccino', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(2, 'Café Expresso', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(3, 'Waffles', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(4, 'Panquecas', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(5, 'Brownie', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(6, 'Cheesecake', 'cafe_manha', '2019-09-25 15:47:22', 'nao'),
+(13, 'Strogonoff de Frango', 'almoco', '2019-09-25 15:47:22', 'nao'),
+(14, 'Nuggets', 'almoco', '2019-09-25 15:47:22', 'nao'),
+(15, 'Batata Frita', 'almoco', '2019-09-25 15:47:22', 'nao'),
+(16, 'Macarronada', 'almoco', '2019-09-25 15:47:22', 'nao'),
+(17, 'Bife à Parmegiana', 'almoco', '2019-09-25 15:47:22', 'nao'),
 (18, 'Risoto de Brócolis', 'almoco', '0000-00-00 00:00:00', 'nao'),
-(19, 'Pizza Calabresa', 'jantar', '0000-00-00 00:00:00', 'nao'),
-(20, 'Sopa de macarrão', 'jantar', '0000-00-00 00:00:00', 'nao'),
-(21, 'Esfiha', 'jantar', '0000-00-00 00:00:00', 'nao'),
-(22, 'Cachorro Quente', 'jantar', '0000-00-00 00:00:00', 'nao'),
-(23, 'Lasanha', 'jantar', '0000-00-00 00:00:00', 'nao'),
-(32, 'Cheeseburger ', 'jantar', '0000-00-00 00:00:00', 'nao');
+(19, 'Pizza Calabresa', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(20, 'Sopa de macarrão', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(21, 'Esfiha', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(22, 'Cachorro Quente', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(23, 'Lasanha', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(32, 'Cheeseburger ', 'jantar', '2019-09-25 15:47:22', 'nao'),
+(34, 'macarrÃ£o', 'almoco', '2019-09-25 15:47:22', 'nao');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,8 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `preferencia_comida`, `preferencia_restaurante`, `comentarios`, `saldo_cafe`, `saldo_almoco`, `saldo_janta`) VALUES
 (1040, 'pedro', 'SC', 'bnu', 'pedro', 33445566, 'acucar', 'vegana', 'mc donalds', 'ODEIO CARNE ', 0, 0, 0),
 (1042, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', '123', 'ovo frito', '', 0, 0, 0),
-(1043, 'jose', 'SC', '', '', 0, 'nenhuma', '', '', '', 0, 0, 0);
+(1043, 'jose', 'SC', '', '', 0, 'nenhuma', '', '', '', 0, 0, 0),
+(1044, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'lactose', 'arroz', 'ovo frito', 'ki', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -118,7 +120,8 @@ CREATE TABLE `finalizacao` (
 INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`, `data_compra`) VALUES
 (16, 1052, 9, 'boleto_bancario', 'pendente', '2015-02-20'),
 (17, 1052, 5, 'dinheiro', 'pendente', '2019-02-20'),
-(22, 1052, 5, 'boleto_bancario', 'pendente', '2019-09-24 16:28:41');
+(22, 1052, 5, 'boleto_bancario', 'pendente', '2019-09-24 16:28:41'),
+(23, 1059, 8, 'cartao_credito', 'pago', '2019-09-25 15:14:28');
 
 -- --------------------------------------------------------
 
@@ -169,7 +172,8 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `email`, `senha`, `tp_usuario`, `fk_tipo`, `ativo`) VALUES
 (1052, 'oi@xp.com', '123', 'cliente', 1043, 1),
-(1053, 'deliiverycheff@gmail.com', '2019', 'administrador', 0, 1);
+(1053, 'deliiverycheff@gmail.com', '2019', 'administrador', 0, 1),
+(1059, 'isa@feia.comn', '123', 'cliente', 1044, 1);
 
 --
 -- Indexes for dumped tables
@@ -215,19 +219,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1045;
 
 --
 -- AUTO_INCREMENT for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `pacotes`
@@ -239,7 +243,7 @@ ALTER TABLE `pacotes`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1059;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1060;
 
 --
 -- Constraints for dumped tables
