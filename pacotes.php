@@ -9,12 +9,6 @@ $lista = "SELECT * FROM pacotes";
 $queryPacote = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 
-
-if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
-  header('Location:erros.php?mesagem= Você não está logado e por isso não pode assinar nenhum pacote');
-
-
-}
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +101,11 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
 								<a href="edicaoPacotes.php?id=<?=$item['id']?>" class="btn btn-dark col-md-12 mt-3">Editar Pacote</a>
 							<?php } ?>
 						<?php } ?>
-											
+
+						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+							<a href="#" class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>

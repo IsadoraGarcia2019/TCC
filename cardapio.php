@@ -68,6 +68,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 								
 							</div>					                               
@@ -91,6 +92,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>
@@ -113,6 +115,7 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 								<?php } ?>
 
 								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
+									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
 								<?php } ?>
 							</div>
 						</div>

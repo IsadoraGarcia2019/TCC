@@ -33,49 +33,58 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="edicao.php" style="margin-left: 10px;">Edição</a>
               </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
-                    Assinaturas
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
-                    <a class="dropdown-item" href="pacotes.php">Pacotes</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="meuspedidos.php" style="margin-left: 10px;">Meus Pedidos</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="meuspedidos.php" style="margin-left: 10px;">Meus Pedidos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+                  Assinaturas
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
+                  <a class="dropdown-item" href="pacotes.php">Pacotes</a>
+                </div>
+              </li>
             <?php } ?>
             <?php if(!isset($_SESSION['logado'])) { ?>
-              <li class="nav-item">
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
+                Assinaturas
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
+                <a class="dropdown-item" href="pacotes.php">Pacotes</a>
+              </div>
+            </li>  
+            <li class="nav-item">
               <a class="nav-link text-light" href="CadastroCliente.php" style="margin-left: 10px;">Cadastrar-me</a>
-            </li>    
-            <?php } ?>
+            </li>  
           <?php } ?>
-          <?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página Inicial <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Cadastro </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="CadastroPacotes.php">Cadastrar pacotes</a>
-                  <a class="dropdown-item" href="CadastroCardapio.php">Cadastrar cardápio do dia</a>
-                </div>
-              </li>  
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Vizualizar</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                  <a class="dropdown-item" href="pacotes.php">Pacotes</a>
-                  <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
-                  <a class="dropdown-item" href="vendas.php">Vendas</a>
-                </div>
-              </li>
-            </ul>
-          <?php } ?>
-        </ul>
-        <?php Site::Navbar(); ?>
-      </div>
-    </nav>
-  </header>
+        <?php } ?>
+        <?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-light" href="index.php" style="margin-left: 10px;">Página Inicial <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Cadastro </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="CadastroPacotes.php">Cadastrar pacotes</a>
+                <a class="dropdown-item" href="CadastroCardapio.php">Cadastrar cardápio do dia</a>
+              </div>
+            </li>  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">Vizualizar</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                <a class="dropdown-item" href="pacotes.php">Pacotes</a>
+                <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
+                <a class="dropdown-item" href="vendas.php">Vendas</a>
+              </div>
+            </li>
+          </ul>
+        <?php } ?>
+      </ul>
+      <?php Site::Navbar(); ?>
+    </div>
+  </nav>
+</header>
