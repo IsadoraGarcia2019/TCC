@@ -62,7 +62,7 @@
  							<tr>
  								<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
  								<td><?=$item['data_compra']?></td>
- 								<td><?=utf8_encode($item['nome_pacote'])?></td>
+ 								<td><?=utf8_encode($item['id-pacote'])?></td>
  								<td>
  									<?php switch ($item['forma_pagamento']) { 
  										case "dinheiro":
