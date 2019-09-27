@@ -57,10 +57,9 @@ if (isset($_POST['btnEditar'])) {
 if (isset($_POST['btnExcluir'])) {
 
 	$sql = "UPDATE cardapio_dia
-	SET exclido = 'sim'
-	
+	SET excluido = 'sim'
 	WHERE id_cardapio = $id";
-	
+
 	if (mysqli_query($obj->con, $sql)) {
 		$query = mysqli_query($obj->con, $sql);
 
@@ -71,7 +70,7 @@ if (isset($_POST['btnExcluir'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-		header('Location:CadastroCardapio.php');
+		header('Location:cardapio.php');
 
 	}
 }

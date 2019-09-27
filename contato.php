@@ -1,6 +1,30 @@
 <?php
 
 require_once"head.php";
+//CHAMANDO O ARQUIVO DE FUNÇÕES
+require_once"funcoes.php";
+
+
+//RECEBER AS INFORMAÇÕES DO FORMULÁRIO
+if (isset($_POST['enviar'])) {
+	$nome = $_POST['nome'];
+	$email = $_POST['email'];
+	$mensagem = $_POST['mensagem'];
+
+	// $corpo = "<h1>Obrigado pelo seu contato $nome </h1>";
+	// $corpo .= "<p>Assim que possível retornaremos sua mensagem. Mensagem enviada: </p>";
+	$corpo .= "<p>$mensagem</p>";
+
+	$envio = enviar_email('deliiverycheff@gmail.com', $email, $nome, 'Contato no site - Cheff Delivery', $corpo);
+
+	if ($envio == true) {
+		echo "Contato enviado com sucesso!";
+	} else {
+		echo "Erro ao enviar Contato :( <br>";
+		echo $envio;
+	}
+
+}
 
 ?>
 
@@ -21,19 +45,17 @@ require_once"head.php";
 
 	<div class="row">
 		<div class="shadow " style="  background-color: #f2392c ;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;">
-		<h1 class="text-white mb-5 text-center mt-5">Contato</h1>
-	</div> 
-</div>
+			<h1 class="text-white mb-5 text-center mt-5">Contato</h1>
+		</div> 
+	</div>
 </div>
 <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 	<div class="card shadow" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
-
-			<br>
-			<form>
+			<form method="post" action="">
 				<div class="form-row">
 					<div class="form-group col-md-6">
-						<label for="nome"><strong><i class="fas fa-car-battery"></i>Nome</strong></label>
+						<label for="nome"><strong>Nome</strong></label>
 						<input type="text" class="form-control" id="nome" placeholder="Ex: Fulano" value="<?=$_SESSION['nome_usuario']?>">
 					</div>
 					<div class="form-group col-md-6">
@@ -42,27 +64,12 @@ require_once"head.php";
 					</div>
 				</div>
 				<div class="form-row">
-					<div class="form-group col-sm-6">
-						<label for="telefone_cliente"><strong>Número de telefone</strong></label>
-						<input type="text" class="form-control" id="telefone_cliente" placeholder="Ex: 999663311" value="<?=$_SESSION['numero_telefone']?>">
-					</div>
-					<div class="form-group col-sm-6">
-						<label for="tipo_comentario"><strong>Tipo do comentário</strong></label>
-						<select id="tipo_comentario" class="form-control">
-							<option selected>Crítica</option>
-							<option>Dúvida</option>
-							<option>Sugestão</option>
-							<option>Outros</option>
-						</select>
+					<div class="form-group col-md-12">
+						<label for="mensagem"><strong>Mensagem</strong></label>
+						<textarea class="form-control" id="mensagem" name="mensagem" rows="3"></textarea>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="comentarios"><strong>Comentários</strong></label>
-					<textarea class="form-control" id="comentarios" rows="3"></textarea>
-				</div>
-				<input type="hidden"name="redirect" value="http://www.gmail.com.br">
-				<button type="submit" class="btn btn-dark col-md-12">Enviar</button>
-				<input name="recipient" value="deliiverycheff@gmail.com" type="hidden">
+				<input type="submit" class="btn btn-dark col-md-12" name="enivar" value="Enviar">
 			</form>
 		</div>
 	</div>

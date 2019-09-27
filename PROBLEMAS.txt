@@ -10,13 +10,16 @@ ignora esse número: 5762696426
 
 LEMBAR DE COLOCAR A COLUNA "MEU SALDO" NA PÁGINA DE MEUS PEDIDOS; (OS SALDOS ESTÃO NA TABELA CLIENTE)
 
+DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA; 
+
+AS COMIDAS DO CARDÁPIO SÓ DEVEM ESTAR DISPONIVEIS CONFORME O POACOTE ECOLHIDO PELO CLIENTE(SE ELE ESCOLLHEU UM PACOTE COM 20 ALMOÇOS POR MÊS, NO CARDÁPIO DO DIA DEVE APARECER APENAS AS REFEIÇÕES DO ALMOÇO PARA ELE ESCOLHER )
+
 Coloquei o utf-8_enconde nas comidas do cradápio mas ainda ta vindo bugado;
 
 
 **************************************** O QUE FALTA FAZER: ****************************************
 
 
-Fazer o saldo do cliente abaixar conforme ele for recebendo as refeições durante o mês;
 
 Colocar o BD no servidor novamente;
 

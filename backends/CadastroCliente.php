@@ -31,12 +31,12 @@ if (isset($_POST['btnCadastrar'])) {
 	'$preferencia_comida',
 	'$preferencia_restaurante',
 	'$comentarios',
-	 0,
-	 0,
-	 0
+	0,
+	0,
+	0
 )";
 
-// Executando o SQL
+ // Executando o SQL
 if (mysqli_query($con, $sqlCliente)) {
 
 	$idCliente = mysqli_insert_id($con);
