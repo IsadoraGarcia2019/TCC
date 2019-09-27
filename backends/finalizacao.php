@@ -35,7 +35,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Sua compra foi concluída com sucesso!";
+	$alerta['mensagem'] = 'Sua compra foi concluída com sucesso! <a href="meuspedidos.php" class="alert-link">Ver meus pedidos</a>';
 
 	$alerta = serialize($alerta);
 

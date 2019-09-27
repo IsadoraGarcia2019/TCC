@@ -56,9 +56,9 @@
  			<table class="table table-light col-md-12 mt-3 table-striped table-hover">
  				<thead>
  					<tr>
- 						<th scope="col">Id</th>
  						<th scope="col">Data da compra</th>
  						<th scope="col">Nome do pacote</th>
+ 						<!-- <th scope="col">Saldo do pacote</th> -->
  						<th scope="col">Forma de pagamento</th>
  						<th scope="col">Status do pagamento</th>
  					</tr>
@@ -66,8 +66,6 @@
  				<tbody>
  					<?php foreach ($lista as $item) { ?>
  						<tr>
-
- 							<td class="text-danger"><?=utf8_encode($_SESSION['id_usuario'])?></td>
 
  							<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
 

@@ -56,14 +56,16 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
             <div class="form-group col-md-6">
               <label for="email"><strong>E-mail</strong></label>
               <input type="email" class="form-control" id="email" name="email_cliente">
+              <small>Certifique-se que seu e-mail é válido e está ativo!!!!</small>
             </div>
             <div class="form-group col-sm">
               <label for="senha"><strong>Senha</strong></label>
               <input type="password" class="form-control" id="senha" name="senha_cliente">
+              <small>Escolha uma senha forte que seja difícil alguém descobrir</small>
             </div>
           </div>
           <div class="form-group">
-            <label for="nome_cliente"><strong>Nome do Cliente</strong></label>
+            <label for="nome_cliente"><strong>Nome Completo</strong></label>
             <input type="text" class="form-control" id="nome_cliente" name="nome_cliente">
           </div>
           <div class="form-group">
@@ -98,16 +100,7 @@ if (isset($_SESSION['logado']) && $_SESSION['logado'] == true) {
               </select>
             </div>
           </div>
-          <h2><strong>Preferências</strong></h2>
-          <div class="form-group">
-            <label for="comida_cliente"><strong>Comida</strong></label>
-            <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida">
-          </div>
-          <div class="form-group">
-            <label for="restaurante_cliente"><strong>Restaurante</strong></label>
-            <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante">
-          </div>
-          <div class="form-group">
+            <div class="form-group">
             <label for="comentarios"><strong>Comentários</strong></label>
             <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
           </div>

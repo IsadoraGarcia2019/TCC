@@ -14,8 +14,6 @@ if (isset($_POST['btnCadastrar'])) {
 	$rua = $_POST['rua_cliente'];
 	$numero_telefone = $_POST['numero_telefone_cliente'];
 	$restricao_alimentar = $_POST['restricao_alimentar'];
-	$preferencia_comida = $_POST['preferencia_comida'];
-	$preferencia_restaurante = $_POST['preferencia_restaurante'];
 	$comentarios = $_POST['comentarios'];
 
 	//inserindo no BD
@@ -28,8 +26,6 @@ if (isset($_POST['btnCadastrar'])) {
 	'$rua',
 	'$numero_telefone',
 	'$restricao_alimentar',
-	'$preferencia_comida',
-	'$preferencia_restaurante',
 	'$comentarios',
 	0,
 	0,
@@ -55,7 +51,7 @@ if (mysqli_query($con, $sqlCliente)) {
 if (mysqli_query($con, $sqlUsuario)) {
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = "Seu cadastro foi salvo com sucesso!";
+	$alerta['mensagem'] = 'Seu cadastro foi salvo com sucesso! <a href="login.php" class="alert-link">Fazer Login</a>';
 
 	$alerta = serialize($alerta);
 
