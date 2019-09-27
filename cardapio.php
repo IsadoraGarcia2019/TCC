@@ -8,6 +8,28 @@ $lista = "SELECT * FROM cardapio_dia WHERE DATE(data_cardapio) = CURRENT_DATE() 
 $queryCardapio = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
+// alterando fuso horario
+date_default_timezone_set('America/Sao_Paulo');
+$agora = date('H');
+
+$hora_inicio_cafe = 5;
+$hora_termino_cafe = 8;
+
+$hora_inicio_almoco = 10;
+$hora_termino_almoco = 13;
+
+$hora_inicio_janta = 19;
+$hora_termino_janta = 21;
+
+if ($agora >= $hora_inicio_cafe && $agora <= $hora_termino_cafe)
+	$texto_topo = "café da manhã";
+
+if ($agora >= $hora_inicio_almoco && $agora <= $hora_termino_almoco)
+	$texto_topo = "almoço";
+
+if ($agora >= $hora_inicio_janta && $agora <= $hora_termino_janta)
+	$texto_topo = "jantar";
+
 ?>
 
 <!DOCTYPE html>
@@ -32,99 +54,74 @@ $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 		min-width: 100%; 
 		background-size: 30%; 
 		background-position: center 1050px;">
-		<div class="text-center my-5" >
-			<h1 class="text-white pt-3">Cardápio do dia</h1>
-		</div> 
+			<div class="text-center my-5" >
+				<h1 class="text-white pt-3">Cardápio do dia</h1>
+			</div> 
+		</div>
 	</div>
-</div>
-<section class="menu-area " id="menu" style="padding-top:120px;background-color: rgb(235, 226, 225)!important; ">
-	<div class="container">
-		<ul class="filter-wrap filters col-lg-12 no-padding">
-			<li class="active" data-filter="*">Todo menu</li>
-			<li data-filter=".cafe_manha">Café da manhã</li>
-			<li data-filter=".almoco">Almoço</li>
-			<li data-filter=".jantar">Jantar</li>
-		</ul>
-		<div class="filters-content pb-5">
-			<div class="row grid">
+
+	<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1 mb-5" style="margin-top: -30px !important;" >
+		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
+			<div class="card-body" > 
+
+				<h3>Meus pedidos para hoje</h3>
 
 
-				<?php foreach ($lista as $item) { ?>
-
-					<?php if (utf8_encode($item['categoria_comida']) == 'cafe_manha'){ ?>
-						<div class="col-md-6 all cafe_manha">
-							<div class="single-menu">
-								<div class="title-wrap d-flex justify-content-between">
-									<h4><?=utf8_encode($item['nome_comida'])?></h4>
-								</div>	
-								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="escolha_cardapio.php" class="btn btn-danger col-md-12">Pedir agora</a>
-									<?php } ?>
-
-									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
-									<?php } ?>
-								<?php } ?>
-
-								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
-								<?php } ?>
-								
-							</div>					                               
-						</div>   
-					<?php } ?>                        
-
-					<?php if (utf8_encode($item['categoria_comida'])== 'almoco') { ?>
-						<div class="col-md-6 all almoco">
-							<div class="single-menu">
-								<div class="title-wrap d-flex justify-content-between">
-									<h4><?=utf8_encode($item['nome_comida'])?></h4>
-								</div>	
-								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="escolha_cardapio.php" class="btn btn-danger col-md-12">Pedir agora</a>
-									<?php } ?>
-
-									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
-									<?php } ?>
-								<?php } ?>
-
-								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
-								<?php } ?>
-							</div>
-						</div>
-					<?php } ?>
-
-					<?php if (utf8_encode($item['categoria_comida']) == 'jantar' ){ ?>
-						<div class="col-md-6 all jantar">
-							<div class="single-menu">
-								<div class="title-wrap d-flex justify-content-between">
-									<h4><?=utf8_encode($item['nome_comida'])?></h4>
-								</div>	
-								<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
-									<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-										<a href="escolha_cardapio.php" class="btn btn-danger col-md-12">Pedir agora</a>
-									<?php } ?>
-
-									<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
-										<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
-									<?php } ?>
-								<?php } ?>
-
-								<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-									<a href="#" class="btn btn-danger col-md-12">Pedir agora</a>
-								<?php } ?>
-							</div>
-						</div>
-					<?php } ?>
-				<?php } ?>
+				
 			</div>
 		</div>
 	</div>
-</section>
+
+	<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1 mb-5" style="margin-top: -30px !important;" >
+		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
+			<div class="card-body" > 
+
+				<div class="row">
+					<?php if (!($agora >= $hora_inicio_cafe && $agora <= $hora_termino_cafe) && !($agora >= $hora_inicio_almoco && $agora <= $hora_termino_almoco) && !($agora >= $hora_inicio_janta && $agora <= $hora_termino_janta)) { ?>
+						<div class="col-12">
+							<h3 class="mb-4">Infelizmente não estamos aceitando pedidos no momento =(</h3>
+
+							<p>O horário dos pedidos são:</p>
+
+							<span class="font-weight-bold pr-1">Café da manhã:</span> 5h e 8h.<br>
+							<span class="font-weight-bold pr-1">Almoço:</span> 10h e 13h.<br>
+							<span class="font-weight-bold pr-1">Janta:</span> 19h e 21h.<br>
+						</div>
+					<?php } else { ?>  
+						<div class="col-12">
+							<h3 class="mb-4">Opções para o <?=$texto_topo?>:</h3>
+						</div> 
+					<?php } ?>
+
+					<?php foreach ($lista as $item) { ?>
+						<?php if (($agora >= $hora_inicio_cafe && $agora <= $hora_termino_cafe && $item['categoria_comida'] == 'cafe_manha') || 
+								  ($agora >= $hora_inicio_almoco && $agora <= $hora_termino_almoco && $item['categoria_comida'] == 'almoco') || 
+								  ($agora >= $hora_inicio_janta && $agora <= $hora_termino_janta && $item['categoria_comida'] == 'jantar')) { ?>
+							<div class="col-6 mb-4">
+								<div class="card">
+									<div class="card-body">
+										<h5 class="card-title"><?=utf8_encode($item['nome_comida'])?></h5>
+
+										<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
+											<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
+												<a href="escolha_cardapio.php" class="btn btn-danger col-md-12">Pedir agora</a>
+											<?php } ?>
+
+											<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>
+												<a href="edicaoCardapio.php?id=<?=$item['id_cardapio']?>" class="btn btn-dark col-md-12 mt-3">Editar Cardápio</a>
+											<?php } ?>
+										<?php } ?>
+									</div>
+								</div>
+							</div>
+						<?php  } ?> 
+					<?php } ?>
+				</div>
+
+				
+			</div>
+		</div>
+	</div>
 
 <center>
 	<div class="redes-sociais" style="background-color: #de2828;">
