@@ -83,9 +83,9 @@ if ($agora >= $hora_inicio_janta && $agora <= $hora_termino_janta)
 
 							<p>O horário dos pedidos são:</p>
 
-							<span class="font-weight-bold pr-1">Café da manhã:</span> 5h e 8h.<br>
-							<span class="font-weight-bold pr-1">Almoço:</span> 10h e 13h.<br>
-							<span class="font-weight-bold pr-1">Janta:</span> 19h e 21h.<br>
+							<span class="font-weight-bold pr-1">Café da manhã:</span> Entre 5h e 8h.<br>
+							<span class="font-weight-bold pr-1">Almoço:</span> Entre 10h e 13h.<br>
+							<span class="font-weight-bold pr-1">Janta:</span> Entre 19h e 21h.<br>
 						</div>
 					<?php } else { ?>  
 						<div class="col-12">
