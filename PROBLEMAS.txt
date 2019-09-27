@@ -26,3 +26,13 @@ Colocar o BD no servidor novamente;
 Página de contato;
 
 Terminar a página de cardápio do dia;
+
+
+
+escolha_dia_usuario
+
+id
+id_usuario
+id_cardapio
+hora_selecao
+entregue -> sim ou nao
