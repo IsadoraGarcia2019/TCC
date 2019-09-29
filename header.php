@@ -79,6 +79,7 @@
                 <a class="dropdown-item" href="pacotes.php">Pacotes</a>
                 <a class="dropdown-item" href="cardapio.php">Cardápio do dia</a>
                 <a class="dropdown-item" href="vendas.php">Vendas</a>
+                <a class="dropdown-item" href="entregas.php">Entregas do dia</a>
               </div>
             </li>
           </ul>
