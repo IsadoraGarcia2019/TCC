@@ -6,10 +6,10 @@ if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
 
-// Buscar informações da empresa
+// Mudando os status do pagamento
 if (isset($id)) {
 
-	$status_pagamento = $_GET['status'];
+	$status_pagamento = $_GET['BtnStatus'];
 
     $sql = "UPDATE finalizacao
 			SET status_pagamento = '$status_pagamento'

@@ -88,9 +88,9 @@
  								<td><div class="btn-group" role="group">
  									<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
  									<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
- 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status=pendente&id=<?=$item['id']?>">Pendente</a>
- 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status=pago&id=<?=$item['id']?>">Pago</a>
- 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status=atrasado&id=<?=$item['id']?>">Atrasado</a>
+ 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status_pagamento=pendente&id=<?=$item['id']?>">Pendente</a>
+ 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status_pagamento=pago&id=<?=$item['id']?>">Pago</a>
+ 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status_pagamento=atrasado&id=<?=$item['id']?>">Atrasado</a>
  									</div>
  								</div>
  							</div></td>		
