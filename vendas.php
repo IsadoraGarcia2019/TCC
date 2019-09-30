@@ -6,7 +6,8 @@
 
 
 
- $lista = "SELECT * FROM finalizacao";
+ $lista = "SELECT * FROM finalizacao
+ JOIN pacotes p ON p.id = finalizacao.id_pacote";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
 
@@ -52,7 +53,7 @@
  						<tr>
  							<th scope="col">Id</th>
  							<th scope="col">Data da compra</th>
- 							<th scope="col">Id do pacote</th>
+ 							<th scope="col">Nome do pacote</th>
  							<th scope="col">Forma de pagamento</th>
  							<th scope="col">Status do pagamento</th>
  						</tr>
@@ -62,7 +63,7 @@
  							<tr>
  								<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
  								<td><?=$item['data_compra']?></td>
- 								<td><?=utf8_encode($item['id-pacote'])?></td>
+ 								<td><?=utf8_encode($item['nome_pacote'])?></td>
  								<td>
  									<?php switch ($item['forma_pagamento']) { 
  										case "dinheiro":
