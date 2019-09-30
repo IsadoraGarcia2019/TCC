@@ -32,12 +32,21 @@ require_once"head.php";
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
       <div class="card-body">
-        <div class="mb-3" id="quem_somos">
-          Quem somos?
-        </div>
-        <p class="box">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
 
-        <div class="text-center mt-4 mb-4" id="quem_somos">
+
+        <div class="row">
+          <div class="col">
+            <div class="mb-3" id="quem_somos">
+              Quem somos?
+            </div>
+            <p class="ml-2" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
+          </div>
+          <div class="col">
+            <img src="media/images/img-fundo-banner.png">
+          </div>
+        </div>
+
+        <div class="text-center mb-4" id="quem_somos">
           Como fazer meu pedido?
         </div>
 
@@ -74,14 +83,25 @@ require_once"head.php";
           </div>
         </div>
 
-        <div class="box mt-4 mb-4">
-          RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!
+        <div class="row">
+          <div class="col">
+            <img class="mt-2 mb-2" src="media/images/batata.jpg" style="height: 250px; margin-left: 30px;">
+          </div>
+
+          <div class="col">
+               <div class="card border-secondary mb-3 " style="min-height: 100px; margin-top: 70px; 
+               margin-right: 50px;">
+              <div class="card-body text-black">
+                <h5 class="card-title text-black text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</h5>
+              </div>
+            </div>
+          </div>
         </div>
+
 
         <a href="pacotes.php" class="btn btn-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
         <a href="cardapio.php" class="btn btn-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
-
-
+        
       </div>
     </div>
   </div>
