@@ -1,6 +1,6 @@
 <?php
 
-require_once"backends/CadastroEndereco.php";
+require_once"backends/edicaoEndereco.php";
 
 require_once"head.php";
 
@@ -79,7 +79,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
           <?php } ?>
 
           <?php if (empty($disabled)) { ?>
-            <button type="submit" class="btn btn-danger col-md-12 mt-3  " name="btnExcluir"><i class="fas fa-trash-alt"></i></button>
+            <button type="submit" class="btn btn-danger col-md-12 mt-3" name="btnExcluir"><i class="fas fa-trash-alt"></i></button>
           <?php } ?>
         </form>
       </div>

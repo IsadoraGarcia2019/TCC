@@ -28,9 +28,14 @@ if (isset($_POST['btnEditar'])) {
 	$cidade = $_POST['cidade'];
 	$estado = $_POST['estado'];
 
-	$sql = "UPDATE enderecos SET local = '$local', rua = '$rua', bairro = '$bairro', cidade = '$cidade', estado = '$estado' WHERE id_endereco = $id";
+	$sql = "UPDATE enderecos SET 
+	local = '$local',
+	rua = '$rua',
+	bairro = '$bairro', 
+	cidade = '$cidade', 
+	estado = '$estado' 
+	WHERE id_endereco = $id";
 	
-
 	// Executando o SQL
 	if (mysqli_query($obj->con, $sql)) {
 		$alerta['tipo'] = "success";
@@ -63,5 +68,4 @@ if (isset($_POST['btnExcluir'])) {
 
 }
 
-}
 ?>
