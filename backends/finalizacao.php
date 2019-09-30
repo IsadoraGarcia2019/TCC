@@ -26,6 +26,8 @@ if (isset($_POST['btnComprar'])) {
 	'pendente',
 	now()
 )";
+
+// $sql = "UPDATE clientes SET saldo_cafe = '$quantidade_cafe', saldo_almoco = '$quantidade_almoco', saldo_jantar = '$quantidade_jantar' WHERE id = '".$_SESSION['id_usuario']."'";
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
 

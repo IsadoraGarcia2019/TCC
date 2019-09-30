@@ -39,16 +39,60 @@ require_once"backends/edicao.php";
     </div>
   </div>
 
-  <div class="row">
-    <a href="edicaoUsuario.php?id=<?=$_SESSION['id_usuario']?>" class="btn btn-danger btn-lg col-md-6 col-10 offset-1 offset-md-0 mr-3 float-left mb-4 mt-5 offset-md-3" name="btnUsuarios">Editar meus dados de acesso </a>
 
+  <div class="col-10 col-md-8 mt-5 offset-md-2 offset-1" style="margin-top: -30px !important;">
+    <div class="card shadow" style="margin-right: auto; margin-left: auto;">
+      <div class="card-body" >
 
-    <?php if($_SESSION['tp_usuario'] == 'cliente'){ ?>
-      <a href="edicaoCliente.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-dark btn-lg col-md-6 col-10 offset-1 offset-md-0 mr-3 mb-4 offset-md-3" name="btnClientes">Editar meus dados pessoais</a>
-    <?php } ?>
+        <div class="row">
+          <div class=" col-md-4 col-12">
+            <div class="card border-dark mb-3 " style="min-height: 200px;">
+              <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">EDIÇÃO DADOS DE ACESSO</div></div>
+              <div class="card-body text-danger">
+               <p class="card-text text-dark text-center" style="font-size: 15px;">Página onde você edita seus dados de login, ou seja, e-mail e senha.</p>
+               <div class="row">
+                <a href="edicaoUsuario.php?id=<?=$_SESSION['id_usuario']?>" class="btn btn-dark col-8 offset-md-2" name="btnUsuarios"><i class="fas fa-user-edit"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class=" col-md-4 col-12">
+          <div class="card border-dark mb-3 " style="min-height: 200px;">
+            <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">EDIÇÃO DE DADOS PESSOAIS</div></div>
+            <div class="card-body text-danger">
+             <p class="card-text text-dark text-center" style="font-size: 15px;">Página onde você edita seus dados pessoias, ou seja, nome, endereço, telefone...</p>
+
+             <div class="row">
+              <?php if($_SESSION['tp_usuario'] == 'cliente'){ ?>
+                <a href="edicaoCliente.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-dark col-md-8 offset-md-2 " name="btnClientes"><i class="far fa-edit"></i></a>
+              <?php } ?>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-md-4 col-12">
+        <div class="card border-dark mb-3 " style="min-height: 200px;">
+          <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">ADIÇÃO DE ENDEREÇO</div></div>
+          <div class="card-body text-danger">
+           <p class="card-text text-dark text-center" style="font-size: 15px;">Página onde você adiciona novos endereços onde deseja receber sua refeição.</p>
+
+           <div class="row">
+            <?php if($_SESSION['tp_usuario'] == 'cliente'){ ?>
+              <a href="CadastroEndereco.php?id=<?=$_SESSION['fk_usuario']?>" class="btn btn-dark col-md-8 offset-md-2 " name="btnEndereco"><i class="fas fa-plus"></i></a>
+            <?php } ?>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+</div>
+</div>
+
 
 <?php
     //inclusão do rodapé

@@ -8,8 +8,6 @@ CONST DB   = "cheffdel_master";
 
 ignora esse número: 5762696426
 
-LEMBAR DE COLOCAR A COLUNA "MEU SALDO" NA PÁGINA DE MEUS PEDIDOS; (OS SALDOS ESTÃO NA TABELA CLIENTE)
-
 DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA; 
 
 na página de finalização, o saldo das refeições da tabela clientes deve mudar conforme o pacote que ele escolher 
@@ -22,23 +20,9 @@ AS COMIDAS DO CARDÁPIO SÓ DEVEM ESTAR DISPONIVEIS CONFORME O POACOTE ECOLHIDO 
 
 Coloquei o utf-8_enconde nas comidas do cradápio mas ainda ta vindo bugado;
 
+nao to conseguindo puxar os dados do endereço na página de edição
+
+não to conseguindo cadastrar por causa do 'id_usuario'(Não ta inserindo na tabela enderecos o $_SESSION['id_usuario'])
+
 
 **************************************** O QUE FALTA FAZER: ****************************************
-
-
-
-Colocar o BD no servidor novamente;
-
-Página de contato;
-
-Terminar a página de cardápio do dia;
-
-
-
- escolha_cardapio_dia
-
-id
-id_usuario
-id_cardapio
-hora_selecao
-entregue -> sim ou nao
