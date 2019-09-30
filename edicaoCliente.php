@@ -7,9 +7,9 @@ require_once"head.php";
 if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
   header('Location:erros.php?mesagem= Você não está logado e por isso não pode editar nenhum dado');
 
-if ($_SESSION['tp_usuario'] != 'cliente') {
-  header('Location:erros.php?mesagem= Somente clientes podem editar seus dados!');
-} 
+  if ($_SESSION['tp_usuario'] != 'cliente') {
+    header('Location:erros.php?mesagem= Somente clientes podem editar seus dados!');
+  } 
 } 
 ?>
 <!DOCTYPE html>
@@ -87,15 +87,6 @@ if ($_SESSION['tp_usuario'] != 'cliente') {
             </select>
           </div>
         </div>
-        <h2><strong>Preferências</strong></h2>
-        <div class="form-group mt-3">
-          <label for="comida_cliente"><strong>Comida</strong></label>
-          <input type="text" class="form-control" id="comida_cliente" name="preferencia_comida" value="<?=$resultadoCliente['preferencia_comida']?>">
-        </div>
-        <div class="form-group">
-          <label for="restaurante_cliente"><strong>Restaurante</strong></label>
-          <input type="text" class="form-control" id="restaurante_cliente" name="preferencia_restaurante" value="<?=$resultadoCliente['preferencia_restaurante']?>">
-        </div> 
         <div class="form-group">
           <label for="comentarios"><strong>Comentários</strong></label>
           <textarea class="form-control" id="comentarios" rows="3" name="comentarios"></textarea>
