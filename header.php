@@ -36,6 +36,9 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="meuspedidos.php" style="margin-left: 10px;">Meus Pedidos</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="enderecos.php" style="margin-left: 10px;">Meus Endereços</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-left: 10px;">
                   Assinaturas

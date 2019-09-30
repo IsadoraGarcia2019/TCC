@@ -63,10 +63,11 @@
 
  <div class="row">
 
- 	<div class="col-10 col-md-6 mt-5 offset-1" style="margin-top: -30px !important;">
+ 	<div class="col-10 col-md-7 mt-5 offset-md-1 " style="margin-top: -30px !important; min-height: 300px;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
  			<div class="card-body" > 
 
+ 				<h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Minhas Assinaturas</h2>
 
  				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
  					<thead>
@@ -129,32 +130,32 @@
  		</div>
  	</div>
 
- 	<div class="col-10 col-md-6 mt-5 offset-1" style="margin-top: -30px !important;">
+ 	<div class="col-10 col-md-3 mt-5 " style="margin-top: -30px !important;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
  			<div class="card-body" > 
 
- 				<h2 class="mb-3 mt-3" style="color: #de2828;">Meus Saldos</h2>
+ 				<h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Meus Saldos</h2>
 
  				<?php foreach ($lista as $item) { ?>
-
+ 					
  					<?php if ($item['quantidade_cafe'] != 0) { ?>
- 						<div class="col-md-4 m-0" role="alert">
+ 						<div class="col-12 m-0" role="alert">
  							<div class="alert alert-primary text-center">
  								<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_cafe']?><br>
  							</div>
  						</div>
  					<?php } ?>
-
+ 				
  					<?php if ($item['quantidade_almoco'] != 0) { ?>
- 						<div class=" col-md-4 m-0" role="alert">
+ 						<div class=" col-12 m-0" role="alert">
  							<div class="alert alert-danger text-center">
  								<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_almoco']?><br>
  							</div>
  						</div>
  					<?php } ?>
-
+ 					
  					<?php if ($item['quantidade_jantar'] != 0) { ?>
- 						<div class=" col-md-4 m-0" role="alert">
+ 						<div class=" col-12 m-0" role="alert">
  							<div class="alert alert-secondary text-center">
  								<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['saldo_jantar']?>
  							</div>

@@ -1,3 +1,7 @@
+<?php
+
+require_once"head.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>

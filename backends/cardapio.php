@@ -13,10 +13,7 @@ if (isset($_GET['id'])) {
 	// Verificando ação de comprar
 if (isset($_POST['btnPedir'])) {
 
-        // Recebimento dos campos
-	$forma_pagamento = $_POST['forma_pagamento'];
-
-	// inserindo edição na tabela
+       	// inserindo edição na tabela
 	$sql = "INSERT INTO escolha_cardapio_dia 
 	VALUES (
 	DEFAULT,
