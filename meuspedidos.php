@@ -15,6 +15,18 @@
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
 
+
+ // $lista2 = "SELECT * FROM clientes
+ // JOIN pacotes p ON p.quantidade_cafe = clientes.saldo_cafe
+ // JOIN pacotes p ON p.quantidade_almoco = clientes.saldo_almoco
+ // JOIN pacotes p ON p.quantidade_jantar = clientes.saldo_jantar
+ // WHERE id_usuario = {$_SESSION['id_usuario']}
+
+ // ";
+ // $querySaldo = mysqli_query($con, $lista2);
+ // $lista2 = mysqli_fetch_all($querySaldo, MYSQLI_ASSOC);
+
+
   // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  	$alerta = unserialize($_COOKIE['alerta']);
@@ -48,70 +60,111 @@
  		</div> 
  	</div>
  </div>
- <div class="col-10 col-md-10 mt-5 offset-md- offset-1" style="margin-top: -30px !important;">
- 	<div class="card shadow" style="margin-right: auto; margin-left: auto;">
- 		<div class="card-body" > 
+
+ <div class="row">
+
+ 	<div class="col-10 col-md-6 mt-5 offset-1" style="margin-top: -30px !important;">
+ 		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
+ 			<div class="card-body" > 
 
 
- 			<table class="table table-light col-md-12 mt-3 table-striped table-hover">
- 				<thead>
- 					<tr>
- 						<th scope="col">Data da compra</th>
- 						<th scope="col">Nome do pacote</th>
- 						<!-- <th scope="col">Saldo do pacote</th> -->
- 						<th scope="col">Forma de pagamento</th>
- 						<th scope="col">Status do pagamento</th>
- 					</tr>
- 				</thead>
- 				<tbody>
- 					<?php foreach ($lista as $item) { ?>
+ 				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
+ 					<thead>
  						<tr>
-
- 							<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
-
-
- 							<td><?=utf8_encode($item['nome_pacote'])?></td>
- 							<td>
- 								<?php switch ($item['forma_pagamento']) { 
- 									case "dinheiro":
- 									echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
- 									echo "Dinheiro";
- 									break;
- 									case "boleto_bancario":
- 									echo '<i class="fas fa-money-check-alt text-primary mr-3"></i>';
- 									echo "Boleto Bancário";
- 									break;
- 									case "cartao_credito":
- 									echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
- 									echo "Cartão de Crédito";
- 									break;
- 									case "cartao_debito":
- 									echo '<i class="fas fa-credit-card text-secondary mr-3"></i>';
- 									echo "Cartão de Débito";
- 									break;
- 								}
- 								?>
- 							</td>
- 							<td>
- 								<?php switch ($item['status_pagamento']) { 
- 									case "pendente":
- 									echo "<span class='text-warning font-italic'>Pendente</span>";
- 									break;
- 									case "pago":
- 									echo "<span class='text-success font-italic'>Pago</span>";
- 									break;
- 									case "atrasado":
- 									echo "<span class='text-danger font-italic'>Atrasado</span>";
- 									break;
- 								}
- 								?>
- 							</td> 
+ 							<th scope="col">Data da compra</th>
+ 							<th scope="col">Nome do pacote</th>
+ 							<!-- <th scope="col">Saldo do pacote</th> -->
+ 							<th scope="col">Forma de pagamento</th>
+ 							<th scope="col">Status do pagamento</th>
  						</tr>
- 					<?php } ?>
- 				</tbody>
- 			</table>
+ 					</thead>
+ 					<tbody>
+ 						<?php foreach ($lista as $item) { ?>
+ 							<tr>
+
+ 								<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
+
+
+ 								<td><?=utf8_encode($item['nome_pacote'])?></td>
+ 								<td>
+ 									<?php switch ($item['forma_pagamento']) { 
+ 										case "dinheiro":
+ 										echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
+ 										echo "Dinheiro";
+ 										break;
+ 										case "boleto_bancario":
+ 										echo '<i class="fas fa-money-check-alt text-primary mr-3"></i>';
+ 										echo "Boleto Bancário";
+ 										break;
+ 										case "cartao_credito":
+ 										echo '<i class="fas fa-credit-card text-danger mr-3"></i>';
+ 										echo "Cartão de Crédito";
+ 										break;
+ 										case "cartao_debito":
+ 										echo '<i class="fas fa-credit-card text-secondary mr-3"></i>';
+ 										echo "Cartão de Débito";
+ 										break;
+ 									}
+ 									?>
+ 								</td>
+ 								<td>
+ 									<?php switch ($item['status_pagamento']) { 
+ 										case "pendente":
+ 										echo "<span class='text-warning font-italic'>Pendente</span>";
+ 										break;
+ 										case "pago":
+ 										echo "<span class='text-success font-italic'>Pago</span>";
+ 										break;
+ 										case "atrasado":
+ 										echo "<span class='text-danger font-italic'>Atrasado</span>";
+ 										break;
+ 									}
+ 									?>
+ 								</td> 
+ 							</tr>
+ 						<?php } ?>
+ 					</tbody>
+ 				</table>
+ 			</div>
  		</div>
  	</div>
+
+ 	<div class="col-10 col-md-6 mt-5 offset-1" style="margin-top: -30px !important;">
+ 		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
+ 			<div class="card-body" > 
+
+ 				<h2 class="mb-3 mt-3" style="color: #de2828;">Meus Saldos</h2>
+
+ 				<?php foreach ($lista as $item) { ?>
+
+ 					<?php if ($item['quantidade_cafe'] != 0) { ?>
+ 						<div class="col-md-4 m-0" role="alert">
+ 							<div class="alert alert-primary text-center">
+ 								<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_cafe']?><br>
+ 							</div>
+ 						</div>
+ 					<?php } ?>
+
+ 					<?php if ($item['quantidade_almoco'] != 0) { ?>
+ 						<div class=" col-md-4 m-0" role="alert">
+ 							<div class="alert alert-danger text-center">
+ 								<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_almoco']?><br>
+ 							</div>
+ 						</div>
+ 					<?php } ?>
+
+ 					<?php if ($item['quantidade_jantar'] != 0) { ?>
+ 						<div class=" col-md-4 m-0" role="alert">
+ 							<div class="alert alert-secondary text-center">
+ 								<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['saldo_jantar']?>
+ 							</div>
+ 						</div>
+ 					<?php } ?>
+ 				<?php 	} ?>
+ 			</div>
+ 		</div>
+ 	</div>
+
  </div>
 
  <?php

@@ -104,7 +104,7 @@ if ($agora >= $hora_inicio_janta && $agora <= $hora_termino_janta)
 
 										<?php if (isset($_SESSION['logado']) || $_SESSION['logado'] == true) { ?>
 											<?php if ($_SESSION['tp_usuario'] != 'administrador') { ?>
-												<a href="escolha_cardapio.php" class="btn btn-danger col-md-12">Pedir agora</a>
+												<a href="escolha_cardapio.php" class="btn btn-danger col-md-12" name="btnPedir">Pedir agora</a>
 											<?php } ?>
 
 											<?php if ($_SESSION['tp_usuario'] == 'administrador') { ?>

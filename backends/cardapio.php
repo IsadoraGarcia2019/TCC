@@ -11,21 +11,21 @@ if (isset($_GET['id'])) {
 }
 
 	// Verificando ação de comprar
-if (isset($_POST['btnComprar'])) {
+if (isset($_POST['btnPedir'])) {
 
         // Recebimento dos campos
 	$forma_pagamento = $_POST['forma_pagamento'];
 
 	// inserindo edição na tabela
-	$sql = "INSERT INTO finalizacao 
+	$sql = "INSERT INTO escolha_cardapio_dia 
 	VALUES (
 	DEFAULT,
 	'".$_SESSION['id_usuario']."',
-	'$id',
-	'$forma_pagamento',
-	'pendente',
-	now()
+	'$id_cardapio',
+	now(),
+	'nao',
 )";
+
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
 
@@ -34,7 +34,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = 'Sua compra foi concluída com sucesso! <a href="meuspedidos.php" class="alert-link">Ver meus pedidos</a>';
+	$alerta['mensagem'] = 'Sua escolha foi registrada com sucesso!';
 
 	$alerta = serialize($alerta);
 
@@ -44,7 +44,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 } else{		
 	$alerta['tipo'] = "danger";
-	$alerta['mensagem'] = "Erro ao concluir sua compra.";
+	$alerta['mensagem'] = "Erro ao registrar sua escolha.";
 
 	$alerta = serialize($alerta);
 
