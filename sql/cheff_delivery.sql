@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Set-2019 às 18:34
+-- Generation Time: 30-Set-2019 às 21:41
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -73,7 +73,8 @@ INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`, `d
 (42, 'carne com arroz', 'almoco', '2019-09-27 16:06:25', 'nao'),
 (43, 'feijoada', 'almoco', '2019-09-27 16:06:31', 'nao'),
 (44, 'x-burguer', 'jantar', '2019-09-27 16:06:40', 'nao'),
-(45, 'pizza de frango', 'jantar', '2019-09-27 16:06:49', 'nao');
+(45, 'pizza de frango', 'jantar', '2019-09-27 16:06:49', 'nao'),
+(46, 'macarrÃ£o', 'almoco', '2019-09-30 13:54:09', 'nao');
 
 -- --------------------------------------------------------
 
@@ -93,14 +94,14 @@ CREATE TABLE `clientes` (
   `comentarios` varchar(255) NOT NULL,
   `saldo_cafe` int(11) NOT NULL,
   `saldo_almoco` int(11) NOT NULL,
-  `saldo_janta` int(11) NOT NULL
+  `saldo_jantar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `clientes`
 --
 
-INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `comentarios`, `saldo_cafe`, `saldo_almoco`, `saldo_janta`) VALUES
+INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero_telefone`, `restricao_alimentar`, `comentarios`, `saldo_cafe`, `saldo_almoco`, `saldo_jantar`) VALUES
 (1040, 'pedro', 'SC', 'bnu', 'pedro', 33445566, 'acucar', 'ODEIO CARNE ', 0, 0, 0),
 (1042, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', '', 0, 0, 0),
 (1043, 'jose', 'SC', '', '', 0, 'nenhuma', '', 0, 0, 0),
@@ -108,6 +109,31 @@ INSERT INTO `clientes` (`id`, `nome_cliente`, `estado`, `cidade`, `rua`, `numero
 (1045, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 96256464, 'nenhuma', 'eu gosto de voces :)\r\n', 0, 0, 0),
 (1046, 'isa', 'SC', '', '', 0, 'nenhuma', '', 0, 0, 0),
 (1047, 'Isadora Zancanaro', 'SC', 'Blumenau', 'Rua Bahia, 5800', 2147483647, 'nenhuma', 'oi gosto de vocÃªs', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `enderecos`
+--
+
+DROP TABLE IF EXISTS `enderecos`;
+CREATE TABLE `enderecos` (
+  `id_endereco` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `local` varchar(255) NOT NULL,
+  `rua` varchar(255) NOT NULL,
+  `bairro` varchar(255) NOT NULL,
+  `cidade` varchar(255) NOT NULL,
+  `estado` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `enderecos`
+--
+
+INSERT INTO `enderecos` (`id_endereco`, `id_usuario`, `local`, `rua`, `bairro`, `cidade`, `estado`) VALUES
+(1, 1052, 'Casa', 'Bahia', 'Velha', 'Blumenau', 'SC'),
+(2, 1052, 'Trabalho', 'São Paulo', 'Garcia', 'Blumenau', 'SC');
 
 -- --------------------------------------------------------
 
@@ -145,15 +171,16 @@ CREATE TABLE `finalizacao` (
 --
 
 INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `status_pagamento`, `data_compra`) VALUES
-(16, 1052, 9, 'boleto_bancario', 'pendente', '2015-02-20'),
-(17, 1052, 5, 'dinheiro', 'pendente', '2019-02-20'),
-(22, 1052, 5, 'boleto_bancario', 'pendente', '2019-09-24 16:28:41'),
-(23, 1059, 8, 'cartao_credito', 'pendente', '2019-09-25 15:14:28'),
-(24, 1059, 5, 'dinheiro', 'pendente', '2019-09-25 17:02:00'),
+(22, 1052, 5, 'boleto_bancario', 'pago', '2019-09-24 16:28:41'),
+(23, 1059, 8, 'cartao_credito', 'pago', '2019-09-25 15:14:28'),
+(24, 1059, 5, 'dinheiro', 'pago', '2019-09-25 17:02:00'),
 (25, 1059, 8, 'cartao_debito', 'pendente', '2019-09-25 17:02:06'),
 (26, 1059, 9, 'boleto_bancario', 'pendente', '2019-09-25 17:02:12'),
 (27, 1062, 8, 'cartao_debito', 'pendente', '2019-09-27 16:30:16'),
-(28, 1062, 5, 'cartao_debito', 'pendente', '2019-09-27 16:31:16');
+(28, 1062, 5, 'cartao_debito', 'pendente', '2019-09-27 16:31:16'),
+(29, 1052, 8, 'cartao_debito', 'pago', '2019-09-30 14:03:03'),
+(30, 1052, 5, 'cartao_credito', 'pago', '2019-09-30 14:04:07'),
+(31, 1052, 9, 'boleto_bancario', 'pendente', '2019-09-30 14:05:19');
 
 -- --------------------------------------------------------
 
@@ -225,6 +252,12 @@ ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  ADD PRIMARY KEY (`id_endereco`);
+
+--
 -- Indexes for table `escolha_cardapio_dia`
 --
 ALTER TABLE `escolha_cardapio_dia`
@@ -258,13 +291,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1048;
+
+--
+-- AUTO_INCREMENT for table `enderecos`
+--
+ALTER TABLE `enderecos`
+  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `escolha_cardapio_dia`
@@ -276,7 +315,7 @@ ALTER TABLE `escolha_cardapio_dia`
 -- AUTO_INCREMENT for table `finalizacao`
 --
 ALTER TABLE `finalizacao`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `pacotes`
