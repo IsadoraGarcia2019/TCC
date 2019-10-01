@@ -38,9 +38,7 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
 
   <div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;" >
     <div class="card shadow" style="margin-right: auto; margin-left: auto;">
-      <div class="card-body" > 
-
-        <?php require_once"include/alerta.php"; ?>
+      <div class="card-body" >
 
         <form method="post" action="">
           <h2 class="mb-3"><strong>Edição Endereço</strong></h2>
@@ -75,11 +73,11 @@ if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
           </div>
           
           <?php if (empty($disabled)) { ?>
-            <button type="submit" class="btn btn-dark col-md-12" name="btnEditar"><i class="fas fa-pencil-alt"></i></button>
+            <button type="submit" class="btn btn-success col-md-12" name="btnEditar"><i class="fas fa-pencil-alt"></i></button>
           <?php } ?>
 
           <?php if (empty($disabled)) { ?>
-            <button type="submit" class="btn btn-danger col-md-12 mt-3" name="btnExcluir"><i class="fas fa-trash-alt"></i></button>
+            <button type="submit" class="btn btn-danger col-md-12 mt-2" name="btnExcluir"><i class="fas fa-trash-alt"></i></button>
           <?php } ?>
         </form>
       </div>
