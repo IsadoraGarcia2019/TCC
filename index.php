@@ -55,7 +55,7 @@ require_once"head.php";
               <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 1</div></div>
               <div class="card-body text-danger">
                 <h5 class="card-title text-danger text-center mt-4 ">Como começar?</h5>
-                <p class="card-text text-dark text-center" style="font-size: 15px;">Entre na página cadastro e preencha com suas informações, seja você Cliente, Empresa ou Restaurante.</p>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">Entre na página cadastro e preencha com suas informações. Já cadastrado, escolha o pacote de seu interesse.</p>
               </div>
             </div>
           </div>
@@ -65,7 +65,7 @@ require_once"head.php";
               <div class="card-header "> <div class=" text-center" style="font-weight: 800; color: #4f4c4c;">PASSO 2</div></div>
               <div class="card-body text-danger">
                 <h5 class="card-title text-danger text-center mt-3">O que fazer depois?</h5>
-                <p class="card-text text-dark text-center" style="font-size: 15px;">Já cadastrado, escolha o pacote de seu interesse. A partir disso, dependendo do pacote que você selecionou, você poderá escolher a refeição que vai querer no dia que quiser comer.</p>
+                <p class="card-text text-dark text-center" style="font-size: 15px;">A partir disso, dependendo do pacote que você selecionou, você poderá escolher a refeição que vai querer no dia que quiser comer.</p>
               </div>
             </div>
           </div>
