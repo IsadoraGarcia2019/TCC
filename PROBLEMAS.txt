@@ -12,10 +12,7 @@ DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA;
 
 na página de finalização, o saldo das refeições da tabela clientes deve mudar conforme o pacote que ele escolher 
 
-na página meus pedidos deve puxar o saldo do cliente da tabela clientes
-
 AS COMIDAS DO CARDÁPIO SÓ DEVEM ESTAR DISPONIVEIS CONFORME O POACOTE ECOLHIDO PELO CLIENTE(SE ELE ESCOLLHEU UM PACOTE COM 20 ALMOÇOS POR MÊS, NO CARDÁPIO DO DIA DEVE APARECER APENAS AS REFEIÇÕES DO ALMOÇO PARA ELE ESCOLHER )
 
 Coloquei o utf-8_enconde nas comidas do cardápio mas ainda ta vindo bugado;
 
-não to conseguindo cadastrar por causa do 'id_usuario'(Não ta inserindo na tabela enderecos o $_SESSION['id_usuario'])
