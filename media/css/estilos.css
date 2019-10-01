@@ -78,6 +78,9 @@ footer {
 #card-index:hover {
   background-color: #de2828;
   border: #de2828;
-  transition: 0.5s;
+  transition: 1s;
 }
 
+h5:hover {
+  color: white; 
+}
