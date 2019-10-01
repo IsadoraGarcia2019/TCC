@@ -16,16 +16,10 @@
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
 
 
- // $lista2 = "SELECT * FROM clientes
- // JOIN pacotes p ON p.quantidade_cafe = clientes.saldo_cafe
- // JOIN pacotes p ON p.quantidade_almoco = clientes.saldo_almoco
- // JOIN pacotes p ON p.quantidade_jantar = clientes.saldo_jantar
- // WHERE id_usuario = {$_SESSION['id_usuario']}
-
- // ";
- // $querySaldo = mysqli_query($con, $lista2);
- // $lista2 = mysqli_fetch_all($querySaldo, MYSQLI_ASSOC);
-
+  $lista2 = "SELECT * FROM usuarios
+ JOIN clientes ON clientes.id = usuarios.fk_tipo WHERE usuarios.id = {$_SESSION['id_usuario']}";
+  $querySaldo = mysqli_query($con, $lista2);
+ $lista2 = mysqli_fetch_all($querySaldo, MYSQLI_ASSOC);
 
   // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
@@ -134,33 +128,24 @@
  			<div class="card-body" > 
 
  				<h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Meus Saldos</h2>
+                <div class="col-12 m-0" role="alert">
+                    <div class="alert alert-primary text-center">
+                        <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$lista2[0]['saldo_cafe']?><br>
+                    </div>
+                </div>
 
- 				<?php foreach ($lista as $item) { ?>
- 					
- 					<?php if ($item['quantidade_cafe'] != 0) { ?>
- 						<div class="col-12 m-0" role="alert">
- 							<div class="alert alert-primary text-center">
- 								<img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_cafe']?><br>
- 							</div>
- 						</div>
- 					<?php } ?>
- 				
- 					<?php if ($item['quantidade_almoco'] != 0) { ?>
- 						<div class=" col-12 m-0" role="alert">
- 							<div class="alert alert-danger text-center">
- 								<img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['saldo_almoco']?><br>
- 							</div>
- 						</div>
- 					<?php } ?>
- 					
- 					<?php if ($item['quantidade_jantar'] != 0) { ?>
- 						<div class=" col-12 m-0" role="alert">
- 							<div class="alert alert-secondary text-center">
- 								<img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['saldo_jantar']?>
- 							</div>
- 						</div>
- 					<?php } ?>
- 				<?php 	} ?>
+                <div class=" col-12 m-0" role="alert">
+                    <div class="alert alert-danger text-center">
+                        <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$lista2[0]['saldo_almoco']?><br>
+                    </div>
+                </div>
+
+                <div class=" col-12 m-0" role="alert">
+                    <div class="alert alert-secondary text-center">
+                        <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$lista2[0]['saldo_jantar']?>
+                    </div>
+                </div>
+                
  			</div>
  		</div>
  	</div>
