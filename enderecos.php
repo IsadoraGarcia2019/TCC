@@ -69,7 +69,7 @@
                  <div class="col-12 mb-4">
                     <div class="card shadow-sm">
                         <div class="card-header">
-                            <i class="fas fa-map-marker-alt mr-2" style="color: red;"></i>
+                            <i class="fas fa-map-marker-alt mr-2 text-danger"></i>
                             <span class="font-weight-bold">
                                 <?=strtoupper($item['local'])?>
                             </span>
