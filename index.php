@@ -87,7 +87,7 @@ require_once"head.php";
           </div>
 
           <div class="col">
-           <div class="card border-secondary mb-3 " style="min-height: 100px; margin-top: 70px; 
+           <div class="card border-secondary mb-3" id="card-index" style="min-height: 100px; margin-top: 70px; 
            margin-right: 50px;">
            <div class="card-body text-black">
             <h5 class="card-title text-black text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</h5>
