@@ -49,35 +49,66 @@
 
  	<div class="col-10 col-md-8 mt-5 offset-md-2 " style="margin-top: -30px !important; min-height: 300px;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
- 			<div class="card-body" > 
+ 			<div class="card-body" >
 
  				<div class="col-md-12">
- 					<div class="alert alert-warning " role="alert">
- 						Se deseja adicionar algum endereço <a href="CadastroEndereco.php" class="alert-link ml-5 ">Clique aqui</a>
- 					</div>
+                    <?php require_once"include/alerta.php"; ?>
+                </div>
+
+                <?php if (count($lista) > 0) : ?>
+                <div class="col-md-12 mb-4">
+                    <a href="CadastroEndereco.php" class="btn btn-success">
+                        <i class="far fa-plus pr-2"></i>
+                        Cadastrar novo endereço
+                    </a>
  				</div>
+                <?php endif; ?>
 
  				<?php foreach ($lista as $item) { ?>
- 					<div class=" col-md-12 col-12">
- 						<div class="card border-secondary mb-3 " style="min-height: 100px;">
-
- 							<h5 class="card-text text-dark text-center font-weight-bold mt-3"><p class="text-uppercase"><i class="fas fa-map-marker-alt mr-2" style="color: red;"	></i><?=utf8_encode($item['local'])?></p></h5>
-
- 							<div class="card-text text-secondary ml-3 MT-3"><p class="text-uppercase">Rua <?=utf8_encode($item['rua'])?></p></div>
-
- 							<div class="card-text text-secondary ml-3"><p class="text-uppercase">Bairro <?=utf8_encode($item['bairro'])?></p></div>
-
- 							<div class="card-text text-secondary ml-3"><p class="text-uppercase">Cidade <?=utf8_encode($item['cidade'])?></p></div>
-
- 							<div class="card-text text-secondary ml-3 mb-4"><p class="text-uppercase">Estado <?=utf8_encode($item['estado'])?></p></div>
-
- 							<div class="row">
- 								<a href="edicaoEndereco.php?id=<?=$item['id_endereco']?>" class="btn btn-dark col-md-6 offset-md-3 mb-3"><i class="far fa-edit"></i></a>
- 							</div>
- 						</div>
+ 					<div class="col-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header">
+                                <i class="fas fa-map-marker-alt mr-2" style="color: red;"></i>
+                                <span class="font-weight-bold">
+                                    <?=strtoupper($item['local'])?>
+                                </span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <h4 class="card-text"><?=$item['rua']?> - <?=$item['bairro']?></h4>
+                                        <p class="card-text pt-2"><?=$item['cidade']?> - <?=$item['estado']?></p>
+                                    </div>
+                                    <div class="col-4 text-right py-2">
+                                        <a href="edicaoEndereco.php?id=<?=$item['id_endereco']?>" class="btn btn-primary">
+                                            <i class="far fa-edit"></i>
+                                            Editar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
  					</div>
-
  				<?php } ?>
+                <?php if (count($lista) <= 0) : ?>
+                    <div class="col-12 mb-4">
+                        <div class="card shadow-sm">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12 text-center mb-4">
+                                        <h4 class="card-text">Nenhum endereço cadastrado =(</h4>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <a href="edicaoEndereco.php?id=<?=$item['id_endereco']?>" class="btn btn-success">
+                                            <i class="far fa-plus"></i>
+                                            Cadastrar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
  			</div>
  		</div>
  	</div>

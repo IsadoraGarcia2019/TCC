@@ -3,35 +3,35 @@
 require_once"include/conexao.php";
 
 require_once"classes/site.class.php";
-$obj = new Site();
 
+session_start();
+
+$obj = new Site();
 
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];
 }
 	// botão de cadastrar
 if (isset($_POST['btnCadastrar'])) {
-		// Recebendo os campos
+    // Recebendo os campos
 	$local = $_POST['local'];
 	$rua = $_POST['rua'];
 	$bairro = $_POST['bairro'];
-	$cidade = $_POST['cidade'];
+	$cidade = $_POST['cidade_cliente'];
 	$estado = $_POST['estado'];
+	$id_usuario = $_SESSION['id_usuario'];
 
 	//inserindo no BD
 	$sql = "INSERT INTO enderecos 
-	VALUES (
-	DEFAULT, 
-	''".$_SESSION['id_usuario']."',
-	'$local',
-	'$rua',
-	'$bairro',
-	'$cidade',
-	'$estado'
-
-)";
-var_dump($sql);
-die();
+            VALUES (
+            DEFAULT, 
+            '$id_usuario',
+            '$local',
+            '$rua',
+            '$bairro',
+            '$cidade',
+            '$estado'
+        )";
 
 if (mysqli_query($con, $sql)) {
 

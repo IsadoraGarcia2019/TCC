@@ -25,7 +25,7 @@ if (isset($_POST['btnEditar'])) {
 	$local = $_POST['local'];
 	$rua = $_POST['rua'];
 	$bairro = $_POST['bairro'];
-	$cidade = $_POST['cidade'];
+	$cidade = $_POST['cidade_cliente'];
 	$estado = $_POST['estado'];
 
 	$sql = "UPDATE enderecos SET 
@@ -45,7 +45,7 @@ if (isset($_POST['btnEditar'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-		header('Refresh:0');
+		header('Location: enderecos.php');
 	}
 }
 
@@ -63,7 +63,7 @@ if (isset($_POST['btnExcluir'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-		header('Refresh:0');
+		header('Location: enderecos.php');
 	}
 
 }
