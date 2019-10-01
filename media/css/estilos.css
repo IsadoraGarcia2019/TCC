@@ -74,3 +74,10 @@ footer {
   color: white;
   margin-top: 10px;
 }
+
+#card-index:hover {
+  background-color: #de2828;
+  border: #de2828;
+  transition: 0.5s;
+}
+

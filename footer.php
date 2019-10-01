@@ -1,4 +1,3 @@
- 
 <div class="redes-sociais" style="background-color: #de2828;">
   <div class="container" style="margin-top: 65px;">
     <center>
