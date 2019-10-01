@@ -61,7 +61,7 @@
  					<div class=" col-md-12 col-12">
  						<div class="card border-secondary mb-3 " style="min-height: 100px;">
 
- 							<h5 class="card-text text-dark text-center font-weight-bold mt-3"><p class="text-uppercase"><i class="fas fa-map-marker-alt mr-2" style="color: red;"	></i><?=utf8_encode($item['local'])?></p></h5>
+ 							<h5 class="card-text text-dark text-center font-weight-bold mt-3"><p class="text-uppercase"><i class="fas fa-map-marker-alt mr-2 text-danger"></i><?=utf8_encode($item['local'])?></p></h5>
 
  							<div class="card-text text-secondary ml-3 MT-3"><p class="text-uppercase">Rua <?=utf8_encode($item['rua'])?></p></div>
 

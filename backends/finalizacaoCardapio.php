@@ -14,17 +14,16 @@ if (isset($_GET['id'])) {
 if (isset($_POST['btnComprar'])) {
 
         // Recebimento dos campos
-	$endereco = $_POST['endereco'];
+	// $endereco = $_POST['endereco'];
 
 	// inserindo edição na tabela
-	$sql = "INSERT INTO cardapio_dia 
+	$sql = "INSERT INTO escolha_cardapio_dia 
 	VALUES (
 	DEFAULT,
 	'".$_SESSION['id_usuario']."',
-	'$id',
-	'$forma_pagamento',
-	'pendente',
-	now()
+	'$id_cardapio',
+	now(),
+	'nao'
 )";
 
 // Executando o SQL
@@ -35,7 +34,7 @@ if (mysqli_query($obj->con, $sql)) {
 
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = 'Sua compra foi concluída com sucesso! <a href="meuspedidos.php" class="alert-link">Ver meus pedidos</a>';
+	$alerta['mensagem'] = "Sua compra foi concluída com sucesso! ";
 
 	$alerta = serialize($alerta);
 

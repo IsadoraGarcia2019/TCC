@@ -35,7 +35,7 @@ require_once"head.php";
 
         <div class="row">
           <div class="col">
-            <div class="mb-3" id="quem_somos" style="margin-top: 15px;">
+            <div class="mb-3  text-dark" id="quem_somos" style="margin-top: 15px;">
               Quem somos?
             </div>
             <p class="ml-3" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
@@ -45,7 +45,7 @@ require_once"head.php";
           </div>
         </div>
 
-        <div class="text-center mb-4" id="quem_somos">
+        <div class="text-center mb-4 text-dark" id="quem_somos">
           Como fazer meu pedido?
         </div>
 
@@ -87,9 +87,9 @@ require_once"head.php";
           </div>
 
           <div class="col">
-           <div class="card border-secondary mb-3" id="card-index" style="min-height: 100px; margin-top: 70px; margin-right: 50px;">
-             <div class="card-body text-black">
-              <h5 class="card-title text-black text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</h5>
+           <div class="card border-dark mb-3" id="card-index" style="min-height: 100px; margin-top: 70px; margin-right: 50px;">
+             <div class="card-body" id="index" >
+              <p class=" text-dark text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</p>
             </div>
           </div>
         </div>
