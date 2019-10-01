@@ -22,7 +22,7 @@ if (isset($id)) {
 		$resultado = mysqli_fetch_array($query);
 		
 	}
-	if ($status_pagamento == 'pedente') {
+	if ($status_pagamento == 'pendente') {
 
 		$sql = "UPDATE clientes SET $saldo_cafe = $quantidade_cafe, $saldo_almoco = $quantidade_almoco, $saldo_janta = $quantidade_jantar";
 		$query = mysqli_query($con, $sql);

@@ -17,7 +17,7 @@ if (isset($_POST['btnComprar'])) {
 	$endereco = $_POST['endereco'];
 
 	// inserindo edição na tabela
-	$sql = "INSERT INTO finalizacao 
+	$sql = "INSERT INTO cardapio_dia 
 	VALUES (
 	DEFAULT,
 	'".$_SESSION['id_usuario']."',
@@ -27,7 +27,6 @@ if (isset($_POST['btnComprar'])) {
 	now()
 )";
 
-// $sql = "UPDATE clientes SET saldo_cafe = '$quantidade_cafe', saldo_almoco = '$quantidade_almoco', saldo_jantar = '$quantidade_jantar' WHERE id = '".$_SESSION['id_usuario']."'";
 // Executando o SQL
 if (mysqli_query($obj->con, $sql)) {
 

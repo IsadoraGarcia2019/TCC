@@ -56,7 +56,6 @@
 
  	<div class="row">
  		<div class="shadow " style="  background-color: #f2392c ;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;">
- 			<h1 class="text-white mb-5 text-center mt-5">Meus pedidos</h1>
  		</div> 
  	</div>
  </div>

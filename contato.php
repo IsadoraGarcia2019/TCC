@@ -61,6 +61,7 @@ if (isset($_POST['enviar'])) {
 					<div class="form-group col-md-6">
 						<label for="email"><strong>E-mail</strong></label>
 						<input type="email" class="form-control" id="email" name="email" placeholder="Ex: fulano@provedor.com" value="<?=$_SESSION['email']?>">
+						<small class="ml-2">Certifique-se que seu e-mail é válido :)</small>
 					</div>
 				</div>
 				<div class="form-row">

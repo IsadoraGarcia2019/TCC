@@ -1,32 +1,27 @@
  <?php
 
-
  require_once"head.php";
 
  require_once"include/conexao.php";
 
- $lista = "SELECT * FROM enderecos WHERE id_usuario = {$_SESSION['id_usuario']}
-
- ";
+ $lista = "SELECT * FROM clientes";
  $query = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($query, MYSQLI_ASSOC);
-
-
 
   // Verificar se existe alerta via COOKIE
  if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
  	$alerta = unserialize($_COOKIE['alerta']);
  	setcookie('alerta');
  }
- if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
- 	header('Location:erros.php?mesagem= Você não está logado e por isso não pode vizualizar esta página!');
+ if ($_SESSION['tp_usuario'] != 'administrador') {
+ 	header('Location:erros.php?mesagem= Somente o administrador pode ter acesso à essa página!');
  }
  ?> 
  <!DOCTYPE html>
  <html lang="pt-br">
  <head>
  	<meta charset="utf-8">
- 	<title>Meus Endereços</title>
+ 	<title>Clientes</title>
  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
  	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
  	<link rel="stylesheet" href="media/css/main.css">
@@ -40,48 +35,47 @@
 
  	<div class="row">
  		<div class="shadow " style="  background-color: #f2392c ;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;">
- 			<h1 class="text-white mb-5 text-center mt-5">Meus Endereços</h1>
+ 			<h1 class="text-white mb-5 text-center mt-5">Listagem de Clientes</h1>
+
  		</div> 
  	</div>
  </div>
 
  <div class="row">
 
- 	<div class="col-10 col-md-8 mt-5 offset-md-2 " style="margin-top: -30px !important; min-height: 300px;">
+ 	<div class="col-10 col-md-10 mt-5 offset-md-1 " style="margin-top: -30px !important; min-height: 300px;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
  			<div class="card-body" > 
 
- 				<div class="col-md-12">
- 					<div class="alert alert-warning " role="alert">
- 						Se deseja adicionar algum endereço <a href="CadastroEndereco.php" class="alert-link ml-5 ">Clique aqui</a>
- 					</div>
- 				</div>
+ 				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
+ 					<thead>
+ 						<tr>
+ 							<th scope="col">Id Cliente</th>
+ 							<th scope="col">Nome do cliente</th>
+ 							<th scope="col">Número de telefone</th>
+ 							<th scope="col">Restrição alimentar</th>
+ 							<th scope="col">Comentários</th>
+ 						</tr>
+ 					</thead>
+ 					<tbody>
+ 						<?php foreach ($lista as $item) { ?>
+ 							<tr>
+ 								<td class="text-danger"><?=utf8_encode($item['id'])?></td>
 
- 				<?php foreach ($lista as $item) { ?>
- 					<div class=" col-md-12 col-12">
- 						<div class="card border-secondary mb-3 " style="min-height: 100px;">
+ 								<td class="text-uppercase"><?=utf8_encode($item['nome_cliente'])?></td>
 
- 							<h5 class="card-text text-dark text-center font-weight-bold mt-3"><p class="text-uppercase"><i class="fas fa-map-marker-alt mr-2" style="color: red;"	></i><?=utf8_encode($item['local'])?></p></h5>
+ 								<td><?=utf8_encode($item['numero_telefone'])?></td>
 
- 							<div class="card-text text-secondary ml-3 MT-3"><p class="text-uppercase">Rua <?=utf8_encode($item['rua'])?></p></div>
+ 								<td class="text-uppercase text-danger"><?=utf8_encode($item['restricao_alimentar'])?></td>
 
- 							<div class="card-text text-secondary ml-3"><p class="text-uppercase">Bairro <?=utf8_encode($item['bairro'])?></p></div>
-
- 							<div class="card-text text-secondary ml-3"><p class="text-uppercase">Cidade <?=utf8_encode($item['cidade'])?></p></div>
-
- 							<div class="card-text text-secondary ml-3 mb-4"><p class="text-uppercase">Estado <?=utf8_encode($item['estado'])?></p></div>
-
- 							<div class="row">
- 								<a href="edicaoEndereco.php?id=<?=$item['id_endereco']?>" class="btn btn-dark col-md-6 offset-md-3 mb-3"><i class="far fa-edit"></i></a>
- 							</div>
- 						</div>
- 					</div>
-
- 				<?php } ?>
+ 								<td><?=utf8_encode($item['comentarios'])?></td>
+ 							</tr>
+ 						<?php } ?>
+ 					</tbody>
+ 				</table>
  			</div>
  		</div>
  	</div>
-
  </div>
 
  <?php

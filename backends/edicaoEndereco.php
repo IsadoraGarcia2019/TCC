@@ -63,7 +63,7 @@ if (isset($_POST['btnExcluir'])) {
 
 		setcookie('alerta', $alerta, time() + 120);
 
-		header('Location:backends/logoff.php');
+		header('Refresh:0');
 	}
 
 }
