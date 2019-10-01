@@ -81,6 +81,7 @@ footer {
   transition: 1s;
 }
 
-h5:hover {
-  color: white; 
+#quem_somos {
+  font-family: italic;
+  font-weight: bold;
 }
