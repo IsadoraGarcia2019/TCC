@@ -6,7 +6,7 @@
 
 
 
- $lista = "SELECT * FROM finalizacao
+ $lista = "SELECT finalizacao.*, p.*, finalizacao.id as id_finalizacao FROM finalizacao
  JOIN pacotes p ON p.id = finalizacao.id_pacote";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
@@ -85,15 +85,25 @@
  									}
  									?>
  								</td>
+
+
+
+
+
  								<td><div class="btn-group" role="group">
  									<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
  									<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
- 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status_pagamento=pendente&id=<?=$item['id']?>">Pendente</a>
- 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status_pagamento=pago&id=<?=$item['id']?>">Pago</a>
- 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status_pagamento=atrasado&id=<?=$item['id']?>">Atrasado</a>
+ 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status_pagamento=pendente&id=<?=$item['id_finalizacao']?>">Pendente</a>
+ 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status_pagamento=pago&id=<?=$item['id_finalizacao']?>">Pago</a>
+ 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status_pagamento=atrasado&id=<?=$item['id_finalizacao']?>">Atrasado</a>
  									</div>
  								</div>
- 							</div></td>		
+ 							</div></td>	
+
+
+
+
+
  						<?php } ?>
  					</tr>
  				</tbody>
