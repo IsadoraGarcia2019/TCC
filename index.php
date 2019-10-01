@@ -88,18 +88,23 @@ require_once"head.php";
 
           <div class="col">
            <div class="card border-secondary mb-3" id="card-index" style="min-height: 100px; margin-top: 70px; margin-right: 50px;">
-           <div class="card-body text-black">
-            <h5 class="card-title text-black text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</h5>
+             <div class="card-body text-black">
+              <h5 class="card-title text-black text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</h5>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <a href="pacotes.php" class="btn btn-dark col-md-12 col-12 mt-4" name="pacotes">Vizualizar nossos pacotes</a>
+        </div>
+        <div class="col">
+          <a href="cardapio.php" class="btn btn-dark col-md-12 col-12 mt-4" name="cardapio">Vizualizar nosso cardápio</a>
+        </div>
+      </div>
     </div>
-
-    <a href="pacotes.php" class="btn btn-dark col-md-12 col-12 mt-3" name="pacotes">Vizualizar nossos pacotes</a>
-    <a href="cardapio.php" class="btn btn-dark col-md-12 col-12 mt-3" name="cardapio">Vizualizar nosso cardápio</a>
-
   </div>
-</div>
 </div>
 </div>
 
