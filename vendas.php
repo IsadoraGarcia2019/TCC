@@ -6,7 +6,7 @@
 
 
 
- $lista = "SELECT finalizacao.*, p.*, finalizacao.id as id_finalizacao FROM finalizacao
+ $lista = "SELECT finalizacao.*, p.*, finalizacao.id as id_finalizacao, p.id as id_pacote FROM finalizacao
  JOIN pacotes p ON p.id = finalizacao.id_pacote";
  $queryFinalizacao = mysqli_query($con, $lista);
  $lista = mysqli_fetch_all($queryFinalizacao, MYSQLI_ASSOC);
@@ -51,20 +51,20 @@
  				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
  					<thead>
  						<tr>
- 							<th scope="col">Id</th>
- 							<th scope="col">Data da compra</th>
- 							<th scope="col">Nome do pacote</th>
- 							<th scope="col">Forma de pagamento</th>
- 							<th scope="col">Status do pagamento</th>
+ 							<th class="text-center">Id</th>
+ 							<th class="text-center">Data da compra</th>
+ 							<th class="text-left">Pacote</th>
+ 							<th class="text-left">Forma de pagamento</th>
+ 							<th class="text-left">Status do pagamento</th>
  						</tr>
  					</thead>
  					<tbody>
  						<?php foreach ($lista as $item) { ?>
  							<tr>
- 								<td class=" text-danger"><?=utf8_encode($item['id_usuario'])?></td>
- 								<td><?=$item['data_compra']?></td>
- 								<td><?=utf8_encode($item['nome_pacote'])?></td>
- 								<td>
+ 								<td class="py-4 text-center text-danger"><?=utf8_encode($item['id_finalizacao'])?></td>
+ 								<td class="py-4 text-center"><?=date_format(date_create($item['data_compra']), 'd/m/Y H:i:s')?></td>
+ 								<td class="py-4 text-left"><a href="edicaoPacotes.php?id=<?=$item['id_pacote']?>"><?=utf8_encode($item['nome_pacote'])?></a></td>
+ 								<td class="py-4">
  									<?php switch ($item['forma_pagamento']) { 
  										case "dinheiro":
  										echo '<i class="far fa-money-bill-alt text-success mr-3"></i>';
@@ -85,20 +85,40 @@
  									}
  									?>
  								</td>
-
-
-
-
-
- 								<td><div class="btn-group" role="group">
- 									<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?=$item['status_pagamento']?></button>
- 									<div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
- 										<a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status_pagamento=pendente&id=<?=$item['id_finalizacao']?>">Pendente</a>
- 										<a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status_pagamento=pago&id=<?=$item['id_finalizacao']?>">Pago</a>
- 										<a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status_pagamento=atrasado&id=<?=$item['id_finalizacao']?>">Atrasado</a>
- 									</div>
- 								</div>
- 							</div></td>	
+                                <td class="py-4 text-left">
+                                    <?php switch ($item['status_pagamento']) {
+                                            case "pago":
+                                                echo '<i class="far fa-check text-success mr-3"></i>';
+                                                echo "<span class='text-success'>Pago</span>";
+                                                break;
+                                            case "pendente":
+                                                echo '<i class="fas fa-clock text-warning mr-3"></i>';
+                                                echo "<span class='text-warning'>Pendente</span>";
+                                                break;
+                                            case "atrasado":
+                                                echo '<i class="fas fa-times text-danger mr-3"></i>';
+                                                echo "<span class='text-danger'>Atrasado</span>";
+                                                break;
+                                        }
+                                    ?>
+                                </td>
+                                <?php if($item['status_pagamento']!='pago') : ?>
+                                <td class="text-center pl-5">
+                                    <div class="btn-group" role="group">
+                                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Alterar pagamento</button>
+                                        <div class="dropdown-menu" name="BtnStatus" aria-labelledby="btnGroupDrop1">
+                                            <a class="dropdown-item" name="Pendente" href="backends/alterarVenda.php?status_pagamento=pendente&id=<?=$item['id_finalizacao']?>">Pendente</a>
+                                            <a class="dropdown-item" name="Pago" href="backends/alterarVenda.php?status_pagamento=pago&id=<?=$item['id_finalizacao']?>">Pago</a>
+                                            <a class="dropdown-item" name="Atrasado" href="backends/alterarVenda.php?status_pagamento=atrasado&id=<?=$item['id_finalizacao']?>">Atrasado</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <?php else : ?>
+                                <td class="py-4 text-center">
+                                    <i class="fas fa-lock text-dark mr-3"></i>
+                                    <small class="text-italic">Não pode alterar depois de pago.</small>
+                                </td>
+                                <?php endif; ?>
 
 
 
