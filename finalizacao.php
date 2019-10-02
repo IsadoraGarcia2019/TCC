@@ -68,7 +68,7 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
             <?php if ($item['quantidade_cafe'] != 0) { ?>
               <div class="col-md-4 m-0" role="alert">
                 <div class="alert alert-primary text-center">
-                  <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
+                  <input type="image" src="media/images/icone-cafe.png" name="quantidade_cafe" id="quantidade_cafe" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_cafe']?><br>
                 </div>
               </div>
             <?php } ?>
@@ -76,7 +76,7 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
             <?php if ($item['quantidade_almoco'] != 0) { ?>
               <div class=" col-md-4 m-0" role="alert">
                 <div class="alert alert-danger text-center">
-                  <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
+                  <input type="image" src="media/images/hamburger.png" name="quantidade_almoco" id="quantidade_almoco" style="max-height: 40px; margin-right: 7px;"><?=$item['quantidade_almoco']?><br>
                 </div>
               </div>
             <?php } ?>
@@ -84,7 +84,7 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
             <?php if ($item['quantidade_jantar'] != 0) { ?>
               <div class=" col-md-4 m-0" role="alert">
                 <div class="alert alert-secondary text-center">
-                  <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$item['quantidade_jantar']?>
+                  <input type="image" src="media/images/pizza.png"  name="quantidade_jantar" id="quantidade_jantar" style="max-height: 40px; margin-right: 10px;"><?=$item['quantidade_jantar']?>
                 </div>
               </div>
             <?php } ?>
