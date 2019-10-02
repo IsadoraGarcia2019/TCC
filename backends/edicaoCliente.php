@@ -34,8 +34,6 @@ if (isset($_POST['btnEditar'])) {
 	$rua = $_POST['rua'];
 	$numero_telefone = $_POST['numero_telefone'];
 	$restricao_alimentar = $_POST['restricao_alimentar'];
-	$preferencia_comida = $_POST['preferencia_comida'];
-	$preferencia_restaurante = $_POST['preferencia_restaurante'];
 	$comentarios = $_POST['comentarios'];
 
 		// mudando o nome da seesao
@@ -44,7 +42,13 @@ if (isset($_POST['btnEditar'])) {
 
 		// inserindo edição na tabela
 	$sql = "UPDATE clientes
-	SET  nome_cliente = '$nome_cliente', estado = '$estado', cidade = '$cidade', rua = '$rua', numero_telefone = '$numero_telefone', restricao_alimentar = '$restricao_alimentar', preferencia_comida = '$preferencia_comida', preferencia_restaurante = '$preferencia_restaurante', comentarios = '$comentarios' 
+	SET  nome_cliente = '$nome_cliente',
+	     estado = '$estado', 
+	     cidade = '$cidade', 
+	     rua = '$rua', 
+	     numero_telefone = '$numero_telefone', 
+	     restricao_alimentar = '$restricao_alimentar', 
+	     comentarios = '$comentarios'
 	WHERE id = $id";
 	
 	// Executando o SQL
