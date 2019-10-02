@@ -58,7 +58,7 @@
                 <?php if (count($lista) > 0) : ?>
                     <div class="col-md-12 mb-4">
                         <a href="CadastroEndereco.php" class="btn btn-success">
-                            <i class="far fa-plus pr-2"></i>
+                            <i class="fas fa-plus p-2"></i>
                             Cadastrar novo endereço
                         </a>
                     </div>

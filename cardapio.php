@@ -16,7 +16,7 @@ $hora_inicio_cafe = 5;
 $hora_termino_cafe = 8;
 
 $hora_inicio_almoco = 10;
-$hora_termino_almoco = 19;
+$hora_termino_almoco = 14;
 
 $hora_inicio_janta = 19;
 $hora_termino_janta = 21;

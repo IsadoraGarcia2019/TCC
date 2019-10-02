@@ -10,9 +10,11 @@ ignora esse número: 5762696426
 
 DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA; 
 
-na página de finalização, o saldo das refeições da tabela clientes deve mudar conforme o pacote que ele escolher 
-
-AS COMIDAS DO CARDÁPIO SÓ DEVEM ESTAR DISPONIVEIS CONFORME O POACOTE ECOLHIDO PELO CLIENTE(SE ELE ESCOLLHEU UM PACOTE COM 20 ALMOÇOS POR MÊS, NO CARDÁPIO DO DIA DEVE APARECER APENAS AS REFEIÇÕES DO ALMOÇO PARA ELE ESCOLHER )
+AS COMIDAS DO CARDÁPIO SÓ DEVEM ESTAR DISPONIVEIS CONFORME O PACOTE ECOLHIDO PELO CLIENTE(SE ELE ESCOLLHEU UM PACOTE COM 20 ALMOÇOS POR MÊS, NO CARDÁPIO DO DIA DEVE APARECER APENAS AS REFEIÇÕES DO ALMOÇO PARA ELE ESCOLHER )
 
 Coloquei o utf-8_enconde nas comidas do cardápio mas ainda ta vindo bugado;
+
+tem que puxar os endereços do cliente na finalização de cardápio;
+
+fazer a página de entregas(vou fazer agora);
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 30-Set-2019 às 21:41
+-- Generation Time: 02-Out-2019 às 19:15
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -68,13 +68,18 @@ INSERT INTO `cardapio_dia` (`id_cardapio`, `nome_comida`, `categoria_comida`, `d
 (37, 'Cheeseburger', 'jantar', '2019-09-26 16:42:57', 'sim'),
 (38, 'feijao', 'almoco', '2019-09-27 13:46:05', 'sim'),
 (39, 'feijao', 'almoco', '2019-09-27 13:51:54', 'sim'),
-(40, 'cafÃ©', 'cafe_manha', '2019-09-27 16:05:54', 'nao'),
+(40, 'cafÃ©', 'cafe_manha', '2019-09-27 16:05:54', 'sim'),
 (41, 'pÃ£o com queijo', 'cafe_manha', '2019-09-27 16:06:04', 'nao'),
 (42, 'carne com arroz', 'almoco', '2019-09-27 16:06:25', 'nao'),
 (43, 'feijoada', 'almoco', '2019-09-27 16:06:31', 'nao'),
 (44, 'x-burguer', 'jantar', '2019-09-27 16:06:40', 'nao'),
 (45, 'pizza de frango', 'jantar', '2019-09-27 16:06:49', 'nao'),
-(46, 'macarrÃ£o', 'almoco', '2019-09-30 13:54:09', 'nao');
+(46, 'macarrÃ£o', 'almoco', '2019-09-30 13:54:09', 'nao'),
+(47, 'carne', 'jantar', '2019-09-30 15:47:22', 'nao'),
+(48, 'macarrÃ£o', 'jantar', '2019-09-30 17:10:09', 'nao'),
+(49, 'Cheeseburger', 'jantar', '2019-10-01 16:08:04', 'nao'),
+(50, 'feijao', 'almoco', '2019-10-01 16:45:22', 'nao'),
+(51, 'feijao', 'almoco', '2019-10-02 14:01:59', 'nao');
 
 -- --------------------------------------------------------
 
@@ -132,8 +137,8 @@ CREATE TABLE `enderecos` (
 --
 
 INSERT INTO `enderecos` (`id_endereco`, `id_usuario`, `local`, `rua`, `bairro`, `cidade`, `estado`) VALUES
-(1, 1052, 'Casa', 'Bahia', 'Velha', 'Blumenau', 'SC'),
-(2, 1052, 'Trabalho', 'São Paulo', 'Garcia', 'Blumenau', 'SC');
+(3, 1062, 'trabalho', '7 de setembro', 'centro', 'Blumenau', 'SC'),
+(4, 1062, 'casa', 'bahia', 'salto weissbach', 'blumenau', 'SC');
 
 -- --------------------------------------------------------
 
@@ -145,9 +150,10 @@ DROP TABLE IF EXISTS `escolha_cardapio_dia`;
 CREATE TABLE `escolha_cardapio_dia` (
   `id` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `id_caradapio` int(11) NOT NULL,
+  `id_cardapio` int(11) NOT NULL,
   `hora_selecao` varchar(255) NOT NULL,
-  `entregue` enum('sim','nao') NOT NULL
+  `entregue` enum('sim','nao') NOT NULL,
+  `id_endereco` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -174,12 +180,12 @@ INSERT INTO `finalizacao` (`id`, `id_usuario`, `id_pacote`, `forma_pagamento`, `
 (22, 1052, 5, 'boleto_bancario', 'pago', '2019-09-24 16:28:41'),
 (23, 1059, 8, 'cartao_credito', 'pago', '2019-09-25 15:14:28'),
 (24, 1059, 5, 'dinheiro', 'pago', '2019-09-25 17:02:00'),
-(25, 1059, 8, 'cartao_debito', 'pendente', '2019-09-25 17:02:06'),
-(26, 1059, 9, 'boleto_bancario', 'pendente', '2019-09-25 17:02:12'),
-(27, 1062, 8, 'cartao_debito', 'pendente', '2019-09-27 16:30:16'),
+(25, 1059, 8, 'cartao_debito', 'pago', '2019-09-25 17:02:06'),
+(26, 1059, 9, 'boleto_bancario', 'pago', '2019-09-25 17:02:12'),
+(27, 1062, 8, 'cartao_debito', 'pago', '2019-09-27 16:30:16'),
 (28, 1062, 5, 'cartao_debito', 'pendente', '2019-09-27 16:31:16'),
-(29, 1052, 8, 'cartao_debito', 'pago', '2019-09-30 14:03:03'),
-(30, 1052, 5, 'cartao_credito', 'pago', '2019-09-30 14:04:07'),
+(29, 1052, 8, 'cartao_debito', 'pendente', '2019-09-30 14:03:03'),
+(30, 1052, 5, 'cartao_credito', 'pendente', '2019-09-30 14:04:07'),
 (31, 1052, 9, 'boleto_bancario', 'pendente', '2019-09-30 14:05:19');
 
 -- --------------------------------------------------------
@@ -255,13 +261,15 @@ ALTER TABLE `clientes`
 -- Indexes for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  ADD PRIMARY KEY (`id_endereco`);
+  ADD PRIMARY KEY (`id_endereco`),
+  ADD KEY `fk_usuarioo` (`id_usuario`);
 
 --
 -- Indexes for table `escolha_cardapio_dia`
 --
 ALTER TABLE `escolha_cardapio_dia`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_endereco` (`id_endereco`);
 
 --
 -- Indexes for table `finalizacao`
@@ -291,7 +299,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `cardapio_dia`
 --
 ALTER TABLE `cardapio_dia`
-  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id_cardapio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `clientes`
@@ -303,7 +311,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT for table `enderecos`
 --
 ALTER TABLE `enderecos`
-  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_endereco` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `escolha_cardapio_dia`
@@ -332,6 +340,18 @@ ALTER TABLE `usuarios`
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Limitadores para a tabela `enderecos`
+--
+ALTER TABLE `enderecos`
+  ADD CONSTRAINT `fk_usuarioo` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`);
+
+--
+-- Limitadores para a tabela `escolha_cardapio_dia`
+--
+ALTER TABLE `escolha_cardapio_dia`
+  ADD CONSTRAINT `fk_endereco` FOREIGN KEY (`id_endereco`) REFERENCES `enderecos` (`id_endereco`);
 
 --
 -- Limitadores para a tabela `finalizacao`

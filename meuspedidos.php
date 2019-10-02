@@ -67,7 +67,6 @@
  						<tr>
  							<th scope="col">Data da compra</th>
  							<th scope="col">Nome do pacote</th>
- 							<!-- <th scope="col">Saldo do pacote</th> -->
  							<th scope="col">Forma de pagamento</th>
  							<th scope="col">Status do pagamento</th>
  						</tr>

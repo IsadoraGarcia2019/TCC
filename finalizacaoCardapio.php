@@ -1,3 +1,4 @@
+
 <?php
 
 require_once"head.php";
@@ -8,9 +9,9 @@ $lista = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
 $queryCardapio = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
-$lista2 = "SELECT * FROM enderecos WHERE id_endereco = $id";
-$queryCardapio = mysqli_query($con, $lista2);
-$lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
+// $lista2 = "SELECT * FROM enderecos WHERE id_endereco = $id";
+// $queryCardapio = mysqli_query($con, $lista2);
+// $lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
 // Verificar se existe alerta via COOKIE
 if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
@@ -26,11 +27,11 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Finalização Cardápio</title>
-	<link rel="stylesheet" type="text/css" href="media/css/estilos.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="media/css/main.css">
+ <meta charset="utf-8">
+ <title>Finalização Cardápio</title>
+ <link rel="stylesheet" type="text/css" href="media/css/estilos.css">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ <link rel="stylesheet" href="media/css/main.css">
 </head>
 
 <body style="background-color: rgb(235, 226, 225);">
@@ -58,7 +59,7 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
       <form id="cadform" name="cadform" method="post" action="" onsubmit="return validaCampo();">
 
         <h2 class="mb-3 mt-3 text-danger" style="color: #de2828; margin-left: 15px;">Dados do pedido</h2>
-        
+
         <?php foreach ($lista as $item) { ?>
 
           <div class="col-12 mb-4">
@@ -75,27 +76,23 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
         <?php } ?>
         <h5 class="text-danger text-center mb-3">Em qual endereço deve ser entregue?</h5>
 
-        <div class=" col-md-12 col-12"> 
-          <div class="card border-secondary mb-3 " style="min-height: 100px;">
-
-            <h5 class="card-text text-dark text-center font-weight-bold mt-3"><i class="fas fa-map-marker-alt mr-2 text-danger" ></i><?=utf8_encode($item['local'])?></h5>
-
-            <div class="card-text text-secondary ml-3">Rua <?=utf8_encode($item['rua'])?></div>
-
-            <div class="card-text text-secondary ml-3">Bairro <?=utf8_encode($item['bairro'])?></div>
-
-            <div class="card-text text-secondary ml-3">Cidade <?=utf8_encode($item['cidade'])?></div>
-
-            <div class="card-text text-secondary ml-3 mb-4">Estado <?=utf8_encode($item['estado'])?></div>
-
-          </div>
-          <button class="btn btn-danger col-md-12  mt-3" name="btnComprar"><i class="fas fa-shopping-basket"></i></button>
+        <div class="col-12">
+          <div class="form-group border-dark">
+            <label for="endereco">Selecione o endereço de entrega</label>
+            <select class="form-control" id="endereco">
+              <option> <?=utf8_encode($item['rua'])?>  <?=utf8_encode($item['bairro'])?>
+              <?=utf8_encode($item['cidade'])?>
+              <?=utf8_encode($item['estado'])?> 
+            </option>
+          </select>
 
         </div>
-        
-      </form>
-    </div>
+
+        <button class="btn btn-danger col-md-12  mt-3" name="btnComprar"><i class="fas fa-shopping-basket"></i></button>
+      </div>
+    </form>
   </div>
+</div>
 </div>
 
 
