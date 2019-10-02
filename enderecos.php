@@ -77,7 +77,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-8">
-                                    <h4 class="card-text"><?=$item['rua']?> - <?=$item['bairro']?></h4>
+                                    <h5 class="card-text text-uppercase"><?=$item['rua']?> - <?=$item['bairro']?></h5>
                                     <p class="card-text pt-2"><?=$item['cidade']?> - <?=$item['estado']?></p>
                                 </div>
                                 <div class="col-4 text-right py-2">
@@ -101,7 +101,7 @@
                                 </div>
                                 <div class="col-12 text-center">
                                     <a href="CadastroEndereco.php?id=<?=$item['id_endereco']?>" class="btn btn-success">
-                                        <i class="far fa-plus"></i>
+                                        <i class="fas fa-plus pr-2"></i>
                                         Cadastrar
                                     </a>
                                 </div>

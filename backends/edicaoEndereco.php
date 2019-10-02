@@ -39,7 +39,7 @@ if (isset($_POST['btnEditar'])) {
 	// Executando o SQL
 	if (mysqli_query($obj->con, $sql)) {
 		$alerta['tipo'] = "success";
-		$alerta['mensagem'] = 'Dados editados com sucesso! <a href="enderecos.php" class="alert-link">Vizualizar</a>';
+		$alerta['mensagem'] = 'Dados editados com sucesso!';
 
 		$alerta = serialize($alerta);
 

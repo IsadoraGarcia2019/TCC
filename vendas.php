@@ -88,7 +88,7 @@
                                 <td class="py-4 text-left">
                                     <?php switch ($item['status_pagamento']) {
                                             case "pago":
-                                                echo '<i class="far fa-check text-success mr-3"></i>';
+                                                echo '<i class="fas fa-check text-success mr-3"></i>';
                                                 echo "<span class='text-success'>Pago</span>";
                                                 break;
                                             case "pendente":
