@@ -13,8 +13,6 @@ if (isset($_GET['id'])) {
 	// Verificando ação de comprar
 if (isset($_POST['btnComprar'])) {
 
-        // Recebimento dos campos
-	// $endereco = $_POST['endereco'];
 
 	// inserindo edição na tabela
 	$sql = "INSERT INTO escolha_cardapio_dia 
@@ -23,7 +21,8 @@ if (isset($_POST['btnComprar'])) {
 	'".$_SESSION['id_usuario']."',
 	'$id_cardapio',
 	now(),
-	'nao'
+	'nao', 
+	'$id_endereco'
 )";
 
 // Executando o SQL

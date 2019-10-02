@@ -9,9 +9,9 @@ $lista = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
 $queryCardapio = mysqli_query($con, $lista);
 $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
-// $lista2 = "SELECT * FROM enderecos WHERE id_endereco = $id";
-// $queryCardapio = mysqli_query($con, $lista2);
-// $lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
+$lista2 = "SELECT * FROM enderecos WHERE id_endereco = $id";
+$queryCardapio = mysqli_query($con, $lista2);
+$lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
 // Verificar se existe alerta via COOKIE
 if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
@@ -67,9 +67,9 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
               <div class="card-body">
                 <div class="row">
                   <i class="fas fa-utensils float-left mr-2 text-danger ml-2"></i>
-                  <h5 class="card-title"><?=utf8_encode($item['nome_comida'])?></h5>
+                  <h5 class="card-title pl-2 text-uppercase"><?=utf8_encode($item['nome_comida'])?></h5>
                 </div>
-                <p class="font-italic text-uppercase ml-3" style="font-size: 17px;"><?=utf8_encode($item['categoria_comida'])?></p>
+                <p class="font-italic pl-4 text-lowercase" style="font-size: 17px;"><?=utf8_encode($item['categoria_comida'])?></p>
               </div>
             </div>
           </div>
@@ -80,9 +80,12 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
           <div class="form-group border-dark">
             <label for="endereco">Selecione o endereço de entrega</label>
             <select class="form-control" id="endereco">
-              <option> <?=utf8_encode($item['rua'])?>  <?=utf8_encode($item['bairro'])?>
-              <?=utf8_encode($item['cidade'])?>
-              <?=utf8_encode($item['estado'])?> 
+              <?php foreach ($lista2 as $item) { ?>
+
+                <option> <?=utf8_encode($item['rua'])?>  <?=utf8_encode($item['bairro'])?>
+                <?=utf8_encode($item['cidade'])?>
+                <?=utf8_encode($item['estado'])?>
+              <?php } ?> 
             </option>
           </select>
 
