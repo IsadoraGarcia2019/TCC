@@ -37,23 +37,6 @@ if (mysqli_query($con, $sql)) {
 	$id = mysqli_insert_id($con);
 	$id = mysqli_insert_id($con);
 	
-	// inserindo edição na tabela
-
-	//UPDATE `clientes` SET 
-	//`saldo_cafe` = '20', 
-	//`saldo_almoco` = '20', 
-	//`saldo_jantar` = '20' 
-	//WHERE `clientes`.`id` = 1045;
-
-	$sqlCliente = "UPDATE `clientes` SET 
-	`saldo_cafe` = '$saldo_cafe', 
-	`saldo_almoco` = '$saldo_almoco', 
-	`saldo_jantar` = '$saldo_jantar' 
-	WHERE `clientes`.`id` = '".$_SESSION['id_usuario']."';
-";
-var_dump($sqlCliente);
-die();
-
 	$alerta['tipo'] = "success";
 	$alerta['mensagem'] = 'Sua compra foi concluída com sucesso! <a href="meuspedidos.php" class="alert-link">Ver meus pedidos</a>';
 
