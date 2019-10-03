@@ -5,11 +5,9 @@ CONST USER = "cheffdel";
 CONST PASS = "entra21@Blusoft";
 CONST DB   = "cheffdel_master";
 
-
 DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA; 
 
 tem que puxar os endereços do cliente na finalização de cardápio;
 
 fazer a página de entregas(vou fazer agora);
 
-tirar o assinaturas do header quando estiver logado;
