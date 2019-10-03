@@ -13,3 +13,5 @@ tem que puxar os endereços do cliente na finalização de cardápio;
 fazer a página de entregas(vou fazer agora);
 
 tirar o assinaturas do header quando estiver logado;
+
+da para comprar pacote sem escolher modo de pagamento 
