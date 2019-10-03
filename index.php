@@ -34,8 +34,8 @@ require_once"head.php";
       <div class="card-body">
 
         <div class="row">
-          <div class="col">
-            <div class="mb-3  text-dark" id="quem_somos" style="margin-top: 15px;">
+          <div class="col-md-6">
+            <div class="mb-3 text-dark" id="quem_somos" style="margin-top: 15px;">
               Quem somos?
             </div>
             <p class="ml-3" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
