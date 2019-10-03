@@ -14,12 +14,11 @@ fazer a página de entregas(vou fazer agora);
 
 tirar o assinaturas do header quando estiver logado;
 
-<<<<<<< HEAD
 tirar os botões de visualizar da páginainicial quando está deslogado;
 
 tornar os campos de e-mail e senha do cadastro obrigatórios;
 
-tirar as páginas de assinatura quandoestá deslogado;
-=======
-da para comprar pacote sem escolher modo de pagamento 
->>>>>>> 76325ec1ef5664bbdea4433481b46ce696df6524
+tirar as páginas de assinatura quando está deslogado;
+
+da para comprar pacote sem escolher modo de pagamento; 
+
