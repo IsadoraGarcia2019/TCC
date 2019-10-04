@@ -31,14 +31,14 @@ require_once"head.php";
 <div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
-        <div class="row">
-            <div class="col-12 text-right">
-                <img src="media/images/img-fundo-banner.png">
-            </div>
+      <div class="row">
+        <div class="col-12 text-right">
+          <img src="media/images/img-fundo-banner.png">
         </div>
+      </div>
 
-        <div class="card-body" style="margin-top: -220px;">
-          <div class="row">
+      <div class="card-body" style="margin-top: -220px;">
+        <div class="row">
           <div class="col-8">
             <div class="mb-3 text-left text-dark" id="quem_somos" style="margin-top: 15px;">
               Quem somos?
@@ -92,19 +92,14 @@ require_once"head.php";
            <div class="card border-dark col-md-12 mb-3" id="card-index" style="min-height: 100px; margin-top: 70px; margin-right: 50px;">
              <div class="card-body" id="index" >
                <p class=" text-dark text-center mt-3" style="font-size: 19px;">RECEBER SUA COMIDA EM CASA NUNCA FOI TÃO FÁCIL!</p>
-              </div>
-            </div>
-          </div>
+             </div>
+           </div>
+         </div>
        </div>
 
-      <div class="row">
-        <div class="col-6 offset-md-6">
-          <a href="pacotes.php" class="btn btn-dark col-md-12 col-12 " name="pacotes">Vizualizar nossos pacotes</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+     </div>
+   </div>
+ </div>
 </div>
 
 <?php require_once "footer.php"; ?>
