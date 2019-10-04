@@ -32,7 +32,6 @@ require_once"head.php";
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
         <div class="row">
-<<<<<<< HEAD
             <div class="col-12 text-right">
                 <img src="media/images/img-fundo-banner.png">
             </div>
@@ -42,10 +41,6 @@ require_once"head.php";
           <div class="row">
           <div class="col-8">
             <div class="mb-3 text-left text-dark" id="quem_somos" style="margin-top: 15px;">
-=======
-          <div class="col-md-6">
-            <div class="mb-3 text-dark" id="quem_somos" style="margin-top: 15px;">
->>>>>>> 107fa4c7d53fe48ce66d422891383c34ce9a6bde
               Quem somos?
             </div>
             <p class="text-justify" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
