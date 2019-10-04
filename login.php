@@ -25,7 +25,7 @@ $login = new Login();
 	require_once "header.php";
 	?>
 
-	<div class="row">
+	<div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
 		<div class="shadow" style="  background-color: #f2392c ;
 		background-image: url('media/images/food-pattern.png');
 		min-height: 100px; 
