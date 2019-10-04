@@ -21,7 +21,7 @@ if (isset($id)) {
 	$res = mysqli_fetch_assoc($query);
 
 	if ($_GET['status_pagamento'] == 'pago') {
-		$sql = "UPDATE clientes SET saldo_cafe = ". ($res['saldo_cafe'] + $res['quantidade_cafe']) .", saldo_almoco = ". ($res['saldo_almoco'] + $res['quantidade_almoco']).", saldo_jantar = ". ($res['saldo_janta'] + $res['quantidade_janta']) . " WHERE id = {$res['id_cliente']}";
+		$sql = "UPDATE clientes SET saldo_cafe = ". ($res['saldo_cafe'] + $res['quantidade_cafe']) .", saldo_almoco = ". ($res['saldo_almoco'] + $res['quantidade_almoco']).", saldo_jantar = ". ($res['saldo_jantar'] + $res['quantidade_jantar']) . " WHERE id = {$res['id_cliente']}";
 		$query = mysqli_query($con, $sql);
 	}
 

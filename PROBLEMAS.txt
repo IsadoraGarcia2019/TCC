@@ -11,4 +11,4 @@ página de contato não está funcionando;
 
 não esta dando para concluir a escolha do cardápio;
 
-NÃO TA APARECENDO AS REFEIÇÕES QUE EU CADASTRO, PRO ADMIN APARECE MAS MAS PRO USUÁRIO
+NÃO TA APARECENDO AS REFEIÇÕES QUE EU CADASTRO, PRO ADMIN APARECE MAS NÃO PRO USUÁRIO
