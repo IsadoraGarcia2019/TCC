@@ -58,26 +58,25 @@
 
  	<div class="col-10 col-md-7 mt-5 offset-md-1 " style="margin-top: -30px !important; min-height: 300px;">
  		<div class="card shadow" style="margin-right: auto; margin-left: auto;">
- 			<div class="card-body" > 
+ 			<div class="card-body" >
 
- 				<h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Minhas Assinaturas</h2>
+                <?php require_once "include/alerta.php"; ?>
+
+                <h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Minhas Assinaturas</h2>
 
  				<table class="table table-light col-md-12 mt-3 table-striped table-hover">
  					<thead>
  						<tr>
- 							<th scope="col">Data da compra</th>
- 							<th scope="col">Nome do pacote</th>
- 							<th scope="col">Forma de pagamento</th>
- 							<th scope="col">Status do pagamento</th>
+ 							<th class="text-left">Data da compra</th>
+ 							<th class="text-left">Nome do pacote</th>
+ 							<th class="text-left">Forma de pagamento</th>
+ 							<th class="text-left">Status do pagamento</th>
  						</tr>
  					</thead>
  					<tbody>
  						<?php foreach ($lista as $item) { ?>
  							<tr>
-
  								<td><?php echo date_format(date_create($item['data_compra']), 'd/m/y H:i:s'); ?></td>
-
-
  								<td><?=utf8_encode($item['nome_pacote'])?></td>
  								<td>
  									<?php switch ($item['forma_pagamento']) { 
@@ -131,20 +130,20 @@
 
          <h2 class="mb-3 mt-3 text-center" style="color: #de2828;">Meus Saldos</h2>
          <div class="col-12 m-0" role="alert">
-            <div class="alert alert-primary text-center">
-                <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;"><?=$lista2[0]['saldo_cafe']?><br>
+            <div class="alert alert-primary text-center font-weight-bold">
+                <img src="media/images/icone-cafe.png" style="max-height: 40px; margin-right: 7px;" class="pr-2"><?=$lista2[0]['saldo_cafe']?><br>
             </div>
         </div>
 
         <div class=" col-12 m-0" role="alert">
-            <div class="alert alert-danger text-center">
-                <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;"><?=$lista2[0]['saldo_almoco']?><br>
+            <div class="alert alert-danger text-center font-weight-bold">
+                <img src="media/images/hamburger.png" style="max-height: 40px; margin-right: 7px;" class="pr-2"><?=$lista2[0]['saldo_almoco']?><br>
             </div>
         </div>
 
         <div class=" col-12 m-0" role="alert">
-            <div class="alert alert-secondary text-center">
-                <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; "><?=$lista2[0]['saldo_jantar']?>
+            <div class="alert alert-secondary text-center font-weight-bold">
+                <img src="media/images/pizza.png" style="max-height: 40px; margin-right: 10px; " class="pr-2"><?=$lista2[0]['saldo_jantar']?>
             </div>
         </div>
 

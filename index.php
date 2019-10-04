@@ -18,7 +18,7 @@ require_once"head.php";
 
   <?php require_once "header.php"; ?>
 
-  <div class="row">
+  <div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
     <div class="shadow " style="  background-color: #f2392c;
     background-image: url('media/images/food-pattern.png');
     min-height: 139px;
@@ -28,24 +28,26 @@ require_once"head.php";
   </div>
 </div>
 
-<div class="row">
+<div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
   <div class="col-10 col-md-8 offset-1 offset-md-2" style="margin-top: -60px !important;">
     <div class="card shadow">
-      <div class="card-body">
-
         <div class="row">
-          <div class="col">
-            <div class="mb-3  text-dark" id="quem_somos" style="margin-top: 15px;">
+            <div class="col-12 text-right">
+                <img src="media/images/img-fundo-banner.png">
+            </div>
+        </div>
+
+        <div class="card-body" style="margin-top: -220px;">
+          <div class="row">
+          <div class="col-8">
+            <div class="mb-3 text-left text-dark" id="quem_somos" style="margin-top: 15px;">
               Quem somos?
             </div>
-            <p class="ml-3" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
-          </div>
-          <div class="col">
-            <img src="media/images/img-fundo-banner.png">
+            <p class="text-justify" style="font-size: 19px;">Nós somos um de clube de assinatura de entrega de refeições. Trabalhamos com planos mensais em que você escolhe o que quer comer e o frete é GRÁTIS. Garantimos suas entregas com êxito, de uma maneira que traga mais praticidade para o seu dia-a-dia!</p>
           </div>
         </div>
 
-        <div class="text-center mb-4 text-dark" id="quem_somos">
+        <div class="text-center mb-4 mt-3 text-dark" id="quem_somos">
           Como fazer meu pedido?
         </div>
 

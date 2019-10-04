@@ -23,7 +23,7 @@ if (isset($_POST['btnCadastrar'])) {
 if (mysqli_query($con, $sql)) {
 
 	$alerta['tipo'] = "success";
-	$alerta['mensagem'] = 'A comida foi salva com sucesso! <a href="Cardapio.php" class="alert-link">Vizualizar</a>';
+	$alerta['mensagem'] = 'A comida foi salva com sucesso! <a href="cardapio.php" class="alert-link">Vizualizar</a>';
 
 	$alerta = serialize($alerta);
 

@@ -1,5 +1,5 @@
 <div class="redes-sociais" style="background-color: #de2828;">
-  <div class="container" style="margin-top: 65px;">
+  <div class="container" style="margin-top: 100px;">
     <center>
 
       <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRmTgXbBSZDhPSBJsPLwHzgBPqskCzpPtNTPhwSkgLdBBXnbmRScSHtKdnmsdqlgZFHsnsQ"><img src="media/images/email.png" alt="email" title="email" class="icones"></a>
@@ -14,7 +14,7 @@
 
 <footer>
  <div class="footer-item">
-  <div class="row">
+  <div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
     <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsTJtrnhxXwfpDgvhvzGsLRlLgjHgjcfzcQFCTNqvbqkMSDXnPTwMNHPSkbjVnnrBWWPBfJq" class="col-sm-12 col-md-3">E-mail: deliiverycheff@gmail.com</a>
 
     <a href="https://twitter.com/delivery_cheff" class="col-sm-12 col-md-3">Twitter: @delivery_cheff </a>
