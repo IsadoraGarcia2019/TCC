@@ -11,3 +11,16 @@ tem que puxar os endereços do cliente na finalização de cardápio;
 
 fazer a página de entregas(vou fazer agora);
 
+<<<<<<< HEAD
+=======
+tirar o assinaturas do header quando estiver logado;
+
+tirar os botões de visualizar da páginainicial quando está deslogado;
+
+tornar os campos de e-mail e senha do cadastro obrigatórios;
+
+tirar as páginas de assinatura quando está deslogado;
+
+da para comprar pacote sem escolher modo de pagamento; 
+
+>>>>>>> 107fa4c7d53fe48ce66d422891383c34ce9a6bde
