@@ -5,22 +5,10 @@ CONST USER = "cheffdel";
 CONST PASS = "entra21@Blusoft";
 CONST DB   = "cheffdel_master";
 
-DIMINUIR O SALDO CLIENTE CONFORME ELE FOR ESCOLHENDO O CARDÁPIO DO DIA; 
-
-tem que puxar os endereços do cliente na finalização de cardápio;
-
-fazer a página de entregas(vou fazer agora);
-
-<<<<<<< HEAD
-=======
-tirar o assinaturas do header quando estiver logado;
-
-tirar os botões de visualizar da páginainicial quando está deslogado;
-
 tornar os campos de e-mail e senha do cadastro obrigatórios;
 
-tirar as páginas de assinatura quando está deslogado;
+página de contato não está funcionando;
 
-da para comprar pacote sem escolher modo de pagamento; 
+não esta dando para concluir a escolha do cardápio;
 
->>>>>>> 107fa4c7d53fe48ce66d422891383c34ce9a6bde
+NÃO TA APARECENDO AS REFEIÇÕES QUE EU CADASTRO, PRO ADMIN APARECE MAS MAS PRO USUÁRIO
