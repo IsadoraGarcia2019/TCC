@@ -43,13 +43,13 @@ if (isset($_POST['enviar'])) {
 	require_once "header.php";
 	?>
 
-	<div class="row">
+	<div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
 		<div class="shadow " style="  background-color: #f2392c ;background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;">
 			<h1 class="text-white mb-5 text-center mt-5">Contato</h1>
 		</div> 
 	</div>
 </div>
-<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
+<div class="col-10 col-md-6 mt-5 mb-5 pb-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 	<div class="card shadow" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" > 
 			<form method="post" action="">

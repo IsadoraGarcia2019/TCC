@@ -37,7 +37,7 @@
  	require_once "header.php";
  	?>
 
- 	<div class="row">
+ 	<div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
  		<div class="shadow " style="background-color: #1a1818 !important; background-image: url('media/images/food-pattern.png');min-height: 100px; min-width: 100%; background-size: 30%; background-position: center 1050px;"> 
  			<div class="text-center my-5">
  				<h1 class="text-white mb-5">Vendas</h1>
@@ -119,11 +119,6 @@
                                     <small class="text-italic">Não pode alterar depois de pago.</small>
                                 </td>
                                 <?php endif; ?>
-
-
-
-
-
  						<?php } ?>
  					</tr>
  				</tbody>

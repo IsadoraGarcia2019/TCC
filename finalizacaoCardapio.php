@@ -1,29 +1,28 @@
-
 <?php
 
-require_once"head.php";
+    require_once"head.php";
 
-require_once"backends/finalizacaoCardapio.php";
+    require_once"backends/finalizacaoCardapio.php";
 
-$lista = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
-$queryCardapio = mysqli_query($con, $lista);
-$lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
+    $lista = "SELECT * FROM cardapio_dia WHERE id_cardapio = $id";
+    $queryCardapio = mysqli_query($con, $lista);
+    $lista = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
-$lista2 = "SELECT * FROM enderecos WHERE id_endereco = $id";
-$queryCardapio = mysqli_query($con, $lista2);
-$lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
+    $lista2 = "SELECT * FROM enderecos WHERE id_usuario = {$_SESSION['id_usuario']}";
+    $queryCardapio = mysqli_query($con, $lista2);
+    $lista2 = mysqli_fetch_all($queryCardapio, MYSQLI_ASSOC);
 
-// Verificar se existe alerta via COOKIE
-if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
-  $alerta = unserialize($_COOKIE['alerta']);
-  setcookie('alerta');
-}
+    // Verificar se existe alerta via COOKIE
+    if (isset($_COOKIE['alerta']) && !is_null($_COOKIE['alerta'])) {
+      $alerta = unserialize($_COOKIE['alerta']);
+      setcookie('alerta');
+    }
 
-if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
-  header('Location:erros.php?mesagem= Você não está logado e por isso não pode acessar essa página!');
-}
+    if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
+      header('Location:erros.php?mesagem= Você não está logado e por isso não pode acessar essa página!');
+    }
+
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,49 +55,48 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
 
       <?php require_once "include/alerta.php"; ?>
 
-      <form id="cadform" name="cadform" method="post" action="" onsubmit="return validaCampo();">
+      <form method="post" action="">
 
-        <h2 class="mb-3 mt-3 text-danger" style="color: #de2828; margin-left: 15px;">Dados do pedido</h2>
+        <h4 class="mb-3 mt-3 text-danger" style="color: #de2828; margin-left: 15px;">Dados do pedido</h4>
 
         <?php foreach ($lista as $item) { ?>
-
           <div class="col-12 mb-4">
-            <div class="card border-secondary">
-              <div class="card-body">
-                <div class="row">
-                  <i class="fas fa-utensils float-left mr-2 text-danger ml-2"></i>
-                  <h5 class="card-title pl-2 text-uppercase"><?=utf8_encode($item['nome_comida'])?></h5>
-                </div>
-                <p class="font-italic pl-4 text-lowercase" style="font-size: 17px;"><?=utf8_encode($item['categoria_comida'])?></p>
+            <div class="card">
+              <div class="card-body mb-0 pb-2">
+                <h5 class="card-title text-uppercase">
+                  <i class="fas fa-utensils float-left mr-2 text-danger"></i>
+                  <?=utf8_encode($item['nome_comida'])?>
+                  <input type="hidden" name="id_cardapio" value="<?=$item['id_cardapio']?>">
+                  <small class="text-dark pl-2"><?=ucwords(utf8_encode(str_replace('_', ' ', $item['categoria_comida'])))?></small>
+                </h5>
               </div>
             </div>
           </div>
         <?php } ?>
-        <h5 class="text-danger text-center mb-3">Em qual endereço deve ser entregue?</h5>
+
+        <h4 class="mb-2 text-danger mt-4" style="color: #de2828; margin-left: 15px;">Em qual endereço deve ser entregue?</h4>
 
         <div class="col-12">
           <div class="form-group border-dark">
             <label for="endereco">Selecione o endereço de entrega</label>
-            <select class="form-control" id="endereco">
+            <select class="form-control" name="id_endereco">
               <?php foreach ($lista2 as $item) { ?>
-
-                <option> <?=utf8_encode($item['rua'])?>  <?=utf8_encode($item['bairro'])?>
-                <?=utf8_encode($item['cidade'])?>
-                <?=utf8_encode($item['estado'])?>
+                <option value="<?=$item['id_endereco']?>">
+                    <?=strtoupper(utf8_encode($item['local']))?> -
+                    <?=utf8_encode($item['rua'])?>, <?=utf8_encode($item['bairro'])?> -
+                    <?=utf8_encode($item['cidade'])?>,
+                    <?=utf8_encode($item['estado'])?>
+                </option>
               <?php } ?> 
-            </option>
-          </select>
-
+            </select>
         </div>
 
-        <button class="btn btn-danger col-md-12  mt-3" name="btnComprar"><i class="fas fa-shopping-basket"></i></button>
+        <button class="btn btn-danger col-md-12 mt-0" name="btnComprar"><i class="fas fa-shopping-basket"></i></button>
       </div>
     </form>
   </div>
 </div>
 </div>
-
-
 
 <?php require_once "footer.php"; ?>
 

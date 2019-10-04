@@ -33,7 +33,7 @@ if ($_SESSION['tp_usuario'] != 'administrador') {
 	require_once "header.php";
 	?> 
 
-	<div class="row">
+	<div class="row" style="max-width: 100%; margin-left: 0 !important; margin-right: 0 !important;">
 		<div class="shadow" style="  background-color: #1a1818 !important;
 		background-image: url('media/images/food-pattern.png');
 		min-height: 100px; 
@@ -46,7 +46,7 @@ if ($_SESSION['tp_usuario'] != 'administrador') {
 	</div>
 </div>
 
-<div class="col-10 col-md-6 mt-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
+<div class="col-10 col-md-6 mt-5 mb-5 pb-5 offset-md-3 offset-1" style="margin-top: -30px !important;">
 	<div class="card shadow" style="margin-right: auto; margin-left: auto;">
 		<div class="card-body" >
 

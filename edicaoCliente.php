@@ -35,7 +35,6 @@ if (!isset($_SESSION['logado']) && $_SESSION['logado'] == false) {
     min-width: 100%; 
     background-size: 30%; 
     background-position: center 1050px;" >
-    <?php Site::navbar(); ?>
     <div class="text-center my-5">
       <h1 class="text-white mb-5">Edição dos meus dados pessoais </h1>
     </div> 
