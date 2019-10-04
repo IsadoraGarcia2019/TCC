@@ -102,10 +102,6 @@ $lista = mysqli_fetch_all($queryPacote, MYSQLI_ASSOC);
 							<?php } ?>
 						<?php } ?>
 
-						<?php if (!isset($_SESSION['logado']) || $_SESSION['logado'] == false) { ?>
-							<a href="#" class="btn btn-danger col-md-12"><?=$item['preco_pacote']?></a>
-						<?php } ?>
-
 					</div>
 				</div>
 			</div>
